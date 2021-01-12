@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: RandomWords(),
+      theme: ThemeData(primaryColor: Colors.amber),
     );
   }
 }
@@ -41,7 +42,6 @@ class _RandomWordsState extends State<RandomWords> {
   void _pushSaved() {
     Navigator.of(context)
         .push(MaterialPageRoute<void>(builder: (BuildContext context) {
-
       final tiles = _saved.map((WordPair pair) {
         return ListTile(
           title: Text(
