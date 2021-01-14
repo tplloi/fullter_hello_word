@@ -10,7 +10,7 @@ class Db {
       listProduct.add(p);
     }
 
-    return listProduct;
+    return listProduct.toList();
   }
 
   static Product getRandomProduct() {

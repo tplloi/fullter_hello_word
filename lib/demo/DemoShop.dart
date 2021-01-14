@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final listProduct = Db.getListProduct().toList();
+  final listProduct = Db.getListProduct();
 
   @override
   Widget build(BuildContext context) {
