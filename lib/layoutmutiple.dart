@@ -61,8 +61,8 @@ class ProductBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(2),
-      height: 120,
+      padding: EdgeInsets.all(10),
+      height: 150,
       child: Card(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
