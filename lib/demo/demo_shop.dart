@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/demo/db/Db.dart';
+import 'package:hello_word/model/Product.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,6 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Shop',
       home: Scaffold(
@@ -14,7 +18,9 @@ class MyApp extends StatelessWidget {
           title: Text('Shop'),
         ),
         body: Center(
-          child: RatingBox(),
+          child: ProductBox(
+            product: Db.getRandomProduct(),
+          ),
         ),
       ),
     );
@@ -100,6 +106,51 @@ class _RatingBoxState extends State<RatingBox> {
               iconSize: _size,
             )),
       ],
+    );
+  }
+}
+
+class ProductBox extends StatelessWidget {
+  ProductBox({Key key, this.product}) : super(key: key);
+
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(5),
+      height: 200,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Image.asset("assets/images/" + this.product.image),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      product.name,
+                      style: TextStyle(fontSize: 22, color: Colors.green),
+                    ),
+                    Text(product.description),
+                    Text(
+                      product.price.toString(),
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.pink),
+                    ),
+                    RatingBox(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -4,11 +4,16 @@ class Db {
   static List<Product> getListProduct() {
     List<Product> listProduct = <Product>[];
     for (int i = 0; i < 10; i++) {
-      Product p = Product("name " + i.toString(), "description " + i.toString(),
-          i * 1000, "image " + i.toString());
+      String img = i.isOdd ? ("iv.png") : ("iv.jpg");
+      Product p = Product(
+          "name " + i.toString(), "description " + i.toString(), i * 1000, img);
       listProduct.add(p);
     }
 
     return listProduct;
+  }
+
+  static Product getRandomProduct() {
+    return (getListProduct().toList()..shuffle()).first;
   }
 }
