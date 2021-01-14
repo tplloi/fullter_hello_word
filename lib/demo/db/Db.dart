@@ -5,8 +5,8 @@ class Db {
     List<Product> listProduct = <Product>[];
     for (int i = 0; i < 10; i++) {
       String img = i.isOdd ? ("iv.png") : ("iv.jpg");
-      Product p = Product(
-          "name " + i.toString(), "description " + i.toString(), i * 1000, img);
+      Product p = Product("Name " + i.toString(),
+          "Description loitp " + i.toString(), i * 1000, img);
       listProduct.add(p);
     }
 
