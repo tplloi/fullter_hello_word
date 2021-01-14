@@ -20,16 +20,16 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
             child: ListView.builder(
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  child: ProductBox(product: listProduct[index],),
-                  onTap: () {
-
-                  },
-                );
-              },
-              itemCount: listProduct.length,
-            )),
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              child: ProductBox(
+                product: listProduct[index],
+              ),
+              onTap: () {},
+            );
+          },
+          itemCount: listProduct.length,
+        )),
       ),
     );
   }
@@ -64,13 +64,13 @@ class _RatingBoxState extends State<RatingBox> {
             child: IconButton(
               icon: this.rating >= 1
                   ? (Icon(
-                Icons.star,
-                size: _size,
-              ))
+                      Icons.star,
+                      size: _size,
+                    ))
                   : (Icon(
-                Icons.star_border,
-                size: _size,
-              )),
+                      Icons.star_border,
+                      size: _size,
+                    )),
               color: Colors.red[500],
               onPressed: () {
                 setRating(1);
@@ -82,13 +82,13 @@ class _RatingBoxState extends State<RatingBox> {
             child: IconButton(
               icon: this.rating >= 2
                   ? (Icon(
-                Icons.star,
-                size: _size,
-              ))
+                      Icons.star,
+                      size: _size,
+                    ))
                   : (Icon(
-                Icons.star_border,
-                size: _size,
-              )),
+                      Icons.star_border,
+                      size: _size,
+                    )),
               color: Colors.red[500],
               onPressed: () {
                 setRating(2);
@@ -100,13 +100,13 @@ class _RatingBoxState extends State<RatingBox> {
             child: IconButton(
               icon: this.rating >= 3
                   ? (Icon(
-                Icons.star,
-                size: _size,
-              ))
+                      Icons.star,
+                      size: _size,
+                    ))
                   : (Icon(
-                Icons.star_border,
-                size: _size,
-              )),
+                      Icons.star_border,
+                      size: _size,
+                    )),
               color: Colors.red[500],
               onPressed: () {
                 setRating(3);
@@ -132,7 +132,14 @@ class ProductBox extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset("assets/images/" + this.product.image),
+            Container(
+              width: 200,
+              height: 200,
+              child: Image.asset(
+                "assets/images/" + this.product.image,
+                fit: BoxFit.fitWidth,
+              ),
+            ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(15),
