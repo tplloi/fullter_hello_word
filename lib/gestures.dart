@@ -31,18 +31,20 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: GestureDetector(
-      child: Text(
-        this.title,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 22,
-        ),
-      ),
-      onTap: () {
-        print("onTap");
-        _showMaterialDialog(context);
-      },
-    ));
+            child: Text(
+              this.title,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              ),
+            ),
+            onTap: () {
+              print("onTap");
+              _showMaterialDialog(context);
+            },
+            onDoubleTap: () {
+              print("onDoubleTap");
+            }));
   }
 
   void _showMaterialDialog(BuildContext context) {
