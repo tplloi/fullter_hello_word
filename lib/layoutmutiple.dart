@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Welcome to Flutter',
       theme: ThemeData(
-        primaryColor: Colors.amber,
+        primaryColor: Colors.black,
       ),
       home: Scaffold(
         // appBar: AppBar(
@@ -38,7 +38,59 @@ class MyHomePage extends StatelessWidget {
         title: Text(this.title),
       ),
       body: Center(
-        child: Text("Some text"),
+        child: ProductBox(
+          name: "name",
+          description: "description",
+          price: 12,
+          image: "iv.jpg",
+        ),
+      ),
+    );
+  }
+}
+
+class ProductBox extends StatelessWidget {
+  ProductBox({Key key, this.name, this.description, this.price, this.image})
+      : super(key: key);
+
+  final String name;
+  final String description;
+  final int price;
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(2),
+      height: 120,
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Image.asset(
+              "assets/images/iv.jpg",
+            ),
+            Expanded(
+                child: Container(
+              padding: EdgeInsets.all(5),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text(
+                    this.name,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    this.description,
+                  ),
+                  Text(
+                    "Price: " + this.price.toString(),
+                  )
+                ],
+              ),
+            ))
+          ],
+        ),
       ),
     );
   }
