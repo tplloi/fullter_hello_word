@@ -101,8 +101,13 @@ class ProductBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {
-        print("onTap: " + this.name),
+      onTap: () {
+        print("onTap: " + this.name);
+        final snackBar = SnackBar(
+          content: Text("Hello " + this.name),
+          backgroundColor: this.color,
+        );
+        Scaffold.of(context).showSnackBar(snackBar);
       },
       child: Container(
         padding: EdgeInsets.all(10),
