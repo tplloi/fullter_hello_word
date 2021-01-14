@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             title: Text('Welcome to Flutter'),
           ),
           body: MyHomePage(
-            title: "Hello Loitp :D",
+            title: "Test gesture",
           )),
     );
   }
@@ -30,6 +30,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+        child: GestureDetector(
       child: Text(
         this.title,
         style: TextStyle(
@@ -37,6 +38,40 @@ class MyHomePage extends StatelessWidget {
           fontSize: 22,
         ),
       ),
-    );
+      onTap: () {
+        print("onTap");
+        _showMaterialDialog(context);
+      },
+    ));
+  }
+
+  void _showMaterialDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (_) => new AlertDialog(
+              title: new Text("title"),
+              content: new Text(
+                "context",
+                style: TextStyle(fontSize: 18, color: Colors.red),
+              ),
+              actions: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(
+                    "Action",
+                    style: TextStyle(fontSize: 25, color: Colors.black),
+                  ),
+                ),
+                FlatButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      "Close",
+                    ))
+              ],
+            ));
   }
 }
