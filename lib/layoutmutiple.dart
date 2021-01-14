@@ -47,18 +47,21 @@ class MyHomePage extends StatelessWidget {
               description: "Japan",
               price: 1000,
               image: "iv.jpg",
+              color: Colors.red,
             ),
             ProductBox(
               name: "Ducati",
               description: "Italia",
               price: 2000,
               image: "iv.png",
+              color: Colors.green,
             ),
             ProductBox(
               name: "Honda",
               description: "Japan",
               price: 3000,
               image: "iv.jpg",
+              color: Colors.blueAccent,
             ),
             ProductBox(
               name: "BMW",
@@ -80,13 +83,14 @@ class MyHomePage extends StatelessWidget {
 }
 
 class ProductBox extends StatelessWidget {
-  ProductBox({Key key, this.name, this.description, this.price, this.image})
+  ProductBox({Key key, this.name, this.description, this.price, this.image, this.color})
       : super(key: key);
 
   final String name;
   final String description;
   final int price;
   final String image;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +98,7 @@ class ProductBox extends StatelessWidget {
       padding: EdgeInsets.all(10),
       height: 150,
       child: Card(
+        color: this.color,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
