@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final listProduct = Db.getListProduct();
+  final listProduct = Db.getListProduct().toList();
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,9 @@ class MyApp extends StatelessWidget {
               child: ProductBox(
                 product: listProduct[index],
               ),
-              onTap: () {},
+              onTap: () {
+                print("onTap " + listProduct[index].name);
+              },
             );
           },
           itemCount: listProduct.length,
