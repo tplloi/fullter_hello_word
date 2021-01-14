@@ -70,7 +70,9 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to Flutter'),
         ),
         body: Center(
-          child: Text('Hello World, Loitp'),
+          child: Text(
+            'Hello World, Loitp',
+          ),
         ),
       ),
     );
