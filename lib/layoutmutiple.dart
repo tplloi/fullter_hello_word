@@ -38,11 +38,41 @@ class MyHomePage extends StatelessWidget {
         title: Text(this.title),
       ),
       body: Center(
-        child: ProductBox(
-          name: "name",
-          description: "description",
-          price: 12,
-          image: "iv.jpg",
+        child: ListView(
+          shrinkWrap: true,
+          padding: EdgeInsets.fromLTRB(5, 10, 15, 20),
+          children: <Widget>[
+            ProductBox(
+              name: "Suzuki",
+              description: "Japan",
+              price: 1000,
+              image: "iv.jpg",
+            ),
+            ProductBox(
+              name: "Ducati",
+              description: "Italia",
+              price: 2000,
+              image: "iv.png",
+            ),
+            ProductBox(
+              name: "Honda",
+              description: "Japan",
+              price: 3000,
+              image: "iv.jpg",
+            ),
+            ProductBox(
+              name: "BMW",
+              description: "Germany",
+              price: 4000,
+              image: "iv.png",
+            ),
+            ProductBox(
+              name: "Ferrari",
+              description: "Italia",
+              price: 5000,
+              image: "iv.png",
+            )
+          ],
         ),
       ),
     );
@@ -68,7 +98,7 @@ class ProductBox extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Image.asset(
-              "assets/images/iv.jpg",
+              "assets/images/" + this.image,
             ),
             Expanded(
                 child: Container(
