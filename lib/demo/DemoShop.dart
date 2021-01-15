@@ -205,6 +205,31 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Shop', home: Scaffold());
+    return MaterialApp(
+        title: 'Shop',
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('ProductPage'),
+            ),
+            body: SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.all(10.0),
+                child: Column(
+                  children: <Widget>[
+                    Image.asset("assets/images/" + product.image),
+                    Text(product.name),
+                    Text(product.description),
+                    Text(product.price.toString()),
+                    RatingBox(
+                        product.rating,
+                        (rating) => {
+                              print(
+                                "ProductPage rating " + rating.toString(),
+                              )
+                            })
+                  ],
+                ),
+              ),
+            )));
   }
 }
