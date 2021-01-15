@@ -27,6 +27,13 @@ class MyApp extends StatelessWidget {
               ),
               onTap: () {
                 print("onTap " + listProduct[index].name);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        ProductPage(product: listProduct[index]),
+                  ),
+                );
               },
             );
           },
@@ -189,5 +196,15 @@ class ProductBox extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ProductPage extends StatelessWidget {
+  ProductPage({Key key, this.product}) : super(key: key);
+  final Product product;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(title: 'Shop', home: Scaffold());
   }
 }
