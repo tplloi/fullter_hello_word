@@ -223,9 +223,8 @@ class ProductPage extends StatelessWidget {
                     RatingBox(
                         product.rating,
                         (rating) => {
-                              print(
-                                "ProductPage rating " + rating.toString(),
-                              )
+                              print("ProductPage rating " + rating.toString()),
+                              product.rating = rating,
                             })
                   ],
                 ),
