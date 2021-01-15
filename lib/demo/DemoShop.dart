@@ -37,19 +37,32 @@ class MyApp extends StatelessWidget {
   }
 }
 
+typedef RatingBoxCallBack = void Function(int rating);
+
 class RatingBox extends StatefulWidget {
+  final int rating;
+  final RatingBoxCallBack _ratingBoxCallBack;
+
+  RatingBox(this.rating, this._ratingBoxCallBack);
+
   @override
   _RatingBoxState createState() {
-    return _RatingBoxState();
+    return _RatingBoxState(rating);
   }
 }
 
 class _RatingBoxState extends State<RatingBox> {
-  int rating = 0;
+  int rate;
 
-  void setRating(int rating) {
+  _RatingBoxState(int rate) {
+    this.rate = rate;
+  }
+
+  void setNewRating(int newRating) {
+    widget._ratingBoxCallBack.call(newRating);
+
     setState(() {
-      this.rating = rating;
+      this.rate = newRating;
     });
   }
 
@@ -64,7 +77,7 @@ class _RatingBoxState extends State<RatingBox> {
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rating >= 1
+              icon: this.rate >= 1
                   ? (Icon(
                       Icons.star,
                       size: _size,
@@ -75,14 +88,14 @@ class _RatingBoxState extends State<RatingBox> {
                     )),
               color: Colors.red[500],
               onPressed: () {
-                setRating(1);
+                setNewRating(1);
               },
               iconSize: _size,
             )),
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rating >= 2
+              icon: this.rate >= 2
                   ? (Icon(
                       Icons.star,
                       size: _size,
@@ -93,14 +106,14 @@ class _RatingBoxState extends State<RatingBox> {
                     )),
               color: Colors.red[500],
               onPressed: () {
-                setRating(2);
+                setNewRating(2);
               },
               iconSize: _size,
             )),
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rating >= 3
+              icon: this.rate >= 3
                   ? (Icon(
                       Icons.star,
                       size: _size,
@@ -111,7 +124,7 @@ class _RatingBoxState extends State<RatingBox> {
                     )),
               color: Colors.red[500],
               onPressed: () {
-                setRating(3);
+                setNewRating(3);
               },
               iconSize: _size,
             )),
@@ -127,6 +140,8 @@ class ProductBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("ProductBox build product " + product.name);
+
     return Container(
       padding: EdgeInsets.all(5),
       height: 200,
@@ -149,7 +164,7 @@ class ProductBox extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      product.name,
+                      product.name + " - " + product.rating.toString(),
                       style: TextStyle(fontSize: 22, color: Colors.green),
                     ),
                     Text(product.description),
@@ -160,7 +175,12 @@ class ProductBox extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Colors.pink),
                     ),
-                    RatingBox(),
+                    RatingBox(
+                        product.rating,
+                        (rating) => {
+                              print("RatingBox rating " + rating.toString()),
+                              product.rating = rating,
+                            }),
                   ],
                 ),
               ),
