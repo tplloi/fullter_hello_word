@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to Flutter'),
         ),
         body: Center(
-          child: sample3(),
+          child: sample(),
         ),
         backgroundColor: Colors.white70,
       ),
