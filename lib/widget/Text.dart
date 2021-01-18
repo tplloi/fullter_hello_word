@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/util/Utils.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to Flutter'),
         ),
         body: Center(
-          child: text2(),
+          child: text3(),
         ),
         backgroundColor: Colors.white70,
       ),
@@ -41,6 +42,16 @@ class MyApp extends StatelessWidget {
               text: "World", style: TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
+    );
+  }
+
+  Widget text3() {
+    return Text(
+      'Hello World!\nLoitp1\nLoitp2\nLoitp3',
+      style: Utils().getCustomFontTextStyle(),
+      maxLines: 5,
+      textAlign: TextAlign.left,
+      textDirection: TextDirection.rtl,
     );
   }
 }
