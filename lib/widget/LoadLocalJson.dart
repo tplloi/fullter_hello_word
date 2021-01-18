@@ -37,23 +37,32 @@ class MyAppState extends State<MyApp> {
                     // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(10),
                         child: Card(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
-                              Text("Name: " + newData[index]['name']),
-                              Text("Height: " + newData[index]['height']),
-                              Text("Mass: " + newData[index]['mass']),
-                              Text("Hair Color: " +
-                                  newData[index]['hair_color']),
-                              Text("Skin Color: " +
-                                  newData[index]['skin_color']),
-                              Text("Eye Color: " + newData[index]['eye_color']),
-                              Text("Birth Year: " +
-                                  newData[index]['birth_year']),
-                              Text("Gender: " + newData[index]['gender'])
-                            ],
+                          elevation: 10,
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Container(
+                            margin: EdgeInsets.all(10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: <Widget>[
+                                Text("Name: " + newData[index]['name']),
+                                Text("Height: " + newData[index]['height']),
+                                Text("Mass: " + newData[index]['mass']),
+                                Text("Hair Color: " +
+                                    newData[index]['hair_color']),
+                                Text("Skin Color: " +
+                                    newData[index]['skin_color']),
+                                Text("Eye Color: " +
+                                    newData[index]['eye_color']),
+                                Text("Birth Year: " +
+                                    newData[index]['birth_year']),
+                                Text("Gender: " + newData[index]['gender'])
+                              ],
+                            ),
                           ),
                         ),
                       );
