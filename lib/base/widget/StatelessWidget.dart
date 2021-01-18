@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Create a reusable stateless widget
+// Create a reusable stateless base.widget
 class MyCard extends StatelessWidget {
   final Widget icon;
   final Widget title;

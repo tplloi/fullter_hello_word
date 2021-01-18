@@ -28,7 +28,7 @@ class MyHome extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.black87),
         child: Center(
           child: Container(
-            // use the theme accent color as background color for this widget
+            // use the theme accent color as background color for this base.widget
             color: Theme.of(context).accentColor,
             child: Text(
               'Hello World!',
@@ -40,7 +40,7 @@ class MyHome extends StatelessWidget {
       ),
 
       floatingActionButton: Theme(
-        // override the accent color of theme for this widget only
+        // override the accent color of theme for this base.widget only
         data: Theme.of(context).copyWith(
           colorScheme: Theme.of(context)
               .colorScheme

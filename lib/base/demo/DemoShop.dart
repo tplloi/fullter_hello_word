@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hello_word/demo/db/Db.dart';
-import 'package:hello_word/model/Product.dart';
+import 'package:hello_word/base/model/Product.dart';
+
+import 'db/Db.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/widget/list/list2/ContactListItem.dart';
-import 'package:hello_word/widget/list/list2/ContactModal.dart';
+import 'package:hello_word/base/widget/list/list2/ContactListItem.dart';
+import 'package:hello_word/base/widget/list/list2/ContactModal.dart';
 
 class ContactsList extends StatelessWidget {
   final List<ContactModal> listContactModal;

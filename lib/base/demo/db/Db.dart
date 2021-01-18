@@ -1,4 +1,4 @@
-import 'package:hello_word/model/Product.dart';
+import 'package:hello_word/base/model/Product.dart';
 
 class Db {
   static List<Product> getListProduct() {

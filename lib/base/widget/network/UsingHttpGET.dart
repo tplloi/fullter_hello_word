@@ -9,13 +9,13 @@ void main() {
   ));
 }
 
-// Create a stateful widget
+// Create a stateful base.widget
 class MyGetHttpData extends StatefulWidget {
   @override
   MyGetHttpDataState createState() => MyGetHttpDataState();
 }
 
-// Create the state for our stateful widget
+// Create the state for our stateful base.widget
 class MyGetHttpDataState extends State<MyGetHttpData> {
   final String url = "https://swapi.dev/api/people";
   List data;
