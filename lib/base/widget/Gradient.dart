@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/Utils.dart';
+import 'package:hello_word/base/util/utils.dart';
 
 void main() {
   runApp(
