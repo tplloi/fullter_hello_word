@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to Flutter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: AnimatedSizeWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class AnimatedSizeWidget extends StatefulWidget {
+  @override
+  _AnimatedSizeWidgetState createState() => _AnimatedSizeWidgetState();
+}
+
+class _AnimatedSizeWidgetState extends State<AnimatedSizeWidget>
+    with SingleTickerProviderStateMixin {
+  bool status = true;
+  double width = 200;
+  double height = 200;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 300,
+          height: 300,
+          color: Colors.lightGreen[400],
+          child: Center(
+            child: AnimatedSize(
+              duration: Duration(milliseconds: 500),
+              curve: Curves.fastOutSlowIn,
+              child: Container(
+                width: width,
+                height: height,
+                color: Colors.blue,
+              ),
+              vsync: this,
+            ),
+          ),
+        ),
+        RaisedButton(
+          child: Text('Change Size'),
+          onPressed: () {
+            setState(() {
+              width = status ? 250 : 200;
+              height = status ? 150 : 200;
+              status = !status;
+            });
+          },
+        ),
+      ],
+    );
+  }
+}
