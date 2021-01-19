@@ -60,12 +60,15 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
             Tab(
               // set icon to the tab
               icon: Icon(Icons.favorite),
+              text: "Favorite",
             ),
             Tab(
               icon: Icon(Icons.adb),
+              text: "adb",
             ),
             Tab(
               icon: Icon(Icons.airport_shuttle),
+              text: "Shuttle",
             ),
           ],
           // setup the controller
