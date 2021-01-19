@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: text3(),
         ),
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.amberAccent,
       ),
     );
   }
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
           TextSpan(
               text: "Hello ", style: TextStyle(fontStyle: FontStyle.italic)),
           TextSpan(
-              text: "World", style: TextStyle(fontWeight: FontWeight.bold)),
+              text: "World 123456", style: TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );
