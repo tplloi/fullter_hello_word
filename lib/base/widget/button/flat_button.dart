@@ -32,11 +32,31 @@ class _FlatButtonWidgetState extends State<FlatButtonWidget> {
     return FlatButton(
       color: Colors.blue,
       onPressed: () {
-        /*...*/
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => RaisedButtonWidget()),
+        );
       },
       child: Text(
         "Flat Button",
       ),
+    );
+  }
+}
+
+class RaisedButtonWidget extends StatefulWidget {
+  @override
+  _RaisedButtonWidgetState createState() => _RaisedButtonWidgetState();
+}
+
+class _RaisedButtonWidgetState extends State<RaisedButtonWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      child: Text('RaisedButton'),
     );
   }
 }
