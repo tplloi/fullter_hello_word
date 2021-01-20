@@ -14,10 +14,29 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Welcome to Flutter'),
         ),
-        body: Center(
-          child: text3(),
-        ),
-        backgroundColor: Colors.amberAccent,
+        body: SingleChildScrollView(
+            child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              text1(),
+              SizedBox(
+                height: 50,
+              ),
+              text2(),
+              SizedBox(
+                height: 50,
+              ),
+              text3(),
+              SizedBox(
+                height: 50,
+              ),
+              TextWidget(),
+            ],
+          ),
+        )),
+        backgroundColor: Colors.white,
       ),
     );
   }
@@ -39,7 +58,8 @@ class MyApp extends StatelessWidget {
           TextSpan(
               text: "Hello ", style: TextStyle(fontStyle: FontStyle.italic)),
           TextSpan(
-              text: "World 123456", style: TextStyle(fontWeight: FontWeight.bold)),
+              text: "World 123456",
+              style: TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -50,8 +70,50 @@ class MyApp extends StatelessWidget {
       'Hello World!\nLoitp1\nLoitp2\nLoitp3',
       style: Utils().getCustomFontTextStyle(),
       maxLines: 5,
-      textAlign: TextAlign.left,
-      textDirection: TextDirection.rtl,
+      textAlign: TextAlign.end,
+      textDirection: TextDirection.ltr,
+    );
+  }
+}
+
+class TextWidget extends StatefulWidget {
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<TextWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Hello World ...",
+          ),
+          Text(
+            "Hello World ...",
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "Hello World ...",
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+          ),
+          Text(
+            "Hello World ...",
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                backgroundColor: Colors.black),
+          ),
+        ],
+      ),
     );
   }
 }
