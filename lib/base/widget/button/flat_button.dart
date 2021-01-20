@@ -5,7 +5,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: Scaffold(
       appBar: AppBar(
-        title: Text("RaisedButtonWidget"),
+        title: Text("FlatButtonWidget"),
       ),
       body: Center(
         child: FlatButtonWidget(),
