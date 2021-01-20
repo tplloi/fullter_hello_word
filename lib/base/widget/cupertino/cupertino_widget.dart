@@ -37,6 +37,10 @@ void main() {
               SizedBox(
                 height: 50,
               ),
+              CupertinoSwitchWidget(),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
@@ -260,6 +264,38 @@ class _CupertinoSliderWidgetState extends State<CupertinoSliderWidget> {
           onChangeEnd: (v) {},
         ),
         Text('Slider value ：${_value2.toString()}'),
+      ],
+    );
+  }
+}
+
+class CupertinoSwitchWidget extends StatefulWidget {
+  @override
+  _CupertinoSwitchWidgetState createState() => _CupertinoSwitchWidgetState();
+}
+
+class _CupertinoSwitchWidgetState extends State<CupertinoSwitchWidget> {
+  bool flag1 = false;
+  bool flag2 = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CupertinoSwitch(
+          value: flag1,
+          onChanged: (value) {
+            setState(() => flag1 = value);
+          },
+        ),
+        CupertinoSwitch(
+          value: flag2,
+          activeColor: Colors.blue,
+          onChanged: (value) {
+            setState(() => flag2 = value);
+          },
+        )
       ],
     );
   }
