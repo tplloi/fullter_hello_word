@@ -17,6 +17,10 @@ void main() {
               SizedBox(
                 height: 50,
               ),
+              CupertinoAlertDialogWidget(),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
@@ -46,6 +50,49 @@ class CupertinoActivityIndicatorWidget extends StatelessWidget {
           animating: false,
           radius: 30.0,
         )
+      ],
+    );
+  }
+}
+
+class CupertinoAlertDialogWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CupertinoButton(
+          color: Colors.blue,
+          pressedOpacity: 0.6,
+          child: Text('Show AlertDialog'),
+          onPressed: () {
+            showCupertinoDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return CupertinoAlertDialog(
+                  title: Text('Title'),
+                  content: Text('Content'),
+                  actions: <Widget>[
+                    CupertinoDialogAction(
+                      child: Text('OK'),
+                      isDestructiveAction: true,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    CupertinoDialogAction(
+                      child: Text('Cancel'),
+                      isDefaultAction: true,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    )
+                  ],
+                );
+              },
+            );
+          },
+        ),
       ],
     );
   }
