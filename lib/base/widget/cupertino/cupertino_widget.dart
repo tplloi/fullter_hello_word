@@ -29,6 +29,10 @@ void main() {
               SizedBox(
                 height: 50,
               ),
+              CupertinoDialogActionWidget(),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
@@ -161,6 +165,53 @@ class _CupertinoContextMenuWidgetState
               ),
             ],
           ),
+        ),
+      ],
+    );
+  }
+}
+
+class CupertinoDialogActionWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CupertinoButton(
+          color: Colors.blue,
+          child: Text('Show CupertinoDialogActionWidget'),
+          onPressed: () {
+            showCupertinoDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return CupertinoAlertDialog(
+                  title: Text('Title'),
+                  content: Text('Content'),
+                  actions: <Widget>[
+                    CupertinoDialogAction(
+                      child: Text('Item1'),
+                      isDestructiveAction: true,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    CupertinoDialogAction(
+                      child: Text('Item2'),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    CupertinoDialogAction(
+                      child: Text('Item3'),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ],
+                );
+              },
+            );
+          },
         ),
       ],
     );
