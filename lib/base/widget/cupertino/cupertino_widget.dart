@@ -21,6 +21,14 @@ void main() {
               SizedBox(
                 height: 50,
               ),
+              CupertinoButtonWidget(),
+              SizedBox(
+                height: 50,
+              ),
+              CupertinoContextMenuWidget(),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
@@ -92,6 +100,67 @@ class CupertinoAlertDialogWidget extends StatelessWidget {
               },
             );
           },
+        ),
+      ],
+    );
+  }
+}
+
+class CupertinoButtonWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        CupertinoButton(
+          child: Text('CupertinoButton'),
+          onPressed: () {},
+        ),
+        SizedBox(height: 5),
+        CupertinoButton.filled(
+          child: Text('CupertinoButton'),
+          onPressed: () {},
+        ),
+      ],
+    );
+  }
+}
+
+class CupertinoContextMenuWidget extends StatefulWidget {
+  @override
+  _CupertinoContextMenuWidgetState createState() =>
+      _CupertinoContextMenuWidgetState();
+}
+
+class _CupertinoContextMenuWidgetState
+    extends State<CupertinoContextMenuWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 100,
+          height: 100,
+          child: CupertinoContextMenu(
+            child: Container(
+              child: Image.asset('assets/images/iv.jpg'),
+            ),
+            actions: <Widget>[
+              CupertinoContextMenuAction(
+                child: const Text('Action one'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              CupertinoContextMenuAction(
+                child: const Text('Action two'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
         ),
       ],
     );
