@@ -21,7 +21,7 @@ class MyHome extends StatelessWidget {
       // AppBar
       appBar: AppBar(
         // AppBar Title
-        title: Text("ExpansionPanelWidget"),
+        title: Text("CardWidget"),
       ),
       body: SingleChildScrollView(
         child: Container(
