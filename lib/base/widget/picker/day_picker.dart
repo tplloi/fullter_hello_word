@@ -19,7 +19,7 @@ class MyHome extends StatelessWidget {
       // AppBar
       appBar: AppBar(
         // AppBar Title
-        title: Text("Checkbox"),
+        title: Text("DayPickerWidget"),
       ),
       body: Container(
         // Another way to set the background color
