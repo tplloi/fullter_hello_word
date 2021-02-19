@@ -12,6 +12,7 @@ import 'animated_modal_barrier.dart';
 import 'animated_opacity.dart';
 import 'animated_padding.dart';
 import 'animated_physical_model.dart';
+import 'animated_positioned.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -131,6 +132,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedPhysicalModelScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedPositionedScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedPositionedScreen()),
                 )
               },
             ),
