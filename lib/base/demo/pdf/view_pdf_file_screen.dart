@@ -1,18 +1,18 @@
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/const/constants.dart';
-import 'package:hello_word/base/demo/pdf/view_pdf.dart';
+import 'package:hello_word/base/demo/pdf/pdf_viewer_screen.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 class ViewPDFFileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'View PDF File',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
+    return Scaffold(
+        appBar: UIUtils().getAppBar(
+          "View PDF File",
+          () => Navigator.pop(context),
         ),
-        home: HomePage());
+        body: HomePage());
   }
 }
 
@@ -28,9 +28,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("View PDF File"),
-      ),
       body: Container(
         child: Center(
           child: isLoading
@@ -70,7 +67,7 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => ViewPDF(pdfDocument: pdfDocument),
+        builder: (_) => PDFViewerScreen(pdfDocument: pdfDocument),
       ),
     );
   }
@@ -87,7 +84,7 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => ViewPDF(pdfDocument: pdfDocument),
+        builder: (_) => PDFViewerScreen(pdfDocument: pdfDocument),
       ),
     );
   }
