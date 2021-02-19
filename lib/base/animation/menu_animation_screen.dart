@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'animated_align.dart';
 import 'file:///D:/Project/Flutter/fullter_hello_word/lib/base/syntax/syntax_screen.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
@@ -19,10 +20,11 @@ class MenuAnimationScreen extends StatelessWidget {
             UIUtils().getRaisedButton(
               "Align",
               () => {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => SyntaxScreen()),
-                // )
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedAlignScreen()),
+                )
               },
             ),
           ],
