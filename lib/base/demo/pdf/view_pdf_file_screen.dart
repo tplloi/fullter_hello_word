@@ -1,13 +1,9 @@
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/demo/pdf/Constants.dart';
+import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/demo/pdf/view_pdf.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class ViewPDFFileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

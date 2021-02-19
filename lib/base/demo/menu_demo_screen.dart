@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/demo/pdf/view_pdf_file_screen.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 class MenuDemoScreen extends StatelessWidget {
@@ -17,11 +18,10 @@ class MenuDemoScreen extends StatelessWidget {
             UIUtils().getRaisedButton(
               "PDF",
               () => {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //       builder: (context) => AnimatedAlignScreen()),
-                // )
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ViewPDFFileScreen()),
+                )
               },
             ),
           ],
