@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/utils.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 void main() {
   runApp(
@@ -26,7 +26,7 @@ void main() {
           // Set background
           decoration: BoxDecoration(
             // Add Gradient
-            gradient: Utils().getCustomGradient(),
+            gradient: UIUtils().getCustomGradient(),
           ),
         ),
       ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Utils {
+class UIUtils {
   RaisedButton getRaisedButton(String text, Function() func) {
     return RaisedButton(
       child: new Text(
         text,
-        style: Utils().getStyleButton(),
+        style: UIUtils().getStyleButton(),
       ),
       onPressed: () => {
         func.call(),

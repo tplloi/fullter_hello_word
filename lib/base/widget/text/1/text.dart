@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/utils.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 void main() {
   runApp(MyApp());
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
   Widget text3() {
     return Text(
       'Hello World!\nLoitp1\nLoitp2\nLoitp3',
-      style: Utils().getCustomFontTextStyle(),
+      style: UIUtils().getCustomFontTextStyle(),
       maxLines: 5,
       textAlign: TextAlign.end,
       textDirection: TextDirection.ltr,

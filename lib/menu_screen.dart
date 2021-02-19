@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hello_word/base/util/utils.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 void main() {
   runApp(MenuScreen());
@@ -22,21 +22,21 @@ class MenuScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Utils().getRaisedButton(
+            UIUtils().getRaisedButton(
               "Animation",
               () => {
                 //TODO
                 print("Click"),
               },
             ),
-            Utils().getRaisedButton(
+            UIUtils().getRaisedButton(
               "Demo",
               () => {
                 //TODO
                 print("Click"),
               },
             ),
-            Utils().getRaisedButton(
+            UIUtils().getRaisedButton(
               "Widget",
               () => {
                 //TODO
