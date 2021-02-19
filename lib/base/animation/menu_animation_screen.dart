@@ -11,6 +11,7 @@ import 'animated_list.dart';
 import 'animated_modal_barrier.dart';
 import 'animated_opacity.dart';
 import 'animated_padding.dart';
+import 'animated_physical_model.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -77,27 +78,25 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedIconScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedIconScreen()),
+                  MaterialPageRoute(builder: (context) => AnimatedIconScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "AnimatedListScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedListScreen()),
+                  MaterialPageRoute(builder: (context) => AnimatedListScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "AnimatedModalBarrierScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -107,7 +106,7 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedOpacityScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -117,11 +116,21 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedPaddingScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedPaddingScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedPhysicalModelScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedPhysicalModelScreen()),
                 )
               },
             ),
