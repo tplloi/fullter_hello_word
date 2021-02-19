@@ -17,6 +17,7 @@ import 'animated_size.dart';
 import 'animated_switcher.dart';
 import 'animated_theme.dart';
 import 'decorated_box_transition.dart';
+import 'fade_in_image.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -27,7 +28,7 @@ class MenuAnimationScreen extends StatelessWidget {
           () => {
                 Navigator.pop(context),
               }),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -185,6 +186,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => DecoratedBoxTransitionScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "FadeInImageScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FadeInImageScreen()),
                 )
               },
             ),
