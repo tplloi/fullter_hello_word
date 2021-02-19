@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: MenuScreen(),
-  ));
+  runApp(MenuScreen());
 }
 
 class MenuScreen extends StatelessWidget {
@@ -11,7 +10,12 @@ class MenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Menu"),
+        title: Text("Main Menu"),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => SystemNavigator.pop(),
+        ),
       ),
       body: Center(
         child: Image.network(

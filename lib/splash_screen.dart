@@ -32,7 +32,9 @@ class SplashScreenState extends State<SplashScreen> {
   route() {
     print("delay finish");
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MenuScreen()));
+      context,
+      MaterialPageRoute(builder: (context) => MenuScreen()),
+    );
   }
 
   @override
