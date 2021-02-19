@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/animation/positioned_transition.dart';
-import 'package:hello_word/base/animation/rotation_transition.dart';
+import 'package:hello_word/base/animation/positioned_transition_screen.dart';
+import 'package:hello_word/base/animation/rotation_transition_screen.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'animated_align.dart';
-import 'animated_builder.dart';
-import 'animated_container.dart';
-import 'animated_cross_fade.dart';
-import 'animated_default_text_style.dart';
-import 'animated_icon.dart';
-import 'animated_list.dart';
-import 'animated_modal_barrier.dart';
-import 'animated_opacity.dart';
-import 'animated_padding.dart';
-import 'animated_physical_model.dart';
-import 'animated_positioned.dart';
-import 'animated_size.dart';
-import 'animated_switcher.dart';
-import 'animated_theme.dart';
-import 'decorated_box_transition.dart';
-import 'fade_in_image.dart';
-import 'fade_transition.dart';
+import 'animated_align_screen.dart';
+import 'animated_builder_screen.dart';
+import 'animated_container_screen.dart';
+import 'animated_cross_fade_screen.dart';
+import 'animated_default_text_style_screen.dart';
+import 'animated_icon_screen.dart';
+import 'animated_list_screen.dart';
+import 'animated_modal_barrier_screen.dart';
+import 'animated_opacity_screen.dart';
+import 'animated_padding_screen.dart';
+import 'animated_physical_model_screen.dart';
+import 'animated_positioned_screen.dart';
+import 'animated_size_screen.dart';
+import 'animated_switcher_screen.dart';
+import 'animated_theme_screen.dart';
+import 'decorated_box_transition_screen.dart';
+import 'fade_in_image_screen.dart';
+import 'fade_transition_screen.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
