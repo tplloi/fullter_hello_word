@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/animation/positioned_transition.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'animated_align.dart';
@@ -192,21 +193,30 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "FadeInImageScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => FadeInImageScreen()),
+                  MaterialPageRoute(builder: (context) => FadeInImageScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "FadeTransitionScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => FadeTransitionScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "PositionedTransitionScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PositionedTransitionScreen()),
                 )
               },
             ),
