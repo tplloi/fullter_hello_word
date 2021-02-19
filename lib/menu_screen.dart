@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'base/animation/menu_animation_screen.dart';
 import 'file:///D:/Project/Flutter/fullter_hello_word/lib/base/syntax/syntax_screen.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -19,8 +20,11 @@ class MenuScreen extends StatelessWidget {
             UIUtils().getRaisedButton(
               "Animation",
               () => {
-                //TODO
-                print("Click"),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MenuAnimationScreen()),
+                )
               },
             ),
             UIUtils().getRaisedButton(
