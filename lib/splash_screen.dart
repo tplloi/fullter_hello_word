@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/menu_screen.dart';
 
 void main() {
@@ -46,7 +47,7 @@ class SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             Container(
               child: Image.network(
-                "https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png",
+                Constants.flutterIcon,
                 width: 200,
                 height: 200,
               ),
