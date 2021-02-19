@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/animation/positioned_transition.dart';
+import 'package:hello_word/base/animation/rotation_transition.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'animated_align.dart';
@@ -217,6 +218,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => PositionedTransitionScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "RotationTransitionScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => RotationTransitionScreen()),
                 )
               },
             ),
