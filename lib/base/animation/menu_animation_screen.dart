@@ -7,6 +7,7 @@ import 'animated_container.dart';
 import 'animated_cross_fade.dart';
 import 'animated_default_text_style.dart';
 import 'animated_icon.dart';
+import 'animated_list.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -78,6 +79,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedIconScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedListScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedListScreen()),
                 )
               },
             ),
