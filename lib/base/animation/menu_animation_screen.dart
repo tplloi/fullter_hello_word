@@ -10,6 +10,7 @@ import 'animated_icon.dart';
 import 'animated_list.dart';
 import 'animated_modal_barrier.dart';
 import 'animated_opacity.dart';
+import 'animated_padding.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -111,6 +112,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedOpacityScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedPaddingScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedPaddingScreen()),
                 )
               },
             ),
