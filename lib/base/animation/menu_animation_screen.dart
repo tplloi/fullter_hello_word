@@ -16,6 +16,7 @@ import 'animated_positioned.dart';
 import 'animated_size.dart';
 import 'animated_switcher.dart';
 import 'animated_theme.dart';
+import 'decorated_box_transition.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -140,7 +141,7 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedPositionedScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -150,17 +151,16 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedSizeScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedSizeScreen()),
+                  MaterialPageRoute(builder: (context) => AnimatedSizeScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "AnimatedSwitcherScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -170,11 +170,21 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedThemeScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedThemeScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "DecoratedBoxTransitionScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DecoratedBoxTransitionScreen()),
                 )
               },
             ),
