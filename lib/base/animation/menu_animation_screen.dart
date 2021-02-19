@@ -3,6 +3,7 @@ import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'animated_align.dart';
 import 'animated_builder.dart';
+import 'animated_container.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -34,6 +35,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedBuilderScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedContainerScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedContainerScreen()),
                 )
               },
             ),

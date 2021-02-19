@@ -1,23 +1,16 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AnimatedContainerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: AnimatedContainerWidget(),
-        ),
+    return Scaffold(
+      appBar: UIUtils()
+          .getAppBar("AnimatedContainerScreen", () => Navigator.pop(context)),
+      body: Center(
+        child: AnimatedContainerWidget(),
       ),
     );
   }
