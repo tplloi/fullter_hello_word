@@ -14,6 +14,7 @@ import 'animated_padding.dart';
 import 'animated_physical_model.dart';
 import 'animated_positioned.dart';
 import 'animated_size.dart';
+import 'animated_switcher.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -153,6 +154,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedSizeScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedSwitcherScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedSwitcherScreen()),
                 )
               },
             ),
