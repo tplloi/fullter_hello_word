@@ -1,22 +1,14 @@
-
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AnimatedCrossFadeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: AnimatedCrossFadeWidget(),
-        ),
+    return Scaffold(
+      appBar: UIUtils()
+          .getAppBar("AnimatedCrossFadeScreen", () => Navigator.pop(context)),
+      body: Center(
+        child: AnimatedCrossFadeWidget(),
       ),
     );
   }

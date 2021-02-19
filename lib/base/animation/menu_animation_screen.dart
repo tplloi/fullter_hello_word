@@ -4,6 +4,7 @@ import 'package:hello_word/base/util/ui_utils.dart';
 import 'animated_align.dart';
 import 'animated_builder.dart';
 import 'animated_container.dart';
+import 'animated_cross_fade.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -45,6 +46,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedContainerScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedCrossFadeScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedCrossFadeScreen()),
                 )
               },
             ),
