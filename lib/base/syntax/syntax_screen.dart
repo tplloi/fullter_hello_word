@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'base/model/people.dart';
+import '../model/people.dart';
 
 class SyntaxScreen extends StatelessWidget {
   void test() {
@@ -55,10 +55,13 @@ class SyntaxScreen extends StatelessWidget {
     test();
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Syntax",
+          "Syntax1",
           () => {
                 Navigator.pop(context),
               }),
+      body: Center(
+        child: UIUtils().getText("Check logcat"),
+      ),
     );
   }
 }

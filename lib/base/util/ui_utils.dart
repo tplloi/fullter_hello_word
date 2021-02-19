@@ -16,7 +16,7 @@ class UIUtils {
     return RaisedButton(
       child: new Text(
         text,
-        style: UIUtils().getStyleButton(),
+        style: UIUtils().getStyleText(),
       ),
       onPressed: () => {
         func.call(),
@@ -24,7 +24,14 @@ class UIUtils {
     );
   }
 
-  TextStyle getStyleButton() {
+  Text getText(String text) {
+    return Text(
+      text,
+      style: UIUtils().getStyleText(),
+    );
+  }
+
+  TextStyle getStyleText() {
     return TextStyle(
       color: Colors.black,
       fontSize: 16.0,

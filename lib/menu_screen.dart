@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
-import 'package:hello_word/syntax.dart';
+import 'file:///D:/Project/Flutter/fullter_hello_word/lib/base/syntax/syntax_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   @override
@@ -17,15 +17,6 @@ class MenuScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "Syntax",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SyntaxScreen()),
-                )
-              },
-            ),
-            UIUtils().getRaisedButton(
               "Animation",
               () => {
                 //TODO
@@ -37,6 +28,15 @@ class MenuScreen extends StatelessWidget {
               () => {
                 //TODO
                 print("Click"),
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "Syntax",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SyntaxScreen()),
+                )
               },
             ),
             UIUtils().getRaisedButton(
