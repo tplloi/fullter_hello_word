@@ -5,6 +5,7 @@ import 'animated_align.dart';
 import 'animated_builder.dart';
 import 'animated_container.dart';
 import 'animated_cross_fade.dart';
+import 'animated_default_text_style.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -51,11 +52,21 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "AnimatedCrossFadeScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedCrossFadeScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedDefaultTextStyleScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedDefaultTextStyleScreen()),
                 )
               },
             ),

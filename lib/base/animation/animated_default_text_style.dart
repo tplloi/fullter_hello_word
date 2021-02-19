@@ -1,22 +1,14 @@
-
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AnimatedDefaultTextStyleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: AnimatedDefaultTextStyleWidget(),
-        ),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+          "AnimatedDefaultTextStyleScreen", () => Navigator.pop(context)),
+      body: Center(
+        child: AnimatedDefaultTextStyleWidget(),
       ),
     );
   }
@@ -30,7 +22,6 @@ class AnimatedDefaultTextStyleWidget extends StatefulWidget {
 
 class _AnimatedDefaultTextStyleWidgetState
     extends State<AnimatedDefaultTextStyleWidget> {
-
   bool _first = true;
   double _fontSize = 60;
   Color _color = Colors.blue;
