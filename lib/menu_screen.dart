@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MenuWidget());
+  runApp(MaterialApp(
+    home: MenuScreen(),
+  ));
 }
 
-class MenuWidget extends StatelessWidget {
+class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

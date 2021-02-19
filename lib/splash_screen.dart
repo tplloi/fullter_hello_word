@@ -1,20 +1,22 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'menu.dart';
+import 'package:flutter/material.dart';
+import 'package:hello_word/menu_screen.dart';
 
 void main() {
-  runApp(SplashWidget());
+  runApp(MaterialApp(
+    home: SplashScreen(),
+  ));
 }
 
-class SplashWidget extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return SplashState();
+    return SplashScreenState();
   }
 }
 
-class SplashState extends State<SplashWidget> {
+class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -28,8 +30,9 @@ class SplashState extends State<SplashWidget> {
   }
 
   route() {
+    print("delay finish");
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MenuWidget()));
+        context, MaterialPageRoute(builder: (context) => MenuScreen()));
   }
 
   @override
