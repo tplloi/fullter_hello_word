@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hello_word/base/util/utils.dart';
 
 void main() {
   runApp(MenuScreen());
@@ -18,10 +19,19 @@ class MenuScreen extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Image.network(
-          'https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png',
-          width: 200,
-          height: 200,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            RaisedButton(
+              child: new Text(
+                'Animation',
+                style: Utils().getStyleButton(),
+              ),
+              onPressed: () => {
+                //do something
+              },
+            ),
+          ],
         ),
       ),
     );
