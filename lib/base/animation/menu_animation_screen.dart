@@ -18,6 +18,7 @@ import 'animated_switcher.dart';
 import 'animated_theme.dart';
 import 'decorated_box_transition.dart';
 import 'fade_in_image.dart';
+import 'fade_transition.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -196,6 +197,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => FadeInImageScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "FadeTransitionScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FadeTransitionScreen()),
                 )
               },
             ),
