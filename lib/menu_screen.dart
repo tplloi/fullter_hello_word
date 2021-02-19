@@ -22,13 +22,10 @@ class MenuScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            RaisedButton(
-              child: new Text(
-                'Animation',
-                style: Utils().getStyleButton(),
-              ),
-              onPressed: () => {
-                //do something
+            Utils().getRaisedButton(
+              "Animation",
+              () => {
+                print("Click"),
               },
             ),
           ],
