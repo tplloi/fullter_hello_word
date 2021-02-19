@@ -1,22 +1,16 @@
-
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AnimatedIconScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: AnimatedIconWidget(),
-        ),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "AnimatedIconScreen",
+        () => Navigator.pop(context),
+      ),
+      body: Center(
+        child: AnimatedIconWidget(),
       ),
     );
   }
@@ -97,7 +91,7 @@ class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
                 setState(() {
                   isSlow = value;
                   controller.duration =
-                  isSlow ? Duration(seconds: 6) : Duration(seconds: 1);
+                      isSlow ? Duration(seconds: 6) : Duration(seconds: 1);
                 });
               },
             ),
