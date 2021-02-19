@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
 class UIUtils {
+  AppBar getAppBar(String text, Function() onPressed) {
+    return AppBar(
+      title: Text(text),
+      centerTitle: true,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back, color: Colors.white),
+        onPressed: () => onPressed.call(),
+      ),
+    );
+  }
+
   RaisedButton getRaisedButton(String text, Function() func) {
     return RaisedButton(
       child: new Text(

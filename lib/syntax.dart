@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'base/model/people.dart';
 
@@ -52,18 +53,12 @@ class SyntaxScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     test();
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text(
-            'Hello World, Loitp',
-          ),
-        ),
-      ),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+          "Syntax",
+          () => {
+                Navigator.pop(context),
+              }),
     );
   }
 }

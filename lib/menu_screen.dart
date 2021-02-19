@@ -7,14 +7,11 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Main Menu"),
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => SystemNavigator.pop(),
-        ),
-      ),
+      appBar: UIUtils().getAppBar(
+          "Main menu",
+          () => {
+                SystemNavigator.pop(),
+              }),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
