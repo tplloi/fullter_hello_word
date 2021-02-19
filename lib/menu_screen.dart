@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
-
-void main() {
-  runApp(MenuScreen());
-}
+import 'package:hello_word/syntax.dart';
 
 class MenuScreen extends StatelessWidget {
   @override
@@ -22,6 +19,15 @@ class MenuScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getRaisedButton(
+              "Syntax",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SyntaxScreen()),
+                )
+              },
+            ),
             UIUtils().getRaisedButton(
               "Animation",
               () => {
