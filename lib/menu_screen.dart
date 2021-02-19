@@ -25,6 +25,21 @@ class MenuScreen extends StatelessWidget {
             Utils().getRaisedButton(
               "Animation",
               () => {
+                //TODO
+                print("Click"),
+              },
+            ),
+            Utils().getRaisedButton(
+              "Demo",
+              () => {
+                //TODO
+                print("Click"),
+              },
+            ),
+            Utils().getRaisedButton(
+              "Widget",
+              () => {
+                //TODO
                 print("Click"),
               },
             ),
