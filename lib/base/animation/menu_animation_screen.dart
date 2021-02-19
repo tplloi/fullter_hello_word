@@ -13,6 +13,7 @@ import 'animated_opacity.dart';
 import 'animated_padding.dart';
 import 'animated_physical_model.dart';
 import 'animated_positioned.dart';
+import 'animated_size.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -142,6 +143,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedPositionedScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedSizeScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedSizeScreen()),
                 )
               },
             ),

@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AnimatedSizeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: AnimatedSizeWidget(),
-        ),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "AnimatedSizeScreen",
+        () => Navigator.pop(context),
+      ),
+      body: Center(
+        child: AnimatedSizeWidget(),
       ),
     );
   }
