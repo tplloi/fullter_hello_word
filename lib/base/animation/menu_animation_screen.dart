@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+
 import 'animated_align.dart';
-import 'file:///D:/Project/Flutter/fullter_hello_word/lib/base/syntax/syntax_screen.dart';
+import 'animated_builder.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -18,12 +18,22 @@ class MenuAnimationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "Align",
+              "AnimatedAlignScreen",
               () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedAlignScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedBuilder",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedBuilderScreen()),
                 )
               },
             ),
