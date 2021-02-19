@@ -1,20 +1,9 @@
 import 'package:flutter/material.dart';
 
-class People {
-  String name = "";
-
-  People(String name) {
-    this.name = name;
-  }
-
-  void showData() {
-    print("showData " + this.name);
-  }
-}
+import 'base/model/people.dart';
 
 class SyntaxScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
+  void test() {
     print("Hello MyApp");
     print(1 / 2);
 
@@ -58,7 +47,11 @@ class SyntaxScreen extends StatelessWidget {
     print("--------------------------------------------");
     People p = People("Loitp123456");
     p.showData();
+  }
 
+  @override
+  Widget build(BuildContext context) {
+    test();
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
