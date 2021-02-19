@@ -8,6 +8,7 @@ import 'animated_cross_fade.dart';
 import 'animated_default_text_style.dart';
 import 'animated_icon.dart';
 import 'animated_list.dart';
+import 'animated_modal_barrier.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -89,6 +90,16 @@ class MenuAnimationScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => AnimatedListScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "AnimatedModalBarrierScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AnimatedModalBarrierScreen()),
                 )
               },
             ),
