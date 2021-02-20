@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'inherited_model.dart';
+import 'inherited_widget.dart';
 
 class MenuInheritedScreen extends StatelessWidget {
   @override
@@ -23,6 +24,16 @@ class MenuInheritedScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => InheritedModelScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "InheritedWidgetScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => InheritedWidgetScreen()),
                 )
               },
             ),

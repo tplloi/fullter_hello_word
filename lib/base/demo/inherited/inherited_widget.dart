@@ -1,42 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-//TODO
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-        appBar: AppBar(
-          title: Text('Scaffold'),
-        ),
-        body: Center(
-          child: InheritedWidgetWidget(),
-        )),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class InheritedWidgetWidget extends StatefulWidget {
+class InheritedWidgetScreen extends StatefulWidget {
   @override
-  _InheritedWidgetWidgetState createState() => _InheritedWidgetWidgetState();
+  _InheritedWidgetScreenState createState() => _InheritedWidgetScreenState();
 }
 
-class _InheritedWidgetWidgetState extends State<InheritedWidgetWidget> {
+class _InheritedWidgetScreenState extends State<InheritedWidgetScreen> {
   int count = 0;
 
   void _incrementCounter() => setState(() => count++);
 
   @override
   Widget build(BuildContext context) {
-    return Root(
-      state: this,
-      increment: _incrementCounter,
-      child: Child(),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "InheritedWidgetScreen",
+        () => Navigator.pop(context),
+      ),
+      body: Root(
+        state: this,
+        increment: _incrementCounter,
+        child: Child(),
+      ),
     );
   }
 }
@@ -50,10 +36,8 @@ class Child extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            'InheritedWidget itself does not have the function of writing data. It needs to combine State to obtain the ability to modify data.',
-            style: TextStyle(color: Colors.black38),
-          ),
+          child: UIUtils().getText(
+              "InheritedWidget itself does not have the function of writing data. It needs to combine State to obtain the ability to modify data."),
         ),
         Text(
           'show ${root.state.count}',
@@ -63,7 +47,7 @@ class Child extends StatelessWidget {
           onPressed: () {
             root.increment();
           },
-          child: Text('Add'),
+          child: UIUtils().getText("Add"),
         ),
       ],
     );
@@ -75,7 +59,7 @@ class Root extends InheritedWidget {
   static Root of(BuildContext context) =>
       context.inheritFromWidgetOfExactType(Root) as Root;
 
-  final _InheritedWidgetWidgetState state;
+  final _InheritedWidgetScreenState state;
 
   final increment;
 
