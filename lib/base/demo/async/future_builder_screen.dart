@@ -37,7 +37,7 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
                   switch (snapshot.connectionState) {
                     case ConnectionState.none:
                       print("ConnectionState.none");
-                      return Text('No FutureBuilder attached');
+                      return UIUtils().getText("No FutureBuilder attached");
                       break;
                     case ConnectionState.waiting:
                       print("ConnectionState.waiting");
@@ -50,9 +50,9 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
                     case ConnectionState.done:
                       print("ConnectionState.done");
                       if (snapshot.hasError) {
-                        return Text(snapshot.error.toString());
+                        return UIUtils().getText(snapshot.error.toString());
                       } else {
-                        return Text(snapshot.data.toString());
+                        return UIUtils().getText(snapshot.data.toString());
                       }
                       break;
                     default:

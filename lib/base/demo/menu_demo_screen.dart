@@ -5,7 +5,7 @@ import 'package:hello_word/base/demo/theme/theme.dart';
 import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'async/future_builder_screen.dart';
+import 'async/menu_async_screen.dart';
 import 'counter/counter.dart';
 import 'load_local_json/load_local_json.dart';
 
@@ -23,17 +23,17 @@ class MenuDemoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "FutureBuilderScreen",
-                  () => {
+              "Async",
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FutureBuilderScreen()),
+                  MaterialPageRoute(builder: (context) => MenuAsyncScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "Counter",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CounterScreen()),
@@ -42,10 +42,11 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "Load Local Json",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoadLocalJsonScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => LoadLocalJsonScreen()),
                 )
               },
             ),
@@ -69,7 +70,7 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "Theme",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ThemeScreen()),
