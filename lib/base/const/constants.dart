@@ -5,6 +5,9 @@ class Constants {
   static final String flutterIcon =
       "https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png";
 
+  static final String dummy_image_link =
+      "https://cdn.pixabay.com/photo/2017/09/14/22/42/milky-way-2750627__340.jpg";
+
   static final double margin_padding_small = 5.0;
   static final double margin_padding_medium = 10.0;
   static final double margin_padding_large = 15.0;
