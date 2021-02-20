@@ -1,26 +1,23 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
-
-class MyApp extends StatefulWidget {
+class LoadLocalJsonScreen extends StatefulWidget {
   @override
-  MyAppState createState() => MyAppState();
+  LoadLocalJsonScreenState createState() => LoadLocalJsonScreenState();
 }
 
-class MyAppState extends State<MyApp> {
+class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
   List data;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Load local JSON file"),
+        appBar: UIUtils().getAppBar(
+          "Load local JSON file",
+          () => Navigator.pop(context),
         ),
         body: Container(
           child: Center(
@@ -37,15 +34,18 @@ class MyAppState extends State<MyApp> {
                     // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: EdgeInsets.all(10),
+                        padding:
+                            EdgeInsets.all(Constants.margin_padding_medium),
                         child: Card(
-                          elevation: 10,
+                          elevation: Constants.elevation_small,
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
+                            borderRadius:
+                                BorderRadius.circular(Constants.radius_medium),
                           ),
                           child: Container(
-                            margin: EdgeInsets.all(10),
+                            margin:
+                                EdgeInsets.all(Constants.margin_padding_medium),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: <Widget>[

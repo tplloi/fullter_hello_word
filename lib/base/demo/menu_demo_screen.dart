@@ -5,6 +5,7 @@ import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'counter/counter.dart';
+import 'load_local_json/load_local_json.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override
@@ -25,6 +26,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CounterScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "Load Local Json",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoadLocalJsonScreen()),
                 )
               },
             ),
