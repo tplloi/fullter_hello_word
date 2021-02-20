@@ -20,74 +20,76 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
         "StreamBuilderScreen",
         () => Navigator.pop(context),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            StreamBuilder(
-              stream: _isButtonClicked ? counterStream : null,
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return Container(
-                      //margin: EdgeInsets.all(12),
-                      //child: CircularProgressIndicator(
-                      //valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),
-                      );
-                }
-                return Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(24),
-                      height: snapshot.data,
-                      width: snapshot.data,
-                      color: Colors.amber[500],
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(24),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            margin: EdgeInsets.all(6),
-                            child: Text(
-                              "Height: ${snapshot.data}",
-                              textAlign: TextAlign.center,
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 18),
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.all(6),
-                            child: Text(
-                              "Width: ${snapshot.data}",
-                              textAlign: TextAlign.center,
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 18),
-                            ),
-                          )
-                        ],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              StreamBuilder(
+                stream: _isButtonClicked ? counterStream : null,
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return Container(
+                        //margin: EdgeInsets.all(12),
+                        //child: CircularProgressIndicator(
+                        //valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),
+                        );
+                  }
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.all(24),
+                        height: snapshot.data,
+                        width: snapshot.data,
+                        color: Colors.amber[500],
                       ),
-                    ),
-                  ],
-                );
-              },
-            ),
-            RaisedButton(
-              onPressed: _isButtonClicked == false
-                  ? () {
-                      ///You need to reset UI by calling setState.
-                      setState(() {
-                        _isButtonClicked == false
-                            ? _isButtonClicked = true
-                            : _isButtonClicked = false;
-                      });
-                    }
-                  : null,
-              child: UIUtils().getText("Start Stream"),
-            ),
-          ],
+                      Container(
+                        margin: EdgeInsets.all(24),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.all(6),
+                              child: Text(
+                                "Height: ${snapshot.data}",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(6),
+                              child: Text(
+                                "Width: ${snapshot.data}",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+              RaisedButton(
+                onPressed: _isButtonClicked == false
+                    ? () {
+                        ///You need to reset UI by calling setState.
+                        setState(() {
+                          _isButtonClicked == false
+                              ? _isButtonClicked = true
+                              : _isButtonClicked = false;
+                        });
+                      }
+                    : null,
+                child: UIUtils().getText("Start Stream"),
+              ),
+            ],
+          ),
         ),
       ),
     );
