@@ -5,6 +5,7 @@ import 'package:hello_word/base/demo/theme/theme.dart';
 import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
+import 'async/future_builder_screen.dart';
 import 'counter/counter.dart';
 import 'load_local_json/load_local_json.dart';
 
@@ -21,6 +22,15 @@ class MenuDemoScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getRaisedButton(
+              "FutureBuilderScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FutureBuilderScreen()),
+                )
+              },
+            ),
             UIUtils().getRaisedButton(
               "Counter",
                   () => {
