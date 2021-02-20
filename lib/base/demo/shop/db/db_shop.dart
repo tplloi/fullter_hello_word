@@ -1,12 +1,17 @@
 import 'package:hello_word/base/model/product.dart';
 
-class Db {
+class DbShop {
   static List<Product> getListProduct() {
     List<Product> listProduct = <Product>[];
     for (int i = 0; i < 10; i++) {
       String img = i.isOdd ? ("iv.png") : ("iv.jpg");
-      Product p = Product("Name " + i.toString(),
-          "Description loitp " + i.toString(), i * 1000, img, 0);
+      Product p = Product(
+        "Name " + i.toString(),
+        "Description loitp " + i.toString(),
+        i * 1000,
+        img,
+        0,
+      );
       listProduct.add(p);
     }
 
