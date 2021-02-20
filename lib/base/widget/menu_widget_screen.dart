@@ -17,13 +17,14 @@ class MenuWidgetScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            //TODO
             UIUtils().getRaisedButton(
               "A",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ViewPDFFileScreen()),
-                )
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => ViewPDFFileScreen()),
+                // )
               },
             ),
           ],

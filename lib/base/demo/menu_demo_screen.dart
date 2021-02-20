@@ -4,6 +4,8 @@ import 'package:hello_word/base/demo/shop/demo_shop.dart';
 import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
+import 'counter/counter.dart';
+
 class MenuDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,15 @@ class MenuDemoScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getRaisedButton(
+              "Counter",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CounterScreen()),
+                )
+              },
+            ),
             UIUtils().getRaisedButton(
               "PDF",
               () => {
