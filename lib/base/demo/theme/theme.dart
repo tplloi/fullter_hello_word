@@ -1,30 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class ThemeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("Using Theme"),
+      appBar: UIUtils().getAppBar(
+        "ThemeScreen",
+        () => Navigator.pop(context),
       ),
       body: Container(
-        // Another way to set the background color
         decoration: BoxDecoration(color: Colors.black87),
         child: Center(
           child: Container(
@@ -38,7 +23,6 @@ class MyHome extends StatelessWidget {
           ),
         ),
       ),
-
       floatingActionButton: Theme(
         // override the accent color of theme for this base.widget only
         data: Theme.of(context).copyWith(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/demo/pdf/view_pdf_file_screen.dart';
 import 'package:hello_word/base/demo/shop/demo_shop.dart';
+import 'package:hello_word/base/demo/theme/theme.dart';
 import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
@@ -53,6 +54,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ShopScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "Theme",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThemeScreen()),
                 )
               },
             ),

@@ -6,7 +6,13 @@ import 'package:hello_word/menu_screen.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: true,
     home: SplashScreen(),
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+      accentColor: Colors.blueAccent,
+      backgroundColor: Colors.white,
+    ),
   ));
 }
 
