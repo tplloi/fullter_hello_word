@@ -7,6 +7,7 @@ import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'async/menu_async_screen.dart';
 import 'counter/counter.dart';
+import 'inherited/menu_inherited_screen.dart';
 import 'load_local_json/load_local_json.dart';
 
 class MenuDemoScreen extends StatelessWidget {
@@ -37,6 +38,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CounterScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "Inherited",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuInheritedScreen()),
                 )
               },
             ),
