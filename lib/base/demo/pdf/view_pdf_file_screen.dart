@@ -67,7 +67,9 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => PDFViewerScreen(pdfDocument: pdfDocument),
+        builder: (_) => PDFViewerScreen(
+            pdfDocument: pdfDocument,
+            time: DateTime.now().millisecondsSinceEpoch),
       ),
     );
   }
@@ -84,7 +86,9 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => PDFViewerScreen(pdfDocument: pdfDocument),
+        builder: (_) => PDFViewerScreen(
+            pdfDocument: pdfDocument,
+            time: DateTime.now().millisecondsSinceEpoch),
       ),
     );
   }
