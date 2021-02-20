@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Tip Calculator',
-    home: TipCalculator(),
-  ));
-}
-
-class TipCalculator extends StatelessWidget {
+class TipCalculatorScreen extends StatelessWidget {
   double billAmount = 0.0;
   double tipPercentage = 0.0;
 
@@ -69,7 +63,10 @@ class TipCalculator extends StatelessWidget {
           calculateButton,
         ]));
 
-    AppBar appBar = AppBar(title: Text("Tip Calculator"));
+    AppBar appBar = UIUtils().getAppBar(
+      "Tip Calculator",
+      () => Navigator.pop(context),
+    );
 
     Scaffold scaffold = Scaffold(
       appBar: appBar,
