@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
+import 'inherited_model.dart';
+
 class MenuInheritedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,12 +17,13 @@ class MenuInheritedScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "Async",
+              "InheritedModelScreen",
               () => {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => MenuAsyncScreen()),
-                // )
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => InheritedModelScreen()),
+                )
               },
             ),
           ],

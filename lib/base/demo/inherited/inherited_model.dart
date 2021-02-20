@@ -1,32 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-//TODO
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-        appBar: AppBar(
-          title: Text('Scaffold'),
-        ),
-        body: Center(
-          child: InheritedModelWidget(),
-        )),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class InheritedModelWidget extends StatefulWidget {
+class InheritedModelScreen extends StatefulWidget {
   @override
-  _InheritedModelWidgetState createState() => _InheritedModelWidgetState();
+  _InheritedModelScreenState createState() => _InheritedModelScreenState();
 }
 
-class _InheritedModelWidgetState extends State<InheritedModelWidget> {
+class _InheritedModelScreenState extends State<InheritedModelScreen> {
   var inheritedRootModel;
 
   @override
@@ -49,17 +29,25 @@ class _InheritedModelWidgetState extends State<InheritedModelWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return InheritedRoot(
-      inheritedRootModel: inheritedRootModel,
-      add: add,
-      minus: minus,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Add(),
-          Show(),
-          Minus(),
-        ],
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "InheritedModelScreen",
+        () => Navigator.pop(context),
+      ),
+      body: Center(
+        child: InheritedRoot(
+          inheritedRootModel: inheritedRootModel,
+          add: add,
+          minus: minus,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              AddWidget(),
+              ShowWidget(),
+              MinusWidget(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -95,20 +83,20 @@ class InheritedRootModel {
   const InheritedRootModel(this.count);
 }
 
-class Add extends StatelessWidget {
+class AddWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final root = InheritedRoot.of(context);
     return Container(
       child: RaisedButton(
         onPressed: root.add,
-        child: Text('+'),
+        child: UIUtils().getText("+"),
       ),
     );
   }
 }
 
-class Minus extends StatelessWidget {
+class MinusWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final root = InheritedRoot.of(context);
@@ -116,19 +104,19 @@ class Minus extends StatelessWidget {
     return Container(
       child: RaisedButton(
         onPressed: root.minus,
-        child: Text('-'),
+        child: UIUtils().getText("-"),
       ),
     );
   }
 }
 
-class Show extends StatelessWidget {
+class ShowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final root = InheritedRoot.of(context);
 
     return Container(
-      child: Text('Show ${root.inheritedRootModel.count}'),
+      child: UIUtils().getText('Show ${root.inheritedRootModel.count}'),
     );
   }
 }
