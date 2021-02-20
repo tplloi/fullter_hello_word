@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/demo/async/stream_builder.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'future_builder_screen.dart';
@@ -22,6 +23,15 @@ class MenuAsyncScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FutureBuilderScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "StreamBuilderScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StreamBuilderScreen()),
                 )
               },
             ),
