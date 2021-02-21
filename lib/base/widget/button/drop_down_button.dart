@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
+class DropDownScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return DropDownScreenState();
   }
 }
 
-class MyAppState extends State<MyApp> {
+class DropDownScreenState extends State<DropDownScreen> {
   List listFruit = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
-  List<DropdownMenuItem<String>> listDropDownMenu;
+  List<DropdownMenuItem<String>> listDropdownMenu;
   String _selectedFruit;
 
   @override
   void initState() {
-    listDropDownMenu = buildAndGetDropDownMenuItems(listFruit);
-    _selectedFruit = listDropDownMenu[0].value;
+    listDropdownMenu = buildAndGetDropDownMenuItems(listFruit);
+    _selectedFruit = listDropdownMenu[0].value;
     super.initState();
   }
 
   List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(List fruits) {
-    List<DropdownMenuItem<String>> items = List();
+    List<DropdownMenuItem<String>> items = [];
     for (String fruit in fruits) {
       items.add(DropdownMenuItem(value: fruit, child: Text(fruit)));
     }
@@ -30,6 +29,7 @@ class MyAppState extends State<MyApp> {
   }
 
   void changedDropDownItem(String selectedFruit) {
+    handleChange(selectedFruit);
     setState(() {
       _selectedFruit = selectedFruit;
     });
@@ -37,28 +37,31 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("DropDown Button Example"),
-        ),
-        body: Container(
-          child: Center(
-              child: Column(
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "DropDownScreen",
+            () => Navigator.pop(context),
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Please choose a fruit: "),
               DropdownButton(
                 value: _selectedFruit,
-                items: listDropDownMenu,
+                items: listDropdownMenu,
                 onChanged: changedDropDownItem,
               )
             ],
-          )),
+          ),
         ),
       ),
     );
   }
+}
+
+void handleChange(String selectedFruit) {
+  print("handleChange selectedFruit " + selectedFruit);
 }
