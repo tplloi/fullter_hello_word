@@ -47,14 +47,42 @@ void _openBottomSheet(context) {
         padding: EdgeInsets.all(5.0),
         child: new Wrap(
           children: <Widget>[
-            getListTile(Icons.more, Colors.black45, "More", context),
-            getListTile(Icons.favorite, Colors.pink, "Favourites", context),
-            getListTile(Icons.account_box, Colors.blue, "Profile", context),
+            getListTile(
+                Icons.more,
+                Colors.black45,
+                "More",
+                () => {
+                      print("More"),
+                      Navigator.pop(context),
+                    }),
+            getListTile(
+                Icons.favorite,
+                Colors.pink,
+                "Favourites",
+                () => {
+                      print("Favourites"),
+                      Navigator.pop(context),
+                    }),
+            getListTile(
+                Icons.account_box,
+                Colors.blue,
+                "Profile",
+                () => {
+                      print("Profile"),
+                      Navigator.pop(context),
+                    }),
             new Divider(
               thickness: 2.0,
               height: 10.0,
             ),
-            getListTile(Icons.exit_to_app, null, "Logout", context),
+            getListTile(
+                Icons.exit_to_app,
+                null,
+                "Logout",
+                () => {
+                      print("Logout"),
+                      Navigator.pop(context),
+                    }),
           ],
         ),
       );

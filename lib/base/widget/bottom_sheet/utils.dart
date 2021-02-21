@@ -4,7 +4,7 @@ ListTile getListTile(
   icon,
   iconColor,
   titleText,
-  context,
+  Function() onPressed,
 ) {
   return new ListTile(
     leading: new Container(
@@ -22,6 +22,6 @@ ListTile getListTile(
         fontWeight: FontWeight.w700,
       ),
     ),
-    onTap: () => Navigator.of(context).pop(),
+    onTap: () => onPressed.call(),
   );
 }

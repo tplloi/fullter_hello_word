@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class UIUtils {
-  AppBar getAppBar(String text, Function() onPressed) {
+  AppBar getAppBar(
+    String text,
+    Function() onPressed,
+  ) {
     return AppBar(
       title: Text(text),
       centerTitle: true,
