@@ -1,35 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-      // Title
-      title: "Using Tabs",
-      // Home
-      home: MyHome()));
-}
-
-class MyHome extends StatefulWidget {
+class TabBarScreen extends StatefulWidget {
   @override
-  MyHomeState createState() => MyHomeState();
+  TabBarScreenState createState() => TabBarScreenState();
 }
 
 // SingleTickerProviderStateMixin is used for animation
-class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
-  // Create a tab controller
-  TabController controller;
+class TabBarScreenState extends State<TabBarScreen>
+    with SingleTickerProviderStateMixin {
+  TabController tabController;
 
   @override
   void initState() {
     super.initState();
 
-    // Initialize the Tab Controller
-    controller = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    // Dispose of the Tab Controller
-    controller.dispose();
+    tabController.dispose();
     super.dispose();
   }
 
@@ -37,28 +28,27 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text("Using Bottom Navigation Bar"),
-        // Set the background color of the App Bar
-        backgroundColor: Colors.blue,
+      appBar: UIUtils().getAppBar(
+        "TabBarScreen",
+        () => Navigator.pop(context),
       ),
       // Set the TabBar view as the body of the Scaffold
       body: TabBarView(
         // Add tabs as widgets
-        children: <Widget>[FirstTab(), SecondTab(), ThirdTab()],
+        children: <Widget>[
+          FirstTab(),
+          SecondTab(),
+          ThirdTab(),
+        ],
         // set the controller
-        controller: controller,
+        controller: tabController,
       ),
       // Set the bottom navigation bar
       bottomNavigationBar: Material(
-        // set the color of the bottom navigation bar
         color: Colors.blue,
-        // set the tab bar as the child of bottom navigation bar
         child: TabBar(
           tabs: <Tab>[
             Tab(
-              // set icon to the tab
               icon: Icon(Icons.favorite),
               text: "Favorite",
             ),
@@ -72,7 +62,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
             ),
           ],
           // setup the controller
-          controller: controller,
+          controller: tabController,
         ),
       ),
     );

@@ -9,6 +9,7 @@ class UIUtils {
         icon: Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () => onPressed.call(),
       ),
+      backgroundColor: Colors.blue,
     );
   }
 
