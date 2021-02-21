@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_1.dart';
+import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_2.dart';
+import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_3.dart';
 
 class TabBarScreen extends StatefulWidget {
   @override
@@ -36,9 +39,9 @@ class TabBarScreenState extends State<TabBarScreen>
       body: TabBarView(
         // Add tabs as widgets
         children: <Widget>[
-          FirstTab(),
-          SecondTab(),
-          ThirdTab(),
+          Tab1(),
+          Tab2(),
+          Tab3(),
         ],
         // set the controller
         controller: tabController,
@@ -63,90 +66,6 @@ class TabBarScreenState extends State<TabBarScreen>
           ],
           // setup the controller
           controller: tabController,
-        ),
-      ),
-    );
-  }
-}
-
-class FirstTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.red,
-      body: Container(
-        child: Center(
-          child: Column(
-            // center the children
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.favorite,
-                size: 160.0,
-                color: Colors.white,
-              ),
-              Text(
-                "First Tab",
-                style: TextStyle(color: Colors.white),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class SecondTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.green,
-      body: Container(
-        child: Center(
-          child: Column(
-            // center the children
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.adb,
-                size: 160.0,
-                color: Colors.white,
-              ),
-              Text(
-                "Second Tab",
-                style: TextStyle(color: Colors.white),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ThirdTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.orange,
-      body: Container(
-        child: Center(
-          child: Column(
-            // center the children
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.airport_shuttle,
-                size: 160.0,
-                color: Colors.white,
-              ),
-              Text(
-                "Third Tab",
-                style: TextStyle(color: Colors.white),
-              )
-            ],
-          ),
         ),
       ),
     );
