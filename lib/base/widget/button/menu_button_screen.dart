@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'back_button_screen.dart';
+import 'button_bar.dart';
 
 class MenuButtonScreen extends StatelessWidget {
   @override
@@ -22,6 +23,15 @@ class MenuButtonScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => BackButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ButtonBarScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ButtonBarScreen()),
                 )
               },
             ),
