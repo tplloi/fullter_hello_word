@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/widget/bottom_sheet/model.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/bottom_sheet/utils.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class BottomSheetHomePage extends StatefulWidget {
+  BottomSheetHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _BottomSheetHomePageState createState() => _BottomSheetHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BottomSheetHomePageState extends State<BottomSheetHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.redAccent,
+      appBar: UIUtils().getAppBar(
+        widget.title,
+        () => Navigator.pop(context),
       ),
       body: Center(
         child: Column(
