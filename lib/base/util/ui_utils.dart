@@ -16,12 +16,16 @@ class UIUtils {
     );
   }
 
-  RaisedButton getRaisedButton(String text, Function() func) {
+  RaisedButton getRaisedButton(
+    String text,
+    Function() func,
+  ) {
     return RaisedButton(
       child: new Text(
         text,
         style: UIUtils().getStyleText(),
       ),
+      color: Colors.blue,
       onPressed: () => {
         func.call(),
       },
