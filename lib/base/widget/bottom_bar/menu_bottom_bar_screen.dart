@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'appbar/sliver_app_bar.dart';
-import 'bottom_bar/menu_bottom_bar_screen.dart';
+import 'bottom_bar/bottom_app_bar.dart';
 
-class MenuWidgetScreen extends StatelessWidget {
+class MenuBottomBarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuWidgetScreen",
+          "MenuBottomBarScreen",
           () => {
                 Navigator.pop(context),
               }),
@@ -18,20 +17,11 @@ class MenuWidgetScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "SliverAppBarScreen",
+              "BottomAppBarScreen",
               () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SliverAppBarScreen()),
-                )
-              },
-            ),
-            UIUtils().getRaisedButton(
-              "MenuBottomBarScreen",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuBottomBarScreen()),
+                  MaterialPageRoute(builder: (context) => BottomAppBarScreen()),
                 )
               },
             ),
