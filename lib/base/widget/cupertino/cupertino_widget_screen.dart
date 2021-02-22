@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("Cupertino"),
+class CupertinoWidgetScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "CupertinoWidgetScreen",
+        () => Navigator.pop(context),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -45,15 +47,8 @@ void main() {
           ),
         ),
       ),
-    ),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
+    );
+  }
 }
 
 class CupertinoActivityIndicatorWidget extends StatelessWidget {
