@@ -3,6 +3,7 @@ import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'cupertino_action_sheet_screen.dart';
 import 'cupertino_segmented_control_screen.dart';
+import 'cupertino_timer_picker_screen.dart';
 
 class MenuCupertinoScreen extends StatelessWidget {
   @override
@@ -34,6 +35,16 @@ class MenuCupertinoScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => CupertinoSegmentedControlScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "CupertinoTimerPickerScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CupertinoTimerPickerScreen()),
                 )
               },
             ),

@@ -1,45 +1,31 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("CupertinoTimerPickerWidget"),
-      ),
-      body: Center(
-        child: CupertinoTimerPickerWidget(),
-      ),
-    ),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class CupertinoTimerPickerWidget extends StatelessWidget {
+class CupertinoTimerPickerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        RaisedButton(
-          onPressed: () => _showCupertinoPicker(context),
-          child: Text('CupertinoPicker'),
-        ),
-        RaisedButton(
-          onPressed: () => _showCupertinoDatePicker(context),
-          child: Text('CupertinoDatePicker'),
-        ),
-        RaisedButton(
-          onPressed: () => _showCupertinoTimerPicker(context),
-          child: Text('CupertinoTimerPicker'),
-        ),
-      ],
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "CupertinoTimerPickerScreen",
+        () => Navigator.pop(context),
+      ),
+      body: ListView(
+        children: <Widget>[
+          RaisedButton(
+            onPressed: () => _showCupertinoPicker(context),
+            child: Text('CupertinoPicker'),
+          ),
+          RaisedButton(
+            onPressed: () => _showCupertinoDatePicker(context),
+            child: Text('CupertinoDatePicker'),
+          ),
+          RaisedButton(
+            onPressed: () => _showCupertinoTimerPicker(context),
+            child: Text('CupertinoTimerPicker'),
+          ),
+        ],
+      ),
     );
   }
 
