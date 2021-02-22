@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(MaterialApp(
-      // Disable the debug flag
-      debugShowCheckedModeBanner: false,
-      // Home
-      home: MyHome()));
-}
-
-class MyHome extends StatefulWidget {
+class SharedPreferencesScreen extends StatefulWidget {
   @override
-  MyHomeState createState() {
-    return MyHomeState();
+  SharedPreferencesScreenState createState() {
+    return SharedPreferencesScreenState();
   }
 }
 
-class MyHomeState extends State<MyHome> {
+class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
   var nameOfApp = "Persist Key Value";
 
   var counter = 0;

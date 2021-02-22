@@ -10,6 +10,7 @@ import 'check_box/check_box_screen.dart';
 import 'check_box/radio_button_screen.dart';
 import 'cupertino/menu_cupertino_screen.dart';
 import 'data_table/data_table_screen.dart';
+import 'database/shared_preferences_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -105,6 +106,16 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
+            UIUtils().getRaisedButton(
+              "SharedPreferencesScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SharedPreferencesScreen()),
+                )
+              },
+            ),
+
           ],
         ),
       ),
