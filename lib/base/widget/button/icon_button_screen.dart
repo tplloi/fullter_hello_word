@@ -1,31 +1,15 @@
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("IconButtonWidget"),
-      ),
-      body: Center(
-        child: IconButtonWidget(),
-      ),
-    ),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
+import 'package:hello_word/base/util/ui_utils.dart';
 
 /// This is the stateless widget that the main application instantiates.
-class IconButtonWidget extends StatelessWidget {
+class IconButtonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "IconButtonScreen",
+        () => Navigator.pop(context),
+      ),
       body: Center(
         child: Container(
           child: Ink(
