@@ -1,33 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("CupertinoActionSheetWidget"),
-      ),
-      body: Center(
-        child: CupertinoActionSheetWidget(),
-      ),
-    ),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class CupertinoActionSheetWidget extends StatelessWidget {
+class CupertinoActionSheetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      onPressed: () => showActionSheet(context),
-      child: Text('Show ActionSheet'),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+          "CupertinoActionSheetScreen", () => Navigator.pop(context)),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () => showActionSheet(context),
+          child: Text('Show ActionSheet'),
+        ),
+      ),
     );
   }
 
@@ -41,21 +27,29 @@ class CupertinoActionSheetWidget extends StatelessWidget {
           actions: <Widget>[
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item1'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item2'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item3'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ],
           cancelButton: CupertinoActionSheetAction(
             isDefaultAction: true,
             child: Text('Cancel'),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         );
       },

@@ -7,7 +7,7 @@ class UIUtils {
   ) {
     return AppBar(
       title: Text(text),
-      centerTitle: true,
+      centerTitle: false,
       leading: IconButton(
         icon: Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () => onPressed.call(),
