@@ -11,12 +11,22 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   Drawer getNavDrawer(BuildContext context) {
     var headerChild = DrawerHeader(
-        child: Text(
-      "HomeScreenState Header",
-      style: TextStyle(
-        backgroundColor: Colors.red,
+      margin: EdgeInsets.all(0.0),
+      padding: EdgeInsets.all(0.0),
+      child: Container(
+        width: double.infinity,
+        color: Colors.yellow,
+        child: Center(
+          child: Text(
+            "HomeScreenState Header",
+            style: TextStyle(
+              backgroundColor: Colors.red,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
-    ));
+    );
 
     var aboutChild = AboutListTile(
       child: Text("HomeScreenState About"),
