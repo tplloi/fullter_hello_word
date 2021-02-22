@@ -6,6 +6,7 @@ import 'button_bar_screen.dart';
 import 'drop_down_button_screen.dart';
 import 'flat_button_screen.dart';
 import 'icon_button_screen.dart';
+import 'outline_button_screen.dart';
 
 class MenuButtonScreen extends StatelessWidget {
   @override
@@ -62,6 +63,15 @@ class MenuButtonScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => IconButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "OutlineButtonScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OutlineButtonScreen()),
                 )
               },
             ),

@@ -32,6 +32,26 @@ class UIUtils {
     );
   }
 
+  OutlineButton getOutlineButton(
+    String text,
+    Function() func,
+  ) {
+    return OutlineButton(
+      child: Text(text),
+      onPressed: () {
+        func.call();
+      },
+      borderSide: BorderSide(
+        color: Colors.red,
+        width: 2,
+        style: BorderStyle.solid,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    );
+  }
+
   Text getText(String text) {
     return Text(
       text,
