@@ -1,19 +1,32 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/menu_screen.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: true,
-    home: SplashScreen(),
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blueAccent,
-      backgroundColor: Colors.white,
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      // statusBarColor: Colors.blue, // status bar color
+      // statusBarIconBrightness: Brightness.light, // status bar icons' color
+
+      systemNavigationBarColor: Colors.blue, // navigation bar color
+      systemNavigationBarIconBrightness:
+          Brightness.light, //navigation bar icons' color
     ),
-  ));
+  );
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: true,
+      home: SplashScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        accentColor: Colors.blueAccent,
+        backgroundColor: Colors.white,
+      ),
+    ),
+  );
 }
 
 class SplashScreen extends StatefulWidget {
