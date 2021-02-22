@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      // Set background color
-      backgroundColor: Colors.blue,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class CardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("CardWidget"),
+      appBar: UIUtils().getAppBar(
+        "CardScreen",
+        () => Navigator.canPop(context),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            children: <Widget>[
-              CardWidget(),
-            ],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Column(
+              children: <Widget>[
+                CardWidget(),
+              ],
+            ),
           ),
         ),
       ),
