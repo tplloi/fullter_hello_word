@@ -1,27 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      // Set background color
-      backgroundColor: Colors.blue,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class DataTableScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("DataTableWidget"),
+      appBar: UIUtils().getAppBar(
+        "DataTableScreen",
+        () => Navigator.pop(context),
       ),
       body: DataTableWidget(),
     );
@@ -97,8 +84,16 @@ const kTableColumns = <DataColumn>[
 
 ////// Data class.
 class Dessert {
-  Dessert(this.name, this.calories, this.fat, this.carbs, this.protein,
-      this.sodium, this.calcium, this.iron);
+  Dessert(
+    this.name,
+    this.calories,
+    this.fat,
+    this.carbs,
+    this.protein,
+    this.sodium,
+    this.calcium,
+    this.iron,
+  );
 
   final String name;
   final int calories;
