@@ -20,7 +20,7 @@ class _FlatButtonScreenState extends State<FlatButtonScreen> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => RaisedButtonScreen()),
+              MaterialPageRoute(builder: (context) => RaisedButtonFlatScreen()),
             );
           },
           child: Text(
@@ -32,12 +32,12 @@ class _FlatButtonScreenState extends State<FlatButtonScreen> {
   }
 }
 
-class RaisedButtonScreen extends StatefulWidget {
+class RaisedButtonFlatScreen extends StatefulWidget {
   @override
-  _RaisedButtonScreenState createState() => _RaisedButtonScreenState();
+  _RaisedButtonFlatScreenState createState() => _RaisedButtonFlatScreenState();
 }
 
-class _RaisedButtonScreenState extends State<RaisedButtonScreen> {
+class _RaisedButtonFlatScreenState extends State<RaisedButtonFlatScreen> {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
