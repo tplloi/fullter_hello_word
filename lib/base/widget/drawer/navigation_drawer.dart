@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomeScreen(), // route for home is '/' implicitly
-    routes: <String, WidgetBuilder>{
-      // define the routes
-      SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),
-      AccountScreen.routeName: (BuildContext context) => AccountScreen(),
-    },
-  ));
+class NavigationDrawerScreen extends StatelessWidget {
+  static const String routeName = "/account";
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(), // route for home is '/' implicitly
+      routes: <String, WidgetBuilder>{
+        // define the routes
+        SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),
+        NavigationDrawerScreen.routeName: (BuildContext context) =>
+            NavigationDrawerScreen(),
+      },
+    );
+  }
 }
 
 class AccountScreen extends StatelessWidget {
@@ -22,9 +28,10 @@ class AccountScreen extends StatelessWidget {
         title: Text("Account"),
       ),
       body: Container(
-          child: Center(
-        child: Text("Account Screen"),
-      )),
+        child: Center(
+          child: Text("Account Screen"),
+        ),
+      ),
     );
   }
 }
@@ -36,7 +43,6 @@ class HomeScreen extends StatefulWidget {
 
 class HomeScreenState extends State<HomeScreen> {
   Drawer getNavDrawer(BuildContext context) {
-
     var headerChild = DrawerHeader(child: Text("Header"));
 
     var aboutChild = AboutListTile(
@@ -63,9 +69,21 @@ class HomeScreenState extends State<HomeScreen> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Settings", SettingsScreen.routeName),
-      getNavItem(Icons.home, "Home", "/"),
-      getNavItem(Icons.account_box, "Account", AccountScreen.routeName),
+      getNavItem(
+        Icons.settings,
+        "Settings",
+        SettingsScreen.routeName,
+      ),
+      getNavItem(
+        Icons.home,
+        "Home",
+        "/",
+      ),
+      getNavItem(
+        Icons.account_box,
+        "Account",
+        NavigationDrawerScreen.routeName,
+      ),
       aboutChild
     ];
 
@@ -83,9 +101,10 @@ class HomeScreenState extends State<HomeScreen> {
         title: Text("Navigation Drawer Example"),
       ),
       body: Container(
-          child: Center(
-        child: Text("Home Screen"),
-      )),
+        child: Center(
+          child: Text("Home Screen"),
+        ),
+      ),
       // Set the nav drawer
       drawer: getNavDrawer(context),
     );
@@ -102,9 +121,10 @@ class SettingsScreen extends StatelessWidget {
         title: Text("Settings"),
       ),
       body: Container(
-          child: Center(
-        child: Text("Settings Screen"),
-      )),
+        child: Center(
+          child: Text("Settings Screen"),
+        ),
+      ),
     );
   }
 }

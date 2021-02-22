@@ -11,6 +11,7 @@ import 'check_box/radio_button_screen.dart';
 import 'cupertino/menu_cupertino_screen.dart';
 import 'data_table/data_table_screen.dart';
 import 'dialog/dialog_screen.dart';
+import 'drawer/menu_drawer_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -112,6 +113,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DialogScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "MenuDrawerScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuDrawerScreen()),
                 )
               },
             ),
