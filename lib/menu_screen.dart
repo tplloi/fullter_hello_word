@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hello_word/base/demo/menu_demo_screen.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 import 'base/animation/menu_animation_screen.dart';
+import 'base/database/shared_preferences_screen.dart';
 import 'base/demo/syntax/syntax_screen.dart';
 import 'base/widget/menu_widget_screen.dart';
 
@@ -26,6 +27,15 @@ class MenuScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => MenuAnimationScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "SharedPreferencesScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SharedPreferencesScreen()),
                 )
               },
             ),
