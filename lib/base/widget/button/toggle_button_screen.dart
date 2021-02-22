@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
+
+class ToggleButtonScreen extends StatefulWidget {
+  @override
+  _ToggleButtonScreenState createState() => _ToggleButtonScreenState();
+}
+
+class _ToggleButtonScreenState extends State<ToggleButtonScreen> {
+  var selectedList1 = [true, false, false, false];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: UIUtils()
+          .getAppBar("ToggleButtonScreen", () => Navigator.pop(context)),
+      body: Center(
+        child: ToggleButtons(
+          children: [
+            Icon(Icons.account_balance),
+            Icon(Icons.backup),
+            Icon(Icons.calendar_today),
+            Text('Text'),
+          ],
+          onPressed: (int index) {
+            print("index " + index.toString());
+            setState(() => selectedList1[index] = !selectedList1[index]);
+          },
+          isSelected: selectedList1,
+        ),
+      ),
+    );
+  }
+}
