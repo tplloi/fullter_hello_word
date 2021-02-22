@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      // Set background color
-      backgroundColor: Colors.blue,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class DialogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("ExpansionPanelWidget"),
+      appBar: UIUtils().getAppBar(
+        "DialogScreen",
+        () => Navigator.pop(context),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            children: <Widget>[
-              SimpleDialogWidget(),
-            ],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Container(
+            width: double.infinity,
+            child: Column(
+              children: <Widget>[
+                SimpleDialogWidget(),
+              ],
+            ),
           ),
         ),
       ),
@@ -42,7 +31,7 @@ class SimpleDialogWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () => showSimpleDialog(context),
-      child: Text('Show SimpleDialog'),
+      child: UIUtils().getText("Show SimpleDialog"),
     );
   }
 
@@ -56,19 +45,27 @@ class SimpleDialogWidget extends StatelessWidget {
           children: <Widget>[
             SimpleDialogOption(
               child: Text('item 1'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             SimpleDialogOption(
               child: Text('item 2'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             SimpleDialogOption(
               child: Text('item 3'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             SimpleDialogOption(
               child: Text('item 4'),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         );
