@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'navigation_drawer.dart';
+import 'navigation_drawer/navigation_drawer.dart';
 
 class MenuDrawerScreen extends StatelessWidget {
   @override

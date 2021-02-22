@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class NavigationDrawerScreen extends StatelessWidget {
-  static const String routeName = "/account";
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,8 +9,7 @@ class NavigationDrawerScreen extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         // define the routes
         SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),
-        NavigationDrawerScreen.routeName: (BuildContext context) =>
-            NavigationDrawerScreen(),
+        AccountScreen.routeName: (BuildContext context) => AccountScreen(),
       },
     );
   }
@@ -25,11 +22,11 @@ class AccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Account"),
+        title: Text("AccountScreen"),
       ),
       body: Container(
         child: Center(
-          child: Text("Account Screen"),
+          child: Text("AccountScreen"),
         ),
       ),
     );
@@ -43,11 +40,11 @@ class HomeScreen extends StatefulWidget {
 
 class HomeScreenState extends State<HomeScreen> {
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(child: Text("HomeScreenState Header"));
 
     var aboutChild = AboutListTile(
-        child: Text("About"),
-        applicationName: "Application Name",
+        child: Text("HomeScreenState About"),
+        applicationName: "HomeScreenState Application Name",
         applicationVersion: "v1.0.0",
         applicationIcon: Icon(Icons.adb),
         icon: Icon(Icons.info));
@@ -82,7 +79,7 @@ class HomeScreenState extends State<HomeScreen> {
       getNavItem(
         Icons.account_box,
         "Account",
-        NavigationDrawerScreen.routeName,
+        AccountScreen.routeName,
       ),
       aboutChild
     ];
@@ -98,7 +95,7 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigation Drawer Example"),
+        title: Text("NavigationDrawerScreen"),
       ),
       body: Container(
         child: Center(
