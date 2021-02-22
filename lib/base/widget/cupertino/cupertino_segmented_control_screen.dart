@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("Cupertino"),
+class CupertinoSegmentedControlScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "CupertinoSegmentedControlScreen",
+            () => Navigator.pop(context),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -25,8 +27,8 @@ void main() {
           ),
         ),
       ),
-    ),
-  ));
+    );
+  }
 }
 
 class CupertinoSegmentedControlWidget extends StatelessWidget {
@@ -53,7 +55,9 @@ class CupertinoSegmentedControlWidget extends StatelessWidget {
               child: Text("Segment 4"),
             ),
           },
-          onValueChanged: (value) {},
+          onValueChanged: (value) {
+            print("onValueChanged " + value.toString());
+          },
         ),
       ],
     );
@@ -94,6 +98,7 @@ class _CupertinoSlidingSegmentedControlWidgetState
             ),
           },
           onValueChanged: (value) {
+            print("onValueChanged " + value.toString());
             setState(() => groupValue = value);
           },
           groupValue: groupValue,

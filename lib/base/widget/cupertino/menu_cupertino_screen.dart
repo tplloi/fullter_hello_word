@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'cupertino_action_sheet_screen.dart';
+import 'cupertino_segmented_control_screen.dart';
 
 class MenuCupertinoScreen extends StatelessWidget {
   @override
@@ -23,6 +24,16 @@ class MenuCupertinoScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => CupertinoActionSheetScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "CupertinoSegmentedControlScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CupertinoSegmentedControlScreen()),
                 )
               },
             ),
