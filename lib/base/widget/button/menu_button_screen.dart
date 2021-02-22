@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/button/popup_menu_button_screen.dart';
 
 import 'back_button_screen.dart';
 import 'button_bar_screen.dart';
@@ -72,6 +73,15 @@ class MenuButtonScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => OutlineButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "PopupMenuButtonScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PopupMenuButtonScreen()),
                 )
               },
             ),
