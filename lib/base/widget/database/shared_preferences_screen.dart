@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesScreen extends StatefulWidget {
@@ -61,9 +62,9 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text(nameOfApp),
+      appBar: UIUtils().getAppBar(
+        nameOfApp,
+        () => Navigator.pop(context),
       ),
       // Body
       body: Container(
@@ -77,11 +78,11 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
                 textScaleFactor: 10.0,
               ),
               Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
-                  onPressed: _onIncrementHit, child: Text('Increment Counter')),
+              UIUtils().getRaisedButton(
+                  "Increment Counter", () => _onIncrementHit()),
               Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
-                  onPressed: _onDecrementHit, child: Text('Decrement Counter')),
+              UIUtils().getRaisedButton(
+                  "Decrement Counter", () => _onDecrementHit()),
             ],
           ),
         ),
