@@ -1,20 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ScaffoldWidget(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class ScaffoldWidget extends StatelessWidget {
+class DrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,14 +8,17 @@ class ScaffoldWidget extends StatelessWidget {
         Expanded(
           child: Scaffold(
             appBar: AppBar(
-              title: Text('Scaffold'),
+              title: Text('DrawerScreen'),
             ),
             body: Center(
-              child: Text('Scaffold'),
+              child: Text('DrawerScreen'),
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.add),
+              onPressed: () {
+                Navigator.pop(context)
+                ,
+              },
+              child: Icon(Icons.backpack),
             ),
             backgroundColor: Colors.cyan,
             drawer: Drawer(
@@ -40,7 +29,7 @@ class ScaffoldWidget extends StatelessWidget {
                       'flutter',
                     ),
                     accountEmail: Text(
-                      'flutter@gmail.com',
+                      'freuss47@gmail.com',
                     ),
                   ),
                   ListTile(

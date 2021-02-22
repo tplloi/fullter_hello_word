@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
+import 'drawer/drawer_screen.dart';
 import 'navigation_drawer/navigation_drawer.dart';
 
 class MenuDrawerScreen extends StatelessWidget {
@@ -17,8 +18,17 @@ class MenuDrawerScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "NavigationDrawerScreen",
+              "DrawerScreen",
               () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DrawerScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "NavigationDrawerScreen",
+                  () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => NavigationDrawerScreen()),
