@@ -25,7 +25,7 @@ class UIUtils {
         text,
         style: UIUtils().getStyleText(),
       ),
-      color: Colors.blue[100],
+      color: Colors.white70,
       onPressed: () => {
         func.call(),
       },

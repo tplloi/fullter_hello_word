@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'back_button_screen.dart';
-import 'button_bar.dart';
-import 'drop_down_button.dart';
+import 'button_bar_screen.dart';
+import 'drop_down_button_screen.dart';
+import 'flat_button_screen.dart';
 
 class MenuButtonScreen extends StatelessWidget {
   @override
@@ -42,6 +43,15 @@ class MenuButtonScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DropDownScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "FlatButtonScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FlatButtonScreen()),
                 )
               },
             ),
