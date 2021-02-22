@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'account_screen.dart';
+
 class NavigationDrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,24 +13,6 @@ class NavigationDrawerScreen extends StatelessWidget {
         SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),
         AccountScreen.routeName: (BuildContext context) => AccountScreen(),
       },
-    );
-  }
-}
-
-class AccountScreen extends StatelessWidget {
-  static const String routeName = "/account";
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("AccountScreen"),
-      ),
-      body: Container(
-        child: Center(
-          child: Text("AccountScreen"),
-        ),
-      ),
     );
   }
 }
