@@ -7,6 +7,7 @@ import 'bottom_sheet/bottom_sheet_screen.dart';
 import 'button/menu_button_screen.dart';
 import 'card/card_screen.dart';
 import 'check_box/check_box_screen.dart';
+import 'check_box/radio_button_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -72,6 +73,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CheckBoxScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "RadioButtonScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RadioButtonScreen()),
                 )
               },
             ),
