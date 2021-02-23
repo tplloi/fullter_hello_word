@@ -13,6 +13,7 @@ import 'data_table/data_table_screen.dart';
 import 'dialog/dialog_screen.dart';
 import 'drawer/menu_drawer_screen.dart';
 import 'edit_text/menu_edit_text_screen.dart';
+import 'expanded/expanded_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -132,6 +133,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuEditTextScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ExpandedScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ExpandedScreen()),
                 )
               },
             ),
