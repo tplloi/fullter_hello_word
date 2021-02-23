@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 class FormFieldScreen extends StatefulWidget {
@@ -16,62 +17,65 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils().getAppBar(
-        "FormFieldScreen",
-        () => Navigator.pop(context),
-      ),
-      body: ListView(
-        children: <Widget>[
-          Form(
-            // onWillPop: willPop,
-            key: formKey,
-            autovalidate: isAutoValidate,
-            child: Column(
-              children: <Widget>[
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Name'),
-                  keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                  onSaved: (value) => name = value,
+        appBar: UIUtils().getAppBar(
+          "FormFieldScreen",
+          () => Navigator.pop(context),
+        ),
+        body: Container(
+          margin: const EdgeInsets.all(15),
+          child: ListView(
+            children: <Widget>[
+              Form(
+                // onWillPop: willPop,
+                key: formKey,
+                autovalidate: isAutoValidate,
+                child: Column(
+                  children: <Widget>[
+                    TextFormField(
+                      decoration: const InputDecoration(labelText: 'Name'),
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return 'Please enter some text';
+                        }
+                        return null;
+                      },
+                      onSaved: (value) => name = value,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(labelText: 'Tel'),
+                      keyboardType: TextInputType.phone,
+                      validator: (value) {
+                        if (value.length != 11)
+                          return 'Tel Number must be 11 digit';
+                        else
+                          return null;
+                      },
+                      onSaved: (value) => tel = value,
+                    ),
+                    TextFormField(
+                      decoration: const InputDecoration(labelText: 'Email'),
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        Pattern pattern =
+                            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+                        RegExp regex = new RegExp(pattern);
+                        if (!regex.hasMatch(value))
+                          return 'Not Valid Email';
+                        else
+                          return null;
+                      },
+                      onSaved: (value) => email = value,
+                    ),
+                    SizedBox(height: 10),
+                    UIUtils().getRaisedButton(
+                        "Validate input", () => validateInputs()),
+                  ],
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Tel'),
-                  keyboardType: TextInputType.phone,
-                  validator: (value) {
-                    if (value.length != 11)
-                      return 'Tel Number must be 11 digit';
-                    else
-                      return null;
-                  },
-                  onSaved: (value) => tel = value,
-                ),
-                TextFormField(
-                  decoration: const InputDecoration(labelText: 'Email'),
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
-                    Pattern pattern =
-                        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-                    RegExp regex = new RegExp(pattern);
-                    if (!regex.hasMatch(value))
-                      return 'Not Valid Email';
-                    else
-                      return null;
-                  },
-                  onSaved: (value) => email = value,
-                ),
-                SizedBox(height: 10),
-                UIUtils().getRaisedButton("Validate input", () => validateInputs()),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
+              )
+            ],
+          ),
+        ));
   }
 
   void validateInputs() {
@@ -83,22 +87,22 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
     }
   }
 
-  // Future<bool> willPop() {
-  //   return showDialog(
-  //     builder: (context) => AlertDialog(
-  //       title: Text('Exit the page?'),
-  //       actions: <Widget>[
-  //         FlatButton(
-  //           child: Text('No'),
-  //           onPressed: () => Navigator.pop(context, false),
-  //         ),
-  //         FlatButton(
-  //           child: Text('Yes'),
-  //           onPressed: () => Navigator.pop(context, true),
-  //         ),
-  //       ],
-  //     ),
-  //     context: context,
-  //   );
-  // }
+// Future<bool> willPop() {
+//   return showDialog(
+//     builder: (context) => AlertDialog(
+//       title: Text('Exit the page?'),
+//       actions: <Widget>[
+//         FlatButton(
+//           child: Text('No'),
+//           onPressed: () => Navigator.pop(context, false),
+//         ),
+//         FlatButton(
+//           child: Text('Yes'),
+//           onPressed: () => Navigator.pop(context, true),
+//         ),
+//       ],
+//     ),
+//     context: context,
+//   );
+// }
 }
