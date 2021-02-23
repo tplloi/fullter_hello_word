@@ -24,7 +24,7 @@ class _FlowWidgetState extends State<FlowWidget>
   AnimationController menuAnimation;
   IconData lastTapped = Icons.notifications;
 
-  final List<IconData> menuItems = <IconData>[
+  final List<IconData> listIconData = <IconData>[
     Icons.home,
     Icons.new_releases,
     Icons.notifications,
@@ -45,24 +45,25 @@ class _FlowWidgetState extends State<FlowWidget>
     );
   }
 
-  Widget flowMenuItem(IconData icon) {
+  Widget flowMenuItem(IconData iconData) {
     final double buttonDiameter =
-        MediaQuery.of(context).size.width / menuItems.length;
+        MediaQuery.of(context).size.width / listIconData.length;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: RawMaterialButton(
-        fillColor: lastTapped == icon ? Colors.amber[700] : Colors.blue,
+        fillColor: lastTapped == iconData ? Colors.amber[700] : Colors.blue,
         splashColor: Colors.amber[100],
         shape: CircleBorder(),
         constraints: BoxConstraints.tight(Size(buttonDiameter, buttonDiameter)),
         onPressed: () {
-          _updateMenu(icon);
+          print("flowMenuItem onPressed");
+          _updateMenu(iconData);
           menuAnimation.status == AnimationStatus.completed
               ? menuAnimation.reverse()
               : menuAnimation.forward();
         },
         child: Icon(
-          icon,
+          iconData,
           color: Colors.white,
           size: 45.0,
         ),
@@ -74,8 +75,9 @@ class _FlowWidgetState extends State<FlowWidget>
   Widget build(BuildContext context) {
     return Flow(
       delegate: FlowMenuDelegate(menuAnimation: menuAnimation),
-      children:
-          menuItems.map<Widget>((IconData icon) => flowMenuItem(icon)).toList(),
+      children: listIconData
+          .map<Widget>((IconData icon) => flowMenuItem(icon))
+          .toList(),
     );
   }
 }
