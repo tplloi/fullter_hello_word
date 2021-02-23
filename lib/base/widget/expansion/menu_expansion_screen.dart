@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
+
+import '1/expansion_panel.dart';
+
+class MenuExpansionScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+          "MenuExpansionScreen",
+          () => {
+                Navigator.pop(context),
+              }),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            UIUtils().getRaisedButton(
+              "Expansion1Screen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Expansion1Screen()),
+                )
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
