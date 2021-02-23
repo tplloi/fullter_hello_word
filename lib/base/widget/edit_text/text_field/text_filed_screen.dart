@@ -14,16 +14,13 @@ class TextFieldScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(15),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          SizedBox(
-            height: 100,
-            child: TextFieldWidget(),
-          ),
-          SizedBox(
-            height: 500,
-            child: TextFormFieldWidget(),
-          ),
-        ]),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextFieldWidget(),
+            TextFormFieldWidget(),
+          ],
+        ),
       ),
     );
   }
