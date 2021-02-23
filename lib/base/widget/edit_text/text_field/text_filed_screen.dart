@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      backgroundColor: Colors.white,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class TextFieldScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
