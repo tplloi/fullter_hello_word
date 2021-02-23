@@ -1,30 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: SearchDelegateWidget(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class SearchDelegateWidget extends StatefulWidget {
+class SearchDelegateScreen extends StatefulWidget {
   @override
-  _SearchDelegateWidgetState createState() => _SearchDelegateWidgetState();
+  _SearchDelegateScreenState createState() => _SearchDelegateScreenState();
 }
 
-class _SearchDelegateWidgetState extends State<SearchDelegateWidget> {
-  final List<String> kEnglishWords;
+class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
+  final List<String> listWord;
   _MySearchDelegate _delegate;
 
-  _SearchDelegateWidgetState()
-      : kEnglishWords = [
+  _SearchDelegateScreenState()
+      : listWord = [
           'a',
           'ab',
           'abc',
@@ -41,7 +27,7 @@ class _SearchDelegateWidgetState extends State<SearchDelegateWidget> {
   @override
   void initState() {
     super.initState();
-    _delegate = _MySearchDelegate(kEnglishWords);
+    _delegate = _MySearchDelegate(listWord);
   }
 
   @override
@@ -72,9 +58,9 @@ class _SearchDelegateWidgetState extends State<SearchDelegateWidget> {
       ),
       body: Scrollbar(
         child: ListView.builder(
-          itemCount: kEnglishWords.length,
+          itemCount: listWord.length,
           itemBuilder: (context, idx) => ListTile(
-            title: Text(kEnglishWords[idx]),
+            title: Text(listWord[idx]),
           ),
         ),
       ),
@@ -100,7 +86,7 @@ class _MySearchDelegate extends SearchDelegate<String> {
         progress: transitionAnimation,
       ),
       onPressed: () {
-        // SearchDelegate.close() can return vlaues, similar to Navigator.pop().
+        // SearchDelegate.close() can return values, similar to Navigator.pop().
         this.close(context, null);
       },
     );

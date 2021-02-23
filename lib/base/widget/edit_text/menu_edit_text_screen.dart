@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/edit_text/search_delegate_screen.dart';
 
 import 'edit_text_screen.dart';
 import 'form_field_screen.dart';
@@ -32,6 +33,15 @@ class MenuEditTextScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FormFieldScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "SearchDelegateScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchDelegateScreen()),
                 )
               },
             ),
