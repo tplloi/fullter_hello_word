@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:hello_word/base/widget/edit_text/search_delegate/suggestion_list.dart';
 
 class MySearchDelegate extends SearchDelegate<String> {
-  final List<String> _words;
-  final List<String> _history;
+  final List<String> listWord;
+  final List<String> listHistory;
 
   MySearchDelegate(List<String> words)
-      : _words = words,
-        _history = <String>['apple', 'hello', 'world', 'flutter'],
+      : listWord = words,
+        listHistory = <String>['apple', 'hello', 'world', 'flutter'],
         super();
 
   @override
@@ -28,12 +29,12 @@ class MySearchDelegate extends SearchDelegate<String> {
   @override
   Widget buildResults(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(15.0),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text('You have selected the word:'),
+            UIUtils().getText("You have selected the word:"),
             GestureDetector(
               onTap: () {
                 // Returns this.query as result to previous screen, c.f.
@@ -57,15 +58,15 @@ class MySearchDelegate extends SearchDelegate<String> {
   @override
   Widget buildSuggestions(BuildContext context) {
     final Iterable<String> suggestions = this.query.isEmpty
-        ? _history
-        : _words.where((word) => word.startsWith(query));
+        ? listHistory
+        : listWord.where((word) => word.startsWith(query));
 
     return SuggestionListWidget(
       query: this.query,
       listSuggestion: suggestions.toList(),
       onSelected: (String suggestion) {
         this.query = suggestion;
-        this._history.insert(0, suggestion);
+        this.listHistory.insert(0, suggestion);
         showResults(context);
       },
     );
