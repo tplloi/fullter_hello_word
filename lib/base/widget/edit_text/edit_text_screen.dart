@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MyEditText(),
-  ));
-}
-
-class MyEditText extends StatefulWidget {
+class EditTextScreen extends StatefulWidget {
   @override
-  MyEditTextState createState() => MyEditTextState();
+  EditTextScreenState createState() => EditTextScreenState();
 }
 
-class MyEditTextState extends State<MyEditText> {
+class EditTextScreenState extends State<EditTextScreen> {
   String results = "";
 
   final TextEditingController controller = TextEditingController();
@@ -19,9 +14,9 @@ class MyEditTextState extends State<MyEditText> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Using EditText"),
-        backgroundColor: Colors.red,
+      appBar: UIUtils().getAppBar(
+        "EditTextScreen",
+        () => Navigator.pop(context),
       ),
       body: Container(
         padding: const EdgeInsets.all(10.0),
@@ -30,7 +25,10 @@ class MyEditTextState extends State<MyEditText> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(hintText: "Enter text here..."),
+                style: UIUtils().getStyleText(),
+                decoration: InputDecoration(
+                  hintText: "Enter text here...",
+                ),
                 onSubmitted: (String str) {
                   setState(() {
                     results = results + "\n" + str;
@@ -39,7 +37,7 @@ class MyEditTextState extends State<MyEditText> {
                 },
                 controller: controller,
               ),
-              Text(results)
+              UIUtils().getText(results),
             ],
           ),
         ),
