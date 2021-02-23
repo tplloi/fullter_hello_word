@@ -8,7 +8,7 @@ class SearchDelegateScreen extends StatefulWidget {
 
 class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
   final List<String> listWord;
-  MySearchDelegate _delegate;
+  MySearchDelegate mySearchDelegate;
 
   _SearchDelegateScreenState()
       : listWord = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']
@@ -18,7 +18,7 @@ class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
   @override
   void initState() {
     super.initState();
-    _delegate = MySearchDelegate(listWord);
+    mySearchDelegate = MySearchDelegate(listWord);
   }
 
   @override
@@ -34,7 +34,7 @@ class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
             onPressed: () async {
               final String selected = await showSearch<String>(
                 context: context,
-                delegate: _delegate,
+                delegate: mySearchDelegate,
               );
               if (selected != null) {
                 Scaffold.of(context).showSnackBar(
