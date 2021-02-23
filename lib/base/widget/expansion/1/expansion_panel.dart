@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/expansion/1/item.dart';
 
 class Expansion1Screen extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class ExpansionPanelWidget extends StatefulWidget {
 }
 
 class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
-  List<Item> _data = generateItems(8);
+  List<Item> _data = generateItems(3);
 
   @override
   Widget build(BuildContext context) {
@@ -58,25 +59,4 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
       }).toList(),
     );
   }
-}
-
-class Item {
-  Item({
-    this.expandedValue,
-    this.headerValue,
-    this.isExpanded = false,
-  });
-
-  String expandedValue;
-  String headerValue;
-  bool isExpanded;
-}
-
-List<Item> generateItems(int numberOfItems) {
-  return List.generate(numberOfItems, (int index) {
-    return Item(
-      headerValue: 'ExpansionPanel $index',
-      expandedValue: 'item $index',
-    );
-  });
 }
