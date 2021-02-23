@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import '1/expansion_panel.dart';
+import '2/expansion_panel_2.dart';
 
 class MenuExpansionScreen extends StatelessWidget {
   @override
@@ -22,6 +23,15 @@ class MenuExpansionScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Expansion1Screen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ExpansionPanelScreen2",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ExpansionPanelScreen2()),
                 )
               },
             ),

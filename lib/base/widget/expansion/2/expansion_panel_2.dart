@@ -1,25 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/expansion/2/entry.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      backgroundColor: Colors.white,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class ExpansionPanelScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("ExpansionTileWidget"),
+      appBar: UIUtils().getAppBar(
+        "ExpansionPanelScreen2",
+        () => Navigator.pop(context),
       ),
       body: ExpansionTileWidget(),
     );
@@ -44,37 +33,6 @@ class ExpansionTileWidget extends StatelessWidget {
     );
   }
 }
-
-class Entry {
-  const Entry(this.title, [this.children = const <Entry>[]]);
-
-  final String title;
-  final List<Entry> children;
-}
-
-const List<Entry> data = <Entry>[
-  Entry(
-    'ExpansionTile A',
-    <Entry>[
-      Entry(
-        'Section a',
-        <Entry>[
-          Entry('Item A.a.1'),
-          Entry('Item A.a.2'),
-        ],
-      ),
-      Entry('Section aa'),
-      Entry('Section aaa'),
-    ],
-  ),
-  Entry(
-    'ExpansionTile B',
-    <Entry>[
-      Entry('Section b'),
-      Entry('Section bb'),
-    ],
-  ),
-];
 
 class EntryItem extends StatelessWidget {
   const EntryItem(this.entry);
