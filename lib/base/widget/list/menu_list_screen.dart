@@ -4,6 +4,8 @@ import 'package:hello_word/base/widget/list/contact_page_screen/contact_page_scr
 import 'package:hello_word/base/widget/list/list_random_words/list_random_words.dart';
 import 'package:hello_word/base/widget/list/list_title_widget/list_tile_screen.dart';
 
+import 'list_body_widget/list_body_screen.dart';
+
 class MenuListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class MenuListScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "RandomWordsScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RandomWordsScreen()),
@@ -36,8 +38,17 @@ class MenuListScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
+              "ListBodyScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListBodyScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
               "ListTileScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ListTileScreen()),
