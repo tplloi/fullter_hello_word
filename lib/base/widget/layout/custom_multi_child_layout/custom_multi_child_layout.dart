@@ -29,14 +29,14 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
             width: 50.0,
             child: DecoratedBox(
                 decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.black,
             )),
           ),
         ),
         LayoutId(
           id: CustomEnum.center,
           child: SizedBox(
-            height: 50.0,
+            height: 150.0,
             width: 50.0,
             child: DecoratedBox(
                 decoration: BoxDecoration(
