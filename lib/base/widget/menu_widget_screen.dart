@@ -3,6 +3,7 @@ import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:hello_word/base/widget/grid/menu_grid_screen.dart';
 import 'package:hello_word/base/widget/image/menu_image_screen.dart';
 import 'package:hello_word/base/widget/interactive_viewer/using_interactive_viewer.dart';
+import 'package:hello_word/base/widget/layout/menu_layout_screen.dart';
 
 import 'appbar/sliver_app_bar.dart';
 import 'bottom_bar/menu_bottom_bar_screen.dart';
@@ -195,6 +196,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => UsingInteractiveViewerScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "MenuLayoutScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuLayoutScreen()),
                 )
               },
             ),
