@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:hello_word/base/widget/list/contact_page_screen/contact_page_screen.dart';
 import 'package:hello_word/base/widget/list/list_random_words/list_random_words.dart';
+import 'package:hello_word/base/widget/list/list_title_widget/list_tile_screen.dart';
 
 class MenuListScreen extends StatelessWidget {
   @override
@@ -31,6 +32,15 @@ class MenuListScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RandomWordsScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ListTileScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListTileScreen()),
                 )
               },
             ),
