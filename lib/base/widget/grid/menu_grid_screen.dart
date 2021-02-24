@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
-import 'package:hello_word/base/widget/grid/grid/grid.dart';
+import 'package:hello_word/base/widget/grid/grid/grid_screen.dart';
 
 class MenuGridScreen extends StatelessWidget {
   @override
