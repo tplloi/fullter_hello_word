@@ -43,33 +43,37 @@ class GestureWidget extends StatelessWidget {
     );
   }
 
-  void _showMaterialDialog(BuildContext context, String title) {
+  void _showMaterialDialog(
+    BuildContext context,
+    String title,
+  ) {
     showDialog(
-        context: context,
-        builder: (_) => new AlertDialog(
-              title: new Text(title),
-              content: new Text(
-                "context",
-                style: TextStyle(fontSize: 18, color: Colors.red),
-              ),
-              actions: <Widget>[
-                FlatButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Text(
-                    "Action",
-                    style: TextStyle(fontSize: 25, color: Colors.black),
-                  ),
-                ),
-                FlatButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: Text(
-                      "Close",
-                    ))
-              ],
-            ));
+      context: context,
+      builder: (_) => new AlertDialog(
+        title: new Text(title),
+        content: new Text(
+          "context",
+          style: TextStyle(fontSize: 18, color: Colors.red),
+        ),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: Text(
+              "Action",
+              style: TextStyle(fontSize: 25, color: Colors.black),
+            ),
+          ),
+          FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                "Close",
+              ))
+        ],
+      ),
+    );
   }
 }
