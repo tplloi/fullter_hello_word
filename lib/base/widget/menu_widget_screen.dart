@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/grid/menu_grid_screen.dart';
 
 import 'appbar/sliver_app_bar.dart';
 import 'bottom_bar/menu_bottom_bar_screen.dart';
@@ -168,6 +169,16 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
+            UIUtils().getRaisedButton(
+              "MenuGridScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuGridScreen()),
+                )
+              },
+            ),
+
           ],
         ),
       ),
