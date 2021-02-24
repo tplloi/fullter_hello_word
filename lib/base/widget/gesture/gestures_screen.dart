@@ -10,7 +10,7 @@ class GestureScreen extends StatelessWidget {
         () => Navigator.pop(context),
       ),
       body: GestureWidget(
-        title: "Test gesture",
+        title: "Tap Or Double Tap Me",
       ),
     );
   }
@@ -33,20 +33,21 @@ class GestureWidget extends StatelessWidget {
         ),
         onTap: () {
           print("onTap");
-          _showMaterialDialog(context);
+          _showMaterialDialog(context, "onTap");
         },
         onDoubleTap: () {
           print("onDoubleTap");
+          _showMaterialDialog(context, "onDoubleTap");
         },
       ),
     );
   }
 
-  void _showMaterialDialog(BuildContext context) {
+  void _showMaterialDialog(BuildContext context, String title) {
     showDialog(
         context: context,
         builder: (_) => new AlertDialog(
-              title: new Text("title"),
+              title: new Text(title),
               content: new Text(
                 "context",
                 style: TextStyle(fontSize: 18, color: Colors.red),
