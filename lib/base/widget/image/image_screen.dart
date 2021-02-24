@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 class ImageScreen extends StatelessWidget {
@@ -19,6 +20,28 @@ class ImageScreen extends StatelessWidget {
               getImageNetworkWidget(),
               SizedBox(height: 15.0),
               getIconWidget(),
+              SizedBox(height: 15.0),
+              CircleAvatar(
+                radius: 20,
+                backgroundImage: NetworkImage(Constants.dummy_image_link),
+              ),
+              SizedBox(height: 15.0),
+              ClipOval(
+                child: Image.network(
+                  Constants.dummy_image_link,
+                  height: 300,
+                  width: 500,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(height: 15.0),
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                child: Image.network(
+                  Constants.dummy_image_link,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           ),
         ),
