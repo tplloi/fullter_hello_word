@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class GridScreen extends StatelessWidget {
   final MyGridView myGridView = MyGridView();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text("GridView Example"),
-        ),
-        body: myGridView.build(),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "GridScreen",
+        () => Navigator.pop(context),
       ),
+      body: myGridView.build(),
     );
   }
 }

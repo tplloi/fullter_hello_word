@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/grid/grid/grid.dart';
 
 class MenuGridScreen extends StatelessWidget {
   @override
@@ -15,12 +16,12 @@ class MenuGridScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "SliverAppBarScreen",
+              "GridScreen",
               () => {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => SliverAppBarScreen()),
-                // )
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GridScreen()),
+                )
               },
             ),
           ],
