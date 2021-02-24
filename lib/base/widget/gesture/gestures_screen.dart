@@ -1,50 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class GestureScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      theme: ThemeData(
-        primaryColor: Colors.green,
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "GestureScreen",
+        () => Navigator.pop(context),
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Welcome to Flutter'),
-          ),
-          body: MyHomePage(
-            title: "Test gesture",
-          )),
+      body: GestureWidget(
+        title: "Test gesture",
+      ),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class GestureWidget extends StatelessWidget {
+  GestureWidget({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: GestureDetector(
-            child: Text(
-              this.title,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              ),
-            ),
-            onTap: () {
-              print("onTap");
-              _showMaterialDialog(context);
-            },
-            onDoubleTap: () {
-              print("onDoubleTap");
-            }));
+      child: GestureDetector(
+        child: Text(
+          this.title,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+        ),
+        onTap: () {
+          print("onTap");
+          _showMaterialDialog(context);
+        },
+        onDoubleTap: () {
+          print("onDoubleTap");
+        },
+      ),
+    );
   }
 
   void _showMaterialDialog(BuildContext context) {
