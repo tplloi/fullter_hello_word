@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      backgroundColor: Colors.white,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class GridPaperScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("GridPaperWidget"),
+      appBar: UIUtils().getAppBar(
+        "GridPaperScreen",
+        () => Navigator.pop(context),
       ),
       body: GridPaperWidget(),
     );
