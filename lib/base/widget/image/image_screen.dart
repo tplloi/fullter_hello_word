@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
+
+class ImageScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "ImageScreen",
+        () => Navigator.pop(context),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(width: double.infinity, height: 15.0),
+              getImageAssetWidget(),
+              SizedBox(height: 15.0),
+              getImageNetworkWidget(),
+              SizedBox(height: 15.0),
+              getIconWidget(),
+            ],
+          ),
+        ),
+      ),
+      backgroundColor: Colors.white,
+    );
+  }
+
+  Widget getImageAssetWidget() {
+    return Image.asset(
+      'assets/images/iv.jpg',
+      width: 300,
+      height: 200,
+    );
+  }
+
+  Widget getImageNetworkWidget() {
+    // return Image.network('https://picsum.photos/250?image=9');
+    return Image.network(
+        'https://github.com/flutter/plugins/raw/master/packages/video_player/video_player/doc/demo_ipod.gif?raw=true');
+  }
+
+  Widget getIconWidget() {
+    return Icon(Icons.email);
+  }
+}

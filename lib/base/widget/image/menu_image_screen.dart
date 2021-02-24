@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:hello_word/base/widget/image/gradient_screen.dart';
+import 'package:hello_word/base/widget/image/image_screen.dart';
 
 class MenuImageScreen extends StatelessWidget {
   @override
@@ -21,6 +22,15 @@ class MenuImageScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => GradientScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ImageScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ImageScreen()),
                 )
               },
             ),
