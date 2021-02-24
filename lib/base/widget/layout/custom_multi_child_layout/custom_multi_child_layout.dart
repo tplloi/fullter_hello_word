@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/widget/layout/custom_multi_child_layout/custom_enum.dart';
 
 class CustomMultiChildLayoutScreen extends StatelessWidget {
   @override
@@ -22,7 +23,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
       delegate: _CustomLayout(margin: 5),
       children: <Widget>[
         LayoutId(
-          id: Custom.up,
+          id: CustomEnum.up,
           child: SizedBox(
             height: 50.0,
             width: 50.0,
@@ -33,7 +34,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
           ),
         ),
         LayoutId(
-          id: Custom.center,
+          id: CustomEnum.center,
           child: SizedBox(
             height: 50.0,
             width: 50.0,
@@ -44,7 +45,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
           ),
         ),
         LayoutId(
-          id: Custom.down,
+          id: CustomEnum.down,
           child: SizedBox(
             height: 50.0,
             width: 50.0,
@@ -55,7 +56,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
           ),
         ),
         LayoutId(
-          id: Custom.right,
+          id: CustomEnum.right,
           child: SizedBox(
             height: 50.0,
             width: 50.0,
@@ -66,7 +67,7 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
           ),
         ),
         LayoutId(
-          id: Custom.left,
+          id: CustomEnum.left,
           child: SizedBox(
             height: 50.0,
             width: 50.0,
@@ -79,14 +80,6 @@ class CustomMultiChildLayoutWidget extends StatelessWidget {
       ],
     );
   }
-}
-
-enum Custom {
-  up,
-  center,
-  down,
-  left,
-  right,
 }
 
 class _CustomLayout extends MultiChildLayoutDelegate {
@@ -102,35 +95,35 @@ class _CustomLayout extends MultiChildLayoutDelegate {
     Size downSize;
     Size leftSize;
     Size rightSize;
-    if (hasChild(Custom.up)) {
-      upSize = layoutChild(Custom.up, box);
+    if (hasChild(CustomEnum.up)) {
+      upSize = layoutChild(CustomEnum.up, box);
       final dx = (size.width - upSize.width) / 2;
       final dy = (size.height - upSize.height) / 2 - upSize.height - margin;
-      positionChild(Custom.up, Offset(dx, dy));
+      positionChild(CustomEnum.up, Offset(dx, dy));
     }
-    if (hasChild(Custom.center)) {
-      centerSize = layoutChild(Custom.center, box);
+    if (hasChild(CustomEnum.center)) {
+      centerSize = layoutChild(CustomEnum.center, box);
       final dx = (size.width - centerSize.width) / 2;
       final dy = (size.height - centerSize.height) / 2;
-      positionChild(Custom.center, Offset(dx, dy));
+      positionChild(CustomEnum.center, Offset(dx, dy));
     }
-    if (hasChild(Custom.down)) {
-      downSize = layoutChild(Custom.down, box);
+    if (hasChild(CustomEnum.down)) {
+      downSize = layoutChild(CustomEnum.down, box);
       final dx = (size.width - downSize.width) / 2;
       final dy = (size.height - downSize.height) / 2 + downSize.height + margin;
-      positionChild(Custom.down, Offset(dx, dy));
+      positionChild(CustomEnum.down, Offset(dx, dy));
     }
-    if (hasChild(Custom.left)) {
-      leftSize = layoutChild(Custom.left, box);
+    if (hasChild(CustomEnum.left)) {
+      leftSize = layoutChild(CustomEnum.left, box);
       final dx = (size.width - leftSize.width) / 2 - leftSize.width - margin;
       final dy = (size.height - leftSize.height) / 2;
-      positionChild(Custom.left, Offset(dx, dy));
+      positionChild(CustomEnum.left, Offset(dx, dy));
     }
-    if (hasChild(Custom.right)) {
-      rightSize = layoutChild(Custom.right, box);
+    if (hasChild(CustomEnum.right)) {
+      rightSize = layoutChild(CustomEnum.right, box);
       final dx = (size.width - rightSize.width) / 2 + rightSize.width + margin;
       final dy = (size.height - rightSize.height) / 2;
-      positionChild(Custom.right, Offset(dx, dy));
+      positionChild(CustomEnum.right, Offset(dx, dy));
     }
   }
 
