@@ -1,29 +1,14 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class RandomWordsScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: RandomWords(),
-      theme: ThemeData(primaryColor: Colors.amber),
-    );
+  _RandomWordsScreenState createState() {
+    return _RandomWordsScreenState();
   }
 }
 
-class RandomWords extends StatefulWidget {
-  @override
-  _RandomWordsState createState() {
-    return _RandomWordsState();
-  }
-}
-
-class _RandomWordsState extends State<RandomWords> {
+class _RandomWordsScreenState extends State<RandomWordsScreen> {
   final _suggestions = <WordPair>[];
   final _saved = Set<WordPair>();
   final _biggerFont = TextStyle(fontSize: 18.0);
