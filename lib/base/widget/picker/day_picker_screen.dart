@@ -1,29 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      backgroundColor: Colors.white,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class DayPickerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("DayPickerWidget"),
+      appBar: UIUtils().getAppBar(
+        "DayPickerScreen",
+        () => Navigator.pop(context),
       ),
       body: Container(
-        // Another way to set the background color
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: BoxDecoration(color: Colors.yellow),
         child: Center(
           child: DayPickerWidget(),
         ),
