@@ -1,17 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CircularProgressIndicatorApp(),
-    );
-  }
-}
+import 'package:hello_word/base/util/ui_utils.dart';
 
 class CircularProgressIndicatorApp extends StatefulWidget {
   @override
@@ -35,8 +25,9 @@ class CircularProgressIndicatorAppState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter Circular Progress Bar"),
+      appBar: UIUtils().getAppBar(
+        "CircularProgressIndicatorApp",
+        () => Navigator.pop(context),
       ),
       body: Center(
         child: Container(

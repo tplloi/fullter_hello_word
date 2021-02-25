@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
+import 'circular_progress_indicator.dart';
 import 'linear_progress_indicator.dart';
 import 'progress_indicator_screen.dart';
 
@@ -17,6 +18,16 @@ class MenuProgressScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getRaisedButton(
+              "CircularProgressIndicatorApp",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CircularProgressIndicatorApp()),
+                )
+              },
+            ),
             UIUtils().getRaisedButton(
               "LinearProgressIndicatorApp",
               () => {
