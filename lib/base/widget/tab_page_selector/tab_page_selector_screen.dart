@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: TabPageSelectorWidget(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.green,
-      accentColor: Colors.lightGreenAccent,
-      // Set background color
-      backgroundColor: Colors.black12,
-    ),
-  ));
-}
-
-class TabPageSelectorWidget extends StatelessWidget {
+class TabPageSelectorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List tabs = ['Tab1', 'Tab2', 'Tab3', 'Tab4'];
@@ -23,8 +10,9 @@ class TabPageSelectorWidget extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: Scaffold(
-            appBar: AppBar(
-              title: Text('TabPageSelectorWidget'),
+            appBar: UIUtils().getAppBar(
+              "TabPageSelectorScreen",
+              () => Navigator.pop(context),
             ),
             body: DefaultTabController(
               length: tabs.length,
@@ -35,7 +23,10 @@ class TabPageSelectorWidget extends StatelessWidget {
                     Expanded(
                       child: TabBarView(
                           children: tabs.map((value) {
-                        return Text(value);
+                        return UIUtils().getRaisedButton(
+                          "TabBarView " + value,
+                          () => Navigator.pop(context),
+                        );
                       }).toList()),
                     ),
                   ],
