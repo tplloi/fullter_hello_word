@@ -1,43 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class TextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: SingleChildScrollView(
-            child: Container(
-          width: double.infinity,
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-              text1(),
-              SizedBox(
-                height: 50,
-              ),
-              text2(),
-              SizedBox(
-                height: 50,
-              ),
-              text3(),
-              SizedBox(
-                height: 50,
-              ),
-              TextWidget(),
-            ],
-          ),
-        )),
-        backgroundColor: Colors.white,
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "TextScreen",
+        () => Navigator.pop(context),
       ),
+      body: SingleChildScrollView(
+          child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.all(15),
+        child: Column(
+          children: <Widget>[
+            text1(),
+            SizedBox(
+              height: 50,
+            ),
+            text2(),
+            SizedBox(
+              height: 50,
+            ),
+            text3(),
+            SizedBox(
+              height: 50,
+            ),
+            TextWidget(),
+          ],
+        ),
+      )),
+      backgroundColor: Colors.white,
     );
   }
 
