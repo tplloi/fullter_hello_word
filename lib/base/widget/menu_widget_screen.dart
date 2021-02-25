@@ -8,6 +8,7 @@ import 'package:hello_word/base/widget/list/menu_list_screen.dart';
 import 'package:hello_word/base/widget/picker/day_picker_screen.dart';
 import 'package:hello_word/base/widget/slider/slider_screen.dart';
 import 'package:hello_word/base/widget/stepper/stepper.dart';
+import 'package:hello_word/base/widget/switch/switch_screen.dart';
 
 import 'appbar/sliver_app_bar.dart';
 import 'bottom_bar/menu_bottom_bar_screen.dart';
@@ -257,6 +258,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StepperScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "SwitchScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SwitchScreen()),
                 )
               },
             ),
