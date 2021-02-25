@@ -30,6 +30,7 @@ import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
+import 'check_box/radio_button_screen_2.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -123,6 +124,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RadioButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "RadioButtonScreen2",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RadioButtonScreen2()),
                 )
               },
             ),

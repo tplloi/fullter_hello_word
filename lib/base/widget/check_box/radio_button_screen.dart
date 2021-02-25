@@ -5,13 +5,11 @@ class RadioButtonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
       appBar: UIUtils().getAppBar(
         "RadioButtonScreen",
         () => Navigator.pop(context),
       ),
       body: Container(
-        // Another way to set the background color
         decoration: BoxDecoration(color: Colors.white),
         child: Center(
           child: RadioWidget(),

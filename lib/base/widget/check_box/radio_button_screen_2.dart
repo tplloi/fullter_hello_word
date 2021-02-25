@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() => runApp(MyApp());
-
-/// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
-  static const String _title = 'Radio Button Example';
+class RadioButtonScreen2 extends StatelessWidget {
+  static const String _title = 'RadioButtonScreen';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
+        appBar: UIUtils().getAppBar(
+          _title,
+          () => Navigator.pop(context),
+        ),
         body: Center(
           child: MyStatefulWidget(),
         ),
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-enum BestTutorSite { javatpoint, w3schools, tutorialandexample }
+enum BestTutorSite { javatPoint, w3schools, tutorialAndExample }
 
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({Key key}) : super(key: key);
@@ -30,7 +31,7 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  BestTutorSite _site = BestTutorSite.javatpoint;
+  BestTutorSite _site = BestTutorSite.javatPoint;
 
   Widget build(BuildContext context) {
     return Column(
@@ -38,7 +39,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ListTile(
           title: const Text('www.javatpoint.com'),
           leading: Radio(
-            value: BestTutorSite.javatpoint,
+            value: BestTutorSite.javatPoint,
             groupValue: _site,
             onChanged: (BestTutorSite value) {
               setState(() {
@@ -62,7 +63,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ListTile(
           title: const Text('www.tutorialandexample.com'),
           leading: Radio(
-            value: BestTutorSite.tutorialandexample,
+            value: BestTutorSite.tutorialAndExample,
             groupValue: _site,
             onChanged: (BestTutorSite value) {
               setState(() {
