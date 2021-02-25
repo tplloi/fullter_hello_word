@@ -1,40 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyHome(),
-    // Set the theme's primary color, accent color,
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-      accentColor: Colors.blue,
-      // Set background color
-      backgroundColor: Colors.blue,
-    ),
-  ));
-}
-
-class MyHome extends StatelessWidget {
+class ProgressIndicatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
-      appBar: AppBar(
-        // AppBar Title
-        title: Text("CircularProgressIndicatorWidget"),
+      appBar: UIUtils().getAppBar(
+        "ProgressIndicatorScreen",
+        () => Navigator.pop(context),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            children: <Widget>[
-              CircularProgressIndicatorWidget(),
-              SizedBox(
-                height: 50,
-              ),
-              LinearProgressIndicatorWidget(),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            CircularProgressIndicatorWidget(),
+            SizedBox(
+              height: 50,
+            ),
+            LinearProgressIndicatorWidget(),
+          ],
         ),
       ),
     );
