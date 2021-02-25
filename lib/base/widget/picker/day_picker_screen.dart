@@ -32,7 +32,7 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
     final DateTime picked = await showDatePicker(
       context: context,
       selectableDayPredicate: (datetime) {
-        if (datetime.day == 10) {
+        if (datetime.day == 10 || datetime.day == 11 || datetime.day == 12) {
           return false;
         }
         return true;
@@ -42,7 +42,11 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
       firstDate: DateTime(2012, 12),
       lastDate: DateTime(2222, 12),
     );
-    if (picked != null && picked != _date) setState(() => _date = picked);
+    if (picked != null && picked != _date)
+      setState(() => {
+            _date = picked,
+            print("chooseDate _date " + _date.day.toString()),
+          });
     if (picked == null) _date = DateTime.now();
   }
 
@@ -59,18 +63,8 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        RaisedButton(
-          onPressed: () {
-            chooseDate(context);
-          },
-          child: Text('Choose date'),
-        ),
-        RaisedButton(
-          onPressed: () {
-            chooseTime(context);
-          },
-          child: Text('Choose time'),
-        )
+        UIUtils().getRaisedButton("Choose date", () => chooseDate(context)),
+        UIUtils().getRaisedButton("Choose time", () => chooseTime(context)),
       ],
     );
   }
