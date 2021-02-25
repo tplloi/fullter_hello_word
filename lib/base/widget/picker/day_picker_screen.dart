@@ -55,7 +55,10 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
       context: context,
       initialTime: _time,
     );
-    setState(() => _time = picked);
+    setState(() => {
+          _time = picked,
+          print("chooseTime _time " + _time.toString()),
+        });
     if (picked == null) _time = TimeOfDay.now();
   }
 
