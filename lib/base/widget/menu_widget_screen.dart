@@ -6,6 +6,7 @@ import 'package:hello_word/base/widget/interactive_viewer/using_interactive_view
 import 'package:hello_word/base/widget/layout/menu_layout_screen.dart';
 import 'package:hello_word/base/widget/list/menu_list_screen.dart';
 import 'package:hello_word/base/widget/picker/day_picker_screen.dart';
+import 'package:hello_word/base/widget/slider/slider_screen.dart';
 
 import 'appbar/sliver_app_bar.dart';
 import 'bottom_bar/menu_bottom_bar_screen.dart';
@@ -177,7 +178,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "MenuGridScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuGridScreen()),
@@ -186,7 +187,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "MenuImageScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuImageScreen()),
@@ -195,16 +196,17 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "UsingInteractiveViewerScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => UsingInteractiveViewerScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => UsingInteractiveViewerScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "MenuLayoutScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuLayoutScreen()),
@@ -213,7 +215,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "MenuListScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuListScreen()),
@@ -222,7 +224,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "DayPickerScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DayPickerScreen()),
@@ -231,14 +233,23 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ProgressIndicatorScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProgressIndicatorScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => ProgressIndicatorScreen()),
                 )
               },
             ),
-
+            UIUtils().getRaisedButton(
+              "SliderScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SliderScreen()),
+                )
+              },
+            ),
           ],
         ),
       ),
