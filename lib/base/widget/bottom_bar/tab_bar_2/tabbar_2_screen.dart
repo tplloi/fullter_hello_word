@@ -1,38 +1,30 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-      // Title
-      title: "Using Tabs",
-      // Home
-      home: MyHome()));
-}
-
-class MyHome extends StatefulWidget {
+class TabBarScreen2 extends StatefulWidget {
   @override
-  MyHomeState createState() => MyHomeState();
+  TabBarScreen2State createState() => TabBarScreen2State();
 }
 
 // SingleTickerProviderStateMixin is used for animation
-class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
+class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderStateMixin {
   /*
    *-------------------- Setup Tabs ------------------*
    */
   // Create a tab controller
-  TabController controller;
+  TabController tabController;
 
   @override
   void initState() {
     super.initState();
 
     // Initialize the Tab Controller
-    controller = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
     // Dispose of the Tab Controller
-    controller.dispose();
+    tabController.dispose();
     super.dispose();
   }
 
@@ -51,7 +43,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
         ),
       ],
       // setup the controller
-      controller: controller,
+      controller: tabController,
     );
   }
 
@@ -60,7 +52,7 @@ class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
       // Add tabs as widgets
       children: tabs,
       // set the controller
-      controller: controller,
+      controller: tabController,
     );
   }
 
