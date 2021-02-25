@@ -29,7 +29,7 @@ import 'edit_text/menu_edit_text_screen.dart';
 import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
-import 'progress/progress_indicator_screen.dart';
+import 'progress/menu_progress_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -83,7 +83,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "CalendarScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CalendarScreen()),
@@ -101,7 +101,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ChartScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ChartScreen()),
@@ -256,12 +256,11 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
-              "ProgressIndicatorScreen",
+              "MenuProgressScreen",
               () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => ProgressIndicatorScreen()),
+                  MaterialPageRoute(builder: (context) => MenuProgressScreen()),
                 )
               },
             ),
