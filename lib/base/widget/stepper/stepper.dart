@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() {
-  runApp(MaterialApp(
-      // Title
-      title: "Simple Material App",
-      // Home
-      home: MyHome()));
-}
-
-class MyHome extends StatefulWidget {
+class StepperScreen extends StatefulWidget {
   @override
-  MyHomeState createState() => MyHomeState();
+  StepperScreenState createState() => StepperScreenState();
 }
 
-class MyHomeState extends State<MyHome> {
+class StepperScreenState extends State<StepperScreen> {
   // init the step to 0th position
   int currentStep = 0;
   List<Step> listMySteps = [
@@ -29,16 +22,19 @@ class MyHomeState extends State<MyHome> {
         // You can change the style of the step icon i.e number, editing, etc.
         state: StepState.editing,
         isActive: true),
-    Step(title: Text("Step 3"), content: Text("Hello World!"), isActive: true),
+    Step(
+      title: Text("Step 3"),
+      content: Text("Hello World!"),
+      isActive: true,
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Appbar
-      appBar: AppBar(
-        // Title
-        title: Text("Simple Material App"),
+      appBar: UIUtils().getAppBar(
+        "StepperScreen",
+        () => Navigator.pop(context),
       ),
       // Body
       body: Container(
