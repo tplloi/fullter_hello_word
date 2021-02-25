@@ -1,39 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class CalendarScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: HomeCalendarPage(),
-    );
-  }
+  _CalendarScreenState createState() => _CalendarScreenState();
 }
 
-class HomeCalendarPage extends StatefulWidget {
-  @override
-  _HomeCalendarPageState createState() => _HomeCalendarPageState();
-}
-
-class _HomeCalendarPageState extends State<HomeCalendarPage> {
-  CalendarController _controller;
+class _CalendarScreenState extends State<CalendarScreen> {
+  CalendarController calendarController;
 
   @override
   void initState() {
     super.initState();
-    _controller = CalendarController();
+    calendarController = CalendarController();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Calendar Example'),
+      appBar: UIUtils().getAppBar(
+        "CalendarScreen",
+        () => Navigator.pop(context),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -83,7 +71,7 @@ class _HomeCalendarPageState extends State<HomeCalendarPage> {
                       style: TextStyle(color: Colors.white),
                     )),
               ),
-              calendarController: _controller,
+              calendarController: calendarController,
             )
           ],
         ),

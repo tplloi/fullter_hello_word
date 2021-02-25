@@ -16,6 +16,7 @@ import 'appbar/sliver_app_bar.dart';
 import 'bottom_bar/menu_bottom_bar_screen.dart';
 import 'bottom_sheet/bottom_sheet_screen.dart';
 import 'button/menu_button_screen.dart';
+import 'calendar/calendar_screen.dart';
 import 'card/card_screen.dart';
 import 'check_box/check_box_screen.dart';
 import 'check_box/radio_button_screen.dart';
@@ -76,6 +77,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "CalendarScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CalendarScreen()),
                 )
               },
             ),
