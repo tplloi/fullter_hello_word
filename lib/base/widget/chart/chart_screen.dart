@@ -1,25 +1,15 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-void main() => runApp(MyApp());
-
-/// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
+class ChartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Flutter Chart Example'),
-          backgroundColor: Colors.green),
+      appBar: UIUtils().getAppBar(
+        "ChartScreen",
+        () => Navigator.pop(context),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -27,12 +17,14 @@ class HomePage extends StatelessWidget {
             LineCharts(),
             Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Text("Traffic Source Chart",
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.purple,
-                        fontWeight: FontWeight.w700,
-                        fontStyle: FontStyle.italic))),
+                child: Text(
+                  "Traffic Source Chart",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.purple,
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.italic),
+                )),
           ],
         ),
       ),
