@@ -6,7 +6,7 @@ import 'package:hello_word/base/widget/interactive_viewer/using_interactive_view
 import 'package:hello_word/base/widget/layout/menu_layout_screen.dart';
 import 'package:hello_word/base/widget/list/menu_list_screen.dart';
 import 'package:hello_word/base/widget/picker/day_picker_screen.dart';
-import 'package:hello_word/base/widget/slider/slider_screen.dart';
+import 'package:hello_word/base/widget/slider/menu_slider_screen.dart';
 import 'package:hello_word/base/widget/stepper/stepper.dart';
 import 'package:hello_word/base/widget/switch/switch_screen.dart';
 import 'package:hello_word/base/widget/tab_page_selector/tab_page_selector_screen.dart';
@@ -21,6 +21,7 @@ import 'card/card_screen.dart';
 import 'chart/chart_screen.dart';
 import 'check_box/check_box_screen.dart';
 import 'check_box/radio_button_screen.dart';
+import 'check_box/radio_button_screen_2.dart';
 import 'cupertino/menu_cupertino_screen.dart';
 import 'data_table/data_table_screen.dart';
 import 'dialog/dialog_screen.dart';
@@ -30,7 +31,6 @@ import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
-import 'check_box/radio_button_screen_2.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -129,7 +129,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "RadioButtonScreen2",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RadioButtonScreen2()),
@@ -275,11 +275,11 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
-              "SliderScreen",
+              "MenuSliderScreen",
               () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SliderScreen()),
+                  MaterialPageRoute(builder: (context) => MenuSliderScreen()),
                 )
               },
             ),
