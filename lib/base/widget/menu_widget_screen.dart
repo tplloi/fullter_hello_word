@@ -31,6 +31,7 @@ import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
+import 'swiper/swiper_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -289,6 +290,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StepperScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "SwiperScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SwiperScreen()),
                 )
               },
             ),
