@@ -33,6 +33,7 @@ import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
 import 'stack/stack_screen.dart';
 import 'swiper/swiper_screen.dart';
+import 'table/table_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -328,6 +329,15 @@ class MenuWidgetScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => TabPageSelectorScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "TableScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TableScreen()),
                 )
               },
             ),
