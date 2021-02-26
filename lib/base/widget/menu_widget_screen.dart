@@ -31,6 +31,7 @@ import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
+import 'stack/stack_screen.dart';
 import 'swiper/swiper_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
@@ -285,6 +286,15 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
+              "StackScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StackScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
               "StepperScreen",
               () => {
                 Navigator.push(
@@ -295,7 +305,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "SwiperScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SwiperScreen()),
