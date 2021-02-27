@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-//TODO
-void main() {
-  runApp(MaterialApp(
-    home: MyGetHttpData(),
-  ));
-}
-
-// Create a stateful base.widget
-class MyGetHttpData extends StatefulWidget {
+class GetHttpDataScreen extends StatefulWidget {
   @override
-  MyGetHttpDataState createState() => MyGetHttpDataState();
+  GetHttpDataScreenState createState() => GetHttpDataScreenState();
 }
 
 // Create the state for our stateful base.widget
-class MyGetHttpDataState extends State<MyGetHttpData> {
+class GetHttpDataScreenState extends State<GetHttpDataScreen> {
   final String url = "https://swapi.dev/api/people";
   List data;
 
@@ -47,8 +40,9 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Retrieve JSON Data via HTTP GET"),
+      appBar: UIUtils().getAppBar(
+        "GetHttpDataScreen",
+        () => Navigator.pop(context),
       ),
       // Create a Listview and load the data when available
       body: ListView.builder(
@@ -56,25 +50,26 @@ class MyGetHttpDataState extends State<MyGetHttpData> {
           itemBuilder: (BuildContext context, int index) {
             return Container(
               child: Center(
-                  child: Column(
-                // Stretch the cards in horizontal axis
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Card(
-                    child: Container(
-                      child: Text(
-                        // Read the name field value and set it in the Text widget
-                        data[index]['name'],
-                        // set some style to text
-                        style: TextStyle(
-                            fontSize: 20.0, color: Colors.lightBlueAccent),
+                child: Column(
+                  // Stretch the cards in horizontal axis
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Card(
+                      child: Container(
+                        child: Text(
+                          // Read the name field value and set it in the Text widget
+                          data[index]['name'],
+                          // set some style to text
+                          style: TextStyle(
+                              fontSize: 20.0, color: Colors.lightBlueAccent),
+                        ),
+                        // added padding
+                        padding: const EdgeInsets.all(15.0),
                       ),
-                      // added padding
-                      padding: const EdgeInsets.all(15.0),
-                    ),
-                  )
-                ],
-              )),
+                    )
+                  ],
+                ),
+              ),
             );
           }),
     );

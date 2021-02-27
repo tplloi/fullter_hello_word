@@ -9,6 +9,7 @@ import 'async/menu_async_screen.dart';
 import 'counter/counter.dart';
 import 'inherited/menu_inherited_screen.dart';
 import 'load_local_json/load_local_json.dart';
+import 'network/using_http_get.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override
@@ -57,6 +58,16 @@ class MenuDemoScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => LoadLocalJsonScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "GetHttpDataScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => GetHttpDataScreen()),
                 )
               },
             ),
