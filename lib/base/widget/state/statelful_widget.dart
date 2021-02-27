@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 
-//TODO
-void main() {
-  runApp(MaterialApp(
-    home: MyButton(),
-  ));
-}
-
-class MyButton extends StatefulWidget {
+class StatefulWidgetDemoScreen extends StatefulWidget {
   @override
-  MyButtonState createState() {
-    return MyButtonState();
+  StatefulWidgetDemoScreenState createState() {
+    return StatefulWidgetDemoScreenState();
   }
 }
 
-class MyButtonState extends State<MyButton> {
+class StatefulWidgetDemoScreenState extends State<StatefulWidgetDemoScreen> {
   int counter = 0;
-  List<String> strings = ['Flutter', 'is', 'cool', "and","awesome!"];
+  List<String> strings = ['Flutter', 'is', 'cool', "and", "awesome!"];
   String displayedString = "Hello World!";
 
   void onPressOfButton() {
@@ -30,7 +23,7 @@ class MyButtonState extends State<MyButton> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Stateful Widget"),
+        title: Text("StatefulWidgetDemoScreen"),
         backgroundColor: Colors.green,
       ),
       body: Container(

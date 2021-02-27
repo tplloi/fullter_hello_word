@@ -34,6 +34,7 @@ import 'inkwell/inkwell_screen.dart';
 import 'progress/menu_progress_screen.dart';
 import 'stack/stack_screen.dart';
 import 'state/stateless_widget.dart';
+import 'state/statelful_widget.dart';
 import 'swiper/swiper_screen.dart';
 import 'table/table_screen.dart';
 import 'tooltip/tooltip_screen.dart';
@@ -313,6 +314,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StatelessWidgetDemoScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "StatefulWidgetDemoScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StatefulWidgetDemoScreen()),
                 )
               },
             ),
