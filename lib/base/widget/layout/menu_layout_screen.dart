@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
-import 'file:///D:/LoitppFlutter/hello_word/lib/base/widget/layout/custom_multi_child_layout/custom_multi_child_layout.dart';
+import 'package:hello_word/base/widget/layout/custom_multi_child_layout/custom_multi_child_layout.dart';
 import 'package:hello_word/base/widget/layout/layout_builder_screen.dart';
-import 'file:///D:/LoitppFlutter/hello_word/lib/base/widget/layout/layout_multiple_screen/layout_mutiple_screen.dart';
+import 'package:hello_word/base/widget/layout/layout_multiple_screen/layout_mutiple_screen.dart';
 import 'package:hello_word/base/widget/layout/layout_single_screen.dart';
 
 class MenuLayoutScreen extends StatelessWidget {
