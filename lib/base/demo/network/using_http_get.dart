@@ -58,7 +58,7 @@ class GetHttpDataScreenState extends State<GetHttpDataScreen> {
                       child: Container(
                         child: Text(
                           // Read the name field value and set it in the Text widget
-                          data[index]['name'],
+                          data[index]['name'] + " " + data[index]['height'],
                           // set some style to text
                           style: TextStyle(
                               fontSize: 20.0, color: Colors.lightBlueAccent),
