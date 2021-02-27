@@ -79,11 +79,14 @@ class MyCard extends StatelessWidget {
       child: Card(
         child: Container(
           padding: const EdgeInsets.all(15.0),
-          child: Column(
-            children: <Widget>[
+          child: InkWell(
+            onTap: () {
+              print("onTap");
+            },
+            child: Column(children: <Widget>[
               this.title,
               this.icon,
-            ],
+            ]),
           ),
         ),
       ),
