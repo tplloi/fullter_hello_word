@@ -32,6 +32,7 @@ import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
 import 'progress/menu_progress_screen.dart';
 import 'stack/stack_screen.dart';
+import 'state/stateless_widget.dart';
 import 'swiper/swiper_screen.dart';
 import 'table/table_screen.dart';
 import 'tooltip/tooltip_screen.dart';
@@ -293,6 +294,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StackScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "StatelessWidgetDemoScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StatelessWidgetDemoScreen()),
                 )
               },
             ),

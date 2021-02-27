@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-//TODO
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-    // Define the theme, set the primary swatch
-    theme: ThemeData(primarySwatch: Colors.green),
-  ));
-}
-
-class MyApp extends StatelessWidget {
+class StatelessWidgetDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Declare some constants
     final double myTextSize = 30.0;
     final double myIconSize = 40.0;
     final TextStyle myTextStyle =
-    TextStyle(color: Colors.grey, fontSize: myTextSize);
+        TextStyle(color: Colors.grey, fontSize: myTextSize);
 
     var column = Column(
       // Makes the cards stretch in horizontal axis
@@ -24,14 +15,13 @@ class MyApp extends StatelessWidget {
       children: <Widget>[
         // Setup the card
         MyCard(
-          // Setup the text
+            // Setup the text
             title: Text(
               "Favorite",
               style: myTextStyle,
             ),
             // Setup the icon
-            icon:
-            Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
+            icon: Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
         MyCard(
             title: Text(
               "Alarm",
@@ -55,8 +45,9 @@ class MyApp extends StatelessWidget {
     );
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stateless Widget"),
+      appBar: UIUtils().getAppBar(
+        "StatelessWidgetDemoScreen",
+        () => Navigator.pop(context),
       ),
       body: Container(
         // Sets the padding in the main container
@@ -76,7 +67,10 @@ class MyCard extends StatelessWidget {
   final Widget title;
 
   // Constructor. {} here denote that they are optional values i.e you can use as: MyCard()
-  MyCard({this.title, this.icon});
+  MyCard({
+    this.title,
+    this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -84,9 +78,12 @@ class MyCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 1.0),
       child: Card(
         child: Container(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
-            children: <Widget>[this.title, this.icon],
+            children: <Widget>[
+              this.title,
+              this.icon,
+            ],
           ),
         ),
       ),
