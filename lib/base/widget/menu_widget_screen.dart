@@ -30,6 +30,7 @@ import 'edit_text/menu_edit_text_screen.dart';
 import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gestures_screen.dart';
+import 'inkwell/inkwell_screen.dart';
 import 'progress/menu_progress_screen.dart';
 import 'stack/stack_screen.dart';
 import 'state/stateless_widget.dart';
@@ -230,6 +231,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => MenuImageScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "InkwellScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => InkwellScreen()),
                 )
               },
             ),
