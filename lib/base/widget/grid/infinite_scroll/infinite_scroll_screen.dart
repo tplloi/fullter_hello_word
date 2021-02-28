@@ -9,7 +9,7 @@ class InfiniteScrollScreen extends StatefulWidget {
 }
 
 class InfiniteScrollState extends State<InfiniteScrollScreen> {
-  List dataList = [];
+  List listData = [];
   bool isLoading = false;
   int pageCount = 1;
   ScrollController _scrollController;
@@ -37,15 +37,25 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
         crossAxisCount: 2,
         mainAxisSpacing: 15.0,
         physics: const AlwaysScrollableScrollPhysics(),
-        children: dataList.map((value) {
-          return Container(
-            alignment: Alignment.center,
-            height: MediaQuery.of(context).size.height * 0.2,
-            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
+        children: listData.map((value) {
+          return InkWell(
+            child: Container(
+              alignment: Alignment.center,
+              height: MediaQuery.of(context).size.height * 0.2,
+              margin: EdgeInsets.only(left: 10.0, right: 10.0),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+              ),
+              child: Text("Item $value"),
             ),
-            child: Text("Item $value"),
+            onTap: () {
+              print("onTap");
+              listData.remove(value);
+              //do sth better
+              setState(() {
+
+              });
+            },
           );
         }).toList(),
       ),
@@ -74,7 +84,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
   ////ADDING DATA INTO ARRAY LIST
   void addItemIntoLisT(var pageCount) {
     for (int i = (pageCount * 10) - 10; i < pageCount * 10; i++) {
-      dataList.add(i);
+      listData.add(i);
       isLoading = false;
     }
   }
