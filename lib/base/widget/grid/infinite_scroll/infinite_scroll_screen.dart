@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
   void initState() {
     super.initState();
 
-    ////LOADING FIRST  DATA
+    //LOADING FIRST  DATA
     addItemIntoLisT(1);
 
     _scrollController = new ScrollController(initialScrollOffset: 5.0)
@@ -25,33 +26,28 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
   }
 
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Gridview',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.red,
-        accentColor: Color(0xFFFEF9EB),
+    return Scaffold(
+      appBar: UIUtils().getAppBar(
+        "InfiniteScrollScreen",
+        () => Navigator.pop(context),
       ),
-      home: Scaffold(
-        appBar: new AppBar(),
-        body: GridView.count(
-          controller: _scrollController,
-          scrollDirection: Axis.vertical,
-          crossAxisCount: 2,
-          mainAxisSpacing: 10.0,
-          physics: const AlwaysScrollableScrollPhysics(),
-          children: dataList.map((value) {
-            return Container(
-              alignment: Alignment.center,
-              height: MediaQuery.of(context).size.height * 0.2,
-              margin: EdgeInsets.only(left: 10.0, right: 10.0),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
-              ),
-              child: Text("Item $value"),
-            );
-          }).toList(),
-        ),
+      body: GridView.count(
+        controller: _scrollController,
+        scrollDirection: Axis.vertical,
+        crossAxisCount: 2,
+        mainAxisSpacing: 15.0,
+        physics: const AlwaysScrollableScrollPhysics(),
+        children: dataList.map((value) {
+          return Container(
+            alignment: Alignment.center,
+            height: MediaQuery.of(context).size.height * 0.2,
+            margin: EdgeInsets.only(left: 10.0, right: 10.0),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+            ),
+            child: Text("Item $value"),
+          );
+        }).toList(),
       ),
     );
   }
@@ -69,7 +65,6 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
           print("RUNNING LOAD MORE");
 
           pageCount = pageCount + 1;
-
           addItemIntoLisT(pageCount);
         }
       });
