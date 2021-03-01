@@ -1,4 +1,4 @@
-import 'api_provider.dart';
+import 'service/api_provider.dart';
 import 'chuckCategories.dart';
 
 class ChuckCategoryRepository {
