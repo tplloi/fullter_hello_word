@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/const/constants.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'chuck_screen.dart';
-import '../block/category_bloc.dart';
-import '../model/categories.dart';
-import '../service/response.dart';
-import 'error_widget.dart';
-import 'loading_widget.dart';
+import 'ChuckScreen.dart';
+import '../block/CategoriesBloc.dart';
+import '../model/Categories.dart';
+import '../service/Response.dart';
+import 'ErrorRetryWidget.dart';
+import 'LoadingWidget.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
 class CategoriesScreen extends StatefulWidget {

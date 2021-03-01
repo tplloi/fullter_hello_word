@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:hello_word/base/const/constants.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 class SwiperScreen extends StatelessWidget {

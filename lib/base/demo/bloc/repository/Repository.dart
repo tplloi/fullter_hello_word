@@ -1,7 +1,7 @@
-import 'package:hello_word/base/demo/bloc/model/chuck.dart';
+import 'package:hello_word/base/demo/bloc/model/Chuck.dart';
 
-import '../model/categories.dart';
-import '../service/api_provider.dart';
+import '../model/Categories.dart';
+import '../service/ApiProvider.dart';
 
 class Repository {
   ApiProvider _provider = ApiProvider();

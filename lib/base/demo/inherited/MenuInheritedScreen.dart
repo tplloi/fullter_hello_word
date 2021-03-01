@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'inherited_model.dart';
-import 'inherited_widget.dart';
+import 'InheritedModelScreen.dart';
+import 'InheritedWidgetScreen.dart';
 
 class MenuInheritedScreen extends StatelessWidget {
   @override

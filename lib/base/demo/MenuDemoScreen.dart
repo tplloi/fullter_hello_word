@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/demo/pdf/view_pdf_file_screen.dart';
-import 'package:hello_word/base/demo/shop/demo_shop.dart';
-import 'package:hello_word/base/demo/theme/theme.dart';
-import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
+import 'package:hello_word/base/demo/pdf/ViewPDFFileScreen.dart';
+import 'package:hello_word/base/demo/shop/ShopScreen.dart';
+import 'package:hello_word/base/demo/theme/ThemeScreen.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'async/menu_async_screen.dart';
-import 'bloc/ui/categories_screen.dart';
-import 'counter/counter.dart';
-import 'inherited/menu_inherited_screen.dart';
-import 'load_local_json/load_local_json.dart';
-import 'network/using_http_get.dart';
+import 'async/MenuAsyncScreen.dart';
+import 'bloc/ui/CategoriesScreen.dart';
+import 'counter/CounterScreen.dart';
+import 'inherited/MenuInheritedScreen.dart';
+import 'loadLocalJson/LoadLocalJsonScreen.dart';
+import 'network/GetHttpDataScreen.dart';
+import 'tipCalculator/TipCalculatorScreen.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/const/constants.dart';
-import 'package:hello_word/base/demo/bloc/ui/error_widget.dart';
-import 'package:hello_word/base/demo/bloc/ui/loading_widget.dart';
+import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/demo/bloc/ui/ErrorRetryWidget.dart';
+import 'package:hello_word/base/demo/bloc/ui/LoadingWidget.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import '../block/chuck_bloc.dart';
-import '../model/chuck.dart';
-import '../service/response.dart';
+import '../block/ChuckBloc.dart';
+import '../model/Chuck.dart';
+import '../service/Response.dart';
 
 class ChuckScreen extends StatefulWidget {
   final String selectedCategory;

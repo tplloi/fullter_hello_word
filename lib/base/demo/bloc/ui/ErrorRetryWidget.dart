@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/const/constants.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-class LoadingWidget extends StatelessWidget {
-  final String loadingMessage;
+class ErrorRetryWidget extends StatelessWidget {
+  final String errorMessage;
 
-  const LoadingWidget({
+  final Function onRetryPressed;
+
+  const ErrorRetryWidget({
     Key key,
-    this.loadingMessage,
+    this.errorMessage,
+    this.onRetryPressed,
   }) : super(key: key);
 
   @override
@@ -17,7 +20,7 @@ class LoadingWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            loadingMessage,
+            errorMessage,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
@@ -25,7 +28,11 @@ class LoadingWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: Constants.margin_padding_medium),
-          UIUtils().getCircularProgressIndicator(Colors.white),
+          UIUtils().getRaisedButton(
+              "Click to Retry",
+              () => {
+                    onRetryPressed(),
+                  })
         ],
       ),
     );
