@@ -10,6 +10,8 @@ class DBProvider {
   DBProvider._();
 
   static final DBProvider db = DBProvider._();
+  String dbName = "TestDB.db";
+  String tableNameClient = "Client";
 
   Database _database;
 
@@ -22,10 +24,10 @@ class DBProvider {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    String path = join(documentsDirectory.path, "TestDB.db");
+    String path = join(documentsDirectory.path, dbName);
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
-      await db.execute("CREATE TABLE Client ("
+      await db.execute("CREATE TABLE $tableNameClient ("
           "id INTEGER PRIMARY KEY,"
           "first_name TEXT,"
           "last_name TEXT,"
@@ -34,14 +36,14 @@ class DBProvider {
     });
   }
 
-  newClient(Client newClient) async {
+  addClient(Client newClient) async {
     final db = await database;
     //get the biggest id in the table
-    var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM Client");
+    var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM $tableNameClient");
     int id = table.first["id"];
     //insert to the table using the new id
     var raw = await db.rawInsert(
-        "INSERT Into Client (id,first_name,last_name,blocked)"
+        "INSERT Into $tableNameClient (id,first_name,last_name,blocked)"
         " VALUES (?,?,?,?)",
         [id, newClient.firstName, newClient.lastName, newClient.blocked]);
     return raw;
@@ -54,21 +56,21 @@ class DBProvider {
         firstName: client.firstName,
         lastName: client.lastName,
         blocked: !client.blocked);
-    var res = await db.update("Client", blocked.toMap(),
+    var res = await db.update("$tableNameClient", blocked.toMap(),
         where: "id = ?", whereArgs: [client.id]);
     return res;
   }
 
   updateClient(Client newClient) async {
     final db = await database;
-    var res = await db.update("Client", newClient.toMap(),
+    var res = await db.update("$tableNameClient", newClient.toMap(),
         where: "id = ?", whereArgs: [newClient.id]);
     return res;
   }
 
-  getClient(int id) async {
+  getClientById(int id) async {
     final db = await database;
-    var res = await db.query("Client", where: "id = ?", whereArgs: [id]);
+    var res = await db.query("$tableNameClient", where: "id = ?", whereArgs: [id]);
     return res.isNotEmpty ? Client.fromMap(res.first) : null;
   }
 
@@ -76,8 +78,8 @@ class DBProvider {
     final db = await database;
 
     print("works");
-    // var res = await db.rawQuery("SELECT * FROM Client WHERE blocked=1");
-    var res = await db.query("Client", where: "blocked = ? ", whereArgs: [1]);
+    // var res = await db.rawQuery("SELECT * FROM $tableNameClient WHERE blocked=1");
+    var res = await db.query("$tableNameClient", where: "blocked = ? ", whereArgs: [1]);
 
     List<Client> list =
         res.isNotEmpty ? res.map((c) => Client.fromMap(c)).toList() : [];
@@ -86,19 +88,19 @@ class DBProvider {
 
   Future<List<Client>> getAllClients() async {
     final db = await database;
-    var res = await db.query("Client");
+    var res = await db.query("$tableNameClient");
     List<Client> list =
         res.isNotEmpty ? res.map((c) => Client.fromMap(c)).toList() : [];
     return list;
   }
 
-  deleteClient(int id) async {
+  deleteClientById(int id) async {
     final db = await database;
-    return db.delete("Client", where: "id = ?", whereArgs: [id]);
+    return db.delete("$tableNameClient", where: "id = ?", whereArgs: [id]);
   }
 
-  deleteAll() async {
+  deleteAllDb() async {
     final db = await database;
-    db.rawDelete("Delete * from Client");
+    db.rawDelete("Delete * from $tableNameClient");
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'model/ClientModel.dart';
 import 'bloc/ClientsBloc.dart';
@@ -21,20 +22,23 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
     Client(firstName: "Kawasaki", lastName: "H2R", blocked: true),
   ];
 
-  final bloc = ClientsBloc();
+  final clientsBloc = ClientsBloc();
 
   @override
   void dispose() {
-    bloc.dispose();
+    clientsBloc.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter SQLite")),
+      appBar: UIUtils().getAppBar(
+        "SQLiteDemoScreen",
+        () => Navigator.pop(context),
+      ),
       body: StreamBuilder<List<Client>>(
-        stream: bloc.clients,
+        stream: clientsBloc.clientStream,
         builder: (BuildContext context, AsyncSnapshot<List<Client>> snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
@@ -45,14 +49,14 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
                   key: UniqueKey(),
                   background: Container(color: Colors.red),
                   onDismissed: (direction) {
-                    bloc.delete(item.id);
+                    clientsBloc.delete(item.id);
                   },
                   child: ListTile(
                     title: Text(item.lastName),
                     leading: Text(item.id.toString()),
                     trailing: Checkbox(
                       onChanged: (bool value) {
-                        bloc.blockUnblock(item);
+                        clientsBloc.blockUnblock(item);
                       },
                       value: item.blocked,
                     ),
@@ -69,7 +73,7 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
         child: Icon(Icons.add),
         onPressed: () async {
           Client rnd = testClients[math.Random().nextInt(testClients.length)];
-          bloc.add(rnd);
+          clientsBloc.add(rnd);
         },
       ),
     );

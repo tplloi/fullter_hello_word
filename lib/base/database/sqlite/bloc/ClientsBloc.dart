@@ -1,34 +1,34 @@
 import 'dart:async';
 
+import '../db/DBProvider.dart';
 import '../model/ClientModel.dart';
-import '../db/Database.dart';
 
 class ClientsBloc {
   ClientsBloc() {
-    getClients();
+    getAllClients();
   }
 
   final _clientController = StreamController<List<Client>>.broadcast();
 
-  get clients => _clientController.stream;
+  get clientStream => _clientController.stream;
 
-  getClients() async {
+  getAllClients() async {
     _clientController.sink.add(await DBProvider.db.getAllClients());
   }
 
   Future<void> blockUnblock(Client client) async {
     await DBProvider.db.blockOrUnblock(client);
-    await getClients();
+    await getAllClients();
   }
 
   Future<void> delete(int id) async {
-    await DBProvider.db.deleteClient(id);
-    await getClients();
+    await DBProvider.db.deleteClientById(id);
+    await getAllClients();
   }
 
   Future<void> add(Client client) async {
-    await DBProvider.db.newClient(client);
-    await getClients();
+    await DBProvider.db.addClient(client);
+    await getAllClients();
   }
 
   dispose() {
