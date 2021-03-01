@@ -1,5 +1,6 @@
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 class SemicircleDemo extends StatelessWidget {
   static int numItems = 100;
@@ -38,6 +39,7 @@ class SemicircleDemo extends StatelessWidget {
             alignment: Alignment.center,
             margin: EdgeInsets.all(2.0),
             color: Colors.grey[300],
+            child: UIUtils().getText("$index"),
           );
         },
       ),
