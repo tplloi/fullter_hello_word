@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:hello_word/base/demo/bloc/repository/chuck_repository.dart';
+import 'package:hello_word/base/demo/bloc/repository/repository.dart';
 
 import '../model/chuck.dart';
 import '../response.dart';
 
 class ChuckBloc {
-  ChuckRepository _chuckRepository;
+  Repository _repository;
   StreamController _chuckController;
 
   StreamSink<Response<Chuck>> get chuckSink => _chuckController.sink;
@@ -14,7 +14,7 @@ class ChuckBloc {
   Stream<Response<Chuck>> get chuckStream => _chuckController.stream;
 
   ChuckBloc(String category) {
-    _chuckRepository = ChuckRepository();
+    _repository = Repository();
     _chuckController = StreamController<Response<Chuck>>();
     getChuck(category);
   }
@@ -24,7 +24,7 @@ class ChuckBloc {
       Response.loading("Loading chuck...\nPlease wait..."),
     );
     try {
-      Chuck chuck = await _chuckRepository.getChuck(category);
+      Chuck chuck = await _repository.getChuck(category);
       chuckSink.add(
         Response.completed(chuck),
       );

@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:hello_word/base/demo/bloc/repository/category_repository.dart';
+import 'package:hello_word/base/demo/bloc/repository/repository.dart';
 
 import '../model/categories.dart';
 import '../response.dart';
 
 class CategoriesBloc {
-  CategoriesRepository _categoriesRepository;
+  Repository _repository;
   StreamController _categoriesController;
 
   StreamSink<Response<Categories>> get categoriesSink =>
@@ -16,7 +16,7 @@ class CategoriesBloc {
       _categoriesController.stream;
 
   CategoriesBloc() {
-    _categoriesRepository = CategoriesRepository();
+    _repository = Repository();
     _categoriesController = StreamController<Response<Categories>>();
 
     fetchCategories();
@@ -27,7 +27,7 @@ class CategoriesBloc {
       Response.loading('Loading categories...'),
     );
     try {
-      Categories categories = await _categoriesRepository.getCategories();
+      Categories categories = await _repository.getCategories();
       categoriesSink.add(
         Response.completed(categories),
       );
