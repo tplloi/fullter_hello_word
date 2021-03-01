@@ -5,6 +5,7 @@ import '../ShowChuckyJoke.dart';
 import '../block/category_bloc.dart';
 import '../model/categories.dart';
 import '../service/response.dart';
+import 'error_widget.dart';
 import 'loading_widget.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
@@ -44,7 +45,7 @@ class _CategoriesState extends State<CategoriesScreen> {
                   return CategoryList(categoryList: snapshot.data.data);
                   break;
                 case Status.ERROR:
-                  return Error(
+                  return ErrorRetryWidget(
                     errorMessage: snapshot.data.message,
                     onRetryPressed: () => _categoriesBloc.fetchCategories(),
                   );
@@ -110,40 +111,6 @@ class CategoryList extends StatelessWidget {
         itemCount: categoryList.categories.length,
         shrinkWrap: true,
         physics: ClampingScrollPhysics(),
-      ),
-    );
-  }
-}
-
-class Error extends StatelessWidget {
-  final String errorMessage;
-
-  final Function onRetryPressed;
-
-  const Error({Key key, this.errorMessage, this.onRetryPressed})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            errorMessage,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-            ),
-          ),
-          SizedBox(height: 8),
-          RaisedButton(
-            color: Colors.white,
-            child: Text('Retry', style: TextStyle(color: Colors.black)),
-            onPressed: onRetryPressed,
-          )
-        ],
       ),
     );
   }
