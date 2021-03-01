@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'ClientModel.dart';
 import 'ClientsBloc.dart';
 
+//https://medium.com/flutter-community/using-sqlite-in-flutter-187c1a82e8b
 class SQLiteDemoScreen extends StatefulWidget {
   @override
   _SQLiteDemoScreenState createState() => _SQLiteDemoScreenState();
@@ -13,9 +14,11 @@ class SQLiteDemoScreen extends StatefulWidget {
 class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
   // data for testing
   List<Client> testClients = [
-    Client(firstName: "Raouf", lastName: "Rahiche", blocked: false),
-    Client(firstName: "Zaki", lastName: "oun", blocked: true),
-    Client(firstName: "oussama", lastName: "ali", blocked: false),
+    Client(firstName: "BMW", lastName: "S1000RR", blocked: false),
+    Client(firstName: "Suzuki", lastName: "GSX1000R", blocked: true),
+    Client(firstName: "Yamaha", lastName: "R1M", blocked: false),
+    Client(firstName: "Honda", lastName: "CBR1000RR", blocked: true),
+    Client(firstName: "Kawasaki", lastName: "H2R", blocked: true),
   ];
 
   final bloc = ClientsBloc();
