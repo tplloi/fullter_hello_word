@@ -28,14 +28,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
-  english_words: ^3.1.5
-  http: ^0.12.0+1
-  shared_preferences: 0.4.2
+  draggable_scrollbar: ^0.0.4
   advance_pdf_viewer: ^1.2.0
   transparent_image: ^1.0.0
   flutter_swiper: ^1.1.6
   fl_chart: ^0.10.1
   table_calendar: ^2.1.0
+  english_words: ^3.1.5
+  http: ^0.12.0+1 #network
+  shared_preferences: 0.4.2
   sqflite: any #for sqlite
   path_provider: any #We use the path_provider package to get the commonly used location such as TemporaryDirectory and ApplicationDocumentsDirectory
 
