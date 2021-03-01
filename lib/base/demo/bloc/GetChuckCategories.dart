@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ChuckCategoryBloc.dart';
+import 'block/category_bloc.dart';
 import 'ShowChuckyJoke.dart';
 import 'model/categories.dart';
 import 'response.dart';
@@ -12,12 +12,12 @@ class GetChuckCategories extends StatefulWidget {
 }
 
 class _GetChuckyState extends State<GetChuckCategories> {
-  ChuckCategoryBloc _bloc;
+  CategoriesBloc _bloc;
 
   @override
   void initState() {
     super.initState();
-    _bloc = ChuckCategoryBloc();
+    _bloc = CategoriesBloc();
   }
 
   @override
@@ -34,7 +34,7 @@ class _GetChuckyState extends State<GetChuckCategories> {
       body: RefreshIndicator(
         onRefresh: () => _bloc.fetchCategories(),
         child: StreamBuilder<Response<Categories>>(
-          stream: _bloc.chuckListStream,
+          stream: _bloc.categoriesStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               switch (snapshot.data.status) {

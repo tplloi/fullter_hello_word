@@ -1,5 +1,5 @@
-import 'service/api_provider.dart';
-import 'model/chuck.dart';
+import '../service/api_provider.dart';
+import '../model/chuck.dart';
 
 class ChuckRepository {
   ApiProvider _provider = ApiProvider();

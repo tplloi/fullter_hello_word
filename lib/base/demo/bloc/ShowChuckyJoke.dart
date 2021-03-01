@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ChuckBloc.dart';
+import 'block/chuck_bloc.dart';
 import 'model/chuck.dart';
 import 'response.dart';
 

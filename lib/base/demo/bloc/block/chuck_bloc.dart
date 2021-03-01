@@ -1,8 +1,9 @@
 import 'dart:async';
 
-import 'ChuckRepository.dart';
-import 'model/chuck.dart';
-import 'response.dart';
+import 'package:hello_word/base/demo/bloc/repository/ChuckRepository.dart';
+
+import '../model/chuck.dart';
+import '../response.dart';
 
 class ChuckBloc {
   ChuckRepository _chuckRepository;
