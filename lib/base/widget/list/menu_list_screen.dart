@@ -5,6 +5,7 @@ import 'package:hello_word/base/widget/list/list_random_words/list_random_words.
 import 'package:hello_word/base/widget/list/list_title_widget/list_tile_screen.dart';
 
 import 'list_body_widget/list_body_screen.dart';
+import 'list_search/list_search_screen.dart';
 import 'load_more/list_view_load_more.dart';
 
 class MenuListScreen extends StatelessWidget {
@@ -39,6 +40,16 @@ class MenuListScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
+              "ListViewSearchScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ListViewSearchScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
               "ListBodyScreen",
               () => {
                 Navigator.push(
@@ -58,10 +69,11 @@ class MenuListScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ListViewLoadMoreScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ListViewLoadMoreScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => ListViewLoadMoreScreen()),
                 )
               },
             ),
