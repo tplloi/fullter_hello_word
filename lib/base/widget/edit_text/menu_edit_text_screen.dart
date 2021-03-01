@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/edit_text/text_field/text_filed_screen.dart';
 
 import 'edit_text_screen.dart';

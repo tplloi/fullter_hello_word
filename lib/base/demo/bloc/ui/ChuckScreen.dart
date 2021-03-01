@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/bloc/ui/ErrorRetryWidget.dart';
 import 'package:hello_word/base/demo/bloc/ui/LoadingWidget.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import '../block/ChuckBloc.dart';
 import '../model/Chuck.dart';

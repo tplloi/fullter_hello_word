@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/image/gradient_screen.dart';
 import 'package:hello_word/base/widget/image/image_screen.dart';
 

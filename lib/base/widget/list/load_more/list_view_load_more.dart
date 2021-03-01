@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 //https://karthikponnam.medium.com/flutter-loadmore-in-listview-23820612907d
 class ListViewLoadMoreScreen extends StatelessWidget {

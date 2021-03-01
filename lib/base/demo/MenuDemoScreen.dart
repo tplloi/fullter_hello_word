@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/demo/pdf/ViewPDFFileScreen.dart';
 import 'package:hello_word/base/demo/shop/ShopScreen.dart';
 import 'package:hello_word/base/demo/theme/ThemeScreen.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'async/MenuAsyncScreen.dart';
 import 'bloc/ui/CategoriesScreen.dart';

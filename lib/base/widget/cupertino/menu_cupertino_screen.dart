@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'cupertino_action_sheet_screen.dart';
 import 'cupertino_segmented_control_screen.dart';

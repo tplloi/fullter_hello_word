@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/demo/async/StreamBuilderScreen.dart';
 import 'package:hello_word/base/demo/async/ValueListenableBuilderScreen.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'FutureBuilderScreen.dart';
 

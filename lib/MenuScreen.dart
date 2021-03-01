@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/demo/MenuDemoScreen.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 import 'base/animation/menu_animation_screen.dart';
 import 'base/database/SharedPreferencesScreen.dart';
 import 'base/demo/syntax/SyntaxScreen.dart';

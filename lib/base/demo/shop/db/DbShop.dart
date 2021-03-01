@@ -1,4 +1,4 @@
-import 'package:hello_word/base/model/product.dart';
+import 'package:hello_word/base/model/Product.dart';
 
 class DbShop {
   static List<Product> getListProduct() {

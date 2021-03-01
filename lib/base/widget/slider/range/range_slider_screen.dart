@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 class RangeSliderScreen extends StatefulWidget {
   RangeSliderScreen({Key key}) : super(key: key);

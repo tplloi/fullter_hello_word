@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/util/ui_utils.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_bar_view.dart';
 import 'package:hello_word/base/widget/bottom_bar/tab_bar_2/tabbar_2_screen.dart';
 
