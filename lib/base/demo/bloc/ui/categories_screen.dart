@@ -1,40 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
-import 'block/category_bloc.dart';
-import 'ShowChuckyJoke.dart';
-import 'model/categories.dart';
-import 'service/response.dart';
+import '../ShowChuckyJoke.dart';
+import '../block/category_bloc.dart';
+import '../model/categories.dart';
+import '../service/response.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
-class GetChuckCategories extends StatefulWidget {
+class CategoriesScreen extends StatefulWidget {
   @override
-  _GetChuckyState createState() => _GetChuckyState();
+  _CategoriesState createState() => _CategoriesState();
 }
 
-class _GetChuckyState extends State<GetChuckCategories> {
-  CategoriesBloc _bloc;
+class _CategoriesState extends State<CategoriesScreen> {
+  CategoriesBloc _categoriesBloc;
 
   @override
   void initState() {
     super.initState();
-    _bloc = CategoriesBloc();
+    _categoriesBloc = CategoriesBloc();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        automaticallyImplyLeading: false,
-        title: Text('Chucky Categories',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
-        backgroundColor: Color(0xFF333333),
+      appBar: UIUtils().getAppBar(
+        "CategoriesScreen",
+        () => Navigator.pop(context),
       ),
-      backgroundColor: Color(0xFF333333),
+      backgroundColor: Colors.black,
       body: RefreshIndicator(
-        onRefresh: () => _bloc.fetchCategories(),
+        onRefresh: () => _categoriesBloc.fetchCategories(),
         child: StreamBuilder<Response<Categories>>(
-          stream: _bloc.categoriesStream,
+          stream: _categoriesBloc.categoriesStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               switch (snapshot.data.status) {
@@ -47,7 +45,7 @@ class _GetChuckyState extends State<GetChuckCategories> {
                 case Status.ERROR:
                   return Error(
                     errorMessage: snapshot.data.message,
-                    onRetryPressed: () => _bloc.fetchCategories(),
+                    onRetryPressed: () => _categoriesBloc.fetchCategories(),
                   );
                   break;
               }
@@ -61,7 +59,7 @@ class _GetChuckyState extends State<GetChuckCategories> {
 
   @override
   void dispose() {
-    _bloc.dispose();
+    _categoriesBloc.dispose();
     super.dispose();
   }
 }
