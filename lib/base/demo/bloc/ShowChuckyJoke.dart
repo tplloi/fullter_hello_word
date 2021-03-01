@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'block/chuck_bloc.dart';
 import 'model/chuck.dart';
-import 'response.dart';
+import 'service/response.dart';
 
 class ShowChuckyJoke extends StatefulWidget {
   final String selectedCategory;

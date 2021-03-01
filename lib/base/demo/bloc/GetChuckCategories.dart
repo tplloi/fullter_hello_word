@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'block/category_bloc.dart';
 import 'ShowChuckyJoke.dart';
 import 'model/categories.dart';
-import 'response.dart';
+import 'service/response.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
 class GetChuckCategories extends StatefulWidget {

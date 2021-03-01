@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:hello_word/base/demo/bloc/repository/repository.dart';
 
 import '../model/chuck.dart';
-import '../response.dart';
+import '../service/response.dart';
 
 class ChuckBloc {
   Repository _repository;

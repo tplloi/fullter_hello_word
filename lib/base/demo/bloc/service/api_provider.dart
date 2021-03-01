@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-import '../CustomException.dart';
+import 'custom_exception.dart';
 
 class ApiProvider {
   final String _baseUrl = "https://api.chucknorris.io/";

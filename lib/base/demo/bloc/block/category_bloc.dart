@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:hello_word/base/demo/bloc/repository/repository.dart';
 
 import '../model/categories.dart';
-import '../response.dart';
+import '../service/response.dart';
 
 class CategoriesBloc {
   Repository _repository;
