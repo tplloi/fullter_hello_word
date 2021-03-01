@@ -83,4 +83,10 @@ class UIUtils {
         stops: [0.0, 0.6],
         tileMode: TileMode.clamp);
   }
+
+  CircularProgressIndicator getCircularProgressIndicator(Color color) {
+    return CircularProgressIndicator(
+      valueColor: AlwaysStoppedAnimation<Color>(color),
+    );
+  }
 }

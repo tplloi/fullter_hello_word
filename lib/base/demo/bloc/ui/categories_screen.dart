@@ -5,6 +5,7 @@ import '../ShowChuckyJoke.dart';
 import '../block/category_bloc.dart';
 import '../model/categories.dart';
 import '../service/response.dart';
+import 'loading_widget.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
 class CategoriesScreen extends StatefulWidget {
@@ -37,7 +38,7 @@ class _CategoriesState extends State<CategoriesScreen> {
             if (snapshot.hasData) {
               switch (snapshot.data.status) {
                 case Status.LOADING:
-                  return Loading(loadingMessage: snapshot.data.message);
+                  return LoadingWidget(loadingMessage: snapshot.data.message);
                   break;
                 case Status.COMPLETED:
                   return CategoryList(categoryList: snapshot.data.data);
@@ -142,35 +143,6 @@ class Error extends StatelessWidget {
             child: Text('Retry', style: TextStyle(color: Colors.black)),
             onPressed: onRetryPressed,
           )
-        ],
-      ),
-    );
-  }
-}
-
-class Loading extends StatelessWidget {
-  final String loadingMessage;
-
-  const Loading({Key key, this.loadingMessage}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            loadingMessage,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
-          SizedBox(height: 24),
-          CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-          ),
         ],
       ),
     );
