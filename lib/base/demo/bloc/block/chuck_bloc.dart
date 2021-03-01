@@ -1,38 +1,42 @@
 import 'dart:async';
 
-import 'package:hello_word/base/demo/bloc/repository/ChuckRepository.dart';
+import 'package:hello_word/base/demo/bloc/repository/chuck_repository.dart';
 
 import '../model/chuck.dart';
 import '../response.dart';
 
 class ChuckBloc {
   ChuckRepository _chuckRepository;
-  StreamController _chuckDataController;
+  StreamController _chuckController;
 
-  StreamSink<Response<Chuck>> get chuckDataSink =>
-      _chuckDataController.sink;
+  StreamSink<Response<Chuck>> get chuckSink => _chuckController.sink;
 
-  Stream<Response<Chuck>> get chuckDataStream =>
-      _chuckDataController.stream;
+  Stream<Response<Chuck>> get chuckStream => _chuckController.stream;
 
   ChuckBloc(String category) {
-    _chuckDataController = StreamController<Response<Chuck>>();
     _chuckRepository = ChuckRepository();
-    fetchChuckyJoke(category);
+    _chuckController = StreamController<Response<Chuck>>();
+    getChuck(category);
   }
 
-  fetchChuckyJoke(String category) async {
-    chuckDataSink.add(Response.loading('Getting A Chucky Joke!'));
+  getChuck(String category) async {
+    chuckSink.add(
+      Response.loading("Loading chuck...\nPlease wait..."),
+    );
     try {
-      Chuck chuckJoke = await _chuckRepository.fetchChuckJoke(category);
-      chuckDataSink.add(Response.completed(chuckJoke));
+      Chuck chuck = await _chuckRepository.getChuck(category);
+      chuckSink.add(
+        Response.completed(chuck),
+      );
     } catch (e) {
-      chuckDataSink.add(Response.error(e.toString()));
+      chuckSink.add(
+        Response.error(e.toString()),
+      );
       print(e);
     }
   }
 
   dispose() {
-    _chuckDataController?.close();
+    _chuckController?.close();
   }
 }

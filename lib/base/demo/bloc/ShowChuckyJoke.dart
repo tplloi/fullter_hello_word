@@ -33,9 +33,9 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
       ),
       backgroundColor: Color(0xFF333333),
       body: RefreshIndicator(
-        onRefresh: () => _bloc.fetchChuckyJoke(widget.selectedCategory),
+        onRefresh: () => _bloc.getChuck(widget.selectedCategory),
         child: StreamBuilder<Response<Chuck>>(
-          stream: _bloc.chuckDataStream,
+          stream: _bloc.chuckStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               switch (snapshot.data.status) {
@@ -49,7 +49,7 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
                   return Error(
                     errorMessage: snapshot.data.message,
                     onRetryPressed: () =>
-                        _bloc.fetchChuckyJoke(widget.selectedCategory),
+                        _bloc.getChuck(widget.selectedCategory),
                   );
                   break;
               }
