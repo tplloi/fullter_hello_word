@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import '../ShowChuckyJoke.dart';
@@ -42,7 +43,7 @@ class _CategoriesState extends State<CategoriesScreen> {
                   return LoadingWidget(loadingMessage: snapshot.data.message);
                   break;
                 case Status.COMPLETED:
-                  return CategoryList(categoryList: snapshot.data.data);
+                  return CategoriesWidget(listCategory: snapshot.data.data);
                   break;
                 case Status.ERROR:
                   return ErrorRetryWidget(
@@ -66,52 +67,54 @@ class _CategoriesState extends State<CategoriesScreen> {
   }
 }
 
-class CategoryList extends StatelessWidget {
-  final Categories categoryList;
+class CategoriesWidget extends StatelessWidget {
+  final Categories listCategory;
 
-  const CategoryList({Key key, this.categoryList}) : super(key: key);
+  const CategoriesWidget({Key key, this.listCategory}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      backgroundColor: Color(0xFF202020),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 0.0,
-                vertical: 1.0,
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Constants.margin_padding_medium,
+            vertical: Constants.margin_padding_medium,
+          ),
+          child: InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) =>
+                      ShowChuckyJoke(listCategory.categories[index]),
+                ),
+              );
+            },
+            child: SizedBox(
+              height: 65,
+              child: Container(
+                color: Color(0xFF333333),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(4, 0, 0, 0),
+                  child: Text(
+                    listCategory.categories[index],
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: Constants.text_medium,
+                        fontWeight: FontWeight.w100,
+                        fontFamily: 'Roboto'),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
               ),
-              child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            ShowChuckyJoke(categoryList.categories[index])));
-                  },
-                  child: SizedBox(
-                    height: 65,
-                    child: Container(
-                      color: Color(0xFF333333),
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(4, 0, 0, 0),
-                        child: Text(
-                          categoryList.categories[index],
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w100,
-                              fontFamily: 'Roboto'),
-                          textAlign: TextAlign.left,
-                        ),
-                      ),
-                    ),
-                  )));
-        },
-        itemCount: categoryList.categories.length,
-        shrinkWrap: true,
-        physics: ClampingScrollPhysics(),
-      ),
+            ),
+          ),
+        );
+      },
+      itemCount: listCategory.categories.length,
+      shrinkWrap: true,
+      physics: BouncingScrollPhysics(),
     );
   }
 }
