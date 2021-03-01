@@ -1,21 +1,21 @@
 import 'dart:async';
 
 import 'ChuckRepository.dart';
-import 'chuck_response.dart';
+import 'model/chuck.dart';
 import 'response.dart';
 
 class ChuckBloc {
   ChuckRepository _chuckRepository;
   StreamController _chuckDataController;
 
-  StreamSink<Response<chuckResponse>> get chuckDataSink =>
+  StreamSink<Response<Chuck>> get chuckDataSink =>
       _chuckDataController.sink;
 
-  Stream<Response<chuckResponse>> get chuckDataStream =>
+  Stream<Response<Chuck>> get chuckDataStream =>
       _chuckDataController.stream;
 
   ChuckBloc(String category) {
-    _chuckDataController = StreamController<Response<chuckResponse>>();
+    _chuckDataController = StreamController<Response<Chuck>>();
     _chuckRepository = ChuckRepository();
     fetchChuckyJoke(category);
   }
@@ -23,7 +23,7 @@ class ChuckBloc {
   fetchChuckyJoke(String category) async {
     chuckDataSink.add(Response.loading('Getting A Chucky Joke!'));
     try {
-      chuckResponse chuckJoke = await _chuckRepository.fetchChuckJoke(category);
+      Chuck chuckJoke = await _chuckRepository.fetchChuckJoke(category);
       chuckDataSink.add(Response.completed(chuckJoke));
     } catch (e) {
       chuckDataSink.add(Response.error(e.toString()));

@@ -1,21 +1,21 @@
 import 'dart:async';
 
 import 'ChuckCategoryRepository.dart';
-import 'chuckCategories.dart';
+import 'model/categories.dart';
 import 'response.dart';
 
 class ChuckCategoryBloc {
   ChuckCategoryRepository _chuckRepository;
   StreamController _chuckListController;
 
-  StreamSink<Response<chuckCategories>> get chuckListSink =>
+  StreamSink<Response<Categories>> get chuckListSink =>
       _chuckListController.sink;
 
-  Stream<Response<chuckCategories>> get chuckListStream =>
+  Stream<Response<Categories>> get chuckListStream =>
       _chuckListController.stream;
 
   ChuckCategoryBloc() {
-    _chuckListController = StreamController<Response<chuckCategories>>();
+    _chuckListController = StreamController<Response<Categories>>();
     _chuckRepository = ChuckCategoryRepository();
     fetchCategories();
   }
@@ -23,7 +23,7 @@ class ChuckCategoryBloc {
   fetchCategories() async {
     chuckListSink.add(Response.loading('Getting Chuck Categories.'));
     try {
-      chuckCategories chuckCats =
+      Categories chuckCats =
           await _chuckRepository.fetchChuckCategoryData();
       chuckListSink.add(Response.completed(chuckCats));
     } catch (e) {

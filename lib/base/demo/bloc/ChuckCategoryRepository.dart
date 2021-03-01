@@ -1,11 +1,11 @@
 import 'service/api_provider.dart';
-import 'chuckCategories.dart';
+import 'model/categories.dart';
 
 class ChuckCategoryRepository {
   ApiProvider _provider = ApiProvider();
 
-  Future<chuckCategories> fetchChuckCategoryData() async {
+  Future<Categories> fetchChuckCategoryData() async {
     final response = await _provider.get("jokes/categories");
-    return chuckCategories.fromJson(response);
+    return Categories.fromJson(response);
   }
 }

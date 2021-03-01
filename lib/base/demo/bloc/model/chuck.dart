@@ -1,4 +1,4 @@
-class chuckResponse {
+class Chuck {
   List<String> _categories;
   String _createdAt;
   String _iconUrl;
@@ -21,14 +21,15 @@ class chuckResponse {
 
   String get value => _value;
 
-  ChuckResponse(
-      {List<String> categories,
-      String createdAt,
-      String iconUrl,
-      String id,
-      String updatedAt,
-      String url,
-      String value}) {
+  Chuck({
+    List<String> categories,
+    String createdAt,
+    String iconUrl,
+    String id,
+    String updatedAt,
+    String url,
+    String value,
+  }) {
     _categories = categories;
     _createdAt = createdAt;
     _iconUrl = iconUrl;
@@ -38,7 +39,7 @@ class chuckResponse {
     _value = value;
   }
 
-  chuckResponse.fromJson(dynamic json) {
+  Chuck.fromJson(dynamic json) {
     _categories =
         json["categories"] != null ? json["categories"].cast<String>() : [];
     _createdAt = json["created_at"];

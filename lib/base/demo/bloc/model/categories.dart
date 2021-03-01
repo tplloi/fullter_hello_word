@@ -1,10 +1,12 @@
-class chuckCategories {
+class Categories {
   final List<String> categories;
 
-  chuckCategories({this.categories});
+  Categories({
+    this.categories,
+  });
 
-  factory chuckCategories.fromJson(List<dynamic> json) {
-    return chuckCategories(
+  factory Categories.fromJson(List<dynamic> json) {
+    return Categories(
       categories: json != null ? new List<String>.from(json) : null,
     );
   }

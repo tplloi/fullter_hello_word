@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'ChuckCategoryBloc.dart';
 import 'ShowChuckyJoke.dart';
-import 'chuckCategories.dart';
+import 'model/categories.dart';
 import 'response.dart';
 
 //https://itnext.io/flutter-handling-your-network-api-calls-like-a-boss-936eef296547
@@ -33,7 +33,7 @@ class _GetChuckyState extends State<GetChuckCategories> {
       backgroundColor: Color(0xFF333333),
       body: RefreshIndicator(
         onRefresh: () => _bloc.fetchCategories(),
-        child: StreamBuilder<Response<chuckCategories>>(
+        child: StreamBuilder<Response<Categories>>(
           stream: _bloc.chuckListStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
@@ -67,7 +67,7 @@ class _GetChuckyState extends State<GetChuckCategories> {
 }
 
 class CategoryList extends StatelessWidget {
-  final chuckCategories categoryList;
+  final Categories categoryList;
 
   const CategoryList({Key key, this.categoryList}) : super(key: key);
 

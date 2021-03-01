@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'ChuckBloc.dart';
-import 'chuck_response.dart';
+import 'model/chuck.dart';
 import 'response.dart';
 
 class ShowChuckyJoke extends StatefulWidget {
@@ -34,7 +34,7 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
       backgroundColor: Color(0xFF333333),
       body: RefreshIndicator(
         onRefresh: () => _bloc.fetchChuckyJoke(widget.selectedCategory),
-        child: StreamBuilder<Response<chuckResponse>>(
+        child: StreamBuilder<Response<Chuck>>(
           stream: _bloc.chuckDataStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
@@ -69,7 +69,7 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
 }
 
 class ChuckJoke extends StatelessWidget {
-  final chuckResponse displayJoke;
+  final Chuck displayJoke;
 
   const ChuckJoke({Key key, this.displayJoke}) : super(key: key);
 
