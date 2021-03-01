@@ -72,8 +72,8 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () async {
-          Client rnd = testClients[math.Random().nextInt(testClients.length)];
-          clientsBloc.add(rnd);
+          Client randomClient = testClients[math.Random().nextInt(testClients.length)];
+          clientsBloc.add(randomClient);
         },
       ),
     );
