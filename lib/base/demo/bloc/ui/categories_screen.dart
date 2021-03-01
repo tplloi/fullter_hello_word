@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import '../chuck_screen.dart';
+import 'chuck_screen.dart';
 import '../block/category_bloc.dart';
 import '../model/categories.dart';
 import '../service/response.dart';
