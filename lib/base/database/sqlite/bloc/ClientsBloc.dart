@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'ClientModel.dart';
-import 'Database.dart';
+import '../model/ClientModel.dart';
+import '../db/Database.dart';
 
 class ClientsBloc {
   ClientsBloc() {

@@ -2,8 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import 'ClientModel.dart';
-import 'ClientsBloc.dart';
+import 'model/ClientModel.dart';
+import 'bloc/ClientsBloc.dart';
 
 //https://medium.com/flutter-community/using-sqlite-in-flutter-187c1a82e8b
 class SQLiteDemoScreen extends StatefulWidget {
