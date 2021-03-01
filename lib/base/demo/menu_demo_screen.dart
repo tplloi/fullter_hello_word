@@ -6,6 +6,7 @@ import 'package:hello_word/base/demo/tip_calculator/tip_calculator.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'async/menu_async_screen.dart';
+import 'bloc/GetChuckCategories.dart';
 import 'counter/counter.dart';
 import 'inherited/menu_inherited_screen.dart';
 import 'load_local_json/load_local_json.dart';
@@ -34,6 +35,15 @@ class MenuDemoScreen extends StatelessWidget {
               },
             ),
             UIUtils().getRaisedButton(
+              "Block Demo Chuck Norris",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GetChuckCategories()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
               "Counter",
               () => {
                 Navigator.push(
@@ -44,10 +54,11 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "Inherited",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MenuInheritedScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => MenuInheritedScreen()),
                 )
               },
             ),
@@ -63,11 +74,10 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "GetHttpDataScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => GetHttpDataScreen()),
+                  MaterialPageRoute(builder: (context) => GetHttpDataScreen()),
                 )
               },
             ),
