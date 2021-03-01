@@ -19,7 +19,7 @@ class ArrowsDemo extends StatelessWidget {
       controller: controller,
       child: ListView.builder(
         controller: controller,
-        itemCount: 1000,
+        itemCount: 100,
         itemExtent: _itemExtent,
         itemBuilder: (context, index) {
           return Container(

@@ -13,7 +13,7 @@ class RRectDemo extends StatelessWidget {
       labelTextBuilder: (offset) => Text("${offset.floor()}"),
       child: ListView.builder(
         controller: controller,
-        itemCount: 1000,
+        itemCount: 100,
         itemExtent: 100.0,
         itemBuilder: (context, index) {
           return Container(

@@ -12,7 +12,7 @@ class CustomDemo extends StatelessWidget {
       controller: controller,
       child: ListView.builder(
         controller: controller,
-        itemCount: 1000,
+        itemCount: 100,
         itemExtent: 100.0,
         itemBuilder: (context, index) {
           return Container(
@@ -29,7 +29,7 @@ class CustomDemo extends StatelessWidget {
         },
       ),
       heightScrollThumb: 48.0,
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.red,
       scrollThumbBuilder: (
         Color backgroundColor,
         Animation<double> thumbAnimation,
