@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_1.dart';
-import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_2.dart';
-import 'package:hello_word/base/widget/bottom_bar/tab_bar/tab_3.dart';
+
+import 'Tab1.dart';
+import 'Tab2.dart';
+import 'Tab3.dart';
 
 class TabBarScreen extends StatefulWidget {
   @override

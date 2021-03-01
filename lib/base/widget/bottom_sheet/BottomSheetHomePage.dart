@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/bottom_sheet/utils.dart';
+
+import 'utils.dart';
 
 class BottomSheetHomePage extends StatefulWidget {
   BottomSheetHomePage({Key key, this.title}) : super(key: key);

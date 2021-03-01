@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'bottom_sheet_home_page.dart';
+import 'BottomSheetHomePage.dart';
 
 class BottomSheetScreen extends StatelessWidget {
   @override

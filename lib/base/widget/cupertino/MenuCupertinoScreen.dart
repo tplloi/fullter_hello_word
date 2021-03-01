@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'cupertino_action_sheet_screen.dart';
-import 'cupertino_segmented_control_screen.dart';
-import 'cupertino_timer_picker_screen.dart';
-import 'cupertino_widget_screen.dart';
+import 'CupertinoActionSheetScreen.dart';
+import 'CupertinoSegmentedControlScreen.dart';
+import 'CupertinoTimerPickerScreen.dart';
+import 'CupertinoWidgetScreen.dart';
 
 class MenuCupertinoScreen extends StatelessWidget {
   @override
