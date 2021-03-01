@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/image/gradient_screen.dart';
-import 'package:hello_word/base/widget/image/image_screen.dart';
 
-class MenuImageScreen extends StatelessWidget {
+import '1/Expansion1Screen.dart';
+import '2/expansion_panel_2.dart';
+
+class MenuExpansionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuImageScreen",
+          "MenuExpansionScreen",
           () => {
                 Navigator.pop(context),
               }),
@@ -17,20 +18,20 @@ class MenuImageScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
-              "GradientScreen",
+              "Expansion1Screen",
               () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => GradientScreen()),
+                  MaterialPageRoute(builder: (context) => Expansion1Screen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
-              "ImageScreen",
-              () => {
+              "ExpansionPanelScreen2",
+                  () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ImageScreen()),
+                  MaterialPageRoute(builder: (context) => ExpansionPanelScreen2()),
                 )
               },
             ),

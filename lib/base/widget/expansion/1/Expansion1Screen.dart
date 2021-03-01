@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/expansion/1/item.dart';
+import 'package:hello_word/base/widget/expansion/1/Item.dart';
 
 class Expansion1Screen extends StatelessWidget {
   @override

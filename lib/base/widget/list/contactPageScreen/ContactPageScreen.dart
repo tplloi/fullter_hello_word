@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'contact_modal.dart';
-import 'contacts_list.dart';
+import 'ContactModal.dart';
+import 'ContactsList.dart';
 
 class ContactPageScreen extends StatelessWidget {
   _buildContactList() {

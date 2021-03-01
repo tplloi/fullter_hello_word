@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/grid/grid/grid_screen.dart';
-import 'package:hello_word/base/widget/grid/grid_paper/grid_paper_screen.dart';
+import 'package:hello_word/base/widget/grid/grid/GridScreen.dart';
 
-import 'infinite_scroll/infinite_scroll_screen.dart';
+import 'gridPaper/GridPaperScreen.dart';
+import 'infiniteScroll/InfiniteScrollScreen.dart';
 
 class MenuGridScreen extends StatelessWidget {
   @override

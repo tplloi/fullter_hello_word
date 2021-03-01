@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/list/contact_page_screen/contact_page_screen.dart';
-import 'package:hello_word/base/widget/list/list_random_words/list_random_words.dart';
-import 'package:hello_word/base/widget/list/list_title_widget/list_tile_screen.dart';
 
-import 'list_body_widget/list_body_screen.dart';
-import 'list_search/list_search_screen.dart';
-import 'load_more/list_view_load_more.dart';
+import 'contactPageScreen/ContactPageScreen.dart';
+import 'listBodyWidget/ListBodyScreen.dart';
+import 'listRandomWords/RandomWordsScreen.dart';
+import 'listSearch/ListViewSearchScreen.dart';
+import 'listTitleWidget/ListTileScreen.dart';
+import 'loadMore/ListViewLoadMoreScreen.dart';
 
 class MenuListScreen extends StatelessWidget {
   @override

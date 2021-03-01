@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/layout/custom_multi_child_layout/custom_multi_child_layout.dart';
-import 'package:hello_word/base/widget/layout/layout_builder_screen.dart';
-import 'package:hello_word/base/widget/layout/layout_multiple_screen/layout_mutiple_screen.dart';
-import 'package:hello_word/base/widget/layout/layout_single_screen.dart';
+import 'package:hello_word/base/widget/layout/LayoutBuilderScreen.dart';
+import 'package:hello_word/base/widget/layout/LayoutSingleScreen.dart';
+
+import 'customMultiChildLayout/CustomMultiChildLayoutScreen.dart';
+import 'layoutMultipleScreen/LayoutMultipleScreen.dart';
 
 class MenuLayoutScreen extends StatelessWidget {
   @override
