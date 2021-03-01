@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'range/range_slider_screen.dart';
-import 'slider/slider_screen.dart';
+import 'range/RangeSliderScreen.dart';
+import 'slider/SliderScreen.dart';
 
 class MenuSliderScreen extends StatelessWidget {
   @override

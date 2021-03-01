@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'circular_progress_indicator.dart';
-import 'linear_progress_indicator.dart';
-import 'progress_indicator_screen.dart';
+import 'CircularProgressIndicatorApp.dart';
+import 'LinearProgressIndicatorApp.dart';
+import 'ProgressIndicatorScreen.dart';
 
 class MenuProgressScreen extends StatelessWidget {
   @override

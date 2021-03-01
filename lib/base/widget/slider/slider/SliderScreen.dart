@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/slider/slider/slider_theme_widget.dart';
-import 'package:hello_word/base/widget/slider/slider/slider_widget.dart';
+import 'package:hello_word/base/widget/slider/slider/SliderThemeWidget.dart';
+import 'package:hello_word/base/widget/slider/slider/SliderWidget.dart';
 
 class SliderScreen extends StatelessWidget {
   @override
