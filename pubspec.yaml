@@ -36,6 +36,8 @@ dependencies:
   flutter_swiper: ^1.1.6
   fl_chart: ^0.10.1
   table_calendar: ^2.1.0
+  sqflite: any #for sqlite
+  path_provider: any #We use the path_provider package to get the commonly used location such as TemporaryDirectory and ApplicationDocumentsDirectory
 
 dev_dependencies:
   flutter_test:

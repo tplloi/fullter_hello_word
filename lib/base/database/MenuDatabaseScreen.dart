@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'sharedPreferences/SharedPreferencesScreen.dart';
+import 'sqlite/SQLiteDemoScreen.dart';
 
 class MenuDatabaseScreen extends StatelessWidget {
   @override
@@ -24,6 +25,16 @@ class MenuDatabaseScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => SharedPreferencesScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "SQLiteDemoScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SQLiteDemoScreen()),
                 )
               },
             ),
