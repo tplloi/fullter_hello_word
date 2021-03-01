@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/const/constants.dart';
 import 'package:hello_word/base/util/ui_utils.dart';
 
-import '../ShowChuckyJoke.dart';
+import '../chuck_screen.dart';
 import '../block/category_bloc.dart';
 import '../model/categories.dart';
 import '../service/response.dart';
@@ -86,7 +86,7 @@ class CategoriesWidget extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) =>
-                      ShowChuckyJoke(listCategory.categories[index]),
+                      ChuckScreen(listCategory.categories[index]),
                 ),
               );
             },

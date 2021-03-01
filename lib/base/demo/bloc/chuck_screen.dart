@@ -1,41 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/constants.dart';
+import 'package:hello_word/base/util/ui_utils.dart';
 
 import 'block/chuck_bloc.dart';
 import 'model/chuck.dart';
 import 'service/response.dart';
 
-class ShowChuckyJoke extends StatefulWidget {
+class ChuckScreen extends StatefulWidget {
   final String selectedCategory;
 
-  const ShowChuckyJoke(this.selectedCategory);
+  const ChuckScreen(this.selectedCategory);
 
   @override
-  _ShowChuckyJokeState createState() => _ShowChuckyJokeState();
+  _ChuckScreenState createState() => _ChuckScreenState();
 }
 
-class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
-  ChuckBloc _bloc;
+class _ChuckScreenState extends State<ChuckScreen> {
+  ChuckBloc _chuckBloc;
 
   @override
   void initState() {
     super.initState();
-    _bloc = ChuckBloc(widget.selectedCategory);
+    _chuckBloc = ChuckBloc(widget.selectedCategory);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        title: Text('Chucky Joke',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
-        backgroundColor: Color(0xFF333333),
+      appBar: UIUtils().getAppBar(
+        "ChuckScreen",
+        () => Navigator.pop(context),
       ),
-      backgroundColor: Color(0xFF333333),
+      backgroundColor: Color(0x00000000),
       body: RefreshIndicator(
-        onRefresh: () => _bloc.getChuck(widget.selectedCategory),
+        onRefresh: () => _chuckBloc.getChuck(widget.selectedCategory),
         child: StreamBuilder<Response<Chuck>>(
-          stream: _bloc.chuckStream,
+          stream: _chuckBloc.chuckStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               switch (snapshot.data.status) {
@@ -43,13 +43,13 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
                   return Loading(loadingMessage: snapshot.data.message);
                   break;
                 case Status.COMPLETED:
-                  return ChuckJoke(displayJoke: snapshot.data.data);
+                  return ChuckWidget(chuck: snapshot.data.data);
                   break;
                 case Status.ERROR:
                   return Error(
                     errorMessage: snapshot.data.message,
                     onRetryPressed: () =>
-                        _bloc.getChuck(widget.selectedCategory),
+                        _chuckBloc.getChuck(widget.selectedCategory),
                   );
                   break;
               }
@@ -63,34 +63,35 @@ class _ShowChuckyJokeState extends State<ShowChuckyJoke> {
 
   @override
   void dispose() {
-    _bloc.dispose();
+    _chuckBloc.dispose();
     super.dispose();
   }
 }
 
-class ChuckJoke extends StatelessWidget {
-  final Chuck displayJoke;
+class ChuckWidget extends StatelessWidget {
+  final Chuck chuck;
 
-  const ChuckJoke({Key key, this.displayJoke}) : super(key: key);
+  const ChuckWidget({
+    Key key,
+    this.chuck,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new Container(
-        constraints: new BoxConstraints.expand(),
-        color: new Color(0xFF736AB7),
-        child: new Stack(
-          children: <Widget>[
-            _getBackground(),
-            _getGradient(context),
-            _getContent(),
-          ],
-        ),
+    return Container(
+      constraints: new BoxConstraints.expand(),
+      color: new Color(0xFF736AB7),
+      child: new Stack(
+        children: <Widget>[
+          getBackground(),
+          getGradient(context),
+          getContent(),
+        ],
       ),
     );
   }
 
-  Container _getBackground() {
+  Container getBackground() {
     return new Container(
       child: Container(
         decoration: BoxDecoration(
@@ -104,7 +105,7 @@ class ChuckJoke extends StatelessWidget {
     );
   }
 
-  Container _getGradient(BuildContext context) {
+  Container getGradient(BuildContext context) {
     return new Container(
       margin: new EdgeInsets.only(top: 90.0),
       height: MediaQuery.of(context).size.height,
@@ -119,18 +120,20 @@ class ChuckJoke extends StatelessWidget {
     );
   }
 
-  Widget _getContent() {
+  Widget getContent() {
     return new ListView(
       padding: new EdgeInsets.fromLTRB(0.0, 280, 0.0, 32.0),
       children: <Widget>[
         new Container(
           margin: EdgeInsets.all(70.0),
           decoration: BoxDecoration(
-              color: Color(0xFFFFFFFF),
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25.0),
-                  bottomRight: Radius.circular(25.0))),
+            color: Color(0xFFFFFFFF),
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25.0),
+              bottomRight: Radius.circular(25.0),
+            ),
+          ),
           padding: new EdgeInsets.symmetric(horizontal: 32.0),
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,17 +141,17 @@ class ChuckJoke extends StatelessWidget {
               new Container(
                 margin: EdgeInsets.fromLTRB(5, 15, 0.0, 0.0),
                 child: new Image.network(
-                  displayJoke.iconUrl,
+                  chuck.iconUrl,
                   fit: BoxFit.cover,
                 ),
               ),
               new Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  displayJoke.value,
+                  chuck.value,
                   style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
+                      color: Colors.red,
+                      fontSize: Constants.text_medium,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'Roboto'),
                 ),
