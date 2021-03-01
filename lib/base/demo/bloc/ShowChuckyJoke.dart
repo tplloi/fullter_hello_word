@@ -95,7 +95,7 @@ class ChuckJoke extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/chuck.png"),
+            image: AssetImage("assets/images/iv.jpg"),
             fit: BoxFit.cover,
           ),
         ),
