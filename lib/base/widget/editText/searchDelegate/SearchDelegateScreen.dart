@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/widget/edit_text/search_delegate/my_search_delegate.dart';
+
+import 'MySearchDelegate.dart';
 
 class SearchDelegateScreen extends StatefulWidget {
   @override

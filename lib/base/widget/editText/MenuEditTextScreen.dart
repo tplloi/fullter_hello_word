@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/edit_text/text_field/text_filed_screen.dart';
 
-import 'edit_text_screen.dart';
-import 'form_field_screen.dart';
-import 'search_delegate/search_delegate_screen.dart';
+import 'EditTextScreen.dart';
+import 'FormFieldScreen.dart';
+import 'searchDelegate/SearchDelegateScreen.dart';
+import 'textField/TextFieldScreen.dart';
 
 class MenuEditTextScreen extends StatelessWidget {
   @override

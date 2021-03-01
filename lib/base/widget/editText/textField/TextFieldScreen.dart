@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/edit_text/text_field/text_filed_widget.dart';
-import 'package:hello_word/base/widget/edit_text/text_field/text_form_field_widget.dart';
+
+import 'TextFieldWidget.dart';
+import 'TextFormFieldWidget.dart';
 
 class TextFieldScreen extends StatelessWidget {
   @override

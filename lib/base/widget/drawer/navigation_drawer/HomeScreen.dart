@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/widget/drawer/navigation_drawer/setting_screen.dart';
+import 'package:hello_word/base/widget/drawer/navigation_drawer/SettingsScreen.dart';
 
-import 'account_screen.dart';
+import 'AccountScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

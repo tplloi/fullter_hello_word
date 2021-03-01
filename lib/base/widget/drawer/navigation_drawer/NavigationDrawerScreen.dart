@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/widget/drawer/navigation_drawer/account_screen.dart';
-import 'package:hello_word/base/widget/drawer/navigation_drawer/home_screen.dart';
-import 'package:hello_word/base/widget/drawer/navigation_drawer/setting_screen.dart';
+import 'package:hello_word/base/widget/drawer/navigation_drawer/AccountScreen.dart';
+import 'package:hello_word/base/widget/drawer/navigation_drawer/HomeScreen.dart';
+import 'package:hello_word/base/widget/drawer/navigation_drawer/SettingsScreen.dart';
 
 class NavigationDrawerScreen extends StatelessWidget {
   @override

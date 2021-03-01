@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/widget/edit_text/search_delegate/suggestion_list.dart';
+
+import 'SuggestionListWidget.dart';
 
 class MySearchDelegate extends SearchDelegate<String> {
   final List<String> listWord;
