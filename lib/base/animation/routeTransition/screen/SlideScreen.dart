@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/animation/routeTransition/transitions/SlideRightRoute.dart';
+import 'package:hello_word/base/animation/routeTransition/transitions/SlideRoute.dart';
 
 import '../RouteTransitionScreen.dart';
 

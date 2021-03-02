@@ -10,7 +10,7 @@ class RotationScreen extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Center(
         child: RaisedButton(
-          child: Text('RotationTansition'),
+          child: Text('RotationTransition'),
           onPressed: () =>
               Navigator.push(context, RotationRoute(page: Screen2())),
         ),

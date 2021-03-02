@@ -10,7 +10,7 @@ class FadeScreen extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Center(
         child: RaisedButton(
-          child: Text('FadeTansition'),
+          child: Text("FadeTransition"),
           onPressed: () => Navigator.push(context, FadeRoute(page: Screen2())),
         ),
       ),
