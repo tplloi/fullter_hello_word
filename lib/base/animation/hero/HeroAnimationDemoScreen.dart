@@ -138,6 +138,8 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
   _buildPopUp(BuildContext context) {
     return Center(
       child: AlertDialog(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         title: Hero(
           tag: "hero2",
           child: Material(
