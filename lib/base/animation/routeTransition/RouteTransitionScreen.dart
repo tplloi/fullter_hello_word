@@ -39,12 +39,13 @@ class Screen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
-      body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: buttons(context),
+      body: Center(
+        child: IntrinsicWidth(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: buttons(context),
+          ),
         ),
       ),
     );
