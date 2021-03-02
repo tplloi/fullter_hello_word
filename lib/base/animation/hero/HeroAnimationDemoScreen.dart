@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'Page1.dart';
 import 'Page2.dart';
-import 'hero_dialog_route.dart';
+import 'HeroDialogRoute.dart';
 
-class MainHeroAnimationsPage extends StatefulWidget {
+class HeroAnimationDemoScreen extends StatefulWidget {
   @override
-  _MainHeroAnimationsPageState createState() => _MainHeroAnimationsPageState();
+  _HeroAnimationDemoScreenState createState() =>
+      _HeroAnimationDemoScreenState();
 }
 
-class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
+class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
   _onButtonTap(Widget page) {
     Navigator.push(
-        context,
-        MaterialPageRoute(
-            fullscreenDialog: true, builder: (BuildContext context) => page));
+      context,
+      MaterialPageRoute(
+          fullscreenDialog: true, builder: (BuildContext context) => page),
+    );
   }
 
   _onButtonTapPopup(Widget page) {
     Navigator.push(
-        context, HeroDialogRoute(builder: (BuildContext context) => page));
+      context,
+      HeroDialogRoute(builder: (BuildContext context) => page),
+    );
   }
 
   _onButtonTapCustom(Widget page) {
@@ -43,8 +48,9 @@ class _MainHeroAnimationsPageState extends State<MainHeroAnimationsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Hero Animations"),
+      appBar: UIUtils().getAppBar(
+        "HeroAnimationDemoScreen",
+        () => Navigator.pop(context),
       ),
       body: Container(
         child: Container(
@@ -145,7 +151,7 @@ class CustomLogo extends StatelessWidget {
       height: size,
       child: Center(
         child: Image.asset(
-          "images/mario_logo.png",
+          "images/iv.jpg",
           width: size,
           height: size,
         ),

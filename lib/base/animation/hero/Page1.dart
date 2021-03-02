@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'MainHeroAnimationsPage.dart';
+import 'HeroAnimationDemoScreen.dart';
 
 class Page1 extends StatelessWidget {
   @override
