@@ -84,7 +84,8 @@ class ParentPageState extends State<ParentPage>
             child: Text("Action 1"),
             onPressed: () {
               setState(() {
-                updateChild1Title = "Update from Parent";
+                updateChild1Title = "Update from Parent " +
+                    DateTime.now().millisecondsSinceEpoch.toString();
               });
             },
           ),

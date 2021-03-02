@@ -35,14 +35,16 @@ class Child1PageState extends State<Child1Page> {
             //Update Parent from Child 1
             child: Text("Action 2"),
             onPressed: () {
-              widget.child2Action2("Update from Child 1");
+              widget.child2Action2("Update from Child 1 " +
+                  DateTime.now().millisecondsSinceEpoch.toString());
             },
           ),
           RaisedButton(
             //Update Child 2 from Child 1
             child: Text("Action 3"),
             onPressed: () {
-              widget.child2Action3("Update from Child 1");
+              widget.child2Action3("Update from Child 1 " +
+                  DateTime.now().millisecondsSinceEpoch.toString());
             },
           ),
           RaisedButton(
