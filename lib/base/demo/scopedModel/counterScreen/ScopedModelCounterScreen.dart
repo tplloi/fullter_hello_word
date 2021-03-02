@@ -43,6 +43,11 @@ class CounterModel extends Model {
     _counter++;
     notifyListeners();
   }
+
+  void minus() {
+    _counter--;
+    notifyListeners();
+  }
 }
 
 class CounterHome extends StatelessWidget {
@@ -55,7 +60,7 @@ class CounterHome extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         title,
-        () => Navigator.pop(context),
+            () => Navigator.pop(context),
       ),
       body: Center(
         child: Column(
@@ -75,14 +80,21 @@ class CounterHome extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            ScopedModelDescendant<CounterModel>(
+              builder: (context, child, model) {
+                return UIUtils().getRaisedButton("-", () => {model.minus()});
+              },
+            ),
           ],
         ),
       ),
       floatingActionButton: ScopedModelDescendant<CounterModel>(
         builder: (context, child, model) {
           return FloatingActionButton(
-              onPressed: model.increment,
+              onPressed: () {
+                model.increment();
+              },
               child: Icon(
                 Icons.add,
               ));
