@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
+import 'CustomLogo.dart';
 import 'Page1.dart';
 import 'Page2.dart';
 import 'HeroDialogRoute.dart';
@@ -59,12 +60,24 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              _buildCustomButton("Simple Hero", Page1()),
-              _buildCustomButton("Two Heroes", Page2()),
-              _buildCustomButton("Hero on Dialog", _buildPopUp(context),
-                  isPopup: true),
-              _buildCustomButton("Custom Hero Animation", Page1(),
-                  isCustom: true),
+              _buildCustomButton(
+                "Simple Hero",
+                Page1(),
+              ),
+              _buildCustomButton(
+                "Two Heroes",
+                Page2(),
+              ),
+              _buildCustomButton(
+                "Hero on Dialog",
+                _buildPopUp(context),
+                isPopup: true,
+              ),
+              _buildCustomButton(
+                "Custom Hero Animation",
+                Page1(),
+                isCustom: true,
+              ),
               Hero(
                 tag: "hero1",
                 child: ClipOval(
@@ -133,28 +146,6 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
             child: Icon(Icons.close),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CustomLogo extends StatelessWidget {
-  final double size;
-
-  CustomLogo({this.size = 200.0});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.lightBlueAccent,
-      width: size,
-      height: size,
-      child: Center(
-        child: Image.asset(
-          "images/iv.jpg",
-          width: size,
-          height: size,
-        ),
       ),
     );
   }

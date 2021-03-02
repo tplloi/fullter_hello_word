@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'CustomLogo.dart';
 import 'HeroAnimationDemoScreen.dart';
 
 class Page2 extends StatelessWidget {
