@@ -6,6 +6,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'async/MenuAsyncScreen.dart';
 import 'bloc/ui/CategoriesScreen.dart';
+import 'communicationBetweenWidget/CommunicationBetweenWidgetScreen.dart';
 import 'counter/CounterScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
 import 'loadLocalJson/LoadLocalJsonScreen.dart';
@@ -40,6 +41,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CategoriesScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "CommunicationBetweenWidgetScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CommunicationBetweenWidgetScreen()),
                 )
               },
             ),
