@@ -10,7 +10,28 @@ class ScopedModelCounterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScopedModel<CounterModel>(
       model: model,
-      child: CounterHome("ScopedModelCounterScreen"),
+      child: Stack(
+        children: [
+          CounterHome("ScopedModelCounterScreen"),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Container(
+              margin: EdgeInsets.all(150),
+              child: ScopedModelDescendant<CounterModel>(
+                builder: (context, child, model) {
+                  return Text(
+                    "Text in Parent ${model._counter}",
+                    style: TextStyle(
+                      color: Colors.pink,
+                      fontSize: 30,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
