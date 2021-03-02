@@ -9,6 +9,7 @@ import 'screen/SlideScreen.dart';
 import 'screen/fade_screen.dart';
 import 'screen/random_screen.dart';
 
+//https://medium.com/flutter-community/everything-you-need-to-know-about-flutter-page-route-transition-9ef5c1b32823
 class RouteTransitionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
