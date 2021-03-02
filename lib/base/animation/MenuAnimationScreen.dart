@@ -21,6 +21,7 @@ import 'AnimatedThemeScreen.dart';
 import 'DecoratedBoxTransitionScreen.dart';
 import 'FadeInImageScreen.dart';
 import 'FadeTransitionScreen.dart';
+import 'routeTransition/RouteTransitionScreen.dart';
 
 class MenuAnimationScreen extends StatelessWidget {
   @override
@@ -35,6 +36,16 @@ class MenuAnimationScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getRaisedButton(
+              "RouteTransitionScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => RouteTransitionScreen()),
+                )
+              },
+            ),
             UIUtils().getRaisedButton(
               "AnimatedAlignScreen",
               () => {
