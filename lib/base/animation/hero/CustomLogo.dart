@@ -8,7 +8,7 @@ class CustomLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Colors.transparent,
       width: size,
       height: size,
       child: Center(

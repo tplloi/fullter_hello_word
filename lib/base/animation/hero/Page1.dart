@@ -16,8 +16,8 @@ class Page1 extends StatelessWidget {
               child: Hero(
                 tag: "hero1",
                 child: Container(
-                  height: 250.0,
-                  width: 250.0,
+                  height: 200.0,
+                  width: 200.0,
                   child: CustomLogo(),
                 ),
               ),
