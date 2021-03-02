@@ -27,12 +27,12 @@ class RouteTransitionScreen extends StatelessWidget {
 
 class Screen1 extends StatelessWidget {
   final Map<String, Widget> screens = {
-    'SlideTransition': SlideScreen(),
-    'ScaleTransition': ScaleScreen(),
-    'RotationTransition': RotationScreen(),
-    'SizeTransition': SizeScreen(),
     'FadeTransition': FadeScreen(),
     'Random': RandomScreen(),
+    'RotationTransition': RotationScreen(),
+    'ScaleTransition': ScaleScreen(),
+    'SizeTransition': SizeScreen(),
+    'SlideTransition': SlideScreen(),
   };
 
   @override
