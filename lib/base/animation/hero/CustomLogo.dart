@@ -8,14 +8,15 @@ class CustomLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.lightBlueAccent,
+      color: Colors.red,
       width: size,
       height: size,
       child: Center(
         child: Image.asset(
-          "images/iv.jpg",
+          "assets/images/iv.jpg",
           width: size,
           height: size,
+          fit: BoxFit.cover,
         ),
       ),
     );

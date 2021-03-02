@@ -102,8 +102,12 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
     );
   }
 
-  _buildCustomButton(String text, Widget page,
-      {bool isPopup = false, bool isCustom = false}) {
+  _buildCustomButton(
+    String text,
+    Widget page, {
+    bool isPopup = false,
+    bool isCustom = false,
+  }) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: MaterialButton(
@@ -122,7 +126,7 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
         child: Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 13.0),
+          style: TextStyle(fontSize: 13.0, color: Colors.white),
         ),
       ),
     );
@@ -132,7 +136,11 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
     return Center(
       child: AlertDialog(
         title: Hero(
-            tag: "hero2", child: Material(child: Text('You are my hero.'))),
+          tag: "hero2",
+          child: Material(
+            child: Text('You are my hero.'),
+          ),
+        ),
         content: Container(
           child: Hero(
               tag: 'hero1',
