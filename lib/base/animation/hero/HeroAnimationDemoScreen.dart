@@ -31,8 +31,11 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
   _onButtonTapCustom(Widget page) {
     Navigator.of(context).push(
       PageRouteBuilder<Null>(
-          pageBuilder: (BuildContext context, Animation<double> animation,
-              Animation<double> secondaryAnimation) {
+          pageBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) {
             return AnimatedBuilder(
                 animation: animation,
                 builder: (BuildContext context, Widget child) {

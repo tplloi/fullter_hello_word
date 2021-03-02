@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'CustomLogo.dart';
-import 'HeroAnimationDemoScreen.dart';
 
 class Page2 extends StatelessWidget {
   @override
@@ -18,7 +17,7 @@ class Page2 extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(top: 50.0),
                   height: 250.0,
-                  width: 250.0,
+                  width: 200.0,
                   child: CustomLogo(),
                 ),
               ),
@@ -30,8 +29,8 @@ class Page2 extends StatelessWidget {
                 child: Material(
                     color: Colors.transparent,
                     child: Text(
-                      "Hero Text",
-                      style: TextStyle(fontSize: 40.0),
+                      "Hero Text Suzuki Ducati BMW Honda",
+                      style: TextStyle(fontSize: 50.0),
                     )),
               ),
             ),
