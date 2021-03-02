@@ -11,6 +11,7 @@ import 'counter/CounterScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
 import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'network/GetHttpDataScreen.dart';
+import 'scopedModel/counterScreen/ScopedModelCounterScreen.dart';
 import 'tipCalculator/TipCalculatorScreen.dart';
 
 class MenuDemoScreen extends StatelessWidget {
@@ -97,6 +98,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ViewPDFFileScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "ScopedModelCounterScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScopedModelCounterScreen()),
                 )
               },
             ),

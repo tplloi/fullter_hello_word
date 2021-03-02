@@ -39,6 +39,8 @@ dependencies:
   shared_preferences: 0.4.2
   sqflite: any #for sqlite
   path_provider: any #We use the path_provider package to get the commonly used location such as TemporaryDirectory and ApplicationDocumentsDirectory
+  scoped_model: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
