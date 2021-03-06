@@ -14,6 +14,7 @@ import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'network/GetHttpDataScreen.dart';
 import 'scopedModel/counterScreen/ScopedModelCounterScreen.dart';
 import 'tipCalculator/TipCalculatorScreen.dart';
+import 'urlLauncher/UrlLauncherScreen.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override
@@ -149,6 +150,16 @@ class MenuDemoScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => TipCalculatorScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "UrlLauncherScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => UrlLauncherScreen()),
                 )
               },
             ),
