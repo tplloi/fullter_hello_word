@@ -36,7 +36,7 @@ dependencies:
   table_calendar: ^2.1.0
   english_words: ^3.1.5
   http: ^0.12.0+1 #network
-  shared_preferences: 0.4.2
+  shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences
   sqflite: any #for sqlite
   path_provider: any #We use the path_provider package to get the commonly used location such as TemporaryDirectory and ApplicationDocumentsDirectory
   scoped_model: ^1.1.0
