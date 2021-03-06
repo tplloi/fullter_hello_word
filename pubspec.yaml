@@ -40,7 +40,7 @@ dependencies:
   sqflite: any #https://pub.dev/packages/sqflite
   path_provider: any #https://pub.dev/packages/path_provider
   scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
-
+  url_launcher: ^6.0.2 #https://pub.dev/packages/url_launcher
 
 dev_dependencies:
   flutter_test:

@@ -58,7 +58,7 @@ class Child extends StatelessWidget {
 // Support both reading and writing
 class Root extends InheritedWidget {
   static Root of(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(Root) as Root;
+      context.dependOnInheritedWidgetOfExactType<Root>() as Root;
 
   final _InheritedWidgetScreenState state;
 
@@ -80,7 +80,7 @@ class Root extends InheritedWidget {
 // Only supports reading attributes
 class ReadOnlyRoot extends InheritedWidget {
   static ReadOnlyRoot of(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(Root) as ReadOnlyRoot;
+      context.dependOnInheritedWidgetOfExactType<Root>() as ReadOnlyRoot;
 
   final int count;
 
