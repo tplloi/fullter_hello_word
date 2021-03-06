@@ -52,6 +52,7 @@ class ContactPageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ContactPageScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ContactsList(_buildContactList()),
     );

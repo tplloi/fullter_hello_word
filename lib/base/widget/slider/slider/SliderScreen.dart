@@ -10,6 +10,7 @@ class SliderScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "SliderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Column(

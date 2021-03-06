@@ -8,6 +8,7 @@ class AnimatedPhysicalModelScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedPhysicalModelScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedPhysicalModelWidget(),

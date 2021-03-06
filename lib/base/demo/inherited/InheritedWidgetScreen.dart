@@ -17,6 +17,7 @@ class _InheritedWidgetScreenState extends State<InheritedWidgetScreen> {
       appBar: UIUtils().getAppBar(
         "InheritedWidgetScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Root(
         state: this,

@@ -9,6 +9,7 @@ class DataTableScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "DataTableScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: DataTableWidget(),
     );

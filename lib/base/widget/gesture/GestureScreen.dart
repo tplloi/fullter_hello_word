@@ -8,6 +8,7 @@ class GestureScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "GestureScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: GestureWidget(
         title: "Tap Or Double Tap Me",

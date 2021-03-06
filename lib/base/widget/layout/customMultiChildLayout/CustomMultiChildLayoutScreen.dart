@@ -11,6 +11,7 @@ class CustomMultiChildLayoutScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CustomMultiChildLayoutScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: CustomMultiChildLayoutWidget(),
     );

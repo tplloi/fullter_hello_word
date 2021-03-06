@@ -30,6 +30,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
       appBar: UIUtils().getAppBar(
         "InfiniteScrollScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: GridView.count(
         controller: _scrollController,
@@ -52,9 +53,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
               print("onTap");
               listData.remove(value);
               //do sth better
-              setState(() {
-
-              });
+              setState(() {});
             },
           );
         }).toList(),

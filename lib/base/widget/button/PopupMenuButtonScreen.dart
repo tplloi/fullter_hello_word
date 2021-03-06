@@ -15,6 +15,7 @@ class _PopupMenuButtonScreenState extends State<PopupMenuButtonScreen> {
       appBar: UIUtils().getAppBar(
         "PopupMenuButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: PopupMenuButton<Selections>(

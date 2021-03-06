@@ -35,6 +35,7 @@ class TabBarScreenState extends State<TabBarScreen>
       appBar: UIUtils().getAppBar(
         "TabBarScreen",
         () => Navigator.pop(context),
+        null,
       ),
       // Set the TabBar view as the body of the Scaffold
       body: TabBarView(

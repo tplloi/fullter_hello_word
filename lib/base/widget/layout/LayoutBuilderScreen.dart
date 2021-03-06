@@ -9,6 +9,7 @@ class LayoutBuilderScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "LayoutBuilderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: LayoutBuilderWidget(),
     );

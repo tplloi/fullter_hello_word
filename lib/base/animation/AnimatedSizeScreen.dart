@@ -8,6 +8,7 @@ class AnimatedSizeScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedSizeScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedSizeWidget(),

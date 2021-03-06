@@ -9,6 +9,7 @@ class Expansion1Screen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Expansion1Screen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ExpansionPanelWidget(),
     );

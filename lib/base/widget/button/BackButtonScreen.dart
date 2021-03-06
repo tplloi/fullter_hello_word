@@ -8,6 +8,7 @@ class BackButtonScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "BackButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

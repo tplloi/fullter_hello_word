@@ -9,10 +9,12 @@ class MenuSliderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuSliderScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuSliderScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,7 +30,7 @@ class MenuSliderScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "SliderScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SliderScreen()),

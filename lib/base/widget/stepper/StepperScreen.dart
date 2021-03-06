@@ -35,6 +35,7 @@ class StepperScreenState extends State<StepperScreen> {
       appBar: UIUtils().getAppBar(
         "StepperScreen",
         () => Navigator.pop(context),
+        null,
       ),
       // Body
       body: Container(

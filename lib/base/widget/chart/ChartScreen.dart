@@ -9,6 +9,7 @@ class ChartScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ChartScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

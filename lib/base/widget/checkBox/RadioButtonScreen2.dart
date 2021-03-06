@@ -12,6 +12,7 @@ class RadioButtonScreen2 extends StatelessWidget {
         appBar: UIUtils().getAppBar(
           _title,
           () => Navigator.pop(context),
+          null,
         ),
         body: Center(
           child: MyStatefulWidget(),

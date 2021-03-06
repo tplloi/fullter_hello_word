@@ -9,6 +9,7 @@ class InkwellScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "InkwellScreen - check logcat see event",
         () => Navigator.pop(context),
+        null,
       ),
       body: SizedBox(
         width: double.infinity,

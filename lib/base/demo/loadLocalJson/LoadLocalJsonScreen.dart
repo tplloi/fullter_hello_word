@@ -18,6 +18,7 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
         appBar: UIUtils().getAppBar(
           "Load local JSON file",
           () => Navigator.pop(context),
+          null,
         ),
         body: Container(
           child: Center(

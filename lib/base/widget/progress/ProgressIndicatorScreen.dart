@@ -8,6 +8,7 @@ class ProgressIndicatorScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ProgressIndicatorScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

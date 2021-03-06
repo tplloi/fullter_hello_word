@@ -13,6 +13,7 @@ class TabPageSelectorScreen extends StatelessWidget {
             appBar: UIUtils().getAppBar(
               "TabPageSelectorScreen",
               () => Navigator.pop(context),
+              null,
             ),
             body: DefaultTabController(
               length: tabs.length,

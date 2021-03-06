@@ -8,6 +8,7 @@ class RadioButtonScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "RadioButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.white),

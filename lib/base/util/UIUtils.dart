@@ -1,17 +1,45 @@
 import 'package:flutter/material.dart';
 
 class UIUtils {
+
+  //TODO add onPressCodeGitPubdev
   AppBar getAppBar(
     String text,
     Function() onPressed,
+    Function() onPressCodeViewer,
   ) {
+    Widget _buildActionCodeWidget() {
+      if (onPressCodeViewer == null) {
+        return Container();
+      } else {
+        return IconButton(
+          icon: Icon(
+            Icons.code,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            onPressCodeViewer?.call();
+          },
+        );
+      }
+    }
+
     return AppBar(
       title: Text(text),
       centerTitle: true,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
         onPressed: () => onPressed.call(),
       ),
+
+      //add action on appbar
+      actions: <Widget>[
+        _buildActionCodeWidget(),
+      ],
+
       backgroundColor: Colors.blue,
     );
   }

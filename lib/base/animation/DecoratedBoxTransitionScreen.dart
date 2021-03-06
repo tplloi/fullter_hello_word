@@ -8,6 +8,7 @@ class DecoratedBoxTransitionScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "DecoratedBoxTransitionScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: DecoratedBoxTransitionWidget(),

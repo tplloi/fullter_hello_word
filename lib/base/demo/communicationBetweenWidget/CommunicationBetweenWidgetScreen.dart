@@ -11,6 +11,7 @@ class CommunicationBetweenWidgetScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "text",
         () => Navigator.pop(context),
+        null,
       ),
       body: ParentPage(),
     );

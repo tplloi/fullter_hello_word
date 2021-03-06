@@ -10,6 +10,7 @@ class AnimatedPaddingScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedPaddingScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedPaddingWidget(),

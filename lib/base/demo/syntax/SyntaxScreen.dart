@@ -54,10 +54,12 @@ class SyntaxScreen extends StatelessWidget {
     test();
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Syntax1",
-          () => {
-                Navigator.pop(context),
-              }),
+        "Syntax1",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: Center(
         child: UIUtils().getText("Check logcat"),
       ),

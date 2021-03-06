@@ -10,38 +10,43 @@ class MenuAsyncScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Demo async",
-          () => {
-                Navigator.pop(context),
-              }),
+        "Demo async",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
               "FutureBuilderScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FutureBuilderScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => FutureBuilderScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "StreamBuilderScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StreamBuilderScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => StreamBuilderScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "ValueListenableBuilderScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ValueListenableBuilderScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => ValueListenableBuilderScreen()),
                 )
               },
             ),

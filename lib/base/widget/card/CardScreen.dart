@@ -9,6 +9,7 @@ class CardScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CardScreen",
         () => Navigator.canPop(context),
+        null,
       ),
       body: Center(
         child: SingleChildScrollView(

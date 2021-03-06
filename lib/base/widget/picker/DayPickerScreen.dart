@@ -8,6 +8,7 @@ class DayPickerScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "DayPickerScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.yellow),

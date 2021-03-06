@@ -11,10 +11,12 @@ class MenuLayoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuLayoutScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuLayoutScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -31,7 +33,7 @@ class MenuLayoutScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "LayoutBuilderScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -41,7 +43,7 @@ class MenuLayoutScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "LayoutMultipleScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -51,15 +53,13 @@ class MenuLayoutScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "LayoutSingleScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => LayoutSingleScreen()),
+                  MaterialPageRoute(builder: (context) => LayoutSingleScreen()),
                 )
               },
             ),
-
           ],
         ),
       ),

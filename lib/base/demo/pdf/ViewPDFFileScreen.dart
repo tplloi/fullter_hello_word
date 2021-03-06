@@ -11,6 +11,7 @@ class ViewPDFFileScreen extends StatelessWidget {
         appBar: UIUtils().getAppBar(
           "View PDF File",
           () => Navigator.pop(context),
+          null,
         ),
         body: HomePage());
   }

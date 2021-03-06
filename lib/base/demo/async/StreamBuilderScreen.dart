@@ -19,6 +19,7 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
       appBar: UIUtils().getAppBar(
         "StreamBuilderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: SingleChildScrollView(

@@ -8,6 +8,7 @@ class PositionedTransitionScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "PositionedTransitionScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: PositionedTransitionWidget(),

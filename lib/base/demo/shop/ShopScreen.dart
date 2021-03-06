@@ -14,6 +14,7 @@ class ShopScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Shop",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: ListView.builder(

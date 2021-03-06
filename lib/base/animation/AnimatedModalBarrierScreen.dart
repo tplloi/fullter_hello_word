@@ -8,6 +8,7 @@ class AnimatedModalBarrierScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedModalBarrierScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedModalBarrierWidget(),

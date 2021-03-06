@@ -8,6 +8,7 @@ class SwitchScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "SwitchScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Column(

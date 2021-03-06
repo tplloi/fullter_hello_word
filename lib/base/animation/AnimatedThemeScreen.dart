@@ -8,6 +8,7 @@ class AnimatedThemeScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedThemeScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedThemeWidget(),

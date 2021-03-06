@@ -14,10 +14,12 @@ class MenuListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuListScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuListScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

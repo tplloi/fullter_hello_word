@@ -8,7 +8,8 @@ class CupertinoSegmentedControlScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CupertinoSegmentedControlScreen",
-            () => Navigator.pop(context),
+        () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Container(

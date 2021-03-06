@@ -40,7 +40,8 @@ class DropDownScreenState extends State<DropDownScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "DropDownScreen",
-            () => Navigator.pop(context),
+        () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         child: Center(

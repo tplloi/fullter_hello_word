@@ -7,8 +7,11 @@ class AnimatedContainerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils()
-          .getAppBar("AnimatedContainerScreen", () => Navigator.pop(context)),
+      appBar: UIUtils().getAppBar(
+        "AnimatedContainerScreen",
+        () => Navigator.pop(context),
+        null,
+      ),
       body: Center(
         child: AnimatedContainerWidget(),
       ),

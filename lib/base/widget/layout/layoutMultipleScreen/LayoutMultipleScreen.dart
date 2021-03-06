@@ -10,6 +10,7 @@ class LayoutMultipleScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "LayoutMultipleScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: MyHomePage(

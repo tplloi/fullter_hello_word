@@ -36,6 +36,7 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
       appBar: UIUtils().getAppBar(
         "SQLiteDemoScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: StreamBuilder<List<Client>>(
         stream: clientsBloc.clientStream,
@@ -72,7 +73,8 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () async {
-          Client randomClient = testClients[math.Random().nextInt(testClients.length)];
+          Client randomClient =
+              testClients[math.Random().nextInt(testClients.length)];
           clientsBloc.add(randomClient);
         },
       ),

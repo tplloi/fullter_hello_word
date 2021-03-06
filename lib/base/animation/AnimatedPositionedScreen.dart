@@ -8,6 +8,7 @@ class AnimatedPositionedScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedPositionedScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedPositionedWidget(),

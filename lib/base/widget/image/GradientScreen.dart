@@ -6,10 +6,12 @@ class GradientScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "GradientScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "GradientScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: Container(
         // Center the content
         child: Center(

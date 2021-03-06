@@ -11,10 +11,12 @@ class MenuEditTextScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuEditTextScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuEditTextScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -30,7 +32,7 @@ class MenuEditTextScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "FormFieldScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FormFieldScreen()),
@@ -39,16 +41,17 @@ class MenuEditTextScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "SearchDelegateScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SearchDelegateScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => SearchDelegateScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "TextFieldScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TextFieldScreen()),

@@ -9,6 +9,7 @@ class CheckBoxScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CheckBoxScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         // Another way to set the background color

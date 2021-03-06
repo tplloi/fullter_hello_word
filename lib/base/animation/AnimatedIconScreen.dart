@@ -8,6 +8,7 @@ class AnimatedIconScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedIconScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedIconWidget(),

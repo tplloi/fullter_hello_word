@@ -7,7 +7,10 @@ class CupertinoActionSheetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "CupertinoActionSheetScreen", () => Navigator.pop(context)),
+        "CupertinoActionSheetScreen",
+        () => Navigator.pop(context),
+        null,
+      ),
       body: Center(
         child: RaisedButton(
           onPressed: () => showActionSheet(context),

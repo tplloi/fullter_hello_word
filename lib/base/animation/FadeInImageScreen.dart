@@ -9,6 +9,7 @@ class FadeInImageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "FadeInImageScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: FadeInImageWidget(),

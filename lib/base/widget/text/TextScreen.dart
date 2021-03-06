@@ -8,6 +8,7 @@ class TextScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "TextScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
           child: Container(

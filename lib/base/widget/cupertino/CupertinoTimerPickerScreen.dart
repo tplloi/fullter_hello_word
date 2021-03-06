@@ -9,6 +9,7 @@ class CupertinoTimerPickerScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CupertinoTimerPickerScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ListView(
         children: <Widget>[

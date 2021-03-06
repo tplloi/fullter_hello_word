@@ -8,6 +8,7 @@ class LayoutSingleScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "LayoutSingleScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: MyButton(),

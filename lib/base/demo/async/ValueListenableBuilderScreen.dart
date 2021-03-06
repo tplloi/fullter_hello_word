@@ -24,6 +24,7 @@ class _ValueListenableBuilderScreenState
       appBar: UIUtils().getAppBar(
         "ValueListenableBuilderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

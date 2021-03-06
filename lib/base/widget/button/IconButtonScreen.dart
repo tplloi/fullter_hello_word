@@ -9,6 +9,7 @@ class IconButtonScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "IconButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Container(

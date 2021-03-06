@@ -48,6 +48,7 @@ class StatelessWidgetDemoScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "StatelessWidgetDemoScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         // Sets the padding in the main container

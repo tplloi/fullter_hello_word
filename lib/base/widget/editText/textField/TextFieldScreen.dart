@@ -12,6 +12,7 @@ class TextFieldScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "TextFieldScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(15),

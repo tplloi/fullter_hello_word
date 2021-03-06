@@ -9,6 +9,7 @@ class ImageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ImageScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: SingleChildScrollView(

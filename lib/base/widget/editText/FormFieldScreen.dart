@@ -20,6 +20,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
         appBar: UIUtils().getAppBar(
           "FormFieldScreen",
           () => Navigator.pop(context),
+          null,
         ),
         body: Container(
           margin: const EdgeInsets.all(15),

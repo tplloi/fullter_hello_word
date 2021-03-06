@@ -30,6 +30,7 @@ class _CategoriesState extends State<CategoriesScreen> {
       appBar: UIUtils().getAppBar(
         "CategoriesScreen",
         () => Navigator.pop(context),
+        null,
       ),
       backgroundColor: Colors.black,
       body: RefreshIndicator(

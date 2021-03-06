@@ -66,6 +66,7 @@ class TipCalculatorScreen extends StatelessWidget {
     AppBar appBar = UIUtils().getAppBar(
       "Tip Calculator",
       () => Navigator.pop(context),
+      null,
     );
 
     Scaffold scaffold = Scaffold(

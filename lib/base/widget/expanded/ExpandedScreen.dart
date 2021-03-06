@@ -8,6 +8,7 @@ class ExpandedScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ExpandedScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: ExpandedWidget(),

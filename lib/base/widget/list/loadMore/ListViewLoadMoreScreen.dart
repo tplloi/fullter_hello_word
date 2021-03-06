@@ -9,6 +9,7 @@ class ListViewLoadMoreScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ListViewLoadMoreScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ListTileWidget(),
     );

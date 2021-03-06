@@ -10,10 +10,12 @@ class MenuBottomBarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuBottomBarScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuBottomBarScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -29,7 +31,7 @@ class MenuBottomBarScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "TabBarScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TabBarScreen()),
@@ -38,7 +40,7 @@ class MenuBottomBarScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "TabBarScreen2",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TabBarScreen2()),

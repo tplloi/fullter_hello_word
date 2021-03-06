@@ -5,8 +5,11 @@ class AnimatedCrossFadeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils()
-          .getAppBar("AnimatedCrossFadeScreen", () => Navigator.pop(context)),
+      appBar: UIUtils().getAppBar(
+        "AnimatedCrossFadeScreen",
+        () => Navigator.pop(context),
+        null,
+      ),
       body: Center(
         child: AnimatedCrossFadeWidget(),
       ),

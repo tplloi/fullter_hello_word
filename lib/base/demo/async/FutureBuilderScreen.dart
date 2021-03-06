@@ -25,6 +25,7 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
       appBar: UIUtils().getAppBar(
         "FutureBuilderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Column(
         children: <Widget>[

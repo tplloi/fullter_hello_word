@@ -9,6 +9,7 @@ class DialogScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "DialogScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: SingleChildScrollView(

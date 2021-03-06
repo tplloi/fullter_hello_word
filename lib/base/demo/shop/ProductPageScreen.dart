@@ -16,6 +16,7 @@ class ProductPageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ProductPageScreen " + product.name,
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Container(

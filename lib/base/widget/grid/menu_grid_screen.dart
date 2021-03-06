@@ -10,10 +10,12 @@ class MenuGridScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuGridScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuGridScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -29,7 +31,7 @@ class MenuGridScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "GridPaperScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => GridPaperScreen()),
@@ -38,10 +40,11 @@ class MenuGridScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "InfiniteScrollScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InfiniteScrollScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => InfiniteScrollScreen()),
                 )
               },
             ),

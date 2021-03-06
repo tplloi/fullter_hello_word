@@ -9,10 +9,12 @@ class MenuExpansionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuExpansionScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuExpansionScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,10 +30,11 @@ class MenuExpansionScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ExpansionPanelScreen2",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ExpansionPanelScreen2()),
+                  MaterialPageRoute(
+                      builder: (context) => ExpansionPanelScreen2()),
                 )
               },
             ),

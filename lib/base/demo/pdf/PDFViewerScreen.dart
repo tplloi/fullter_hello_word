@@ -17,6 +17,7 @@ class PDFViewerScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "PDFViewerScreen" + time.toString(),
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(child: PDFViewer(document: pdfDocument)),
     );

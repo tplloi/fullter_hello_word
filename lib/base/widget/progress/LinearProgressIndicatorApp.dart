@@ -28,6 +28,7 @@ class LinearProgressIndicatorAppState
       appBar: UIUtils().getAppBar(
         "LinearProgressIndicatorApp",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Container(

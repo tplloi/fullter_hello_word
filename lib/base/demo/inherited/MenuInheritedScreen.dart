@@ -9,10 +9,12 @@ class MenuInheritedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Menu inherited",
-          () => {
-                Navigator.pop(context),
-              }),
+        "Menu inherited",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

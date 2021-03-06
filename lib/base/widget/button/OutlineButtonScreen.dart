@@ -8,6 +8,7 @@ class OutlineButtonScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "OutlineButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: UIUtils().getOutlineButton(

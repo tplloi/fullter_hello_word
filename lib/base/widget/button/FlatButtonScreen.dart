@@ -13,6 +13,7 @@ class _FlatButtonScreenState extends State<FlatButtonScreen> {
       appBar: UIUtils().getAppBar(
         "FlatButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: FlatButton(

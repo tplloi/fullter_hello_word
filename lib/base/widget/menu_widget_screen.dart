@@ -44,10 +44,12 @@ class MenuWidgetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuWidgetScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuWidgetScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -237,7 +239,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "InkwellScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => InkwellScreen()),
@@ -310,19 +312,21 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "StatelessWidgetDemoScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StatelessWidgetDemoScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => StatelessWidgetDemoScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "StatefulWidgetDemoScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StatefulWidgetDemoScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => StatefulWidgetDemoScreen()),
                 )
               },
             ),

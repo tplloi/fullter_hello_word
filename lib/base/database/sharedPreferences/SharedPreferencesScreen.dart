@@ -65,6 +65,7 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
       appBar: UIUtils().getAppBar(
         nameOfApp,
         () => Navigator.pop(context),
+        null,
       ),
       // Body
       body: Container(

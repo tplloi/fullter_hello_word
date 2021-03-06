@@ -13,6 +13,7 @@ class _TooltipScreenState extends State<TooltipScreen> {
       appBar: UIUtils().getAppBar(
         "TooltipScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

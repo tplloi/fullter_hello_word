@@ -33,6 +33,7 @@ class _InheritedModelScreenState extends State<InheritedModelScreen> {
       appBar: UIUtils().getAppBar(
         "InheritedModelScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: InheritedRoot(

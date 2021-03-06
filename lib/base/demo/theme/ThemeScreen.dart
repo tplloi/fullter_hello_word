@@ -8,6 +8,7 @@ class ThemeScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ThemeScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.black87),

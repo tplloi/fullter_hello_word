@@ -17,6 +17,7 @@ class EditTextScreenState extends State<EditTextScreen> {
       appBar: UIUtils().getAppBar(
         "EditTextScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         padding: const EdgeInsets.all(10.0),

@@ -8,6 +8,7 @@ class ListTileScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ListTileScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ListTileWidget(),
     );

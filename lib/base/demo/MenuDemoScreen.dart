@@ -8,6 +8,7 @@ import 'async/MenuAsyncScreen.dart';
 import 'bloc/ui/CategoriesScreen.dart';
 import 'communicationBetweenWidget/CommunicationBetweenWidgetScreen.dart';
 import 'counter/CounterScreen.dart';
+import 'crypto/CryptoScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
 import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'network/GetHttpDataScreen.dart';
@@ -19,10 +20,12 @@ class MenuDemoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Demo menu",
-          () => {
-                Navigator.pop(context),
-              }),
+        "Demo menu",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -47,10 +50,11 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "CommunicationBetweenWidgetScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CommunicationBetweenWidgetScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => CommunicationBetweenWidgetScreen()),
                 )
               },
             ),
@@ -60,6 +64,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CounterScreen()),
+                )
+              },
+            ),
+            UIUtils().getRaisedButton(
+              "CryptoScreen",
+              () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CryptoScreen()),
                 )
               },
             ),
@@ -103,10 +116,11 @@ class MenuDemoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ScopedModelCounterScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ScopedModelCounterScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => ScopedModelCounterScreen()),
                 )
               },
             ),

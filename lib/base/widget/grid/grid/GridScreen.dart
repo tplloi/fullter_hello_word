@@ -9,6 +9,7 @@ class GridScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "GridScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: MyGridView().build(),
     );

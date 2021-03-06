@@ -10,6 +10,7 @@ class AccountScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AccountScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         child: Center(

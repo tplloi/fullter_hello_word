@@ -8,10 +8,12 @@ class AnimatedBuilderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "AnimatedBuilderScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "AnimatedBuilderScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: Center(
         child: AnimatedBuilderWidget(),
       ),

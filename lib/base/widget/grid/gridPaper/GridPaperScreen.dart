@@ -8,6 +8,7 @@ class GridPaperScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "GridPaperScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: GridPaperWidget(),
     );

@@ -29,17 +29,19 @@ class MenuAnimationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Animation menu",
-          () => {
-                Navigator.pop(context),
-              }),
+        "Animation menu",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getRaisedButton(
               "HeroAnimationDemoScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -49,7 +51,7 @@ class MenuAnimationScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "RouteTransitionScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(

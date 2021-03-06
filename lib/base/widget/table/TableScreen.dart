@@ -14,6 +14,7 @@ class _DataTableExample extends State<TableScreen> {
         appBar: UIUtils().getAppBar(
           "TableScreen",
           () => Navigator.pop(context),
+          null,
         ),
         body: ListView(children: <Widget>[
           Center(

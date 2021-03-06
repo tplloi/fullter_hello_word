@@ -9,6 +9,7 @@ class ListViewSearchScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ListViewSearchScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ListViewSearchWidget(title: "Suzuki"),
     );

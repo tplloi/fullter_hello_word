@@ -10,10 +10,12 @@ class MenuDatabaseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuDatabaseScreen",
-          () => {
-                SystemNavigator.pop(),
-              }),
+        "MenuDatabaseScreen",
+        () => {
+          SystemNavigator.pop(),
+        },
+        null,
+      ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -30,11 +32,10 @@ class MenuDatabaseScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "SQLiteDemoScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => SQLiteDemoScreen()),
+                  MaterialPageRoute(builder: (context) => SQLiteDemoScreen()),
                 )
               },
             ),

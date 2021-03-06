@@ -60,7 +60,8 @@ class CounterHome extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         title,
-            () => Navigator.pop(context),
+        () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

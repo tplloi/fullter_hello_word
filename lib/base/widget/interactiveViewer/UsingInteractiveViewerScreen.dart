@@ -9,6 +9,7 @@ class UsingInteractiveViewerScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "UsingInteractiveViewerScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: InteractiveViewer(
         boundaryMargin: EdgeInsets.all(300.0),

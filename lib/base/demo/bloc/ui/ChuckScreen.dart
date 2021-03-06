@@ -32,6 +32,7 @@ class _ChuckScreenState extends State<ChuckScreen> {
       appBar: UIUtils().getAppBar(
         "ChuckScreen",
         () => Navigator.pop(context),
+        null,
       ),
       backgroundColor: Color(0x00000000),
       body: RefreshIndicator(

@@ -17,6 +17,7 @@ class _RangeSliderScreenState extends State<RangeSliderScreen> {
       appBar: UIUtils().getAppBar(
         "RangeSliderScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Padding(
         padding: EdgeInsets.all(15.0),

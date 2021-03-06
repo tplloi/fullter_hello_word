@@ -11,10 +11,12 @@ class MenuCupertinoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuCupertinoScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuCupertinoScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,7 +43,7 @@ class MenuCupertinoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "CupertinoTimerPickerScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -51,7 +53,7 @@ class MenuCupertinoScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "CupertinoWidgetScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(

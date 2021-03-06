@@ -8,6 +8,7 @@ class AnimatedListScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedListScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedListWidget(),

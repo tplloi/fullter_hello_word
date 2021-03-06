@@ -17,6 +17,7 @@ class RouteTransitionScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "RouteTransitionScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Screen1(),

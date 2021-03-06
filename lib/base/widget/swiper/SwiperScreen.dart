@@ -10,6 +10,7 @@ class SwiperScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "SwiperScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         padding: EdgeInsets.all(15),

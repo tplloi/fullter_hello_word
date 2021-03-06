@@ -9,10 +9,12 @@ class MenuDrawerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuDrawerScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuDrawerScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,10 +30,11 @@ class MenuDrawerScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "NavigationDrawerScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NavigationDrawerScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => NavigationDrawerScreen()),
                 )
               },
             ),

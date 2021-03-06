@@ -55,6 +55,7 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
       appBar: UIUtils().getAppBar(
         "HeroAnimationDemoScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         child: Container(

@@ -10,10 +10,12 @@ class MenuProgressScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuProgressScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuProgressScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

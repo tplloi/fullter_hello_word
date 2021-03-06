@@ -6,7 +6,10 @@ class AnimatedDefaultTextStyleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "AnimatedDefaultTextStyleScreen", () => Navigator.pop(context)),
+        "AnimatedDefaultTextStyleScreen",
+        () => Navigator.pop(context),
+        null,
+      ),
       body: Center(
         child: AnimatedDefaultTextStyleWidget(),
       ),

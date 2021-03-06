@@ -19,6 +19,7 @@ class _BottomSheetHomePageState extends State<BottomSheetHomePage> {
       appBar: UIUtils().getAppBar(
         widget.title,
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

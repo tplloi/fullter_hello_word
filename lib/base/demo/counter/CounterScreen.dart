@@ -72,6 +72,7 @@ class _CounterHomePageState extends State<CounterHomePage> {
       appBar: UIUtils().getAppBar(
         widget.title,
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         // Center is a layout base.widget. It takes a single child and positions it

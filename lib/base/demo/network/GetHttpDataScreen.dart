@@ -43,6 +43,7 @@ class GetHttpDataScreenState extends State<GetHttpDataScreen> {
       appBar: UIUtils().getAppBar(
         "GetHttpDataScreen",
         () => Navigator.pop(context),
+        null,
       ),
       // Create a Listview and load the data when available
       body: ListView.builder(

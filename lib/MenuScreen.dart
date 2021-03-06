@@ -16,7 +16,8 @@ class MenuScreen extends StatelessWidget {
           "Main menu",
           () => {
                 SystemNavigator.pop(),
-              }),
+              },
+          null),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

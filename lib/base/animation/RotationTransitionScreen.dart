@@ -8,6 +8,7 @@ class RotationTransitionScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "RotationTransitionScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: RotationTransitionWidget(),

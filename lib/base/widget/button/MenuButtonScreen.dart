@@ -17,10 +17,12 @@ class MenuButtonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "MenuButtonScreen",
-          () => {
-                Navigator.pop(context),
-              }),
+        "MenuButtonScreen",
+        () => {
+          Navigator.pop(context),
+        },
+        null,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,7 +38,7 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "ButtonBarScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ButtonBarScreen()),
@@ -45,7 +47,7 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "DropDownScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DropDownScreen()),
@@ -54,7 +56,7 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "FlatButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FlatButtonScreen()),
@@ -63,7 +65,7 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "IconButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => IconButtonScreen()),
@@ -72,25 +74,27 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "OutlineButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => OutlineButtonScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => OutlineButtonScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "PopupMenuButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PopupMenuButtonScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => PopupMenuButtonScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "RaisedButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RaisedButtonScreen()),
@@ -99,16 +103,17 @@ class MenuButtonScreen extends StatelessWidget {
             ),
             UIUtils().getRaisedButton(
               "RawMaterialButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RawMaterialButtonScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => RawMaterialButtonScreen()),
                 )
               },
             ),
             UIUtils().getRaisedButton(
               "ToggleButtonScreen",
-                  () => {
+              () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ToggleButtonScreen()),

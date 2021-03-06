@@ -10,6 +10,7 @@ class AnimatedAlignScreen extends StatelessWidget {
         () => {
           Navigator.pop(context),
         },
+        null,
       ),
       body: Center(
         child: AnimatedAlignWidget(),

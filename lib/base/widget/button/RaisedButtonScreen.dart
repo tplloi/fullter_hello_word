@@ -13,6 +13,7 @@ class _RaisedButtonScreenState extends State<RaisedButtonScreen> {
       appBar: UIUtils().getAppBar(
         "RaisedButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: RaisedButton(

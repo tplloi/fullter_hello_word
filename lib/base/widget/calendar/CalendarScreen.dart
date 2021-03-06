@@ -22,6 +22,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
       appBar: UIUtils().getAppBar(
         "CalendarScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Column(

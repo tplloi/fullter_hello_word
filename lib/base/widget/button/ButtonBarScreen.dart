@@ -8,6 +8,7 @@ class ButtonBarScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ButtonBarScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Column(

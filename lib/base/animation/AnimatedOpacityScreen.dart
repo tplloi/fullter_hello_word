@@ -8,6 +8,7 @@ class AnimatedOpacityScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedOpacityScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedOpacityWidget(),

@@ -8,6 +8,7 @@ class AnimatedSwitcherScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedSwitcherScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: AnimatedSwitcherWidget(),

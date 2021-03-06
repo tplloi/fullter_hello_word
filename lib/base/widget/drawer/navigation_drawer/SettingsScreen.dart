@@ -10,6 +10,7 @@ class SettingsScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "SettingsScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(
         child: Center(

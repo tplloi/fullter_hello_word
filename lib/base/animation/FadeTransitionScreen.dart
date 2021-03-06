@@ -8,6 +8,7 @@ class FadeTransitionScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "FadeTransitionScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: FadeTransitionWidget(),

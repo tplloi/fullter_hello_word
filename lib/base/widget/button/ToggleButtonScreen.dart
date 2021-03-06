@@ -12,8 +12,11 @@ class _ToggleButtonScreenState extends State<ToggleButtonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils()
-          .getAppBar("ToggleButtonScreen", () => Navigator.pop(context)),
+      appBar: UIUtils().getAppBar(
+        "ToggleButtonScreen",
+        () => Navigator.pop(context),
+        null,
+      ),
       body: Center(
         child: ToggleButtons(
           children: [

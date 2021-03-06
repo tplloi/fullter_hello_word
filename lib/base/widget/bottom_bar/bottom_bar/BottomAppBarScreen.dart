@@ -8,6 +8,7 @@ class BottomAppBarScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "BottomAppBarScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Container(),
       floatingActionButton: FloatingActionButton(

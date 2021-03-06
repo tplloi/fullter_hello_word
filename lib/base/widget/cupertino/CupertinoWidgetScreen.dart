@@ -9,6 +9,7 @@ class CupertinoWidgetScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CupertinoWidgetScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: SingleChildScrollView(
         child: Container(

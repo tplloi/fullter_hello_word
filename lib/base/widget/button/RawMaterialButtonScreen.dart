@@ -9,6 +9,7 @@ class RawMaterialButtonScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "RawMaterialButtonScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: RawMaterialButton(

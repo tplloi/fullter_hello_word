@@ -28,6 +28,7 @@ class CircularProgressIndicatorAppState
       appBar: UIUtils().getAppBar(
         "CircularProgressIndicatorApp",
         () => Navigator.pop(context),
+        null,
       ),
       body: Center(
         child: Container(

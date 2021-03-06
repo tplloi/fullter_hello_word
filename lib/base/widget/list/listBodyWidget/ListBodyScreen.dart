@@ -10,6 +10,7 @@ class ListBodyScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "ListBodyScreen",
         () => Navigator.pop(context),
+        null,
       ),
       body: ListBodyWidget(),
     );
