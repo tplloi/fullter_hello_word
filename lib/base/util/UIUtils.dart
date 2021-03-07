@@ -129,4 +129,11 @@ class UIUtils {
       valueColor: AlwaysStoppedAnimation<Color>(color),
     );
   }
+
+  Future sleep(int timeInSecond, Function function) {
+    return new Future.delayed(
+      Duration(seconds: timeInSecond),
+      () => function.call(),
+    );
+  }
 }

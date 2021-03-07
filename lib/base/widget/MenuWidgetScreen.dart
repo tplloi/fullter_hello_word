@@ -15,6 +15,7 @@ import 'cupertino/MenuCupertinoScreen.dart';
 import 'dataTable/DataTableScreen.dart';
 import 'dialog/DialogScreen.dart';
 import 'drawer/MenuDrawerScreen.dart';
+import 'easyLoading/EasyLoadingScreen.dart';
 import 'editText/MenuEditTextScreen.dart';
 import 'expanded/ExpandedScreen.dart';
 import 'expansion/MenuExpansionScreen.dart';
@@ -179,6 +180,15 @@ class MenuWidgetScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MenuDrawerScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "EasyLoadingScreen",
+                () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EasyLoadingScreen()),
               )
             },
           ),
