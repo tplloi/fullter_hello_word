@@ -50,8 +50,8 @@ class UIUtils {
   ) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.white70,//bkg color
-        onPrimary: Colors.black,//text color
+        primary: Colors.white70, //bkg color
+        onPrimary: Colors.black, //text color
         shape: new RoundedRectangleBorder(
           borderRadius: new BorderRadius.circular(Constants.radius_medium),
         ),
@@ -71,22 +71,23 @@ class UIUtils {
     );
   }
 
-  OutlineButton getOutlineButton(
+  OutlinedButton getOutlineButton(
     String text,
     Function() func,
   ) {
-    return OutlineButton(
+    return OutlinedButton(
       child: Text(text),
       onPressed: () {
         func.call();
       },
-      borderSide: BorderSide(
-        color: Colors.red,
-        width: 2,
-        style: BorderStyle.solid,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
+      style: ElevatedButton.styleFrom(
+        side: BorderSide(
+          width: 2.0,
+          color: Colors.red,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Constants.radius_round),
+        ),
       ),
     );
   }
