@@ -48,6 +48,7 @@ dependencies:
   webview_flutter: ^2.0.2 #https://pub.dev/packages/webview_flutter
   shimmer: ^1.1.2 #https://pub.dev/packages/shimmer
   animated_text_kit: ^4.0.0 #https://pub.dev/packages/animated_text_kit
+  logger: ^0.9.4 #https://pub.dev/packages/logger
 
 dev_dependencies:
   flutter_test:

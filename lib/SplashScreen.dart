@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/MenuScreen.dart';
+import 'package:hello_word/base/util/LLog.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -16,6 +17,7 @@ void main() {
           Brightness.light, //navigation bar icons' color
     ),
   );
+  testLogger();
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: true,
@@ -27,6 +29,16 @@ void main() {
       ),
     ),
   );
+}
+
+void testLogger() {
+  LLog.instance.logger.d("testLogger");
+  LLog.instance.logger.e("testLogger");
+  LLog.instance.logger.v("testLogger");
+  LLog.instance.logger.i("testLogger");
+  LLog.instance.loggerNoStack.d("testLogger");
+  LLog.instance.loggerNoStack.v("testLogger");
+  LLog.instance.loggerNoStack.e("testLogger");
 }
 
 class SplashScreen extends StatefulWidget {
