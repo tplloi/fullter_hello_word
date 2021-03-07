@@ -29,7 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   draggable_scrollbar: ^0.0.4 #https://pub.dev/packages/draggable_scrollbar
-  advance_pdf_viewer: ^1.2.0 #https://pub.dev/packages/advance_pdf_viewer
+  advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
   transparent_image: ^1.0.0 #https://pub.dev/packages/transparent_image
   flutter_swiper: ^1.1.6 #https://pub.dev/packages/flutter_swiper
   fl_chart: ^0.10.1 #https://pub.dev/packages/fl_chart
@@ -41,6 +41,7 @@ dependencies:
   path_provider: any #https://pub.dev/packages/path_provider
   scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
   url_launcher: ^5.7.10 #https://pub.dev/packages/url_launcher
+  crypto: ^2.0.0 #https://pub.dev/packages/crypto/install
 
 dev_dependencies:
   flutter_test:
