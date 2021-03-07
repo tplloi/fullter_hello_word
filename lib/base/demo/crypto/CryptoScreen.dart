@@ -4,14 +4,19 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
+import 'package:path_provider/path_provider.dart';
 
 class CryptoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> listString = [];
     listString.add("sha256");
-    listString.add("ThisIsInputFileName");
-    _test(listString);
+    _localFile.then(
+      (value) => {
+        listString.add(value),
+        _test(listString),
+      },
+    );
 
     return Scaffold(
       appBar: UIUtils().getAppBar(
@@ -29,12 +34,22 @@ class CryptoScreen extends StatelessWidget {
 
   final _usage = 'Usage: dart hash.dart <md5|sha1|sha256> <input_filename>';
 
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
+
+  Future<String> get _localFile async {
+    final path = await _localPath;
+    return "$path/counter.txt";
+  }
+
   Future _test(List<String> list) async {
-    print("_test ${list.length}");
+    print("_test length ${list.length}");
     if (list.length != 2) {
       print(_usage);
       print("Error length != 2");
-      // exitCode = 64; // Command was used incorrectly.
+      exitCode = 64; // Command was used incorrectly.
       return;
     }
 
@@ -53,7 +68,7 @@ class CryptoScreen extends StatelessWidget {
       default:
         print(_usage);
         print("Error hash init failed");
-        // exitCode = 64; // Command was used incorrectly.
+        exitCode = 64; // Command was used incorrectly.
         return;
     }
 
@@ -63,7 +78,7 @@ class CryptoScreen extends StatelessWidget {
 
     if (!input.existsSync()) {
       print("File $filename does not exist.");
-      // exitCode = 66; // An input file did not exist or was not readable.
+      exitCode = 66; // An input file did not exist or was not readable.
       return;
     }
 
