@@ -44,6 +44,7 @@ dependencies:
   url_launcher: ^5.7.10 #https://pub.dev/packages/url_launcher
   crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
   encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
+  focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
 
 dev_dependencies:
   flutter_test:
