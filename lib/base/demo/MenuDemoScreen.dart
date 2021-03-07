@@ -9,6 +9,7 @@ import 'bloc/ui/CategoriesScreen.dart';
 import 'communicationBetweenWidget/CommunicationBetweenWidgetScreen.dart';
 import 'counter/CounterScreen.dart';
 import 'crypto/CryptoScreen.dart';
+import 'encypt/EncryptScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
 import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'network/GetHttpDataScreen.dart';
@@ -74,6 +75,15 @@ class MenuDemoScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => CryptoScreen()),
+                )
+              },
+            ),
+            UIUtils().getButton(
+              "EncryptScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EncryptScreen()),
                 )
               },
             ),
