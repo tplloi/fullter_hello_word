@@ -38,7 +38,9 @@ android {
 
     defaultConfig {
         applicationId "com.loitp.baseflutter"
-        minSdkVersion 16
+
+        // Required by the Flutter WebView plugin: https://pub.dev/packages/webview_flutter
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

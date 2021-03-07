@@ -38,6 +38,7 @@ import 'tabPageSelector/TabPageSelectorScreen.dart';
 import 'table/TableScreen.dart';
 import 'text/TextScreen.dart';
 import 'tooltip/TooltipScreen.dart';
+import 'webview/WebViewScreen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -391,6 +392,15 @@ class MenuWidgetScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TooltipScreen()),
+                )
+              },
+            ),
+            UIUtils().getButton(
+              "WebViewScreen",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WebViewScreen()),
                 )
               },
             ),
