@@ -22,7 +22,7 @@ class MenuScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Animation",
               () => {
                 Navigator.push(
@@ -32,7 +32,7 @@ class MenuScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuDatabaseScreen",
               () => {
                 Navigator.push(
@@ -41,7 +41,7 @@ class MenuScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Demo",
               () => {
                 Navigator.push(
@@ -50,7 +50,7 @@ class MenuScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Syntax",
               () => {
                 Navigator.push(
@@ -59,7 +59,7 @@ class MenuScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Widget",
               () => {
                 Navigator.push(

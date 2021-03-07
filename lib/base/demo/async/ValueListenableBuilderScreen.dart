@@ -42,7 +42,7 @@ class _ValueListenableBuilderScreenState
             SizedBox(height: 20),
             UIUtils().getText('Click without setState $_counter'),
             SizedBox(height: 20),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
                 "Click me",
                 () => {
                       _incrementCounter(),

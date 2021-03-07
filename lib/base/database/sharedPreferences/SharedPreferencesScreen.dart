@@ -79,10 +79,10 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
                 textScaleFactor: 10.0,
               ),
               Padding(padding: EdgeInsets.all(10.0)),
-              UIUtils().getRaisedButton(
+              UIUtils().getButton(
                   "Increment Counter", () => _onIncrementHit()),
               Padding(padding: EdgeInsets.all(10.0)),
-              UIUtils().getRaisedButton(
+              UIUtils().getButton(
                   "Decrement Counter", () => _onDecrementHit()),
             ],
           ),

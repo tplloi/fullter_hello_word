@@ -21,7 +21,7 @@ class MenuEditTextScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "EditTextScreen",
               () => {
                 Navigator.push(
@@ -30,7 +30,7 @@ class MenuEditTextScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "FormFieldScreen",
               () => {
                 Navigator.push(
@@ -39,7 +39,7 @@ class MenuEditTextScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SearchDelegateScreen",
               () => {
                 Navigator.push(
@@ -49,7 +49,7 @@ class MenuEditTextScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TextFieldScreen",
               () => {
                 Navigator.push(

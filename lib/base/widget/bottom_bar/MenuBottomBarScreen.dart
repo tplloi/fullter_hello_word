@@ -20,7 +20,7 @@ class MenuBottomBarScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "BottomAppBarScreen",
               () => {
                 Navigator.push(
@@ -29,7 +29,7 @@ class MenuBottomBarScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TabBarScreen",
               () => {
                 Navigator.push(
@@ -38,7 +38,7 @@ class MenuBottomBarScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TabBarScreen2",
               () => {
                 Navigator.push(

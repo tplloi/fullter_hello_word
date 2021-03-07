@@ -20,7 +20,7 @@ class MenuGridScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "GridScreen",
               () => {
                 Navigator.push(
@@ -29,7 +29,7 @@ class MenuGridScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "GridPaperScreen",
               () => {
                 Navigator.push(
@@ -38,7 +38,7 @@ class MenuGridScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "InfiniteScrollScreen",
               () => {
                 Navigator.push(

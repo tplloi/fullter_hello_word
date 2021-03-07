@@ -84,7 +84,7 @@ class CounterHome extends StatelessWidget {
             ),
             ScopedModelDescendant<CounterModel>(
               builder: (context, child, model) {
-                return UIUtils().getRaisedButton("-", () => {model.minus()});
+                return UIUtils().getButton("-", () => {model.minus()});
               },
             ),
           ],

@@ -19,7 +19,7 @@ class MenuSliderScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RangeSliderScreen",
               () => {
                 Navigator.push(
@@ -28,7 +28,7 @@ class MenuSliderScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SliderScreen",
               () => {
                 Navigator.push(

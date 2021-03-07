@@ -67,8 +67,8 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        UIUtils().getRaisedButton("Choose date", () => chooseDate(context)),
-        UIUtils().getRaisedButton("Choose time", () => chooseTime(context)),
+        UIUtils().getButton("Choose date", () => chooseDate(context)),
+        UIUtils().getButton("Choose time", () => chooseTime(context)),
       ],
     );
   }

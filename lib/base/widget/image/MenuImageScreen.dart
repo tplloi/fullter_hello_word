@@ -18,7 +18,7 @@ class MenuImageScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "GradientScreen",
               () => {
                 Navigator.push(
@@ -27,7 +27,7 @@ class MenuImageScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ImageScreen",
               () => {
                 Navigator.push(

@@ -69,7 +69,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                       onSaved: (value) => email = value,
                     ),
                     SizedBox(height: 10),
-                    UIUtils().getRaisedButton(
+                    UIUtils().getButton(
                         "Validate input", () => validateInputs()),
                   ],
                 ),

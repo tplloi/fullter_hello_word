@@ -20,7 +20,7 @@ class MenuProgressScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CircularProgressIndicatorApp",
               () => {
                 Navigator.push(
@@ -30,7 +30,7 @@ class MenuProgressScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "LinearProgressIndicatorApp",
               () => {
                 Navigator.push(
@@ -40,7 +40,7 @@ class MenuProgressScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ProgressIndicatorScreen",
               () => {
                 Navigator.push(

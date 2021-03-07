@@ -18,9 +18,9 @@ class ButtonBarScreen extends StatelessWidget {
               alignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                UIUtils().getRaisedButton("Item1", () => {}),
-                UIUtils().getRaisedButton("Item2", () => {}),
-                UIUtils().getRaisedButton("Item3", () => {}),
+                UIUtils().getButton("Item1", () => {}),
+                UIUtils().getButton("Item2", () => {}),
+                UIUtils().getButton("Item3", () => {}),
                 RaisedButton(
                   child: Text('Item4'),
                   color: Colors.red,

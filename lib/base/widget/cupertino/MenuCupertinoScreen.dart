@@ -21,7 +21,7 @@ class MenuCupertinoScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CupertinoActionSheetScreen",
               () => {
                 Navigator.push(
@@ -31,7 +31,7 @@ class MenuCupertinoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CupertinoSegmentedControlScreen",
               () => {
                 Navigator.push(
@@ -41,7 +41,7 @@ class MenuCupertinoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CupertinoTimerPickerScreen",
               () => {
                 Navigator.push(
@@ -51,7 +51,7 @@ class MenuCupertinoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CupertinoWidgetScreen",
               () => {
                 Navigator.push(

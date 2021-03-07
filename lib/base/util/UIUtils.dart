@@ -44,7 +44,7 @@ class UIUtils {
     );
   }
 
-  ElevatedButton getRaisedButton(
+  ElevatedButton getButton(
     String text,
     Function() func,
   ) {

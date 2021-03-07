@@ -20,7 +20,7 @@ class MenuDatabaseScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SharedPreferencesScreen",
               () => {
                 Navigator.push(
@@ -30,7 +30,7 @@ class MenuDatabaseScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SQLiteDemoScreen",
               () => {
                 Navigator.push(

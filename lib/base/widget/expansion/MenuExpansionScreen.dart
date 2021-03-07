@@ -19,7 +19,7 @@ class MenuExpansionScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Expansion1Screen",
               () => {
                 Navigator.push(
@@ -28,7 +28,7 @@ class MenuExpansionScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ExpansionPanelScreen2",
               () => {
                 Navigator.push(

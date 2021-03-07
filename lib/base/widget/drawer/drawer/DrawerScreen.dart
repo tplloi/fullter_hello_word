@@ -44,7 +44,7 @@ class DrawerScreen extends StatelessWidget {
                   ListTile(
                     title: UIUtils().getText("Title5"),
                   ),
-                  UIUtils().getRaisedButton(
+                  UIUtils().getButton(
                     "Click",
                     () => Navigator.pop(context),
                   ),

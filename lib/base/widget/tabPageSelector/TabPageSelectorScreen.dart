@@ -24,7 +24,7 @@ class TabPageSelectorScreen extends StatelessWidget {
                     Expanded(
                       child: TabBarView(
                           children: tabs.map((value) {
-                        return UIUtils().getRaisedButton(
+                        return UIUtils().getButton(
                           "TabBarView " + value,
                           () => Navigator.pop(context),
                         );

@@ -20,7 +20,7 @@ class MenuAsyncScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "FutureBuilderScreen",
               () => {
                 Navigator.push(
@@ -30,7 +30,7 @@ class MenuAsyncScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "StreamBuilderScreen",
               () => {
                 Navigator.push(
@@ -40,7 +40,7 @@ class MenuAsyncScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ValueListenableBuilderScreen",
               () => {
                 Navigator.push(

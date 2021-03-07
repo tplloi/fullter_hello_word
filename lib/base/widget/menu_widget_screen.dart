@@ -54,7 +54,7 @@ class MenuWidgetScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SliverAppBarScreen",
               () => {
                 Navigator.push(
@@ -63,7 +63,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuBottomBarScreen",
               () => {
                 Navigator.push(
@@ -73,7 +73,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "BottomSheetScreen",
               () => {
                 Navigator.push(
@@ -82,7 +82,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuButtonScreen",
               () => {
                 Navigator.push(
@@ -91,7 +91,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CalendarScreen",
               () => {
                 Navigator.push(
@@ -100,7 +100,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CardScreen",
               () => {
                 Navigator.push(
@@ -109,7 +109,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ChartScreen",
               () => {
                 Navigator.push(
@@ -118,7 +118,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CheckBoxScreen",
               () => {
                 Navigator.push(
@@ -127,7 +127,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RadioButtonScreen",
               () => {
                 Navigator.push(
@@ -136,7 +136,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RadioButtonScreen2",
               () => {
                 Navigator.push(
@@ -145,7 +145,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuCupertinoScreen",
               () => {
                 Navigator.push(
@@ -155,7 +155,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DataTableScreen",
               () => {
                 Navigator.push(
@@ -164,7 +164,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DialogScreen",
               () => {
                 Navigator.push(
@@ -173,7 +173,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuDrawerScreen",
               () => {
                 Navigator.push(
@@ -182,7 +182,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuEditTextScreen",
               () => {
                 Navigator.push(
@@ -191,7 +191,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ExpandedScreen",
               () => {
                 Navigator.push(
@@ -200,7 +200,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuExpansionScreen",
               () => {
                 Navigator.push(
@@ -210,7 +210,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "GestureScreen",
               () => {
                 Navigator.push(
@@ -219,7 +219,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuGridScreen",
               () => {
                 Navigator.push(
@@ -228,7 +228,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuImageScreen",
               () => {
                 Navigator.push(
@@ -237,7 +237,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "InkwellScreen",
               () => {
                 Navigator.push(
@@ -246,7 +246,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "UsingInteractiveViewerScreen",
               () => {
                 Navigator.push(
@@ -256,7 +256,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuLayoutScreen",
               () => {
                 Navigator.push(
@@ -265,7 +265,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuListScreen",
               () => {
                 Navigator.push(
@@ -274,7 +274,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DayPickerScreen",
               () => {
                 Navigator.push(
@@ -283,7 +283,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuProgressScreen",
               () => {
                 Navigator.push(
@@ -292,7 +292,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "MenuSliderScreen",
               () => {
                 Navigator.push(
@@ -301,7 +301,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "StackScreen",
               () => {
                 Navigator.push(
@@ -310,7 +310,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "StatelessWidgetDemoScreen",
               () => {
                 Navigator.push(
@@ -320,7 +320,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "StatefulWidgetDemoScreen",
               () => {
                 Navigator.push(
@@ -330,7 +330,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "StepperScreen",
               () => {
                 Navigator.push(
@@ -339,7 +339,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SwiperScreen",
               () => {
                 Navigator.push(
@@ -348,7 +348,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "SwitchScreen",
               () => {
                 Navigator.push(
@@ -357,7 +357,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TabPageSelectorScreen",
               () => {
                 Navigator.push(
@@ -367,7 +367,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TableScreen",
               () => {
                 Navigator.push(
@@ -376,7 +376,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TextScreen",
               () => {
                 Navigator.push(
@@ -385,7 +385,7 @@ class MenuWidgetScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "TooltipScreen",
               () => {
                 Navigator.push(

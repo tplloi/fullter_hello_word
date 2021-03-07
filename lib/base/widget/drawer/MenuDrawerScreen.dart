@@ -19,7 +19,7 @@ class MenuDrawerScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DrawerScreen",
               () => {
                 Navigator.push(
@@ -28,7 +28,7 @@ class MenuDrawerScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "NavigationDrawerScreen",
               () => {
                 Navigator.push(

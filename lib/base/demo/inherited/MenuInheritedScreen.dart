@@ -19,7 +19,7 @@ class MenuInheritedScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "InheritedModelScreen",
               () => {
                 Navigator.push(
@@ -29,7 +29,7 @@ class MenuInheritedScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "InheritedWidgetScreen",
               () => {
                 Navigator.push(

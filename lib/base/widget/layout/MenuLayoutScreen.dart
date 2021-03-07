@@ -21,7 +21,7 @@ class MenuLayoutScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CustomMultiChildLayoutScreen",
               () => {
                 Navigator.push(
@@ -31,7 +31,7 @@ class MenuLayoutScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "LayoutBuilderScreen",
               () => {
                 Navigator.push(
@@ -41,7 +41,7 @@ class MenuLayoutScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "LayoutMultipleScreen",
               () => {
                 Navigator.push(
@@ -51,7 +51,7 @@ class MenuLayoutScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "LayoutSingleScreen",
               () => {
                 Navigator.push(

@@ -24,7 +24,7 @@ class MenuListScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ContactPageScreen",
               () => {
                 Navigator.push(
@@ -33,7 +33,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DraggableScrollBarDemo",
               () => {
                 Navigator.push(
@@ -43,7 +43,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RandomWordsScreen",
               () => {
                 Navigator.push(
@@ -52,7 +52,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ListViewSearchScreen",
               () => {
                 Navigator.push(
@@ -62,7 +62,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ListBodyScreen",
               () => {
                 Navigator.push(
@@ -71,7 +71,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ListTileScreen",
               () => {
                 Navigator.push(
@@ -80,7 +80,7 @@ class MenuListScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ListViewLoadMoreScreen",
               () => {
                 Navigator.push(

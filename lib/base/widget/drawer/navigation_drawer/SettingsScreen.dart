@@ -14,7 +14,7 @@ class SettingsScreen extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: UIUtils().getRaisedButton("SettingsScreen", () => null),
+          child: UIUtils().getButton("SettingsScreen", () => null),
         ),
       ),
     );

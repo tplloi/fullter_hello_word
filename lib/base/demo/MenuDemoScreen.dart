@@ -31,7 +31,7 @@ class MenuDemoScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Async",
               () => {
                 Navigator.push(
@@ -40,7 +40,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Block Demo Chuck Norris",
               () => {
                 Navigator.push(
@@ -49,7 +49,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CommunicationBetweenWidgetScreen",
               () => {
                 Navigator.push(
@@ -59,7 +59,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Counter",
               () => {
                 Navigator.push(
@@ -68,7 +68,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "CryptoScreen",
               () => {
                 Navigator.push(
@@ -77,7 +77,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Inherited",
               () => {
                 Navigator.push(
@@ -87,7 +87,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Load Local Json",
               () => {
                 Navigator.push(
@@ -97,7 +97,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "GetHttpDataScreen",
               () => {
                 Navigator.push(
@@ -106,7 +106,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "PDF",
               () => {
                 Navigator.push(
@@ -115,7 +115,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "ScopedModelCounterScreen",
               () => {
                 Navigator.push(
@@ -125,7 +125,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Shop",
               () => {
                 Navigator.push(
@@ -134,7 +134,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Theme",
               () => {
                 Navigator.push(
@@ -143,7 +143,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "Tip calculator",
               () => {
                 Navigator.push(
@@ -153,7 +153,7 @@ class MenuDemoScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "UrlLauncherScreen",
                   () => {
                 Navigator.push(

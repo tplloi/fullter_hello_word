@@ -28,7 +28,7 @@ class ErrorRetryWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: Constants.margin_padding_medium),
-          UIUtils().getRaisedButton(
+          UIUtils().getButton(
               "Click to Retry",
               () => {
                     onRetryPressed(),

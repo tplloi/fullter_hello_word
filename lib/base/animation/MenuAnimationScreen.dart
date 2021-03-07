@@ -39,7 +39,7 @@ class MenuAnimationScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "HeroAnimationDemoScreen",
               () => {
                 Navigator.push(
@@ -49,7 +49,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RouteTransitionScreen",
               () => {
                 Navigator.push(
@@ -59,7 +59,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedAlignScreen",
               () => {
                 Navigator.push(
@@ -69,7 +69,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedBuilder",
               () => {
                 Navigator.push(
@@ -79,7 +79,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedContainerScreen",
               () => {
                 Navigator.push(
@@ -89,7 +89,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedCrossFadeScreen",
               () => {
                 Navigator.push(
@@ -99,7 +99,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedDefaultTextStyleScreen",
               () => {
                 Navigator.push(
@@ -109,7 +109,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedIconScreen",
               () => {
                 Navigator.push(
@@ -118,7 +118,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedListScreen",
               () => {
                 Navigator.push(
@@ -127,7 +127,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedModalBarrierScreen",
               () => {
                 Navigator.push(
@@ -137,7 +137,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedOpacityScreen",
               () => {
                 Navigator.push(
@@ -147,7 +147,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedPaddingScreen",
               () => {
                 Navigator.push(
@@ -157,7 +157,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedPhysicalModelScreen",
               () => {
                 Navigator.push(
@@ -167,7 +167,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedPositionedScreen",
               () => {
                 Navigator.push(
@@ -177,7 +177,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedSizeScreen",
               () => {
                 Navigator.push(
@@ -186,7 +186,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedSwitcherScreen",
               () => {
                 Navigator.push(
@@ -196,7 +196,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "AnimatedThemeScreen",
               () => {
                 Navigator.push(
@@ -206,7 +206,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "DecoratedBoxTransitionScreen",
               () => {
                 Navigator.push(
@@ -216,7 +216,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "FadeInImageScreen",
               () => {
                 Navigator.push(
@@ -225,7 +225,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "FadeTransitionScreen",
               () => {
                 Navigator.push(
@@ -235,7 +235,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "PositionedTransitionScreen",
               () => {
                 Navigator.push(
@@ -245,7 +245,7 @@ class MenuAnimationScreen extends StatelessWidget {
                 )
               },
             ),
-            UIUtils().getRaisedButton(
+            UIUtils().getButton(
               "RotationTransitionScreen",
               () => {
                 Navigator.push(
