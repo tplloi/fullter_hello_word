@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/Constants.dart';
 
 class UIUtils {
-
   //TODO add onPressCodeGitPubdev
   AppBar getAppBar(
     String text,
@@ -44,16 +44,27 @@ class UIUtils {
     );
   }
 
-  RaisedButton getRaisedButton(
+  ElevatedButton getRaisedButton(
     String text,
     Function() func,
   ) {
-    return RaisedButton(
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: Colors.white70,//bkg color
+        onPrimary: Colors.black,//text color
+        shape: new RoundedRectangleBorder(
+          borderRadius: new BorderRadius.circular(Constants.radius_medium),
+        ),
+      ),
+
       child: new Text(
         text,
-        style: UIUtils().getStyleText(),
+        style: TextStyle(
+          // color: Colors.black,
+          fontSize: Constants.text_medium,
+        ),
       ),
-      color: Colors.white70,
+      // color: Colors.white70,
       onPressed: () => {
         func.call(),
       },
@@ -90,7 +101,7 @@ class UIUtils {
   TextStyle getStyleText() {
     return TextStyle(
       color: Colors.black,
-      fontSize: 16.0,
+      fontSize: Constants.text_medium,
     );
   }
 
