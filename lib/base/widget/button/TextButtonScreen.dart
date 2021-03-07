@@ -36,7 +36,7 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => RaisedButtonFlatScreen()),
+              MaterialPageRoute(builder: (context) => DummyScreen()),
             );
           },
           onLongPress: () {
@@ -51,19 +51,17 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
   }
 }
 
-class RaisedButtonFlatScreen extends StatefulWidget {
+class DummyScreen extends StatefulWidget {
   @override
-  _RaisedButtonFlatScreenState createState() => _RaisedButtonFlatScreenState();
+  _DummyScreenState createState() => _DummyScreenState();
 }
 
-class _RaisedButtonFlatScreenState extends State<RaisedButtonFlatScreen> {
+class _DummyScreenState extends State<DummyScreen> {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      child: Text('RaisedButton'),
+    return UIUtils().getButton(
+      "Tap",
+      () => Navigator.pop(context),
     );
   }
 }
