@@ -90,17 +90,16 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 runAlignment: WrapAlignment.center,
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: <Widget>[
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('open test page'),
-                    onPressed: () {
-                      _timer?.cancel();
+                  UIUtils().getButton(
+                    "open test page",
+                    () => {
+                      _timer?.cancel(),
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (BuildContext context) => TestPage(),
                         ),
-                      );
+                      ),
                     },
                   ),
                   FlatButton(
