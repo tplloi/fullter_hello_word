@@ -38,7 +38,7 @@ void _configLoading() {
     ..indicatorColor = Colors.yellow
     ..textColor = Colors.yellow
     ..maskColor = Colors.blue.withOpacity(0.5)
-    ..userInteractions = true
+    ..userInteractions = false
     ..dismissOnTap = false
     ..customAnimation = CustomAnimation();
 }
@@ -102,22 +102,20 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       ),
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('dismiss'),
+                  TextButton(
+                    child: Text("Dismiss"),
                     onPressed: () async {
                       _timer?.cancel();
                       await EasyLoading.dismiss();
-                      print('EasyLoading dismiss');
+                      print("EasyLoading dismiss");
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('show'),
+                  TextButton(
+                    child: Text("show"),
                     onPressed: () async {
                       _timer?.cancel();
                       await EasyLoading.show(
-                        status: 'loading...',
+                        status: "loading...",
                         maskType: EasyLoadingMaskType.black,
                       );
                       print('EasyLoading show');

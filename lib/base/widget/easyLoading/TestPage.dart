@@ -29,7 +29,11 @@ class _TestPageState extends State<TestPage> {
 
   void loadData() async {
     try {
-      await EasyLoading.show();
+      // await EasyLoading.show();
+      await EasyLoading.show(
+        status: "loading...",
+        maskType: EasyLoadingMaskType.black,
+      );
 
       //delay
       UIUtils().sleep(15, () {
