@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
 class TextAnimatedTextKitScreen extends StatefulWidget {
   TextAnimatedTextKitScreen({
@@ -20,7 +21,7 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
   void initState() {
     super.initState();
     _examples = animatedTextExamples(onTap: () {
-      print('Tap Event');
+      print("Tap Event");
       setState(() {
         _tapCount++;
       });
@@ -32,12 +33,8 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
     final animatedTextExample = _examples[_index];
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          animatedTextExample.label,
-          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-        ),
-      ),
+      appBar: UIUtils().getAppBar(
+          animatedTextExample.label, () => Navigator.pop(context), () => null),
       body: Column(
         children: <Widget>[
           Expanded(
@@ -52,7 +49,7 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
           Expanded(
             child: Container(
               alignment: Alignment.center,
-              child: Text('Taps: $_tapCount'),
+              child: UIUtils().getText("Taps: $_tapCount"),
             ),
           ),
         ],
@@ -64,7 +61,7 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
             _tapCount = 0;
           });
         },
-        tooltip: 'Next',
+        tooltip: "Next",
         child: const Icon(
           Icons.play_circle_filled,
           size: 50.0,
@@ -223,7 +220,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Wavy Text',
-        color: Colors.black87,
+        color: Colors.yellow,
         child: WavyAnimatedTextKit(
           onTap: onTap,
           textStyle: const TextStyle(fontSize: 20),
