@@ -1,23 +1,13 @@
-import 'dart:async';
-import 'dart:io';
+import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:path_provider/path_provider.dart';
 
 class CryptoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> listString = [];
-    listString.add("sha256");
-    _localFile.then(
-      (value) => {
-        listString.add(value),
-        _test(listString),
-      },
-    );
-
+    _test();
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CryptoScreen",
@@ -32,57 +22,10 @@ class CryptoScreen extends StatelessWidget {
     );
   }
 
-  final _usage = 'Usage: dart hash.dart <md5|sha1|sha256> <input_filename>';
-
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
-    return directory.path;
-  }
-
-  Future<String> get _localFile async {
-    final path = await _localPath;
-    return "$path/counter.txt";
-  }
-
-  Future _test(List<String> list) async {
-    print("_test length ${list.length}");
-    if (list.length != 2) {
-      print(_usage);
-      print("Error length != 2");
-      exitCode = 64; // Command was used incorrectly.
-      return;
-    }
-
-    Hash hash;
-
-    switch (list[0]) {
-      case 'md5':
-        hash = md5;
-        break;
-      case 'sha1':
-        hash = sha1;
-        break;
-      case 'sha256':
-        hash = sha256;
-        break;
-      default:
-        print(_usage);
-        print("Error hash init failed");
-        exitCode = 64; // Command was used incorrectly.
-        return;
-    }
-
-    var filename = list[1];
-    print("file name $filename");
-    var input = File(filename);
-
-    if (!input.existsSync()) {
-      print("File $filename does not exist.");
-      exitCode = 66; // An input file did not exist or was not readable.
-      return;
-    }
-
-    var value = await hash.bind(input.openRead()).first;
-    print(">>>value $value");
+  void _test() {
+    var bytes1 = utf8.encode("TranPhuLoi@69"); // data being hashed
+    var digest1 = sha256.convert(bytes1); // Hashing Process
+    print("Digest as bytes: ${digest1.bytes}"); // Print Bytes
+    print("Digest as hex string: $digest1"); // Print After Hashing
   }
 }
