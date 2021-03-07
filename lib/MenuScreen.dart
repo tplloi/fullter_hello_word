@@ -18,58 +18,55 @@ class MenuScreen extends StatelessWidget {
                 SystemNavigator.pop(),
               },
           null),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            UIUtils().getButton(
-              "Animation",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => MenuAnimationScreen()),
-                )
-              },
-            ),
-            UIUtils().getButton(
-              "MenuDatabaseScreen",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuDatabaseScreen()),
-                )
-              },
-            ),
-            UIUtils().getButton(
-              "Demo",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuDemoScreen()),
-                )
-              },
-            ),
-            UIUtils().getButton(
-              "Syntax",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SyntaxScreen()),
-                )
-              },
-            ),
-            UIUtils().getButton(
-              "Widget",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuWidgetScreen()),
-                )
-              },
-            ),
-          ],
-        ),
+      body: ListView(
+        physics: BouncingScrollPhysics(),
+        children: [
+          UIUtils().getButton(
+            "Animation",
+            () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MenuAnimationScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "MenuDatabaseScreen",
+            () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MenuDatabaseScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "Demo",
+            () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MenuDemoScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "Syntax",
+            () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SyntaxScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "Widget",
+            () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MenuWidgetScreen()),
+              )
+            },
+          ),
+        ],
       ),
     );
   }
