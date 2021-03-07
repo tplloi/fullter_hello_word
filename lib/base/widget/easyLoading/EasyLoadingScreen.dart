@@ -187,7 +187,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 padding: EdgeInsets.only(top: 20.0),
                 child: Column(
                   children: <Widget>[
-                    Text('Style'),
+                    Text("Style"),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                       child: CupertinoSegmentedControl<EasyLoadingStyle>(
@@ -195,15 +195,15 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                         children: {
                           EasyLoadingStyle.dark: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('dark'),
+                            child: Text("dark"),
                           ),
                           EasyLoadingStyle.light: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('light'),
+                            child: Text("light"),
                           ),
                           EasyLoadingStyle.custom: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('custom'),
+                            child: Text("custom"),
                           ),
                         },
                         onValueChanged: (value) {
@@ -218,7 +218,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 padding: EdgeInsets.only(top: 20.0),
                 child: Column(
                   children: <Widget>[
-                    Text('MaskType'),
+                    Text("MaskType"),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                       child: CupertinoSegmentedControl<EasyLoadingMaskType>(
@@ -253,7 +253,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 padding: EdgeInsets.only(top: 20.0),
                 child: Column(
                   children: <Widget>[
-                    Text('Toast Positon'),
+                    Text("Toast Position"),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                       child:
@@ -262,15 +262,15 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                         children: {
                           EasyLoadingToastPosition.top: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('top'),
+                            child: Text("top"),
                           ),
                           EasyLoadingToastPosition.center: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('center'),
+                            child: Text("center"),
                           ),
                           EasyLoadingToastPosition.bottom: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('bottom'),
+                            child: Text("bottom"),
                           ),
                         },
                         onValueChanged: (value) {
@@ -285,7 +285,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 padding: EdgeInsets.only(top: 20.0),
                 child: Column(
                   children: <Widget>[
-                    Text('Animation Style'),
+                    Text("Animation Style"),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                       child:
@@ -294,19 +294,19 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                         children: {
                           EasyLoadingAnimationStyle.opacity: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('opacity'),
+                            child: Text("opacity"),
                           ),
                           EasyLoadingAnimationStyle.offset: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('offset'),
+                            child: Text("offset"),
                           ),
                           EasyLoadingAnimationStyle.scale: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('scale'),
+                            child: Text("scale"),
                           ),
                           EasyLoadingAnimationStyle.custom: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('custom'),
+                            child: Text("custom"),
                           ),
                         },
                         onValueChanged: (value) {
@@ -324,7 +324,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                 ),
                 child: Column(
                   children: <Widget>[
-                    Text('IndicatorType(total: 23)'),
+                    Text("IndicatorType(total: 23)"),
                     Padding(
                       padding: EdgeInsets.only(top: 10.0),
                       child:
@@ -333,27 +333,27 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                         children: {
                           EasyLoadingIndicatorType.circle: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('circle'),
+                            child: Text("circle"),
                           ),
                           EasyLoadingIndicatorType.wave: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('wave'),
+                            child: Text("wave"),
                           ),
                           EasyLoadingIndicatorType.ring: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('ring'),
+                            child: Text("ring"),
                           ),
                           EasyLoadingIndicatorType.pulse: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('pulse'),
+                            child: Text("pulse"),
                           ),
                           EasyLoadingIndicatorType.cubeGrid: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('cubeGrid'),
+                            child: Text("cubeGrid"),
                           ),
                           EasyLoadingIndicatorType.threeBounce: Padding(
                             padding: EdgeInsets.all(5.0),
-                            child: Text('threeBounce'),
+                            child: Text("threeBounce"),
                           ),
                         },
                         onValueChanged: (value) {
