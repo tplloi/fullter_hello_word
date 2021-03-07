@@ -8,7 +8,7 @@ import 'package:hello_word/base/widget/button/ToggleButtonScreen.dart';
 import 'BackButtonScreen.dart';
 import 'ButtonBarScreen.dart';
 import 'DropDownScreen.dart';
-import 'FlatButtonScreen.dart';
+import 'TextButtonScreen.dart';
 import 'IconButtonScreen.dart';
 import 'OutlineButtonScreen.dart';
 
@@ -51,15 +51,6 @@ class MenuButtonScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DropDownScreen()),
-                )
-              },
-            ),
-            UIUtils().getButton(
-              "FlatButtonScreen",
-              () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FlatButtonScreen()),
                 )
               },
             ),
@@ -108,6 +99,15 @@ class MenuButtonScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => RawMaterialButtonScreen()),
+                )
+              },
+            ),
+            UIUtils().getButton(
+              "TextButtonScreen +++",
+                  () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TextButtonScreen()),
                 )
               },
             ),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-class FlatButtonScreen extends StatefulWidget {
+class TextButtonScreen extends StatefulWidget {
   @override
-  _FlatButtonScreenState createState() => _FlatButtonScreenState();
+  _TextButtonScreenState createState() => _TextButtonScreenState();
 }
 
-class _FlatButtonScreenState extends State<FlatButtonScreen> {
+class _TextButtonScreenState extends State<TextButtonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,16 +17,33 @@ class _FlatButtonScreenState extends State<FlatButtonScreen> {
         null,
       ),
       body: Center(
-        child: FlatButton(
-          color: Colors.blue,
+        child: TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.teal,
+            backgroundColor: Colors.yellow,
+            // onSurface: Colors.grey,
+            textStyle: TextStyle(
+              // color: Colors.red,
+              fontSize: Constants.text_medium,
+              fontStyle: FontStyle.italic,
+            ),
+            elevation: 5,
+            side: BorderSide(color: Colors.pink, width: 2),
+            shape: const BeveledRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(45)),
+            ),
+          ),
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => RaisedButtonFlatScreen()),
             );
           },
+          onLongPress: () {
+            print('Long press');
+          },
           child: Text(
-            "FlatButtonScreen",
+            "TextButton",
           ),
         ),
       ),
