@@ -46,6 +46,7 @@ dependencies:
   encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
   focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
   webview_flutter: ^2.0.2 #https://pub.dev/packages/webview_flutter
+  shimmer: ^1.1.2 #https://pub.dev/packages/shimmer
 
 
 dev_dependencies:

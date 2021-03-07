@@ -27,6 +27,7 @@ import 'layout/MenuLayoutScreen.dart';
 import 'list/MenuListScreen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
+import 'shimmer/ShimmerScreen.dart';
 import 'slider/MenuSliderScreen.dart';
 import 'stack/StackScreen.dart';
 import 'state/StatefulWidgetDemoScreen.dart';
@@ -286,6 +287,15 @@ class MenuWidgetScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => MenuProgressScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "ShimmerScreen",
+                () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ShimmerScreen()),
               )
             },
           ),

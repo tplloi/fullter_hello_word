@@ -53,7 +53,7 @@ class ImageScreen extends StatelessWidget {
 
   Widget getImageAssetWidget() {
     return Image.asset(
-      'assets/images/iv.jpg',
+      "assets/images/iv.jpg",
       width: 300,
       height: 200,
     );
