@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CustomAnimation.dart';
@@ -38,8 +39,8 @@ void _configLoading() {
     ..indicatorColor = Colors.yellow
     ..textColor = Colors.yellow
     ..maskColor = Colors.blue.withOpacity(0.5)
-    ..userInteractions = false
-    ..dismissOnTap = false
+    ..userInteractions = true
+    ..dismissOnTap = true
     ..customAnimation = CustomAnimation();
 }
 
@@ -102,6 +103,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       ),
                     },
                   ),
+                  SizedBox(width: Constants.margin_padding_medium),
                   TextButton(
                     child: Text("Dismiss"),
                     onPressed: () async {
@@ -110,6 +112,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       print("EasyLoading dismiss");
                     },
                   ),
+                  SizedBox(width: Constants.margin_padding_medium),
                   TextButton(
                     child: Text("show"),
                     onPressed: () async {
@@ -121,58 +124,61 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       print('EasyLoading show');
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('showToast'),
+                  SizedBox(width: Constants.margin_padding_medium),
+                  TextButton(
+                    child: Text("showToast"),
                     onPressed: () {
                       _timer?.cancel();
                       EasyLoading.showToast(
-                        'Toast',
+                        "This is Toast",
                       );
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('showSuccess'),
+                  SizedBox(width: Constants.margin_padding_medium),
+                  TextButton(
+                    child: Text("showSuccess"),
                     onPressed: () async {
                       _timer?.cancel();
-                      await EasyLoading.showSuccess('Great Success!');
-                      print('EasyLoading showSuccess');
+                      await EasyLoading.showSuccess("Great Success!");
+                      print("EasyLoading showSuccess");
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('showError'),
+                  SizedBox(width: Constants.margin_padding_medium),
+                  TextButton(
+                    child: Text("showError"),
                     onPressed: () {
                       _timer?.cancel();
-                      EasyLoading.showError('Failed with Error');
+                      EasyLoading.showError("Failed with Error");
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('showInfo'),
+                  SizedBox(width: Constants.margin_padding_medium),
+                  TextButton(
+                    child: Text("showInfo"),
                     onPressed: () {
                       _timer?.cancel();
-                      EasyLoading.showInfo('Useful Information.');
+                      EasyLoading.showInfo("Useful Information.");
                     },
                   ),
-                  FlatButton(
-                    textColor: Colors.blue,
-                    child: Text('showProgress'),
+                  SizedBox(width: Constants.margin_padding_medium),
+                  TextButton(
+                    child: Text("showProgress"),
                     onPressed: () {
                       _progress = 0;
                       _timer?.cancel();
-                      _timer = Timer.periodic(const Duration(milliseconds: 100),
-                          (Timer timer) {
-                        EasyLoading.showProgress(_progress,
-                            status: '${(_progress * 100).toStringAsFixed(0)}%');
-                        _progress += 0.03;
+                      _timer = Timer.periodic(
+                        const Duration(milliseconds: 100),
+                        (Timer timer) {
+                          EasyLoading.showProgress(_progress,
+                              status:
+                                  "${(_progress * 100).toStringAsFixed(0)}%");
+                          _progress += 0.03;
 
-                        if (_progress >= 1) {
-                          _timer?.cancel();
-                          EasyLoading.dismiss();
-                        }
-                      });
+                          if (_progress >= 1) {
+                            _timer?.cancel();
+                            EasyLoading.dismiss();
+                          }
+                        },
+                      );
                     },
                   ),
                 ],
