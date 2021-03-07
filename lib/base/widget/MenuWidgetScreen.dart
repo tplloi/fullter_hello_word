@@ -37,6 +37,7 @@ import 'swiper/SwiperScreen.dart';
 import 'switch/SwitchScreen.dart';
 import 'tabPageSelector/TabPageSelectorScreen.dart';
 import 'table/TableScreen.dart';
+import 'text/TextAnimatedTextKit.dart';
 import 'text/TextScreen.dart';
 import 'tooltip/TooltipScreen.dart';
 import 'webview/WebViewScreen.dart';
@@ -380,6 +381,15 @@ class MenuWidgetScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => TableScreen()),
+              )
+            },
+          ),
+          UIUtils().getButton(
+            "TextAnimatedTextKitScreen",
+                () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TextAnimatedTextKitScreen()),
               )
             },
           ),
