@@ -3,6 +3,8 @@ import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/image/GradientScreen.dart';
 import 'package:hello_word/base/widget/image/ImageScreen.dart';
 
+import 'CacheNetworkImageScreen.dart';
+
 class MenuImageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,8 +21,17 @@ class MenuImageScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils().getButton(
-              "GradientScreen",
+              "CacheNetworkImageScreen +++",
               () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CacheNetworkImageScreen()),
+                )
+              },
+            ),
+            UIUtils().getButton(
+              "GradientScreen",
+                  () => {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => GradientScreen()),
