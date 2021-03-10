@@ -21,9 +21,9 @@ class EncryptScreen extends StatelessWidget {
   }
 
   void _test() {
-    final plainText = "TranPhuLoi@69";
+    final plainText = "SomeP@assw0rd2021";
 
-    final key = Encrypted.Key.fromUtf8("my 32 length key................");
+    final key = Encrypted.Key.fromUtf8("11111111112222222222333333333344");
     final iv = Encrypted.IV.fromLength(16);
 
     final encrypter = Encrypted.Encrypter(Encrypted.AES(key));
