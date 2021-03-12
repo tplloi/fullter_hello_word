@@ -143,7 +143,9 @@ class Second extends GetView<ControllerX> {
             ElevatedButton(
               child: Text("Go to last page"),
               onPressed: () {
-                Get.toNamed('/third', arguments: 'arguments of second');
+                Get.toNamed('/third',
+                    arguments: 'arguments of second ' +
+                        DateTime.now().millisecondsSinceEpoch.toString());
               },
             ),
             ElevatedButton(
