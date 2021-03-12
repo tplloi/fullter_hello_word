@@ -3,16 +3,14 @@ import 'package:get/get.dart';
 import 'package:hello_word/base/demo/getx/Controller.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'SecondScreen.dart';
-
-class GetXScreen extends StatelessWidget {
-  final Controller controller = Get.put(Controller());
+class SecondScreen extends StatelessWidget {
+  final Controller controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-        "GetXScreen",
+        "SecondScreen",
         () => {
           Navigator.pop(context),
         },
@@ -23,13 +21,13 @@ class GetXScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(() => UIUtils().getText("${controller.count}")),
-            UIUtils().getButton("Next Screen", () => Get.to(SecondScreen())),
+            // UIUtils().getButton("Next Screen", () => null),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () => controller.increment(),
+        child: Icon(Icons.exposure_minus_1),
+        onPressed: () => controller.minus(),
       ),
     );
   }
