@@ -15,7 +15,7 @@ void main() {
 
       systemNavigationBarColor: Colors.blue, // navigation bar color
       systemNavigationBarIconBrightness:
-          Brightness.light, //navigation bar icons' color
+      Brightness.light, //navigation bar icons' color
     ),
   );
   testLogger();
@@ -23,6 +23,7 @@ void main() {
     GetMaterialApp(
       enableLog: true,
       debugShowCheckedModeBanner: true,
+      defaultTransition: Transition.cupertino,
       home: SplashScreen(),
       theme: ThemeData(
         primarySwatch: Colors.blue,

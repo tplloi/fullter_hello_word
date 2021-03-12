@@ -15,4 +15,8 @@ class Controller extends GetxController {
   void updateText(String s) {
     text.value = s;
   }
+
+  void setCount(int count) {
+    this.count.value = count;
+  }
 }
