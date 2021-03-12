@@ -20,7 +20,7 @@ class SecondScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() => UIUtils().getText("${controller.count}")),
+            Obx(() => UIUtils().getText("${controller.count} ~~~ ${controller.text}" )),
             // UIUtils().getButton("Next Screen", () => null),
           ],
         ),

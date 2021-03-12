@@ -29,7 +29,10 @@ class GetXScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () => controller.increment(),
+        onPressed: () => {
+          controller.increment(),
+          controller.updateText(DateTime.now().millisecondsSinceEpoch.toString()),
+        },
       ),
     );
   }
