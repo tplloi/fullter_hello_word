@@ -52,6 +52,7 @@ dependencies:
   flutter_easyloading: ^2.2.2 #https://pub.dev/packages/flutter_easyloading
   flutter_native_splash: ^0.3.2 #https://pub.dev/packages/flutter_native_splash
   basic_utils: ^2.7.1 #https://pub.dev/packages/basic_utils
+  get: ^3.26.0 #https://pub.dev/packages/get
 
 dev_dependencies:
   flutter_test:

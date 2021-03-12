@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/MenuScreen.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/LLog.dart';
 
 void main() {
@@ -19,7 +20,8 @@ void main() {
   );
   testLogger();
   runApp(
-    MaterialApp(
+    GetMaterialApp(
+      enableLog: true,
       debugShowCheckedModeBanner: true,
       home: SplashScreen(),
       theme: ThemeData(
