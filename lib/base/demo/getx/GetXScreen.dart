@@ -5,7 +5,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'SecondScreen.dart';
 
-class GetXScreen extends StatelessWidget {
+class GetXScreen extends GetWidget {
   final Controller controller = Get.put(Controller());
 
   Widget testListen() {
@@ -23,9 +23,8 @@ class GetXScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "GetXScreen",
-            () =>
-        {
-          Navigator.pop(context),
+        () => {
+          Get.back(),
         },
         null,
       ),
@@ -36,22 +35,24 @@ class GetXScreen extends StatelessWidget {
             Obx(() => UIUtils().getText("${controller.count}")),
             UIUtils().getButton("Next Screen", () => Get.to(SecondScreen())),
             testListen(),
-            UIUtils().getButton("Set count = 69", () => {
-            controller.setCount(69),
+            UIUtils().getButton(
+                "Set count = 69",
+                () => {
+                      controller.setCount(69),
+                    }),
+            UIUtils().getButton("Pop this screen and reset all value", () => {
+              controller.clearAllValue(),
+              Get.back(),
             }),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () =>
-        {
+        onPressed: () => {
           controller.increment(),
           controller
-              .updateText(DateTime
-              .now()
-              .millisecondsSinceEpoch
-              .toString()),
+              .updateText(DateTime.now().millisecondsSinceEpoch.toString()),
         },
       ),
     );
