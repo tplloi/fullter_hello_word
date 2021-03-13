@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TabPageSelectorScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class TabPageSelectorScreen extends StatelessWidget {
           child: Scaffold(
             appBar: UIUtils().getAppBar(
               "TabPageSelectorScreen",
-              () => Navigator.pop(context),
+              () => Get.back(),
               null,
             ),
             body: DefaultTabController(
@@ -26,7 +27,7 @@ class TabPageSelectorScreen extends StatelessWidget {
                           children: tabs.map((value) {
                         return UIUtils().getButton(
                           "TabBarView " + value,
-                          () => Navigator.pop(context),
+                          () => Get.back(),
                         );
                       }).toList()),
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CupertinoSegmentedControlScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class CupertinoSegmentedControlScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CupertinoSegmentedControlScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(

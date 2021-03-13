@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'ChuckScreen.dart';
 import '../block/CategoriesBloc.dart';
 import '../model/Categories.dart';
-import '../service/Response.dart';
+import '../service/AppResponse.dart';
 import 'ErrorRetryWidget.dart';
 import 'LoadingWidget.dart';
 
@@ -29,13 +30,13 @@ class _CategoriesState extends State<CategoriesScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CategoriesScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       backgroundColor: Colors.black,
       body: RefreshIndicator(
         onRefresh: () => _categoriesBloc.fetchCategories(),
-        child: StreamBuilder<Response<Categories>>(
+        child: StreamBuilder<AppResponse<Categories>>(
           stream: _categoriesBloc.categoriesStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/bloc/ui/ErrorRetryWidget.dart';
 import 'package:hello_word/base/demo/bloc/ui/LoadingWidget.dart';
@@ -6,7 +7,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 
 import '../block/ChuckBloc.dart';
 import '../model/Chuck.dart';
-import '../service/Response.dart';
+import '../service/AppResponse.dart';
 
 class ChuckScreen extends StatefulWidget {
   final String selectedCategory;
@@ -31,13 +32,13 @@ class _ChuckScreenState extends State<ChuckScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "ChuckScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       backgroundColor: Color(0x00000000),
       body: RefreshIndicator(
         onRefresh: () => _chuckBloc.getChuck(widget.selectedCategory),
-        child: StreamBuilder<Response<Chuck>>(
+        child: StreamBuilder<AppResponse<Chuck>>(
           stream: _chuckBloc.chuckStream,
           builder: (context, snapshot) {
             if (snapshot.hasData) {

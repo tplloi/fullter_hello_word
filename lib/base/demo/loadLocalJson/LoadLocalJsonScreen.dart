@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -17,7 +18,7 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
     return Scaffold(
         appBar: UIUtils().getAppBar(
           "Load local JSON file",
-          () => Navigator.pop(context),
+          () => Get.back(),
           null,
         ),
         body: Container(

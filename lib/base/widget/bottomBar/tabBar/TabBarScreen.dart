@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'Tab1.dart';
@@ -34,7 +35,7 @@ class TabBarScreenState extends State<TabBarScreen>
       // Appbar
       appBar: UIUtils().getAppBar(
         "TabBarScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       // Set the TabBar view as the body of the Scaffold

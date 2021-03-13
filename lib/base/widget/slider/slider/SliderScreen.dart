@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/slider/slider/SliderThemeWidget.dart';
 import 'package:hello_word/base/widget/slider/slider/SliderWidget.dart';
@@ -9,7 +10,7 @@ class SliderScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "SliderScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(
