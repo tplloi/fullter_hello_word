@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CardScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class CardScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils().getAppBar(
         "CardScreen",
-        () => Navigator.canPop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
