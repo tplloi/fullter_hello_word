@@ -5,7 +5,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'SecondScreen.dart';
 
-class GetXScreen extends GetWidget {
+class GetXScreen extends GetWidget with WidgetsBindingObserver {
   final Controller controller = Get.put(Controller());
 
   Widget testListen() {
@@ -40,10 +40,12 @@ class GetXScreen extends GetWidget {
                 () => {
                       controller.setCount(69),
                     }),
-            UIUtils().getButton("Pop this screen and reset all value", () => {
-              controller.clearAllValue(),
-              Get.back(),
-            }),
+            UIUtils().getButton(
+                "Pop this screen and reset all value",
+                () => {
+                      controller.clearAllValue(),
+                      Get.back(),
+                    }),
           ],
         ),
       ),
