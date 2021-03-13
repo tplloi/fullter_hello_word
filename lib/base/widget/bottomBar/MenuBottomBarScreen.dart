@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'bottom_bar/BottomAppBarScreen.dart';
+import 'bottomBar/BottomAppBarScreen.dart';
 import 'tabBar/TabBarScreen.dart';
 import 'tabBar2/TabBarScreen2.dart';
 
@@ -23,28 +24,19 @@ class MenuBottomBarScreen extends StatelessWidget {
             UIUtils().getButton(
               "BottomAppBarScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BottomAppBarScreen()),
-                )
+                Get.to(BottomAppBarScreen()),
               },
             ),
             UIUtils().getButton(
               "TabBarScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TabBarScreen()),
-                )
+                Get.to(TabBarScreen()),
               },
             ),
             UIUtils().getButton(
               "TabBarScreen2",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TabBarScreen2()),
-                )
+                Get.to(TabBarScreen2()),
               },
             ),
           ],
