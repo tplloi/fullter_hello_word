@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/MenuScreen.dart';
 import 'package:hello_word/base/const/Constants.dart';
-import 'package:hello_word/base/demo/todo/TabBarScreen.dart';
 import 'package:hello_word/base/util/LLog.dart';
+
+import 'base/demo/todo/screen/ToDoMainScreen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -68,7 +68,7 @@ class SplashScreenState extends State<SplashScreen> {
   route() {
     print("delay finish");
     // Get.off(TabBarScreen());
-    Get.off(TabBarScreen());
+    Get.off(ToDoMainScreen());
   }
 
   @override
