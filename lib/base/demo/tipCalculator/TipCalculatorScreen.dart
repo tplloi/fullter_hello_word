@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TipCalculatorScreen extends StatelessWidget {
@@ -65,7 +66,7 @@ class TipCalculatorScreen extends StatelessWidget {
 
     AppBar appBar = UIUtils().getAppBar(
       "Tip Calculator",
-      () => Navigator.pop(context),
+      () => Get.back(),
       null,
     );
 

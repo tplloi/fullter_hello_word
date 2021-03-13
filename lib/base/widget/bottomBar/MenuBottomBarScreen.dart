@@ -13,7 +13,7 @@ class MenuBottomBarScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuBottomBarScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

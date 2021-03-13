@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class OutlineButtonScreen extends StatelessWidget {
@@ -7,13 +8,13 @@ class OutlineButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "OutlineButtonScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
         child: UIUtils().getOutlineButton(
           "OutlineButton",
-          () => Navigator.pop(context),
+          () => Get.back(),
         ),
       ),
     );

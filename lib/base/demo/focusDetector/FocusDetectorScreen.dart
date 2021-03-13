@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/util/UrlLauncherUtils.dart';
@@ -14,7 +15,7 @@ class FocusDetectorScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "FocusDetectorScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),
@@ -88,7 +89,7 @@ class OtherPage extends StatelessWidget {
         appBar: UIUtils().getAppBar(
             "OtherPage",
             () => {
-                  Navigator.pop(context),
+                  Get.back(),
                 },
             () => null),
         body: Center(

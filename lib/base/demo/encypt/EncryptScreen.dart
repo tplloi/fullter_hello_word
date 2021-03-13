@@ -1,5 +1,6 @@
 import 'package:encrypt/encrypt.dart' as Encrypted;
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class EncryptScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class EncryptScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "EncryptScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

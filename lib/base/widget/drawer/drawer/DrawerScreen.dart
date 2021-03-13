@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -17,7 +18,7 @@ class DrawerScreen extends StatelessWidget {
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
               child: Icon(Icons.exit_to_app),
             ),

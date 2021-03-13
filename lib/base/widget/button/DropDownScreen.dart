@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class DropDownScreen extends StatefulWidget {
@@ -40,7 +41,7 @@ class DropDownScreenState extends State<DropDownScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "DropDownScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Container(

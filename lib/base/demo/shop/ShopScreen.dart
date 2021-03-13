@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/shop/db/DbShop.dart';
 import 'package:hello_word/base/demo/shop/ProductBox.dart';
 import 'package:hello_word/base/demo/shop/ProductPageScreen.dart';
@@ -13,7 +14,7 @@ class ShopScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "Shop",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -10,7 +11,7 @@ class CacheNetworkImageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CacheNetworkImageScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),
