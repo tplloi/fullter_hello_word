@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:hello_word/base/const/Constants.dart';
 
@@ -6,24 +8,35 @@ class Tab1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(Constants.margin_padding_large),
-            child: Text(
+      body: Container(
+        padding: EdgeInsets.all(Constants.margin_padding_large),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
               "All",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 65,
               ),
             ),
-          ),
-          ListView(
-            physics: BouncingScrollPhysics(),
-            children: [],
-          ),
-        ],
+            Expanded(
+              child: ListView.builder(
+                physics: BouncingScrollPhysics(),
+                itemCount: 150,
+                itemBuilder: (context, index) {
+                  return Text(
+                    "AAAAAA$index",
+                    style: TextStyle(
+                      color: Colors.red,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
