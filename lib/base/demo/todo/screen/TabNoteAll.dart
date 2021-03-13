@@ -1,9 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/util/UIUtils.dart';
 
-class Tab1 extends StatelessWidget {
+class Tab1 extends GetWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,6 @@ class Tab1 extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          //TODO
         },
       ),
     );

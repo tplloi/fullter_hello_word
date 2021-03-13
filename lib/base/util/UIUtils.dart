@@ -1,4 +1,7 @@
+import 'package:avatar_glow/avatar_glow.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 
 class UIUtils {
@@ -134,6 +137,189 @@ class UIUtils {
     return new Future.delayed(
       Duration(seconds: timeInSecond),
       () => function.call(),
+    );
+  }
+
+  void showAlertDialog(
+    BuildContext context,
+    String title,
+    String message,
+    String cancelTitle,
+    VoidCallback cancelAction,
+    String okTitle,
+    VoidCallback okAction,
+  ) {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        content: Text(
+          message,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            color: Color(0xff232426),
+          ),
+        ),
+        title: title == null ? null : Text(title),
+        actions: [
+          if (cancelTitle != null)
+            CupertinoDialogAction(
+              child: Text(
+                cancelTitle,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xff0A79F8),
+                ),
+              ),
+              isDefaultAction: true,
+              onPressed: () {
+                Navigator.of(context, rootNavigator: true).pop("Discard");
+                if (cancelAction != null) {
+                  cancelAction();
+                }
+              },
+            ),
+          if (okTitle != null)
+            CupertinoDialogAction(
+              child: Text(
+                okTitle,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xffFF0000),
+                ),
+              ),
+              onPressed: () {
+                Navigator.of(context, rootNavigator: true).pop("Discard");
+                if (okAction != null) {
+                  okAction();
+                }
+              },
+            ),
+        ],
+      ),
+    );
+  }
+
+  void showErrorDialog(
+    BuildContext context,
+    String title,
+    String message,
+    String okTitle,
+    VoidCallback okCallback,
+  ) {
+    showAlertDialog(
+      context,
+      title,
+      message,
+      null,
+      null,
+      okTitle,
+      okCallback,
+    );
+  }
+
+  void showSnackBar(
+    String title,
+    String message,
+  ) {
+    Get.snackbar(
+      title, // title
+      message, // message
+      barBlur: 20,
+      isDismissible: true,
+      duration: Duration(seconds: 3),
+    );
+  }
+
+  void showDialogSuccess(
+    BuildContext context,
+    String msg,
+    VoidCallback onClickConfirm,
+  ) {
+    showGeneralDialog(
+      barrierDismissible: false,
+      barrierColor: Colors.black.withOpacity(0.5),
+      transitionDuration: Duration(milliseconds: 500),
+      context: context,
+      pageBuilder: (_, __, ___) {
+        return Center(
+          child: Container(
+            width: 300,
+            margin: EdgeInsets.all(Constants.margin_padding_medium),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(Constants.radius_medium),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(height: Constants.margin_padding_medium),
+                AvatarGlow(
+                  glowColor: Colors.green,
+                  endRadius: 60,
+                  duration: Duration(milliseconds: 2000),
+                  repeat: true,
+                  showTwoGlows: true,
+                  repeatPauseDuration: Duration(milliseconds: 100),
+                  child: Image.asset(
+                    "resources/images/ic_success.png",
+                    height: 60,
+                    width: 60,
+                  ),
+                ),
+                // SizedBox(height: DimenConstants.marginPaddingMedium),
+                Text(
+                  msg,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff232426),
+                  ),
+                ),
+                SizedBox(height: Constants.radius_medium),
+                Divider(
+                  color: Color(0xffC8C8CA),
+                  height: 1,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: Constants.button_height,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      primary: Color(0xff0A79F8),
+                      // backgroundColor: Colors.white,
+                      textStyle: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: Text(
+                      "Đóng",
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (_, anim, __, child) {
+        return ScaleTransition(
+          scale: CurvedAnimation(
+            parent: anim,
+            curve: Curves.bounceIn,
+            reverseCurve: Curves.bounceIn,
+          ),
+          child: child,
+        );
+      },
     );
   }
 }

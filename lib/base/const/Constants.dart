@@ -22,4 +22,6 @@ class Constants {
 
   static const double radius_medium = 10.0;
   static const double radius_round = 45.0;
+
+  static const double button_height = 48.0;
 }
