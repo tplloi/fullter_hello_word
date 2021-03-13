@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
-import 'package:hello_word/base/util/UIUtils.dart';
+import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 
 class Tab1 extends GetWidget {
+  final ControllerNote _controllerNote = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,8 +42,7 @@ class Tab1 extends GetWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {
-        },
+        onPressed: () {},
       ),
     );
   }

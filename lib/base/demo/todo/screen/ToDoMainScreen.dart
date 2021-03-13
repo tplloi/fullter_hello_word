@@ -7,7 +7,7 @@ import 'TabNoteComplete.dart';
 import 'TabNoteIncomplete.dart';
 
 class ToDoMainScreen extends StatefulWidget {
-  final ControllerNote controllerNote = Get.put(ControllerNote());
+  final ControllerNote _controllerNote = Get.put(ControllerNote());
 
   @override
   ToDoMainScreenState createState() => ToDoMainScreenState();
