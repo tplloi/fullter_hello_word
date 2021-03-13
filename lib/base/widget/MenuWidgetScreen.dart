@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
-import 'bottom_bar/MenuBottomBarScreen.dart';
+import 'bottomBar/MenuBottomBarScreen.dart';
 import 'bottom_sheet/BottomSheetScreen.dart';
 import 'button/MenuButtonScreen.dart';
 import 'calendar/CalendarScreen.dart';

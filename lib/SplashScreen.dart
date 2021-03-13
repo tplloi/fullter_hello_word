@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/MenuScreen.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/demo/todo/TabBarScreen.dart';
 import 'package:hello_word/base/util/LLog.dart';
 
 void main() {
@@ -15,7 +16,7 @@ void main() {
 
       systemNavigationBarColor: Colors.blue, // navigation bar color
       systemNavigationBarIconBrightness:
-      Brightness.light, //navigation bar icons' color
+          Brightness.light, //navigation bar icons' color
     ),
   );
   testLogger();
@@ -66,10 +67,8 @@ class SplashScreenState extends State<SplashScreen> {
 
   route() {
     print("delay finish");
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => MenuScreen()),
-    );
+    // Get.off(TabBarScreen());
+    Get.off(TabBarScreen());
   }
 
   @override
