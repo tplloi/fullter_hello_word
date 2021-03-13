@@ -38,6 +38,12 @@ class Tab1 extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          //TODO
+        },
+      ),
     );
   }
 }
