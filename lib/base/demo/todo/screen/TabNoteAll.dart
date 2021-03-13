@@ -4,7 +4,7 @@ class Tab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       body: Container(
         child: Center(
           child: Column(

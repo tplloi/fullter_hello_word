@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'Tab1.dart';
-import 'Tab2.dart';
-import 'Tab3.dart';
+import 'TabNoteAll.dart';
+import 'TabNoteComplete.dart';
+import 'TabNoteIncomplete.dart';
 
 class ToDoMainScreen extends StatefulWidget {
   @override
@@ -41,6 +41,9 @@ class ToDoMainScreenState extends State<ToDoMainScreen>
       bottomNavigationBar: Material(
         color: Colors.blue,
         child: TabBar(
+          indicatorColor: Colors.white,
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.white60,
           tabs: <Tab>[
             Tab(
               icon: Icon(Icons.event_note),
