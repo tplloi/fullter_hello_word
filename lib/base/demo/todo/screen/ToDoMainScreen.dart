@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 
 import 'TabNoteAll.dart';
 import 'TabNoteComplete.dart';
 import 'TabNoteIncomplete.dart';
 
 class ToDoMainScreen extends StatefulWidget {
+  final ControllerNote controllerNote = Get.put(ControllerNote());
+
   @override
   ToDoMainScreenState createState() => ToDoMainScreenState();
 }
