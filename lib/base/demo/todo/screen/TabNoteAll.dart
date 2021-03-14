@@ -9,35 +9,28 @@ class Tab1 extends GetWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        brightness: Brightness.dark,
+        centerTitle: false,
+        title: Text(
+          "All",
+          style: TextStyle(color: Colors.white, fontSize: 45),
+        ),
+      ),
       body: Container(
         padding: EdgeInsets.all(Constants.margin_padding_large),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "All",
+        child: ListView.builder(
+          physics: BouncingScrollPhysics(),
+          itemCount: 150,
+          itemBuilder: (context, index) {
+            return Text(
+              "AAAAAA$index",
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 65,
+                color: Colors.red,
               ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                physics: BouncingScrollPhysics(),
-                itemCount: 150,
-                itemBuilder: (context, index) {
-                  return Text(
-                    "AAAAAA$index",
-                    style: TextStyle(
-                      color: Colors.red,
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
+            );
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
