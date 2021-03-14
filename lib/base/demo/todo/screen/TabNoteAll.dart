@@ -118,7 +118,7 @@ class TabNoteAll extends GetWidget {
                 ),
                 Spacer(),
                 Checkbox(
-                  activeColor: Colors.red,
+                  activeColor: Colors.blue,
                   tristate: false,
                   value: note.isComplete,
                   onChanged: (value) {
