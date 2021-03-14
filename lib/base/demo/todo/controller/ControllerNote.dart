@@ -1,15 +1,15 @@
-
 import 'package:get/get.dart';
 import 'package:hello_word/base/core/BaseController.dart';
+import 'package:hello_word/base/demo/todo/model/Note.dart';
 
 class ControllerNote extends BaseController {
-  var isValidOTPNumber = false.obs;
+  var listNote = <Note>[].obs;
 
   void clearAllValue() {
     Get.delete<ControllerNote>();
   }
 
-  void setIsValidOTPNumber(bool isValidOTPNumber) {
-    this.isValidOTPNumber.value = isValidOTPNumber;
+  void addNote(Note note){
+    listNote.add(note);
   }
 }

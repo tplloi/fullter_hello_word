@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
+import 'package:hello_word/base/demo/todo/model/Note.dart';
 
 class Tab1 extends GetWidget {
   final ControllerNote _controllerNote = Get.find();
@@ -20,23 +21,41 @@ class Tab1 extends GetWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(Constants.margin_padding_large),
-        child: ListView.builder(
-          physics: BouncingScrollPhysics(),
-          itemCount: 150,
-          itemBuilder: (context, index) {
-            return Text(
-              "AAAAAA$index",
-              style: TextStyle(
-                color: Colors.red,
-              ),
-            );
-          },
-        ),
+        child: _buildList(),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          _addNote();
+        },
       ),
     );
+  }
+
+  Widget _buildList() {
+    return Obx(() {
+      return ListView.builder(
+        physics: BouncingScrollPhysics(),
+        itemCount: _controllerNote.listNote.length,
+        itemBuilder: (context, index) {
+          return Text(
+            "AAAAAAAAA",
+            style: TextStyle(
+              color: Colors.red,
+            ),
+          );
+        },
+      );
+    });
+  }
+
+  void _addNote() {
+    Note note = Note(
+      "title",
+      "content",
+      DateTime.now().millisecondsSinceEpoch,
+      false,
+    );
+    _controllerNote.addNote(note);
   }
 }
