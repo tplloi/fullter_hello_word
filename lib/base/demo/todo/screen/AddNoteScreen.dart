@@ -69,7 +69,7 @@ class AddNoteScreenState extends State<AddNoteScreen> {
         Text(
           "Time: " +
               TimeUtils.convertFromMillisecondsSinceEpoch(
-                  DateTime.now().millisecondsSinceEpoch, "dd/MM/yyyy HH:MM:ss"),
+                  DateTime.now().millisecondsSinceEpoch, TimeUtils.FORMAT_1),
           style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
         ),
         SizedBox(height: Constants.button_height),

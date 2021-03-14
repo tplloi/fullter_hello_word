@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
+import 'package:hello_word/base/util/TimeUtils.dart';
 
 import 'AddNoteScreen.dart';
 
@@ -67,16 +68,72 @@ class TabNoteAll extends GetWidget {
           physics: BouncingScrollPhysics(),
           itemCount: _controllerNote.listNote.length,
           itemBuilder: (context, index) {
-            return Text(
-              "AAAAAAAAA",
-              style: TextStyle(
-                color: Colors.red,
-              ),
-            );
+            return _buildRow(_controllerNote.listNote[index]);
           },
         );
       }
     });
+  }
+
+  Widget _buildRow(Note note) {
+    return Container(
+      padding: EdgeInsets.fromLTRB(
+        0,
+        Constants.margin_padding_medium,
+        0,
+        Constants.margin_padding_medium,
+      ),
+      child: Container(
+        padding: EdgeInsets.all(Constants.margin_padding_medium),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withAlpha(15),
+              blurRadius: 0.5, // soften the shadow
+              spreadRadius: 0.5, //extend the shadow
+              offset: Offset(
+                1.5, // Move to right 10  horizontally
+                1.5, // Move to bottom 10 Vertically
+              ),
+            )
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                TimeUtils.convertFromMillisecondsSinceEpoch(
+                    note.millisecondsSinceEpoch, TimeUtils.FORMAT_1),
+                style: TextStyle(
+                  fontSize: Constants.text_small,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Text(
+              note.title,
+              style: TextStyle(
+                fontSize: Constants.text_large,
+                color: Colors.black,
+              ),
+            ),
+            Text(
+              note.content,
+              style: TextStyle(
+                fontSize: Constants.text_medium,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _addNote() {
