@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNoteAdd.dart';
+import 'package:hello_word/base/demo/todo/model/Note.dart';
 import 'package:hello_word/base/util/TimeUtils.dart';
 
 class AddNoteScreen extends StatefulWidget {
@@ -11,6 +13,7 @@ class AddNoteScreen extends StatefulWidget {
 
 class AddNoteScreenState extends State<AddNoteScreen> {
   final ControllerNoteAdd _controllerNoteAdd = Get.put(ControllerNoteAdd());
+  final ControllerNote _controllerNote = Get.put(ControllerNote());
 
   @override
   void dispose() {
@@ -136,12 +139,13 @@ class AddNoteScreenState extends State<AddNoteScreen> {
   }
 
   void _addNote() {
-    // Note note = Note(
-    //   "title",
-    //   "content",
-    //   DateTime.now().millisecondsSinceEpoch,
-    //   false,
-    // );
-    // _controllerNote.addNote(note);
+    Note note = Note(
+      _controllerNoteAdd.title.value,
+      _controllerNoteAdd.content.value,
+      DateTime.now().millisecondsSinceEpoch,
+      false,
+    );
+    _controllerNote.addNote(note);
+    Get.back();
   }
 }
