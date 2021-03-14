@@ -21,7 +21,7 @@ class TabNoteAll extends GetWidget {
           "All",
           style: TextStyle(
             color: Colors.white,
-            fontSize: Constants.text_header,
+            fontSize: Constants.text_medium,
           ),
         ),
       ),
@@ -54,7 +54,7 @@ class TabNoteAll extends GetWidget {
             ),
             SizedBox(height: Constants.margin_padding_medium),
             Text(
-              "No Data.\nPlease click Add button below to add some task.",
+              "You have no task.\nPlease click Add button below to add some task.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey,
