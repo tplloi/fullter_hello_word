@@ -20,6 +20,7 @@ class Tab1 extends GetWidget {
         ),
       ),
       body: Container(
+        width: double.infinity,
         padding: EdgeInsets.all(Constants.margin_padding_large),
         child: _buildList(),
       ),
@@ -34,18 +35,42 @@ class Tab1 extends GetWidget {
 
   Widget _buildList() {
     return Obx(() {
-      return ListView.builder(
-        physics: BouncingScrollPhysics(),
-        itemCount: _controllerNote.listNote.length,
-        itemBuilder: (context, index) {
-          return Text(
-            "AAAAAAAAA",
-            style: TextStyle(
-              color: Colors.red,
+      int length = _controllerNote.listNote.length;
+      if (length == 0) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              "assets/images/ic_cancel.png",
+              width: 70,
+              height: 70,
             ),
-          );
-        },
-      );
+            SizedBox(height: Constants.margin_padding_medium),
+            Text(
+              "No Data.\nPlease click Add button below to add some task.",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: Constants.text_medium,
+              ),
+            ),
+          ],
+        );
+      } else {
+        return ListView.builder(
+          physics: BouncingScrollPhysics(),
+          itemCount: _controllerNote.listNote.length,
+          itemBuilder: (context, index) {
+            return Text(
+              "AAAAAAAAA",
+              style: TextStyle(
+                color: Colors.red,
+              ),
+            );
+          },
+        );
+      }
     });
   }
 
