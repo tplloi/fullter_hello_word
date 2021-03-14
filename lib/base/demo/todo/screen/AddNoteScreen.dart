@@ -5,8 +5,6 @@ import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
 
 class AddNoteScreen extends GetWidget {
-  final ControllerNote _controllerNote = Get.find();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +23,7 @@ class AddNoteScreen extends GetWidget {
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.all(Constants.margin_padding_large),
-        child: _buildList(),
+        child: _buildInput(),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -36,54 +34,73 @@ class AddNoteScreen extends GetWidget {
     );
   }
 
-  Widget _buildList() {
-    return Obx(() {
-      int length = _controllerNote.listNote.length;
-      if (length == 0) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              "assets/images/ic_cancel.png",
-              width: 70,
-              height: 70,
+  Widget _buildInput() {
+    int millisecondsSinceEpoch = DateTime.now().millisecondsSinceEpoch;
+    return ListView(
+      physics: BouncingScrollPhysics(),
+      children: [
+        Text(
+          "Time: " + millisecondsSinceEpoch.toString(),
+          style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
+        ),
+        SizedBox(height: Constants.button_height),
+        Text(
+          "Title",
+          style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
+        ),
+        TextField(
+          textInputAction: TextInputAction.next,
+          keyboardType: TextInputType.multiline,
+          minLines: 1,
+          //Normal textInputField will be displayed
+          maxLines: 5,
+          // wh
+          maxLength: 200,
+          // en user pre
+          style: TextStyle(
+            fontSize: Constants.text_medium,
+            color: Colors.black,
+          ),
+          decoration: InputDecoration(
+            hintStyle: TextStyle(
+              fontSize: Constants.text_medium,
+              color: Colors.grey,
             ),
-            SizedBox(height: Constants.margin_padding_medium),
-            Text(
-              "No Data.\nPlease click Add button below to add some task.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: Constants.text_medium,
-              ),
+            hintText: "Type title",
+            suffixIcon: Icon(Icons.create),
+          ), // / ill adapt to it
+        ),
+        SizedBox(height: Constants.button_height),
+        Text(
+          "Content",
+          style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
+        ),
+        TextField(
+          textInputAction: TextInputAction.done,
+          keyboardType: TextInputType.multiline,
+          minLines: 5,
+          //Normal textInputField will be displayed
+          maxLines: null,
+          // wh
+          decoration: InputDecoration(
+            hintStyle: TextStyle(
+              fontSize: Constants.text_medium,
+              color: Colors.grey,
             ),
-          ],
-        );
-      } else {
-        return ListView.builder(
-          physics: BouncingScrollPhysics(),
-          itemCount: _controllerNote.listNote.length,
-          itemBuilder: (context, index) {
-            return Text(
-              "AAAAAAAAA",
-              style: TextStyle(
-                color: Colors.red,
-              ),
-            );
-          },
-        );
-      }
-    });
+            hintText: "Type content",
+          ), //
+        ),
+      ],
+    );
   }
 
   void _addNote() {
-    Note note = Note(
-      "title",
-      "content",
-      DateTime.now().millisecondsSinceEpoch,
-      false,
-    );
-    _controllerNote.addNote(note);
+    // Note note = Note(
+    //   "title",
+    //   "content",
+    //   DateTime.now().millisecondsSinceEpoch,
+    //   false,
+    // );
+    // _controllerNote.addNote(note);
   }
 }
