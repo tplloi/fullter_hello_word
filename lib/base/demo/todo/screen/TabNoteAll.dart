@@ -68,14 +68,14 @@ class TabNoteAll extends GetWidget {
           physics: BouncingScrollPhysics(),
           itemCount: _controllerNote.listNote.length,
           itemBuilder: (context, index) {
-            return _buildRow(_controllerNote.listNote[index]);
+            return _buildRow(_controllerNote.listNote[index], index);
           },
         );
       }
     });
   }
 
-  Widget _buildRow(Note note) {
+  Widget _buildRow(Note note, int index) {
     return Container(
       padding: EdgeInsets.fromLTRB(
         0,
@@ -105,17 +105,30 @@ class TabNoteAll extends GetWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                TimeUtils.convertFromMillisecondsSinceEpoch(
-                    note.millisecondsSinceEpoch, TimeUtils.FORMAT_1),
-                style: TextStyle(
-                  fontSize: Constants.text_small,
-                  color: Colors.blue,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  TimeUtils.convertFromMillisecondsSinceEpoch(
+                      note.millisecondsSinceEpoch, TimeUtils.FORMAT_1),
+                  style: TextStyle(
+                    fontSize: Constants.text_small,
+                    color: Colors.blue,
+                  ),
                 ),
-              ),
+                Spacer(),
+                Checkbox(
+                  activeColor: Colors.red,
+                  tristate: false,
+                  value: note.isComplete,
+                  onChanged: (value) {
+                    _controllerNote.setNoteComplete(index);
+                  },
+                ),
+              ],
             ),
+            _buildHorizontalDivider(),
+            SizedBox(height: Constants.margin_padding_medium),
             Text(
               note.title,
               style: TextStyle(
@@ -123,6 +136,7 @@ class TabNoteAll extends GetWidget {
                 color: Colors.black,
               ),
             ),
+            SizedBox(height: Constants.margin_padding_medium),
             Text(
               note.content,
               style: TextStyle(
@@ -133,6 +147,15 @@ class TabNoteAll extends GetWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildHorizontalDivider() {
+    return Container(
+      margin: EdgeInsets.all(0.0),
+      height: 1,
+      width: double.maxFinite,
+      color: Color(0xffECECEC),
     );
   }
 
