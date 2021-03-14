@@ -36,9 +36,9 @@ class ToDoMainScreenState extends State<ToDoMainScreen>
     return Scaffold(
       body: TabBarView(
         children: <Widget>[
-          Tab1(),
-          Tab2(),
-          Tab3(),
+          TabNoteAll(),
+          TabNoteComplete(),
+          TabNoteIncomplete(),
         ],
         controller: _tabController,
       ),

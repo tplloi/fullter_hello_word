@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Tab2 extends StatelessWidget {
+class TabNoteComplete extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

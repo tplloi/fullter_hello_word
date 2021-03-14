@@ -15,6 +15,7 @@ class Constants {
   static const double text_small = 10.0;
   static const double text_medium = 16.0;
   static const double text_large = 20.0;
+  static const double text_header = 45.0;
 
   static const double elevation_small = 1.0;
   static const double elevation_medium = 3.0;

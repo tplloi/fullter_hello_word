@@ -4,9 +4,7 @@ import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
 
-import 'AddNoteScreen.dart';
-
-class TabNoteAll extends GetWidget {
+class AddNoteScreen extends GetWidget {
   final ControllerNote _controllerNote = Get.find();
 
   @override
@@ -17,10 +15,10 @@ class TabNoteAll extends GetWidget {
         brightness: Brightness.dark,
         centerTitle: false,
         title: Text(
-          "All",
+          "Create your task",
           style: TextStyle(
             color: Colors.white,
-            fontSize: Constants.text_header,
+            fontSize: Constants.text_medium,
           ),
         ),
       ),
@@ -80,6 +78,12 @@ class TabNoteAll extends GetWidget {
   }
 
   void _addNote() {
-    Get.to(AddNoteScreen());
+    Note note = Note(
+      "title",
+      "content",
+      DateTime.now().millisecondsSinceEpoch,
+      false,
+    );
+    _controllerNote.addNote(note);
   }
 }
