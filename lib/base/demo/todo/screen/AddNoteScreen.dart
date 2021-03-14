@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
-import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
-import 'package:hello_word/base/demo/todo/model/Note.dart';
+import 'package:hello_word/base/demo/todo/controller/ControllerNoteAdd.dart';
 import 'package:hello_word/base/util/TimeUtils.dart';
 
-class AddNoteScreen extends GetWidget {
+class AddNoteScreen extends StatefulWidget {
+  @override
+  AddNoteScreenState createState() => AddNoteScreenState();
+}
+
+class AddNoteScreenState extends State<AddNoteScreen> {
+  final ControllerNoteAdd _controllerNoteAdd = Get.put(ControllerNoteAdd());
+
+  @override
+  void dispose() {
+    _controllerNoteAdd.clearAllValue();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,12 +38,24 @@ class AddNoteScreen extends GetWidget {
         padding: EdgeInsets.all(Constants.margin_padding_large),
         child: _buildInput(),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          _addNote();
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: Icon(Icons.add),
+      //   onPressed: () {
+      //     _addNote();
+      //   },
+      // ),
+      floatingActionButton: Obx(() {
+        bool isValidInput = _controllerNoteAdd.isValidInput.value;
+        return FloatingActionButton(
+          backgroundColor: isValidInput == true ? Colors.blue : Colors.grey,
+          child: Icon(Icons.done_all),
+          onPressed: (isValidInput == true)
+              ? () {
+                  _addNote();
+                }
+              : null,
+        );
+      }),
     );
   }
 
@@ -43,8 +67,7 @@ class AddNoteScreen extends GetWidget {
           "Time: " +
               TimeUtils.convertFromMillisecondsSinceEpoch(
                   DateTime.now().millisecondsSinceEpoch, "dd/MM/yyyy HH:MM:ss"),
-          style:
-              TextStyle(color: Colors.black, fontSize: Constants.text_medium),
+          style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
         ),
         SizedBox(height: Constants.button_height),
         Text(
@@ -75,7 +98,10 @@ class AddNoteScreen extends GetWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
-          ), // / ill adapt to it
+          ),
+          onChanged: (string) {
+            _controllerNoteAdd.setTitle(string);
+          }, // / ill adapt to it
         ),
         SizedBox(height: Constants.button_height),
         Text(
@@ -99,7 +125,11 @@ class AddNoteScreen extends GetWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
-          ), //
+          ),
+          maxLength: 10000,
+          onChanged: (string) {
+            _controllerNoteAdd.setContent(string);
+          }, //
         ),
       ],
     );
