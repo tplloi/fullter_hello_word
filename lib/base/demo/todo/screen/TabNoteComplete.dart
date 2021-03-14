@@ -5,8 +5,6 @@ import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
 import 'package:hello_word/base/util/TimeUtils.dart';
 
-import 'AddNoteScreen.dart';
-
 class TabNoteComplete extends GetWidget {
   final ControllerNote _controllerNote = Get.find();
 

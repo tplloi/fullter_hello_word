@@ -41,12 +41,6 @@ class AddNoteScreenState extends State<AddNoteScreen> {
         padding: EdgeInsets.all(Constants.margin_padding_large),
         child: _buildInput(),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.add),
-      //   onPressed: () {
-      //     _addNote();
-      //   },
-      // ),
       floatingActionButton: Obx(() {
         bool isValidInput = _controllerNoteAdd.isValidInput.value;
         return FloatingActionButton(
