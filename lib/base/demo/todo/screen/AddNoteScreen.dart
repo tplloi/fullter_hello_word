@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
+import 'package:hello_word/base/util/TimeUtils.dart';
 
 class AddNoteScreen extends GetWidget {
   @override
@@ -35,13 +36,14 @@ class AddNoteScreen extends GetWidget {
   }
 
   Widget _buildInput() {
-    int millisecondsSinceEpoch = DateTime.now().millisecondsSinceEpoch;
     return ListView(
       physics: BouncingScrollPhysics(),
       children: [
         Text(
-          "Time: " + millisecondsSinceEpoch.toString(),
-          style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
+          "Time: " +
+              TimeUtils.convertFromMillisecondsSinceEpoch(
+                  DateTime.now().millisecondsSinceEpoch, "dd/MM/yyyy HH:MM:ss"),
+          style: TextStyle(color: Colors.black, fontSize: Constants.text_medium),
         ),
         SizedBox(height: Constants.button_height),
         Text(

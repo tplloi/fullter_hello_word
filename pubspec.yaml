@@ -54,6 +54,7 @@ dependencies:
   basic_utils: ^2.7.1 #https://pub.dev/packages/basic_utils
   get: ^3.26.0 #https://pub.dev/packages/get
   avatar_glow: ^2.0.0 #https://pub.dev/packages/avatar_glow
+  intl: ^0.17.0 #https://pub.dev/packages/intl
 
 dev_dependencies:
   flutter_test:

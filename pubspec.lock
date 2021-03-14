@@ -49,7 +49,7 @@ packages:
       name: avatar_glow
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   basic_utils:
     dependency: "direct main"
     description:
@@ -283,7 +283,7 @@ packages:
     source: hosted
     version: "1.0.1+1"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       url: "https://pub.dartlang.org"
@@ -685,7 +685,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.3"
+    version: "2.0.4"
   xdg_directories:
     dependency: transitive
     description:
