@@ -43,13 +43,15 @@ class AddNoteScreen extends GetWidget {
           "Time: " +
               TimeUtils.convertFromMillisecondsSinceEpoch(
                   DateTime.now().millisecondsSinceEpoch, "dd/MM/yyyy HH:MM:ss"),
-          style: TextStyle(color: Colors.black, fontSize: Constants.text_medium),
+          style:
+              TextStyle(color: Colors.black, fontSize: Constants.text_medium),
         ),
         SizedBox(height: Constants.button_height),
         Text(
           "Title",
           style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
         ),
+        SizedBox(height: Constants.margin_padding_small),
         TextField(
           textInputAction: TextInputAction.next,
           keyboardType: TextInputType.multiline,
@@ -70,6 +72,9 @@ class AddNoteScreen extends GetWidget {
             ),
             hintText: "Type title",
             suffixIcon: Icon(Icons.create),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+            ),
           ), // / ill adapt to it
         ),
         SizedBox(height: Constants.button_height),
@@ -77,10 +82,11 @@ class AddNoteScreen extends GetWidget {
           "Content",
           style: TextStyle(color: Colors.grey, fontSize: Constants.text_medium),
         ),
+        SizedBox(height: Constants.margin_padding_small),
         TextField(
-          textInputAction: TextInputAction.done,
+          // textInputAction: TextInputAction.done,
           keyboardType: TextInputType.multiline,
-          minLines: 5,
+          minLines: 1,
           //Normal textInputField will be displayed
           maxLines: null,
           // wh
@@ -90,6 +96,9 @@ class AddNoteScreen extends GetWidget {
               color: Colors.grey,
             ),
             hintText: "Type content",
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+            ),
           ), //
         ),
       ],
