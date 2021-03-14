@@ -114,7 +114,7 @@ class TabNoteComplete extends GetWidget {
                   tristate: false,
                   value: note.isComplete,
                   onChanged: (value) {
-                    _controllerNote.setNoteComplete(index);
+                    _controllerNote.setNoteComplete(note);
                   },
                 ),
               ],
