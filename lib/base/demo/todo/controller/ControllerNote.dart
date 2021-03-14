@@ -9,7 +9,7 @@ class ControllerNote extends BaseController {
     Get.delete<ControllerNote>();
   }
 
-  void addNote(Note note){
-    listNote.add(note);
+  void addNote(Note note) {
+    listNote.insert(0, note);
   }
 }
