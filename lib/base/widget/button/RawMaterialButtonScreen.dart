@@ -16,9 +16,9 @@ class RawMaterialButtonScreen extends StatelessWidget {
       body: Center(
         child: RawMaterialButton(
           padding: EdgeInsets.fromLTRB(
-            Constants.margin_padding_medium,
+            Constants.marginPaddingMedium,
             0,
-            Constants.margin_padding_medium,
+            Constants.marginPaddingMedium,
             0,
           ),
           onPressed: () {},

@@ -49,7 +49,7 @@ class DrawerScreen extends StatelessWidget {
                     "Click",
                     () => Get.back(),
                   ),
-                  Image.network(Constants.dummy_image_link),
+                  Image.network(Constants.dummyImageLink),
                   ListTile(
                     title: UIUtils().getText("Title6"),
                   ),

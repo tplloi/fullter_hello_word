@@ -25,12 +25,12 @@ class ImageScreen extends StatelessWidget {
               SizedBox(height: 15.0),
               CircleAvatar(
                 radius: 20,
-                backgroundImage: NetworkImage(Constants.dummy_image_link),
+                backgroundImage: NetworkImage(Constants.dummyImageLink),
               ),
               SizedBox(height: 15.0),
               ClipOval(
                 child: Image.network(
-                  Constants.dummy_image_link,
+                  Constants.dummyImageLink,
                   height: 300,
                   width: 500,
                   fit: BoxFit.cover,
@@ -40,7 +40,7 @@ class ImageScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 child: Image.network(
-                  Constants.dummy_image_link,
+                  Constants.dummyImageLink,
                   fit: BoxFit.cover,
                 ),
               ),

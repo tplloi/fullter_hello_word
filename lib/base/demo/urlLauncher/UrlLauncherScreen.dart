@@ -136,7 +136,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(Constants.margin_padding_medium),
+              padding: const EdgeInsets.all(Constants.marginPaddingMedium),
               child: TextField(
                   onChanged: (String text) => _phone = text,
                   decoration: const InputDecoration(
@@ -150,7 +150,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Make phone call'),
             ),
             const Padding(
-              padding: EdgeInsets.all(Constants.margin_padding_medium),
+              padding: EdgeInsets.all(Constants.marginPaddingMedium),
               child: Text(toLaunch),
             ),
             ElevatedButton(
@@ -161,7 +161,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Launch in browser'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_medium)),
+                padding: EdgeInsets.all(Constants.marginPaddingMedium)),
             ElevatedButton(
               onPressed: () =>
                   setState(() {
@@ -170,7 +170,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Launch in app'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_small)),
+                padding: EdgeInsets.all(Constants.marginPaddingSmall)),
             ElevatedButton(
               onPressed: () =>
                   setState(() {
@@ -179,7 +179,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Launch in app(JavaScript ON)'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_small)),
+                padding: EdgeInsets.all(Constants.marginPaddingSmall)),
             ElevatedButton(
               onPressed: () =>
                   setState(() {
@@ -188,7 +188,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Launch in app(DOM storage ON)'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_medium)),
+                padding: EdgeInsets.all(Constants.marginPaddingMedium)),
             ElevatedButton(
               onPressed: () =>
                   setState(() {
@@ -198,7 +198,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
                   'Launch a universal link in a native app, fallback to Safari.(Youtube)'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_medium)),
+                padding: EdgeInsets.all(Constants.marginPaddingMedium)),
             ElevatedButton(
               onPressed: () =>
                   setState(() {
@@ -211,7 +211,7 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
               child: const Text('Launch in app + close after 5 seconds'),
             ),
             const Padding(
-                padding: EdgeInsets.all(Constants.margin_padding_medium)),
+                padding: EdgeInsets.all(Constants.marginPaddingMedium)),
             FutureBuilder<void>(future: _launched, builder: _launchStatus),
           ],
         ),

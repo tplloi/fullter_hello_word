@@ -16,7 +16,7 @@ class InkwellScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         child: InkWell(
-          child: Image.network(Constants.dummy_image_link),
+          child: Image.network(Constants.dummyImageLink),
           onTap: () {
             print("onTap");
           },

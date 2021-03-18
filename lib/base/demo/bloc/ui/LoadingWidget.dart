@@ -21,10 +21,10 @@ class LoadingWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
-              fontSize: Constants.text_medium,
+              fontSize: Constants.txtMedium,
             ),
           ),
-          SizedBox(height: Constants.margin_padding_medium),
+          SizedBox(height: Constants.marginPaddingMedium),
           UIUtils().getCircularProgressIndicator(Colors.white),
         ],
       ),

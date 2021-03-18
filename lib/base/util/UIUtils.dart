@@ -57,7 +57,7 @@ class UIUtils {
         primary: Colors.white70, //bkg color
         onPrimary: Colors.black, //text color
         shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(Constants.radius_medium),
+          borderRadius: new BorderRadius.circular(Constants.radiusMedium),
         ),
       ),
 
@@ -65,7 +65,7 @@ class UIUtils {
         text,
         style: TextStyle(
           // color: Colors.black,
-          fontSize: Constants.text_medium,
+          fontSize: Constants.txtMedium,
         ),
       ),
       // color: Colors.white70,
@@ -90,7 +90,7 @@ class UIUtils {
           color: Colors.red,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Constants.radius_round),
+          borderRadius: BorderRadius.circular(Constants.radiusRound),
         ),
       ),
     );
@@ -106,7 +106,7 @@ class UIUtils {
   TextStyle getStyleText() {
     return TextStyle(
       color: Colors.black,
-      fontSize: Constants.text_medium,
+      fontSize: Constants.txtMedium,
     );
   }
 
@@ -248,15 +248,15 @@ class UIUtils {
         return Center(
           child: Container(
             width: 300,
-            margin: EdgeInsets.all(Constants.margin_padding_medium),
+            margin: EdgeInsets.all(Constants.marginPaddingMedium),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(Constants.radius_medium),
+              borderRadius: BorderRadius.circular(Constants.radiusMedium),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(height: Constants.margin_padding_medium),
+                SizedBox(height: Constants.marginPaddingMedium),
                 AvatarGlow(
                   glowColor: Colors.green,
                   endRadius: 60,
@@ -280,14 +280,14 @@ class UIUtils {
                     color: Color(0xff232426),
                   ),
                 ),
-                SizedBox(height: Constants.radius_medium),
+                SizedBox(height: Constants.radiusMedium),
                 Divider(
                   color: Color(0xffC8C8CA),
                   height: 1,
                 ),
                 Container(
                   width: double.infinity,
-                  height: Constants.button_height,
+                  height: Constants.heightButton,
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.fromLTRB(15, 0, 15, 0),

@@ -21,13 +21,13 @@ class TabNoteAll extends GetWidget {
           "All",
           style: TextStyle(
             color: Colors.white,
-            fontSize: Constants.text_medium,
+            fontSize: Constants.txtMedium,
           ),
         ),
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(Constants.margin_padding_large),
+        padding: EdgeInsets.all(Constants.marginPaddingLarge),
         child: _buildList(),
       ),
       floatingActionButton: FloatingActionButton(
@@ -52,13 +52,13 @@ class TabNoteAll extends GetWidget {
               width: 70,
               height: 70,
             ),
-            SizedBox(height: Constants.margin_padding_medium),
+            SizedBox(height: Constants.marginPaddingMedium),
             Text(
               "You have no task.\nPlease click Add button below to add some task.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey,
-                fontSize: Constants.text_medium,
+                fontSize: Constants.txtMedium,
               ),
             ),
           ],
@@ -79,12 +79,12 @@ class TabNoteAll extends GetWidget {
     return Container(
       padding: EdgeInsets.fromLTRB(
         0,
-        Constants.margin_padding_medium,
+        Constants.marginPaddingMedium,
         0,
-        Constants.margin_padding_medium,
+        Constants.marginPaddingMedium,
       ),
       child: Container(
-        padding: EdgeInsets.all(Constants.margin_padding_medium),
+        padding: EdgeInsets.all(Constants.marginPaddingMedium),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -112,7 +112,7 @@ class TabNoteAll extends GetWidget {
                   TimeUtils.convertFromMillisecondsSinceEpoch(
                       note.millisecondsSinceEpoch, TimeUtils.FORMAT_1),
                   style: TextStyle(
-                    fontSize: Constants.text_small,
+                    fontSize: Constants.txtSmall,
                     color: Colors.blue,
                   ),
                 ),
@@ -128,19 +128,19 @@ class TabNoteAll extends GetWidget {
               ],
             ),
             _buildHorizontalDivider(),
-            SizedBox(height: Constants.margin_padding_medium),
+            SizedBox(height: Constants.marginPaddingMedium),
             Text(
               note.title,
               style: TextStyle(
-                fontSize: Constants.text_large,
+                fontSize: Constants.txtLarge,
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: Constants.margin_padding_medium),
+            SizedBox(height: Constants.marginPaddingMedium),
             Text(
               note.content,
               style: TextStyle(
-                fontSize: Constants.text_medium,
+                fontSize: Constants.txtMedium,
                 color: Colors.grey,
               ),
             ),

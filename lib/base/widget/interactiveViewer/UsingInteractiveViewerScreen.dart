@@ -24,6 +24,6 @@ class UsingInteractiveViewerScreen extends StatelessWidget {
   }
 
   Widget getImageWidget() {
-    return Image.network(Constants.dummy_image_link);
+    return Image.network(Constants.dummyImageLink);
   }
 }

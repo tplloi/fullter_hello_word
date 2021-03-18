@@ -19,7 +19,7 @@ class SliverAppBarScreen extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
             collapseMode: CollapseMode.parallax,
             background: Image.network(
-              Constants.dummy_image_link,
+              Constants.dummyImageLink,
               fit: BoxFit.fill,
             ),
           ),

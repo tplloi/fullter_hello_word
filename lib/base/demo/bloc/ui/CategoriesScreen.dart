@@ -80,8 +80,8 @@ class CategoriesWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: Constants.margin_padding_medium,
-            vertical: Constants.margin_padding_medium,
+            horizontal: Constants.marginPaddingMedium,
+            vertical: Constants.marginPaddingMedium,
           ),
           child: InkWell(
             onTap: () {
@@ -103,7 +103,7 @@ class CategoriesWidget extends StatelessWidget {
                     listCategory.categories[index],
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: Constants.text_medium,
+                        fontSize: Constants.txtMedium,
                         fontWeight: FontWeight.w100,
                         fontFamily: 'Roboto'),
                     textAlign: TextAlign.left,

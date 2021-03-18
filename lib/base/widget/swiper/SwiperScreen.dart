@@ -29,7 +29,7 @@ Swiper imageSlider(context) {
     autoplay: true,
     itemBuilder: (BuildContext context, int index) {
       return new Image.network(
-        Constants.dummy_image_link,
+        Constants.dummyImageLink,
         fit: BoxFit.fitHeight,
       );
     },

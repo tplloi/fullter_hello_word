@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
@@ -54,7 +55,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
     return Container(
       child: HorizontalDataTable(
         leftHandSideColumnWidth: 100,
-        rightHandSideColumnWidth: 600,
+        rightHandSideColumnWidth: 700,
         isFixedHeader: true,
         headerWidgets: _getTitleWidget(),
         leftSideItemBuilder: _generateFirstColumnRow,
@@ -88,11 +89,11 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
 
   List<Widget> _getTitleWidget() {
     return [
-      FlatButton(
-        padding: EdgeInsets.all(0),
+      TextButton(
         child: _getTitleItemWidget(
-            'Name' + (sortType == sortName ? (isAscending ? '↓' : '↑') : ''),
-            100),
+          'Name' + (sortType == sortName ? (isAscending ? '↓' : '↑') : ''),
+          100,
+        ),
         onPressed: () {
           sortType = sortName;
           isAscending = !isAscending;
@@ -100,12 +101,11 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           setState(() {});
         },
       ),
-      FlatButton(
-        padding: EdgeInsets.all(0),
+      TextButton(
         child: _getTitleItemWidget(
-            'Status' +
-                (sortType == sortStatus ? (isAscending ? '↓' : '↑') : ''),
-            100),
+          'Status' + (sortType == sortStatus ? (isAscending ? '↓' : '↑') : ''),
+          100,
+        ),
         onPressed: () {
           sortType = sortStatus;
           isAscending = !isAscending;
@@ -113,19 +113,29 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           setState(() {});
         },
       ),
-      _getTitleItemWidget('Phone', 200),
-      _getTitleItemWidget('Register', 100),
-      _getTitleItemWidget('Termination', 200),
+      _getTitleItemWidget("Phone", 200),
+      _getTitleItemWidget("Register", 100),
+      _getTitleItemWidget("Termination", 200),
     ];
   }
 
-  Widget _getTitleItemWidget(String label, double width) {
+  Widget _getTitleItemWidget(
+    String label,
+    double width,
+  ) {
     return Container(
-      child: Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
+      child: Text(
+        label,
+        style: TextStyle(
+          fontSize: Constants.txtLarge,
+          fontWeight: FontWeight.bold,
+          color: Colors.red,
+        ),
+      ),
       width: width,
       height: 56,
-      padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-      alignment: Alignment.centerLeft,
+      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+      alignment: Alignment.center,
     );
   }
 

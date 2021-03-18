@@ -21,7 +21,7 @@ class CacheNetworkImageScreen extends StatelessWidget {
 
   Widget _buildWidget() {
     return CachedNetworkImage(
-      imageUrl: Constants.dummy_image_link,
+      imageUrl: Constants.dummyImageLink,
       imageBuilder: (context, imageProvider) => Container(
         decoration: BoxDecoration(
           image: DecorationImage(

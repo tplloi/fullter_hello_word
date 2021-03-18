@@ -155,7 +155,7 @@ class ChuckWidget extends StatelessWidget {
                   chuck.value,
                   style: TextStyle(
                       color: Colors.red,
-                      fontSize: Constants.text_medium,
+                      fontSize: Constants.txtMedium,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'Roboto'),
                 ),

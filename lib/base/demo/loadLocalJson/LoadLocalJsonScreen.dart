@@ -37,17 +37,17 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
                         padding:
-                            EdgeInsets.all(Constants.margin_padding_medium),
+                            EdgeInsets.all(Constants.marginPaddingMedium),
                         child: Card(
-                          elevation: Constants.elevation_small,
+                          elevation: Constants.elevationSmall,
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
                             borderRadius:
-                                BorderRadius.circular(Constants.radius_medium),
+                                BorderRadius.circular(Constants.radiusMedium),
                           ),
                           child: Container(
                             margin:
-                                EdgeInsets.all(Constants.margin_padding_medium),
+                                EdgeInsets.all(Constants.marginPaddingMedium),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: <Widget>[

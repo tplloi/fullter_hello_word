@@ -25,7 +25,7 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
             // onSurface: Colors.grey,
             textStyle: TextStyle(
               // color: Colors.red,
-              fontSize: Constants.text_medium,
+              fontSize: Constants.txtMedium,
               fontStyle: FontStyle.italic,
             ),
             elevation: 5,

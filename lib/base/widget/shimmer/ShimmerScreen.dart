@@ -71,8 +71,8 @@ class _LoadingListPageState extends State<LoadingListPage> {
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(
-          horizontal: Constants.margin_padding_medium,
-          vertical: Constants.margin_padding_medium,
+          horizontal: Constants.marginPaddingMedium,
+          vertical: Constants.marginPaddingMedium,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,
