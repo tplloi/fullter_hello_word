@@ -44,6 +44,7 @@ class UIUtils {
       ],
 
       backgroundColor: Colors.blue,
+      brightness: Brightness.dark,
     );
   }
 
