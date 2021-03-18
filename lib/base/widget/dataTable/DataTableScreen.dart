@@ -128,6 +128,17 @@ class DessertDataSource extends DataTableSource {
     new Dessert('Gingerbread with sugar', 345, 16.0, 51, 3.9, 327, 7, 16),
     new Dessert('Jelly bean with sugar', 364, 0.0, 96, 0.0, 50, 0, 0),
     new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
+    new Dessert('Lollipop with sugar', 401, 0.2, 100, 0.0, 38, 0, 2),
   ];
 
   @override
