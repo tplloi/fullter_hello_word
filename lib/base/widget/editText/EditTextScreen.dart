@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class EditTextScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class EditTextScreenState extends State<EditTextScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "EditTextScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Container(

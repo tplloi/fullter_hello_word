@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class AnimatedPaddingScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class AnimatedPaddingScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "AnimatedPaddingScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

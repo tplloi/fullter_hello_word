@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'InheritedModelScreen.dart';
@@ -11,7 +12,7 @@ class MenuInheritedScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Menu inherited",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

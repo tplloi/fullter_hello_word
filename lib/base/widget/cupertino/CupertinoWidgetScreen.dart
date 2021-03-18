@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CupertinoWidgetScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class CupertinoWidgetScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CupertinoWidgetScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(
@@ -93,14 +94,14 @@ class CupertinoAlertDialogWidget extends StatelessWidget {
                       child: Text('OK'),
                       isDestructiveAction: true,
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                     ),
                     CupertinoDialogAction(
                       child: Text('Cancel'),
                       isDefaultAction: true,
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                     )
                   ],

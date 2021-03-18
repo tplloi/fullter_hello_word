@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -19,7 +20,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
     return Scaffold(
         appBar: UIUtils().getAppBar(
           "FormFieldScreen",
-          () => Navigator.pop(context),
+          () => Get.back(),
           null,
         ),
         body: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
@@ -51,7 +52,7 @@ class MenuWidgetScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuWidgetScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CircularProgressIndicatorApp.dart';
@@ -12,7 +13,7 @@ class MenuProgressScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuProgressScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class InheritedModelScreen extends StatefulWidget {
@@ -32,7 +33,7 @@ class _InheritedModelScreenState extends State<InheritedModelScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "InheritedModelScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

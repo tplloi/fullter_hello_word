@@ -1,5 +1,6 @@
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class PDFViewerScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class PDFViewerScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "PDFViewerScreen" + time.toString(),
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(child: PDFViewer(document: pdfDocument)),

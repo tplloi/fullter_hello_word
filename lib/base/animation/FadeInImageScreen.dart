@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -8,7 +9,7 @@ class FadeInImageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "FadeInImageScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

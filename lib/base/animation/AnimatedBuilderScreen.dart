@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class AnimatedBuilderScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class AnimatedBuilderScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "AnimatedBuilderScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

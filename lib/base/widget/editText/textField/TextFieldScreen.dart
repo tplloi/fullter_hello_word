@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'TextFieldWidget.dart';
@@ -11,7 +12,7 @@ class TextFieldScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils().getAppBar(
         "TextFieldScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(

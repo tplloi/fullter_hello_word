@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class ExpandedScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class ExpandedScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "ExpandedScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

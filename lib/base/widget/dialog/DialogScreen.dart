@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class DialogScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class DialogScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils().getAppBar(
         "DialogScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
@@ -47,25 +48,25 @@ class SimpleDialogWidget extends StatelessWidget {
             SimpleDialogOption(
               child: Text('item 1'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
             SimpleDialogOption(
               child: Text('item 2'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
             SimpleDialogOption(
               child: Text('item 3'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
             SimpleDialogOption(
               child: Text('item 4'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
           ],

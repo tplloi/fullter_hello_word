@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -64,7 +65,7 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
       // Appbar
       appBar: UIUtils().getAppBar(
         nameOfApp,
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       // Body

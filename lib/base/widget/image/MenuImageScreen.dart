@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/image/GradientScreen.dart';
 import 'package:hello_word/base/widget/image/ImageScreen.dart';
@@ -12,7 +13,7 @@ class MenuImageScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuImageScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

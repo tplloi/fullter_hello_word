@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -8,7 +9,7 @@ class UsingInteractiveViewerScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "UsingInteractiveViewerScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: InteractiveViewer(
