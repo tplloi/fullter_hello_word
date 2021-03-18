@@ -44,12 +44,8 @@ class _IndicatorHomePageState extends State<IndicatorHomePage> {
             labelColor: Color(0xff1967d2),
             unselectedLabelColor: Color(0xff5f6368),
             isScrollable: true,
-            // indicator: MD2Indicator(
-            //   indicatorHeight: 3,
-            //   indicatorColor: Color(0xff1967d2),
-            // ),
             indicator: MD2Indicator(
-              indicatorSize: MD2IndicatorSize.tiny,
+              indicatorSize: MD2IndicatorSize.full,
               indicatorHeight: 10.0,
               indicatorColor: Colors.red,
             ),
