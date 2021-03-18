@@ -55,7 +55,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
     return Container(
       child: HorizontalDataTable(
         leftHandSideColumnWidth: 100,
-        rightHandSideColumnWidth: 700,
+        rightHandSideColumnWidth: 600,
         isFixedHeader: true,
         headerWidgets: _getTitleWidget(),
         leftSideItemBuilder: _generateFirstColumnRow,
@@ -66,6 +66,8 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           height: 1.0,
           thickness: 0.0,
         ),
+        elevation: 5,
+        elevationColor: Colors.white,
         leftHandSideColBackgroundColor: Color(0x55ff0000),
         rightHandSideColBackgroundColor: Color(0xffffffff),
         enablePullToRefresh: true,
