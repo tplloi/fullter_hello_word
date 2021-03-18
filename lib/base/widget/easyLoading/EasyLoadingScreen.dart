@@ -99,12 +99,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                     "open test page",
                     () => {
                       _timer?.cancel(),
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => TestPage(),
-                        ),
-                      ),
+                      Get.to(TestPage()),
                     },
                   ),
                   SizedBox(width: Constants.margin_padding_medium),

@@ -67,7 +67,7 @@ class SplashScreenState extends State<SplashScreen> {
 
   route() {
     print("delay finish");
-    Get.off({MenuScreen()});
+    Get.off(MenuScreen());
   }
 
   @override

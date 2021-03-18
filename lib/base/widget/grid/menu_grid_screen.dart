@@ -24,29 +24,19 @@ class MenuGridScreen extends StatelessWidget {
             UIUtils().getButton(
               "GridScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GridScreen()),
-                )
+                Get.to(GridScreen()),
               },
             ),
             UIUtils().getButton(
               "GridPaperScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GridPaperScreen()),
-                )
+                Get.to(GridPaperScreen()),
               },
             ),
             UIUtils().getButton(
               "InfiniteScrollScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InfiniteScrollScreen()),
-                )
+                Get.to(InfiniteScrollScreen()),
               },
             ),
           ],

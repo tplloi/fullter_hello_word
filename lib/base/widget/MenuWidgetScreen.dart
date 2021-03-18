@@ -283,10 +283,7 @@ class MenuWidgetScreen extends StatelessWidget {
           UIUtils().getButton(
             "TableScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TableScreen()),
-              )
+              Get.to(TableScreen()),
             },
           ),
           UIUtils().getButton(

@@ -73,10 +73,7 @@ class FocusDetectorScreen extends StatelessWidget {
       child: UIUtils().getButton(
         "Go to other screen",
         () => {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => OtherPage()),
-          )
+          Get.to(OtherPage()),
         },
       ),
     );

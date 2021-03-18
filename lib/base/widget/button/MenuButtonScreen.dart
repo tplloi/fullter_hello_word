@@ -31,94 +31,61 @@ class MenuButtonScreen extends StatelessWidget {
             UIUtils().getButton(
               "BackButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BackButtonScreen()),
-                )
+                Get.to(BackButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "ButtonBarScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ButtonBarScreen()),
-                )
+                Get.to(ButtonBarScreen()),
               },
             ),
             UIUtils().getButton(
               "DropDownScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DropDownScreen()),
-                )
+                Get.to(DropDownScreen()),
               },
             ),
             UIUtils().getButton(
               "IconButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => IconButtonScreen()),
-                )
+                Get.to(IconButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "OutlineButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => OutlineButtonScreen()),
-                )
+                Get.to(OutlineButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "PopupMenuButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => PopupMenuButtonScreen()),
-                )
+                Get.to(PopupMenuButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "RaisedButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RaisedButtonScreen()),
-                )
+                Get.to(RaisedButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "RawMaterialButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => RawMaterialButtonScreen()),
-                )
+                Get.to(RawMaterialButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "TextButtonScreen +++",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TextButtonScreen()),
-                )
+              () => {
+                Get.to(TextButtonScreen()),
               },
             ),
             UIUtils().getButton(
               "ToggleButtonScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ToggleButtonScreen()),
-                )
+                Get.to(ToggleButtonScreen()),
               },
             ),
           ],

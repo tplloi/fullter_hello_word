@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'sharedPreferences/SharedPreferencesScreen.dart';
@@ -12,7 +12,7 @@ class MenuDatabaseScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuDatabaseScreen",
         () => {
-          SystemNavigator.pop(),
+          Get.back(),
         },
         null,
       ),
@@ -23,20 +23,13 @@ class MenuDatabaseScreen extends StatelessWidget {
             UIUtils().getButton(
               "SharedPreferencesScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SharedPreferencesScreen()),
-                )
+                Get.to(SharedPreferencesScreen()),
               },
             ),
             UIUtils().getButton(
               "SQLiteDemoScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SQLiteDemoScreen()),
-                )
+                Get.to(SQLiteDemoScreen()),
               },
             ),
           ],
