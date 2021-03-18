@@ -155,17 +155,23 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
     );
   }
 
-  Widget _generateFirstColumnRow(BuildContext context, int index) {
+  Widget _generateFirstColumnRow(
+    BuildContext context,
+    int index,
+  ) {
     return Container(
-      child: Text(user.listUserInfo[index].name),
+      child: UIUtils().getText(user.listUserInfo[index].name),
       width: 100,
       height: 52,
       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.center,
     );
   }
 
-  Widget _generateRightHandSideColumnRow(BuildContext context, int index) {
+  Widget _generateRightHandSideColumnRow(
+    BuildContext context,
+    int index,
+  ) {
     return Row(
       children: <Widget>[
         Container(
@@ -178,34 +184,38 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
                   color: user.listUserInfo[index].status
                       ? Colors.red
                       : Colors.green),
-              Text(user.listUserInfo[index].status ? 'Disabled' : 'Active')
+              Text(user.listUserInfo[index].status ? "Disabled" : "Active")
             ],
           ),
           width: 100,
           height: 52,
-          padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-          alignment: Alignment.centerLeft,
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          alignment: Alignment.center,
+          color: Colors.lightGreen,
         ),
         Container(
           child: Text(user.listUserInfo[index].phone),
           width: 200,
           height: 52,
-          padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-          alignment: Alignment.centerLeft,
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          alignment: Alignment.center,
+          color: Colors.blueGrey,
         ),
         Container(
           child: Text(user.listUserInfo[index].registerDate),
           width: 100,
           height: 52,
-          padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-          alignment: Alignment.centerLeft,
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          alignment: Alignment.center,
+          color: Colors.lightBlue,
         ),
         Container(
           child: Text(user.listUserInfo[index].terminationDate),
           width: 200,
           height: 52,
-          padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-          alignment: Alignment.centerLeft,
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          alignment: Alignment.center,
+          color: Colors.orangeAccent,
         ),
       ],
     );
