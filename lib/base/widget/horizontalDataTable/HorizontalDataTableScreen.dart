@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
+import 'User.dart';
+
 //https://pub.dev/packages/horizontal_data_table
 class HorizontalDataTableScreen extends StatelessWidget {
   @override
@@ -17,6 +19,8 @@ class HorizontalDataTableScreen extends StatelessWidget {
     );
   }
 }
+
+User user = User();
 
 class DataTableHomePage extends StatefulWidget {
   DataTableHomePage({
@@ -43,9 +47,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _getBodyWidget(),
-    );
+    return _getBodyWidget();
   }
 
   Widget _getBodyWidget() {
@@ -57,7 +59,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
         headerWidgets: _getTitleWidget(),
         leftSideItemBuilder: _generateFirstColumnRow,
         rightSideItemBuilder: _generateRightHandSideColumnRow,
-        itemCount: user.userInfo.length,
+        itemCount: user.listUserInfo.length,
         rowSeparatorWidget: const Divider(
           color: Colors.black54,
           height: 1.0,
@@ -124,7 +126,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
 
   Widget _generateFirstColumnRow(BuildContext context, int index) {
     return Container(
-      child: Text(user.userInfo[index].name),
+      child: Text(user.listUserInfo[index].name),
       width: 100,
       height: 52,
       padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
@@ -139,12 +141,12 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           child: Row(
             children: <Widget>[
               Icon(
-                  user.userInfo[index].status
+                  user.listUserInfo[index].status
                       ? Icons.notifications_off
                       : Icons.notifications_active,
                   color:
-                      user.userInfo[index].status ? Colors.red : Colors.green),
-              Text(user.userInfo[index].status ? 'Disabled' : 'Active')
+                      user.listUserInfo[index].status ? Colors.red : Colors.green),
+              Text(user.listUserInfo[index].status ? 'Disabled' : 'Active')
             ],
           ),
           width: 100,
@@ -153,21 +155,21 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           alignment: Alignment.centerLeft,
         ),
         Container(
-          child: Text(user.userInfo[index].phone),
+          child: Text(user.listUserInfo[index].phone),
           width: 200,
           height: 52,
           padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
           alignment: Alignment.centerLeft,
         ),
         Container(
-          child: Text(user.userInfo[index].registerDate),
+          child: Text(user.listUserInfo[index].registerDate),
           width: 100,
           height: 52,
           padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
           alignment: Alignment.centerLeft,
         ),
         Container(
-          child: Text(user.userInfo[index].terminationDate),
+          child: Text(user.listUserInfo[index].terminationDate),
           width: 200,
           height: 52,
           padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
@@ -176,54 +178,4 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
       ],
     );
   }
-}
-
-User user = User();
-
-class User {
-  List<UserInfo> userInfo = [];
-
-  void initData(int size) {
-    for (int i = 0; i < size; i++) {
-      userInfo.add(UserInfo(
-          "User_$i", i % 3 == 0, '+001 9999 9999', '2019-01-01', 'N/A'));
-    }
-  }
-
-  ///
-  /// Single sort, sort Name's id
-  void sortName(bool isAscending) {
-    userInfo.sort((a, b) {
-      int aId = int.tryParse(a.name.replaceFirst('User_', ''));
-      int bId = int.tryParse(b.name.replaceFirst('User_', ''));
-      return (aId - bId) * (isAscending ? 1 : -1);
-    });
-  }
-
-  ///
-  /// sort with Status and Name as the 2nd Sort
-  void sortStatus(bool isAscending) {
-    userInfo.sort((a, b) {
-      if (a.status == b.status) {
-        int aId = int.tryParse(a.name.replaceFirst('User_', ''));
-        int bId = int.tryParse(b.name.replaceFirst('User_', ''));
-        return (aId - bId);
-      } else if (a.status) {
-        return isAscending ? 1 : -1;
-      } else {
-        return isAscending ? -1 : 1;
-      }
-    });
-  }
-}
-
-class UserInfo {
-  String name;
-  bool status;
-  String phone;
-  String registerDate;
-  String terminationDate;
-
-  UserInfo(this.name, this.status, this.phone, this.registerDate,
-      this.terminationDate);
 }
