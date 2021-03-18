@@ -265,7 +265,7 @@ class UIUtils {
                   showTwoGlows: true,
                   repeatPauseDuration: Duration(milliseconds: 100),
                   child: Image.asset(
-                    "resources/images/ic_success.png",
+                    "assets/images/ic_success.png",
                     height: 60,
                     width: 60,
                   ),

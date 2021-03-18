@@ -4,6 +4,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/widget/image/GradientScreen.dart';
 import 'package:hello_word/base/widget/image/ImageScreen.dart';
 
+import 'AvatarGlowScreen.dart';
 import 'CacheNetworkImageScreen.dart';
 
 class MenuImageScreen extends StatelessWidget {
@@ -21,6 +22,12 @@ class MenuImageScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils().getButton(
+              "AvatarGlowScreen",
+                  () => {
+                Get.to(AvatarGlowScreen())
+              },
+            ),
             UIUtils().getButton(
               "CacheNetworkImageScreen +++",
               () => {
