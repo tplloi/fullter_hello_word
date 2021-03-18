@@ -90,6 +90,16 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
   List<Widget> _getTitleWidget() {
     return [
       TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          primary: Colors.teal,
+          backgroundColor: Colors.yellow,
+          textStyle: TextStyle(
+            fontStyle: FontStyle.italic,
+          ),
+          elevation: 5,
+          side: BorderSide(color: Colors.pink, width: 2),
+        ),
         child: _getTitleItemWidget(
           'Name' + (sortType == sortName ? (isAscending ? '↓' : '↑') : ''),
           100,
@@ -103,6 +113,16 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
         },
       ),
       TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          primary: Colors.teal,
+          backgroundColor: Colors.yellow,
+          textStyle: TextStyle(
+            fontStyle: FontStyle.italic,
+          ),
+          elevation: 5,
+          side: BorderSide(color: Colors.pink, width: 2),
+        ),
         child: _getTitleItemWidget(
           'Status' + (sortType == sortStatus ? (isAscending ? '↓' : '↑') : ''),
           100,
