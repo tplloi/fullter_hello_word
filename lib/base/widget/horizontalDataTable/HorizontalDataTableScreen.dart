@@ -93,6 +93,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
         child: _getTitleItemWidget(
           'Name' + (sortType == sortName ? (isAscending ? '↓' : '↑') : ''),
           100,
+          Colors.yellow,
         ),
         onPressed: () {
           sortType = sortName;
@@ -105,6 +106,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
         child: _getTitleItemWidget(
           'Status' + (sortType == sortStatus ? (isAscending ? '↓' : '↑') : ''),
           100,
+          Colors.green,
         ),
         onPressed: () {
           sortType = sortStatus;
@@ -113,17 +115,31 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           setState(() {});
         },
       ),
-      _getTitleItemWidget("Phone", 200),
-      _getTitleItemWidget("Register", 100),
-      _getTitleItemWidget("Termination", 200),
+      _getTitleItemWidget(
+        "Phone",
+        200,
+        Colors.grey,
+      ),
+      _getTitleItemWidget(
+        "Register",
+        100,
+        Colors.blue,
+      ),
+      _getTitleItemWidget(
+        "Termination",
+        200,
+        Colors.orange,
+      ),
     ];
   }
 
   Widget _getTitleItemWidget(
     String label,
     double width,
+    Color bkgColor,
   ) {
     return Container(
+      color: bkgColor,
       child: Text(
         label,
         style: TextStyle(
