@@ -21,7 +21,6 @@ class MySearchDelegate extends SearchDelegate<String> {
         progress: transitionAnimation,
       ),
       onPressed: () {
-        // SearchDelegate.close() can return values, similar to Navigator.pop().
         this.close(context, null);
       },
     );

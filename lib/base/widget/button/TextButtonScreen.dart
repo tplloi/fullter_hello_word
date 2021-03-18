@@ -35,10 +35,7 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
             ),
           ),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => DummyScreen()),
-            );
+            Get.to(DummyScreen());
           },
           onLongPress: () {
             print('Long press');

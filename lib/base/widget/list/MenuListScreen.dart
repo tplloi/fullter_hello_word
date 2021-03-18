@@ -28,67 +28,43 @@ class MenuListScreen extends StatelessWidget {
             UIUtils().getButton(
               "ContactPageScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ContactPageScreen()),
-                )
+                Get.to(ContactPageScreen()),
               },
             ),
             UIUtils().getButton(
               "DraggableScrollBarDemo",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => DraggableScrollBarDemo()),
-                )
+                Get.to(DraggableScrollBarDemo()),
               },
             ),
             UIUtils().getButton(
               "RandomWordsScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RandomWordsScreen()),
-                )
+                Get.to(RandomWordsScreen()),
               },
             ),
             UIUtils().getButton(
               "ListViewSearchScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ListViewSearchScreen()),
-                )
+                Get.to(ListViewSearchScreen()),
               },
             ),
             UIUtils().getButton(
               "ListBodyScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListBodyScreen()),
-                )
+                Get.to(ListBodyScreen()),
               },
             ),
             UIUtils().getButton(
               "ListTileScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListTileScreen()),
-                )
+                Get.to(ListTileScreen()),
               },
             ),
             UIUtils().getButton(
               "ListViewLoadMoreScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ListViewLoadMoreScreen()),
-                )
+                Get.to(ListViewLoadMoreScreen()),
               },
             ),
           ],

@@ -23,19 +23,13 @@ class MenuSliderScreen extends StatelessWidget {
             UIUtils().getButton(
               "RangeSliderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RangeSliderScreen()),
-                )
+                Get.to(RangeSliderScreen()),
               },
             ),
             UIUtils().getButton(
               "SliderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SliderScreen()),
-                )
+                Get.to(SliderScreen()),
               },
             ),
           ],

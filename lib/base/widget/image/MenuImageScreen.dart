@@ -30,19 +30,13 @@ class MenuImageScreen extends StatelessWidget {
             UIUtils().getButton(
               "GradientScreen",
                   () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GradientScreen()),
-                )
+                Get.to(GradientScreen()),
               },
             ),
             UIUtils().getButton(
               "ImageScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ImageScreen()),
-                )
+                Get.to(ImageScreen()),
               },
             ),
           ],

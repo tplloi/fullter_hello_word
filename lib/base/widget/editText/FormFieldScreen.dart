@@ -88,23 +88,4 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
       setState(() => isAutoValidate = true);
     }
   }
-
-// Future<bool> willPop() {
-//   return showDialog(
-//     builder: (context) => AlertDialog(
-//       title: Text('Exit the page?'),
-//       actions: <Widget>[
-//         FlatButton(
-//           child: Text('No'),
-//           onPressed: () => Navigator.pop(context, false),
-//         ),
-//         FlatButton(
-//           child: Text('Yes'),
-//           onPressed: () => Navigator.pop(context, true),
-//         ),
-//       ],
-//     ),
-//     context: context,
-//   );
-// }
 }

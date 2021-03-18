@@ -43,217 +43,133 @@ class MenuAnimationScreen extends StatelessWidget {
             UIUtils().getButton(
               "HeroAnimationDemoScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => HeroAnimationDemoScreen()),
-                )
+                Get.to(HeroAnimationDemoScreen()),
               },
             ),
             UIUtils().getButton(
               "RouteTransitionScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => RouteTransitionScreen()),
-                )
+                Get.to(RouteTransitionScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedAlignScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedAlignScreen()),
-                )
+                Get.to(AnimatedAlignScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedBuilder",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedBuilderScreen()),
-                )
+                Get.to(AnimatedBuilderScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedContainerScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedContainerScreen()),
-                )
+                Get.to(AnimatedContainerScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedCrossFadeScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedCrossFadeScreen()),
-                )
+                Get.to(AnimatedCrossFadeScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedDefaultTextStyleScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedDefaultTextStyleScreen()),
-                )
+                Get.to(AnimatedDefaultTextStyleScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedIconScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AnimatedIconScreen()),
-                )
+                Get.to(AnimatedIconScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedListScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AnimatedListScreen()),
-                )
+                Get.to(AnimatedListScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedModalBarrierScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedModalBarrierScreen()),
-                )
+                Get.to(AnimatedModalBarrierScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedOpacityScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedOpacityScreen()),
-                )
+                Get.to(AnimatedOpacityScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedPaddingScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedPaddingScreen()),
-                )
+                Get.to(AnimatedPaddingScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedPhysicalModelScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedPhysicalModelScreen()),
-                )
+                Get.to(AnimatedPhysicalModelScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedPositionedScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedPositionedScreen()),
-                )
+                Get.to(AnimatedPositionedScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedSizeScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AnimatedSizeScreen()),
-                )
+                Get.to(AnimatedSizeScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedSwitcherScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedSwitcherScreen()),
-                )
+                Get.to(AnimatedSwitcherScreen()),
               },
             ),
             UIUtils().getButton(
               "AnimatedThemeScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AnimatedThemeScreen()),
-                )
+                Get.to(AnimatedThemeScreen()),
               },
             ),
             UIUtils().getButton(
               "DecoratedBoxTransitionScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => DecoratedBoxTransitionScreen()),
-                )
+                Get.to(DecoratedBoxTransitionScreen()),
               },
             ),
             UIUtils().getButton(
               "FadeInImageScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FadeInImageScreen()),
-                )
+                Get.to(FadeInImageScreen()),
               },
             ),
             UIUtils().getButton(
               "FadeTransitionScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FadeTransitionScreen()),
-                )
+                Get.to(FadeTransitionScreen()),
               },
             ),
             UIUtils().getButton(
               "PositionedTransitionScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => PositionedTransitionScreen()),
-                )
+                Get.to(PositionedTransitionScreen()),
               },
             ),
             UIUtils().getButton(
               "RotationTransitionScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => RotationTransitionScreen()),
-                )
+                Get.to(RotationTransitionScreen()),
               },
             ),
           ],
