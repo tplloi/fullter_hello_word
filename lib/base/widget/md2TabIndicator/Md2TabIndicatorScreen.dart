@@ -34,10 +34,10 @@ class _IndicatorHomePageState extends State<IndicatorHomePage> {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "MD2 Tab Indicator",
+            "MD2TabIndicatorScreen",
             style: TextStyle(color: Colors.black87),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.yellow,
           bottom: TabBar(
             labelStyle: TextStyle(fontWeight: FontWeight.w700),
             indicatorSize: TabBarIndicatorSize.label,
@@ -124,10 +124,11 @@ class MD2Indicator extends Decoration {
   final Color indicatorColor;
   final MD2IndicatorSize indicatorSize;
 
-  const MD2Indicator(
-      {@required this.indicatorHeight,
-      @required this.indicatorColor,
-      @required this.indicatorSize});
+  const MD2Indicator({
+    @required this.indicatorHeight,
+    @required this.indicatorColor,
+    @required this.indicatorSize,
+  });
 
   @override
   _MD2Painter createBoxPainter([VoidCallback onChanged]) {
