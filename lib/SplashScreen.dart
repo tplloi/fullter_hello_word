@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/LLog.dart';
 
-import 'base/demo/todo/screen/ToDoMainScreen.dart';
+import 'MenuScreen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -67,8 +67,7 @@ class SplashScreenState extends State<SplashScreen> {
 
   route() {
     print("delay finish");
-    // Get.off(TabBarScreen());
-    Get.off(ToDoMainScreen());
+    Get.off(MenuScreen());
   }
 
   @override
