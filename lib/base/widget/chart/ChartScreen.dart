@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class ChartScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class ChartScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "ChartScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

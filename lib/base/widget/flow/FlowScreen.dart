@@ -7,7 +7,7 @@ class FlowScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "FlowScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: FlowWidget(),

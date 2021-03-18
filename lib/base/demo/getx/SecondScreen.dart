@@ -12,7 +12,7 @@ class SecondScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "SecondScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

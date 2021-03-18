@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'ProductBox.dart';
@@ -9,7 +10,7 @@ class LayoutMultipleScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "LayoutMultipleScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

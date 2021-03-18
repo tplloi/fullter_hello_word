@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'EditTextScreen.dart';
@@ -13,7 +14,7 @@ class MenuEditTextScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuEditTextScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'drawer/DrawerScreen.dart';
@@ -11,7 +12,7 @@ class MenuDrawerScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuDrawerScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

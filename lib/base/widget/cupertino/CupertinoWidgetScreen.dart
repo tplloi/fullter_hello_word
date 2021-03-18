@@ -159,13 +159,13 @@ class _CupertinoContextMenuWidgetState
               CupertinoContextMenuAction(
                 child: const Text('Action one'),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.back();
                 },
               ),
               CupertinoContextMenuAction(
                 child: const Text('Action two'),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.back();
                 },
               ),
             ],
@@ -197,19 +197,19 @@ class CupertinoDialogActionWidget extends StatelessWidget {
                       child: Text('Item1'),
                       isDestructiveAction: true,
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                     ),
                     CupertinoDialogAction(
                       child: Text('Item2'),
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                     ),
                     CupertinoDialogAction(
                       child: Text('Item3'),
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                     ),
                   ],

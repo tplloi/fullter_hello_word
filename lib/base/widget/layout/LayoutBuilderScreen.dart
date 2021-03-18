@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class LayoutBuilderScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class LayoutBuilderScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils().getAppBar(
         "LayoutBuilderScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: LayoutBuilderWidget(),

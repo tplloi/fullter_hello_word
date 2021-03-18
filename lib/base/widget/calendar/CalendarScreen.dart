@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -21,7 +22,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CalendarScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(

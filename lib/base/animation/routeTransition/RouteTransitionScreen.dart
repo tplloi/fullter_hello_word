@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'screen/RotationScreen.dart';
@@ -16,7 +17,7 @@ class RouteTransitionScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "RouteTransitionScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
@@ -75,7 +76,7 @@ class Screen2 extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: Text('Go Back!'),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Get.back(),
         ),
       ),
     );

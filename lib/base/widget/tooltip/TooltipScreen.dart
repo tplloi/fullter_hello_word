@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TooltipScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class _TooltipScreenState extends State<TooltipScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "TooltipScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
@@ -42,7 +43,7 @@ class GetHttpDataScreenState extends State<GetHttpDataScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "GetHttpDataScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       // Create a Listview and load the data when available

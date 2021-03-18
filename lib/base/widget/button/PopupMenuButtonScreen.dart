@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class PopupMenuButtonScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _PopupMenuButtonScreenState extends State<PopupMenuButtonScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "PopupMenuButtonScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class AnimatedPositionedScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class AnimatedPositionedScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "AnimatedPositionedScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

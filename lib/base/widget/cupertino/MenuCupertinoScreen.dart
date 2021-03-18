@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CupertinoActionSheetScreen.dart';
@@ -13,7 +14,7 @@ class MenuCupertinoScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "MenuCupertinoScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

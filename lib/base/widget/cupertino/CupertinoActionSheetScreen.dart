@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CupertinoActionSheetScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class CupertinoActionSheetScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "CupertinoActionSheetScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
@@ -31,19 +32,19 @@ class CupertinoActionSheetScreen extends StatelessWidget {
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item1'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item2'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
             CupertinoActionSheetAction(
               child: Text('ActionSheet Item3'),
               onPressed: () {
-                Navigator.pop(context);
+                Get.back();
               },
             ),
           ],
@@ -51,7 +52,7 @@ class CupertinoActionSheetScreen extends StatelessWidget {
             isDefaultAction: true,
             child: Text('Cancel'),
             onPressed: () {
-              Navigator.pop(context);
+              Get.back();
             },
           ),
         );

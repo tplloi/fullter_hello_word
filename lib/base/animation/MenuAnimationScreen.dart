@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/animation/PositionedTransitionScreen.dart';
 import 'package:hello_word/base/animation/RotationTransitionScreen.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
@@ -31,7 +32,7 @@ class MenuAnimationScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Animation menu",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

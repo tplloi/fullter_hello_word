@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:hello_word/base/util/UrlLauncherUtils.dart';
@@ -14,7 +15,7 @@ class UrlLauncherScreen extends StatelessWidget {
         "UrlLauncherScreen",
             () =>
         {
-          Navigator.pop(context),
+          Get.back(),
         },
             () =>
         {

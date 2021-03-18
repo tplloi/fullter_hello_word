@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'utils.dart';
@@ -18,7 +19,7 @@ class _BottomSheetHomePageState extends State<BottomSheetHomePage> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         widget.title,
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
@@ -55,7 +56,7 @@ void _openBottomSheet(context) {
                 "More",
                 () => {
                       print("More"),
-                      Navigator.pop(context),
+                      Get.back(),
                     }),
             getListTile(
                 Icons.favorite,
@@ -63,7 +64,7 @@ void _openBottomSheet(context) {
                 "Favourites",
                 () => {
                       print("Favourites"),
-                      Navigator.pop(context),
+                      Get.back(),
                     }),
             getListTile(
                 Icons.account_box,
@@ -71,20 +72,21 @@ void _openBottomSheet(context) {
                 "Profile",
                 () => {
                       print("Profile"),
-                      Navigator.pop(context),
+                      Get.back(),
                     }),
             new Divider(
               thickness: 2.0,
               height: 10.0,
             ),
             getListTile(
-                Icons.exit_to_app,
-                null,
-                "Logout",
-                () => {
-                      print("Logout"),
-                      Navigator.pop(context),
-                    }),
+              Icons.exit_to_app,
+              null,
+              "Logout",
+              () => {
+                print("Logout"),
+                Get.back(),
+              },
+            ),
           ],
         ),
       );

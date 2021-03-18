@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CheckBoxScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class CheckBoxScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils().getAppBar(
         "CheckBoxScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Container(

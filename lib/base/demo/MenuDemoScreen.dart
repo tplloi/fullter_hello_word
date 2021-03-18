@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/pdf/ViewPDFFileScreen.dart';
 import 'package:hello_word/base/demo/shop/ShopScreen.dart';
 import 'package:hello_word/base/demo/theme/ThemeScreen.dart';
@@ -26,7 +27,7 @@ class MenuDemoScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Demo menu",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

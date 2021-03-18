@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TestPage extends StatefulWidget {
@@ -48,8 +49,11 @@ class _TestPageState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils()
-          .getAppBar("TestPage", () => Navigator.pop(context), () => null),
+      appBar: UIUtils().getAppBar(
+        "TestPage",
+        () => Get.back(),
+        () => null,
+      ),
       body: Center(
         child: UIUtils().getButton(
           "loadData",

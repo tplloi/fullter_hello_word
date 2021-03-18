@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class InfiniteScrollScreen extends StatefulWidget {
@@ -29,7 +30,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "InfiniteScrollScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: GridView.count(

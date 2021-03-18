@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CryptoScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class CryptoScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "CryptoScreen",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

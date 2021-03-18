@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -77,8 +78,11 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils()
-          .getAppBar("widget.title", () => Navigator.pop(context), () => null),
+      appBar: UIUtils().getAppBar(
+        "widget.title",
+        () => Get.back(),
+        () => null,
+      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(

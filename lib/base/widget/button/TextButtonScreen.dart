@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -13,7 +14,7 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "FlatButtonScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(
@@ -61,7 +62,7 @@ class _DummyScreenState extends State<DummyScreen> {
   Widget build(BuildContext context) {
     return UIUtils().getButton(
       "Tap",
-      () => Navigator.pop(context),
+      () => Get.back(),
     );
   }
 }

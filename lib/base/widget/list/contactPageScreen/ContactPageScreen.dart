@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'ContactModal.dart';
@@ -51,7 +52,7 @@ class ContactPageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "ContactPageScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: ContactsList(_buildContactList()),

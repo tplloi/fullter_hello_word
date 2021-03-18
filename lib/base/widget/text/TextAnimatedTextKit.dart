@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TextAnimatedTextKitScreen extends StatefulWidget {
@@ -34,7 +35,10 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
 
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          animatedTextExample.label, () => Navigator.pop(context), () => null),
+        animatedTextExample.label,
+        () => Get.back(),
+        () => null,
+      ),
       body: Column(
         children: <Widget>[
           Expanded(

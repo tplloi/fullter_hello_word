@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/async/StreamBuilderScreen.dart';
 import 'package:hello_word/base/demo/async/ValueListenableBuilderScreen.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
@@ -12,7 +13,7 @@ class MenuAsyncScreen extends StatelessWidget {
       appBar: UIUtils().getAppBar(
         "Demo async",
         () => {
-          Navigator.pop(context),
+          Get.back(),
         },
         null,
       ),

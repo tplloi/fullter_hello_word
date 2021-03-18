@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -9,7 +10,7 @@ class SwiperScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "SwiperScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Container(

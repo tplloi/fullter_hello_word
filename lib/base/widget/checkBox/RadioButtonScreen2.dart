@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class RadioButtonScreen2 extends StatelessWidget {
@@ -11,7 +12,7 @@ class RadioButtonScreen2 extends StatelessWidget {
       home: Scaffold(
         appBar: UIUtils().getAppBar(
           _title,
-          () => Navigator.pop(context),
+          () => Get.back(),
           null,
         ),
         body: Center(

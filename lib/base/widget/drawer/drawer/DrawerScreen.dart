@@ -47,7 +47,7 @@ class DrawerScreen extends StatelessWidget {
                   ),
                   UIUtils().getButton(
                     "Click",
-                    () => Navigator.pop(context),
+                    () => Get.back(),
                   ),
                   Image.network(Constants.dummy_image_link),
                   ListTile(

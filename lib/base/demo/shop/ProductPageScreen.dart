@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/shop/RatingBox.dart';
 import 'package:hello_word/base/model/Product.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
@@ -15,7 +16,7 @@ class ProductPageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "ProductPageScreen " + product.name,
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: SingleChildScrollView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 /// This is the stateless widget that the main application instantiates.
@@ -8,7 +9,7 @@ class IconButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "IconButtonScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

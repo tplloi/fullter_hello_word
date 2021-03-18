@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -60,7 +61,7 @@ class CounterHome extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         title,
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Center(

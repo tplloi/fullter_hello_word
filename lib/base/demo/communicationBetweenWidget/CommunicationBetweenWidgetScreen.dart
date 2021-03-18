@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/communicationBetweenWidget/ParentPage.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -10,7 +11,7 @@ class CommunicationBetweenWidgetScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: UIUtils().getAppBar(
         "text",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: ParentPage(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:shimmer/shimmer.dart';
@@ -32,7 +33,7 @@ class _ShimmerHomePageState extends State<ShimmerHomePage> {
       appBar: UIUtils().getAppBar(
           "ShimmerScreen",
           () => {
-                Navigator.pop(context),
+                Get.back(),
               },
           () => null),
       body: Column(
@@ -63,7 +64,10 @@ class _LoadingListPageState extends State<LoadingListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "LoadingListPage", () => Navigator.pop(context), () => null),
+        "LoadingListPage",
+        () => Get.back(),
+        () => null,
+      ),
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(
@@ -179,7 +183,10 @@ class SlideToUnlockPage extends StatelessWidget {
     final int dayInMonth = time.day;
     return Scaffold(
       appBar: UIUtils().getAppBar(
-          "Slide To Unlock", () => Navigator.pop(context), () => null),
+        "Slide To Unlock",
+        () => Get.back(),
+        () => null,
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: [

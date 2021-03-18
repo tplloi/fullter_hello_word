@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TableScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _DataTableExample extends State<TableScreen> {
       home: Scaffold(
         appBar: UIUtils().getAppBar(
           "TableScreen",
-          () => Navigator.pop(context),
+          () => Get.back(),
           null,
         ),
         body: ListView(children: <Widget>[

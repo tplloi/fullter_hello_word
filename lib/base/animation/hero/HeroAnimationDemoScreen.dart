@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CustomLogo.dart';
@@ -54,7 +55,7 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
     return Scaffold(
       appBar: UIUtils().getAppBar(
         "HeroAnimationDemoScreen",
-        () => Navigator.pop(context),
+        () => Get.back(),
         null,
       ),
       body: Container(
