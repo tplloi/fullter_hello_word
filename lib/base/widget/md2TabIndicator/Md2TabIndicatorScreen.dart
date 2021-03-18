@@ -27,13 +27,21 @@ class IndicatorHomePage extends StatefulWidget {
 
 class _IndicatorHomePageState extends State<IndicatorHomePage> {
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         DefaultTabController(
           length: 17,
           child: TabBar(
-            labelStyle: TextStyle(fontWeight: FontWeight.w700),
+            physics: BouncingScrollPhysics(),
+            labelStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+            unselectedLabelStyle:
+                TextStyle(fontWeight: FontWeight.w400, fontSize: 22),
             indicatorSize: TabBarIndicatorSize.label,
             labelColor: Colors.red,
             unselectedLabelColor: Colors.lightBlue,
@@ -43,6 +51,9 @@ class _IndicatorHomePageState extends State<IndicatorHomePage> {
               indicatorHeight: 10.0,
               indicatorColor: Colors.red,
             ),
+            onTap: (index) {
+              UIUtils().showSnackBar("Tap", "index $index");
+            },
             tabs: <Widget>[
               Tab(
                 text: "Home",
