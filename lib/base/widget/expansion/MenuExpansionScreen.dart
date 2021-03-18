@@ -23,20 +23,13 @@ class MenuExpansionScreen extends StatelessWidget {
             UIUtils().getButton(
               "Expansion1Screen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Expansion1Screen()),
-                )
+                Get.to(Expansion1Screen()),
               },
             ),
             UIUtils().getButton(
               "ExpansionPanelScreen2",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ExpansionPanelScreen2()),
-                )
+                Get.to(ExpansionPanelScreen2()),
               },
             ),
           ],

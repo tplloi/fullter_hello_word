@@ -23,20 +23,13 @@ class MenuDrawerScreen extends StatelessWidget {
             UIUtils().getButton(
               "DrawerScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DrawerScreen()),
-                )
+                Get.to(DrawerScreen()),
               },
             ),
             UIUtils().getButton(
               "NavigationDrawerScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NavigationDrawerScreen()),
-                )
+                Get.to(NavigationDrawerScreen()),
               },
             ),
           ],

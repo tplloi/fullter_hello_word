@@ -8,7 +8,6 @@ import 'bottom_sheet/BottomSheetScreen.dart';
 import 'button/MenuButtonScreen.dart';
 import 'calendar/CalendarScreen.dart';
 import 'card/CardScreen.dart';
-import 'chart/ChartScreen.dart';
 import 'checkBox/CheckBoxScreen.dart';
 import 'checkBox/RadioButtonScreen.dart';
 import 'checkBox/RadioButtonScreen2.dart';
@@ -62,338 +61,223 @@ class MenuWidgetScreen extends StatelessWidget {
           UIUtils().getButton(
             "SliverAppBarScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SliverAppBarScreen()),
-              )
+              Get.to(SliverAppBarScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuBottomBarScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuBottomBarScreen()),
-              )
+              Get.to(MenuBottomBarScreen()),
             },
           ),
           UIUtils().getButton(
             "BottomSheetScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => BottomSheetScreen()),
-              )
+              Get.to(BottomSheetScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuButtonScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuButtonScreen()),
-              )
+              Get.to(MenuButtonScreen()),
             },
           ),
           UIUtils().getButton(
             "CalendarScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CalendarScreen()),
-              )
+              Get.to(CalendarScreen()),
             },
           ),
           UIUtils().getButton(
             "CardScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CardScreen()),
-              )
+              Get.to(CardScreen()),
             },
           ),
           UIUtils().getButton(
             "ChartScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ChartScreen()),
-              )
+              Get.to(CardScreen()),
             },
           ),
           UIUtils().getButton(
             "CheckBoxScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CheckBoxScreen()),
-              )
+              Get.to(CheckBoxScreen()),
             },
           ),
           UIUtils().getButton(
             "RadioButtonScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RadioButtonScreen()),
-              )
+              Get.to(RadioButtonScreen()),
             },
           ),
           UIUtils().getButton(
             "RadioButtonScreen2",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RadioButtonScreen2()),
-              )
+              Get.to(RadioButtonScreen2()),
             },
           ),
           UIUtils().getButton(
             "MenuCupertinoScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuCupertinoScreen()),
-              )
+              Get.to(MenuCupertinoScreen()),
             },
           ),
           UIUtils().getButton(
             "DataTableScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DataTableScreen()),
-              )
+              Get.to(DataTableScreen()),
             },
           ),
           UIUtils().getButton(
             "DialogScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DialogScreen()),
-              )
+              Get.to(DialogScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuDrawerScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuDrawerScreen()),
-              )
+              Get.to(MenuDrawerScreen()),
             },
           ),
           UIUtils().getButton(
             "EasyLoadingScreen",
-                () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => EasyLoadingScreen()),
-              )
+            () => {
+              Get.to(EasyLoadingScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuEditTextScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuEditTextScreen()),
-              )
+              Get.to(MenuEditTextScreen()),
             },
           ),
           UIUtils().getButton(
             "ExpandedScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ExpandedScreen()),
-              )
+              Get.to(ExpandedScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuExpansionScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuExpansionScreen()),
-              )
+              Get.to(MenuExpansionScreen()),
             },
           ),
           UIUtils().getButton(
             "GestureScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => GestureScreen()),
-              )
+              Get.to(GestureScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuGridScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuGridScreen()),
-              )
+              Get.to(MenuGridScreen()),
             },
           ),
           UIUtils().getButton(
             "HorizontalDataTableScreen",
-                () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HorizontalDataTableScreen()),
-              )
+            () => {
+              Get.to(HorizontalDataTableScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuImageScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuImageScreen()),
-              )
+              Get.to(MenuImageScreen()),
             },
           ),
           UIUtils().getButton(
             "InkwellScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => InkwellScreen()),
-              )
+              Get.to(InkwellScreen()),
             },
           ),
           UIUtils().getButton(
             "UsingInteractiveViewerScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => UsingInteractiveViewerScreen()),
-              )
+              Get.to(UsingInteractiveViewerScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuLayoutScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuLayoutScreen()),
-              )
+              Get.to(MenuLayoutScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuListScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuListScreen()),
-              )
+              Get.to(MenuListScreen()),
             },
           ),
           UIUtils().getButton(
             "DayPickerScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DayPickerScreen()),
-              )
+              Get.to(DayPickerScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuProgressScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuProgressScreen()),
-              )
+              Get.to(MenuProgressScreen()),
             },
           ),
           UIUtils().getButton(
             "ShimmerScreen",
-                () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ShimmerScreen()),
-              )
+            () => {
+              Get.to(ShimmerScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuSliderScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuSliderScreen()),
-              )
+              Get.to(MenuSliderScreen()),
             },
           ),
           UIUtils().getButton(
             "StackScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => StackScreen()),
-              )
+              Get.to(StackScreen()),
             },
           ),
           UIUtils().getButton(
             "StatelessWidgetDemoScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => StatelessWidgetDemoScreen()),
-              )
+              Get.to(StatelessWidgetDemoScreen()),
             },
           ),
           UIUtils().getButton(
             "StatefulWidgetDemoScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => StatefulWidgetDemoScreen()),
-              )
+              Get.to(StatefulWidgetDemoScreen()),
             },
           ),
           UIUtils().getButton(
             "StepperScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => StepperScreen()),
-              )
+              Get.to(StepperScreen()),
             },
           ),
           UIUtils().getButton(
             "SwiperScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SwiperScreen()),
-              )
+              Get.to(SwiperScreen()),
             },
           ),
           UIUtils().getButton(
             "SwitchScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SwitchScreen()),
-              )
+              Get.to(SwitchScreen()),
             },
           ),
           UIUtils().getButton(
             "TabPageSelectorScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => TabPageSelectorScreen()),
-              )
+              Get.to(TabPageSelectorScreen()),
             },
           ),
           UIUtils().getButton(
@@ -407,38 +291,26 @@ class MenuWidgetScreen extends StatelessWidget {
           ),
           UIUtils().getButton(
             "TextAnimatedTextKitScreen",
-                () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TextAnimatedTextKitScreen()),
-              )
+            () => {
+              Get.to(TextAnimatedTextKitScreen()),
             },
           ),
           UIUtils().getButton(
             "TextScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TextScreen()),
-              )
+              Get.to(TextScreen()),
             },
           ),
           UIUtils().getButton(
             "TooltipScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => TooltipScreen()),
-              )
+              Get.to(TooltipScreen()),
             },
           ),
           UIUtils().getButton(
             "WebViewScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WebViewScreen()),
-              )
+              Get.to(WebViewScreen()),
             },
           ),
         ],

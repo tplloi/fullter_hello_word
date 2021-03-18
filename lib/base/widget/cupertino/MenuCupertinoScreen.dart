@@ -31,31 +31,19 @@ class MenuCupertinoScreen extends StatelessWidget {
             UIUtils().getButton(
               "CupertinoSegmentedControlScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CupertinoSegmentedControlScreen()),
-                )
+                Get.to(CupertinoSegmentedControlScreen()),
               },
             ),
             UIUtils().getButton(
               "CupertinoTimerPickerScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CupertinoTimerPickerScreen()),
-                )
+                Get.to(CupertinoTimerPickerScreen()),
               },
             ),
             UIUtils().getButton(
               "CupertinoWidgetScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CupertinoWidgetScreen()),
-                )
+                Get.to(CupertinoWidgetScreen()),
               },
             ),
           ],
