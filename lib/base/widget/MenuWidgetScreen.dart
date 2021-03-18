@@ -4,7 +4,7 @@ import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
 import 'bottomBar/MenuBottomBarScreen.dart';
-import 'bottom_sheet/BottomSheetScreen.dart';
+import 'bottomSheet/BottomSheetScreen.dart';
 import 'button/MenuButtonScreen.dart';
 import 'calendar/CalendarScreen.dart';
 import 'card/CardScreen.dart';
@@ -27,6 +27,7 @@ import 'inkwell/InkwellScreen.dart';
 import 'interactiveViewer/UsingInteractiveViewerScreen.dart';
 import 'layout/MenuLayoutScreen.dart';
 import 'list/MenuListScreen.dart';
+import 'md2TabIndicator/Md2TabIndicatorScreen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';
@@ -212,6 +213,12 @@ class MenuWidgetScreen extends StatelessWidget {
             "MenuListScreen",
             () => {
               Get.to(MenuListScreen()),
+            },
+          ),
+          UIUtils().getButton(
+            "MD2TabIndicatorScreen",
+                () => {
+              Get.to(MD2TabIndicatorScreen()),
             },
           ),
           UIUtils().getButton(
