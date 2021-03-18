@@ -61,18 +61,23 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
         rightSideItemBuilder: _generateRightHandSideColumnRow,
         itemCount: user.listUserInfo.length,
         rowSeparatorWidget: const Divider(
-          color: Colors.black54,
+          color: Colors.pink,
           height: 1.0,
           thickness: 0.0,
         ),
-        leftHandSideColBackgroundColor: Color(0xFFFFFFFF),
-        rightHandSideColBackgroundColor: Color(0xFFFFFFFF),
+        leftHandSideColBackgroundColor: Color(0x55ff0000),
+        rightHandSideColBackgroundColor: Color(0xffffffff),
         enablePullToRefresh: true,
-        refreshIndicator: const WaterDropHeader(),
+        refreshIndicator: const ClassicHeader(),
+        // refreshIndicator: const WaterDropHeader(),
+        // refreshIndicator: const CustomHeader(),
+        // refreshIndicator: const LinkHeader(),
+        // refreshIndicator: const MaterialClassicHeader(),
+        // refreshIndicator: BezierHeader(),
         refreshIndicatorHeight: 60,
         onRefresh: () async {
           //Do sth
-          await Future.delayed(const Duration(milliseconds: 500));
+          await Future.delayed(const Duration(milliseconds: 1500));
           _hdtRefreshController.refreshCompleted();
         },
         htdRefreshController: _hdtRefreshController,
@@ -144,8 +149,9 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
                   user.listUserInfo[index].status
                       ? Icons.notifications_off
                       : Icons.notifications_active,
-                  color:
-                      user.listUserInfo[index].status ? Colors.red : Colors.green),
+                  color: user.listUserInfo[index].status
+                      ? Colors.red
+                      : Colors.green),
               Text(user.listUserInfo[index].status ? 'Disabled' : 'Active')
             ],
           ),
