@@ -28,21 +28,15 @@ class IndicatorHomePage extends StatefulWidget {
 class _IndicatorHomePageState extends State<IndicatorHomePage> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 17,
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            "MD2TabIndicatorScreen",
-            style: TextStyle(color: Colors.black87),
-          ),
-          backgroundColor: Colors.yellow,
-          bottom: TabBar(
+    return Column(
+      children: [
+        DefaultTabController(
+          length: 17,
+          child: TabBar(
             labelStyle: TextStyle(fontWeight: FontWeight.w700),
             indicatorSize: TabBarIndicatorSize.label,
-            labelColor: Color(0xff1967d2),
-            unselectedLabelColor: Color(0xff5f6368),
+            labelColor: Colors.red,
+            unselectedLabelColor: Colors.lightBlue,
             isScrollable: true,
             indicator: MD2Indicator(
               indicatorSize: MD2IndicatorSize.full,
@@ -104,7 +98,8 @@ class _IndicatorHomePageState extends State<IndicatorHomePage> {
             ],
           ),
         ),
-      ),
+        UIUtils().buildHorizontalDivider(Colors.red),
+      ],
     );
   }
 }

@@ -323,4 +323,13 @@ class UIUtils {
       },
     );
   }
+
+  Widget buildHorizontalDivider(Color color) {
+    return Container(
+      margin: EdgeInsets.all(0.0),
+      height: 1,
+      width: double.maxFinite,
+      color: color,
+    );
+  }
 }
