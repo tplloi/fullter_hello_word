@@ -55,6 +55,7 @@ dependencies:
   get: ^3.26.0 #https://pub.dev/packages/get
   avatar_glow: ^2.0.0 #https://pub.dev/packages/avatar_glow
   intl: ^0.17.0 #https://pub.dev/packages/intl
+  horizontal_data_table: ^2.5.2 #https://pub.dev/packages/horizontal_data_table
 
 dev_dependencies:
   flutter_test:
