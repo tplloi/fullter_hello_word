@@ -25,40 +25,25 @@ class MenuLayoutScreen extends StatelessWidget {
             UIUtils().getButton(
               "CustomMultiChildLayoutScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CustomMultiChildLayoutScreen()),
-                )
+                Get.to(CustomMultiChildLayoutScreen()),
               },
             ),
             UIUtils().getButton(
               "LayoutBuilderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => LayoutBuilderScreen()),
-                )
+                Get.to(LayoutBuilderScreen()),
               },
             ),
             UIUtils().getButton(
               "LayoutMultipleScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => LayoutMultipleScreen()),
-                )
+                Get.to(LayoutMultipleScreen()),
               },
             ),
             UIUtils().getButton(
               "LayoutSingleScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LayoutSingleScreen()),
-                )
+                Get.to(LayoutSingleScreen()),
               },
             ),
           ],

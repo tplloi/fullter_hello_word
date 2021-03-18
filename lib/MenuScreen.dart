@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/base/demo/MenuDemoScreen.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
@@ -24,46 +25,31 @@ class MenuScreen extends StatelessWidget {
           UIUtils().getButton(
             "Animation",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuAnimationScreen()),
-              )
+              Get.to(MenuAnimationScreen()),
             },
           ),
           UIUtils().getButton(
             "MenuDatabaseScreen",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuDatabaseScreen()),
-              )
+              Get.to(MenuDatabaseScreen()),
             },
           ),
           UIUtils().getButton(
             "Demo",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuDemoScreen()),
-              )
+              Get.to(MenuDemoScreen()),
             },
           ),
           UIUtils().getButton(
             "Syntax",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SyntaxScreen()),
-              )
+              Get.to(SyntaxScreen()),
             },
           ),
           UIUtils().getButton(
             "Widget",
             () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuWidgetScreen()),
-              )
+              Get.to(MenuWidgetScreen()),
             },
           ),
         ],

@@ -23,21 +23,13 @@ class MenuInheritedScreen extends StatelessWidget {
             UIUtils().getButton(
               "InheritedModelScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InheritedModelScreen()),
-                )
+                Get.to(InheritedModelScreen()),
               },
             ),
             UIUtils().getButton(
               "InheritedWidgetScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => InheritedWidgetScreen()),
-                )
+                Get.to(InheritedWidgetScreen()),
               },
             ),
           ],

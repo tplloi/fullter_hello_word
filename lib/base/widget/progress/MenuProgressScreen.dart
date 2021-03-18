@@ -24,11 +24,7 @@ class MenuProgressScreen extends StatelessWidget {
             UIUtils().getButton(
               "CircularProgressIndicatorApp",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CircularProgressIndicatorApp()),
-                )
+                Get.to(CircularProgressIndicatorApp()),
               },
             ),
             UIUtils().getButton(

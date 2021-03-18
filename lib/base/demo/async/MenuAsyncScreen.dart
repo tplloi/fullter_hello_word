@@ -24,31 +24,19 @@ class MenuAsyncScreen extends StatelessWidget {
             UIUtils().getButton(
               "FutureBuilderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FutureBuilderScreen()),
-                )
+                Get.to(FutureBuilderScreen()),
               },
             ),
             UIUtils().getButton(
               "StreamBuilderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => StreamBuilderScreen()),
-                )
+                Get.to(StreamBuilderScreen()),
               },
             ),
             UIUtils().getButton(
               "ValueListenableBuilderScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ValueListenableBuilderScreen()),
-                )
+                Get.to(ValueListenableBuilderScreen()),
               },
             ),
           ],

@@ -25,11 +25,7 @@ class MenuCupertinoScreen extends StatelessWidget {
             UIUtils().getButton(
               "CupertinoActionSheetScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CupertinoActionSheetScreen()),
-                )
+                Get.to(CupertinoActionSheetScreen()),
               },
             ),
             UIUtils().getButton(

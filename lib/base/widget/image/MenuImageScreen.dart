@@ -24,10 +24,7 @@ class MenuImageScreen extends StatelessWidget {
             UIUtils().getButton(
               "CacheNetworkImageScreen +++",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CacheNetworkImageScreen()),
-                )
+                Get.to(CacheNetworkImageScreen())
               },
             ),
             UIUtils().getButton(

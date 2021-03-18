@@ -38,160 +38,103 @@ class MenuDemoScreen extends StatelessWidget {
             UIUtils().getButton(
               "Async",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuAsyncScreen()),
-                )
+                Get.to(MenuAsyncScreen()),
               },
             ),
             UIUtils().getButton(
               "Block Demo Chuck Norris",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CategoriesScreen()),
-                )
+                Get.to(CategoriesScreen()),
               },
             ),
             UIUtils().getButton(
               "CommunicationBetweenWidgetScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CommunicationBetweenWidgetScreen()),
-                )
+                Get.to(CommunicationBetweenWidgetScreen()),
               },
             ),
             UIUtils().getButton(
               "Counter",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CounterScreen()),
-                )
+                Get.to(CounterScreen()),
               },
             ),
             UIUtils().getButton(
               "CryptoScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CryptoScreen()),
-                )
+                Get.to(CryptoScreen()),
               },
             ),
             UIUtils().getButton(
               "EncryptScreen",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => EncryptScreen()),
-                )
+              () => {
+                Get.to(EncryptScreen()),
               },
             ),
             UIUtils().getButton(
               "FocusDetectorScreen",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FocusDetectorScreen()),
-                )
+              () => {
+                Get.to(FocusDetectorScreen()),
               },
             ),
             UIUtils().getButton(
               "GetXScreen",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GetXScreen()),
-                )
+              () => {
+                Get.to(GetXScreen()),
               },
             ),
             UIUtils().getButton(
               "Inherited",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => MenuInheritedScreen()),
-                )
+                Get.to(MenuInheritedScreen()),
               },
             ),
             UIUtils().getButton(
               "Load Local Json",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => LoadLocalJsonScreen()),
-                )
+                Get.to(LoadLocalJsonScreen()),
               },
             ),
             UIUtils().getButton(
               "GetHttpDataScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GetHttpDataScreen()),
-                )
+                Get.to(GetHttpDataScreen()),
               },
             ),
             UIUtils().getButton(
               "PDF",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ViewPDFFileScreen()),
-                )
+                Get.to(ViewPDFFileScreen()),
               },
             ),
             UIUtils().getButton(
               "ScopedModelCounterScreen",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ScopedModelCounterScreen()),
-                )
+                Get.to(ScopedModelCounterScreen()),
               },
             ),
             UIUtils().getButton(
               "Shop",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ShopScreen()),
-                )
+                Get.to(ShopScreen()),
               },
             ),
             UIUtils().getButton(
               "Theme",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ThemeScreen()),
-                )
+                Get.to(ThemeScreen()),
               },
             ),
             UIUtils().getButton(
               "Tip calculator",
               () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => TipCalculatorScreen()),
-                )
+                Get.to(TipCalculatorScreen()),
               },
             ),
             UIUtils().getButton(
               "UrlLauncherScreen",
-                  () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => UrlLauncherScreen()),
-                )
+              () => {
+                Get.to(UrlLauncherScreen()),
               },
             ),
           ],
