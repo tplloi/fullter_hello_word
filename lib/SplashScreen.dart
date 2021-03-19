@@ -3,8 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/util/LLog.dart';
-import 'package:hello_word/base/util/LogDogUtil.dart';
+import 'package:hello_word/base/util/LogDogUtils.dart';
 
 import 'MenuScreen.dart';
 import 'base/common/const/Constants.dart';

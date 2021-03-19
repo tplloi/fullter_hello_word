@@ -109,7 +109,7 @@ class _IndicatorHomePageState extends State<IndicatorHomePage> {
             ],
           ),
         ),
-        UIUtils().buildHorizontalDivider(Colors.red),
+        UIUtils.buildHorizontalDivider(Colors.red, double.maxFinite),
       ],
     );
   }

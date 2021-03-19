@@ -324,11 +324,20 @@ class UIUtils {
     );
   }
 
-  Widget buildHorizontalDivider(Color color) {
+  static Widget buildHorizontalDivider(Color color, double widget) {
     return Container(
       margin: EdgeInsets.all(0.0),
       height: 1,
-      width: double.maxFinite,
+      width: widget,
+      color: color,
+    );
+  }
+
+  static Widget buildVerticalDivider(Color color, double height) {
+    return Container(
+      margin: EdgeInsets.all(0.0),
+      height: height,
+      width: 1,
       color: color,
     );
   }
