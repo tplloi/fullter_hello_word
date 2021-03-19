@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class LoadLocalJsonScreen extends StatefulWidget {
@@ -37,17 +37,17 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
                         padding:
-                            EdgeInsets.all(Constants.marginPaddingMedium),
+                            EdgeInsets.all(DimenConstants.marginPaddingMedium),
                         child: Card(
-                          elevation: Constants.elevationSmall,
+                          elevation: DimenConstants.elevationSmall,
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(Constants.radiusMedium),
+                            borderRadius: BorderRadius.circular(
+                                DimenConstants.radiusMedium),
                           ),
                           child: Container(
-                            margin:
-                                EdgeInsets.all(Constants.marginPaddingMedium),
+                            margin: EdgeInsets.all(
+                                DimenConstants.marginPaddingMedium),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: <Widget>[

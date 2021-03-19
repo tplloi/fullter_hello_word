@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class ErrorRetryWidget extends StatelessWidget {
@@ -24,15 +24,16 @@ class ErrorRetryWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
-              fontSize: Constants.txtMedium,
+              fontSize: DimenConstants.txtMedium,
             ),
           ),
-          SizedBox(height: Constants.marginPaddingMedium),
+          SizedBox(height: DimenConstants.marginPaddingMedium),
           UIUtils().getButton(
-              "Click to Retry",
-              () => {
-                    onRetryPressed(),
-                  })
+            "Click to Retry",
+            () => {
+              onRetryPressed(),
+            },
+          )
         ],
       ),
     );

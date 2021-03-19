@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
 import 'package:hello_word/base/util/TimeUtils.dart';
@@ -19,13 +19,13 @@ class TabNoteComplete extends GetWidget {
           "Complete",
           style: TextStyle(
             color: Colors.white,
-            fontSize: Constants.txtMedium,
+            fontSize: DimenConstants.txtMedium,
           ),
         ),
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(Constants.marginPaddingLarge),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingLarge),
         child: _buildList(),
       ),
     );
@@ -44,13 +44,13 @@ class TabNoteComplete extends GetWidget {
               width: 70,
               height: 70,
             ),
-            SizedBox(height: Constants.marginPaddingMedium),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             Text(
               "You have no task completed",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey,
-                fontSize: Constants.txtMedium,
+                fontSize: DimenConstants.txtMedium,
               ),
             ),
           ],
@@ -71,12 +71,12 @@ class TabNoteComplete extends GetWidget {
     return Container(
       padding: EdgeInsets.fromLTRB(
         0,
-        Constants.marginPaddingMedium,
+        DimenConstants.marginPaddingMedium,
         0,
-        Constants.marginPaddingMedium,
+        DimenConstants.marginPaddingMedium,
       ),
       child: Container(
-        padding: EdgeInsets.all(Constants.marginPaddingMedium),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -104,7 +104,7 @@ class TabNoteComplete extends GetWidget {
                   TimeUtils.convertFromMillisecondsSinceEpoch(
                       note.millisecondsSinceEpoch, TimeUtils.FORMAT_1),
                   style: TextStyle(
-                    fontSize: Constants.txtSmall,
+                    fontSize: DimenConstants.txtSmall,
                     color: Colors.blue,
                   ),
                 ),
@@ -120,19 +120,19 @@ class TabNoteComplete extends GetWidget {
               ],
             ),
             _buildHorizontalDivider(),
-            SizedBox(height: Constants.marginPaddingMedium),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             Text(
               note.title,
               style: TextStyle(
-                fontSize: Constants.txtLarge,
+                fontSize: DimenConstants.txtLarge,
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: Constants.marginPaddingMedium),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             Text(
               note.content,
               style: TextStyle(
-                fontSize: Constants.txtMedium,
+                fontSize: DimenConstants.txtMedium,
                 color: Colors.grey,
               ),
             ),

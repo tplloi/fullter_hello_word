@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -71,8 +72,8 @@ class _LoadingListPageState extends State<LoadingListPage> {
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(
-          horizontal: Constants.marginPaddingMedium,
-          vertical: Constants.marginPaddingMedium,
+          horizontal: DimenConstants.marginPaddingMedium,
+          vertical: DimenConstants.marginPaddingMedium,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.max,

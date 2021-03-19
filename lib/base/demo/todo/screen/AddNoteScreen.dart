@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNoteAdd.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';
@@ -32,13 +33,13 @@ class AddNoteScreenState extends State<AddNoteScreen> {
           "Create your task",
           style: TextStyle(
             color: Colors.white,
-            fontSize: Constants.txtMedium,
+            fontSize: DimenConstants.txtMedium,
           ),
         ),
       ),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(Constants.marginPaddingLarge),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingLarge),
         child: _buildInput(),
       ),
       floatingActionButton: Obx(() {
@@ -64,14 +65,16 @@ class AddNoteScreenState extends State<AddNoteScreen> {
           "Time: " +
               TimeUtils.convertFromMillisecondsSinceEpoch(
                   DateTime.now().millisecondsSinceEpoch, TimeUtils.FORMAT_1),
-          style: TextStyle(color: Colors.grey, fontSize: Constants.txtMedium),
+          style:
+              TextStyle(color: Colors.grey, fontSize: DimenConstants.txtMedium),
         ),
-        SizedBox(height: Constants.heightButton),
+        SizedBox(height: DimenConstants.heightButton),
         Text(
           "Title",
-          style: TextStyle(color: Colors.grey, fontSize: Constants.txtMedium),
+          style:
+              TextStyle(color: Colors.grey, fontSize: DimenConstants.txtMedium),
         ),
-        SizedBox(height: Constants.marginPaddingSmall),
+        SizedBox(height: DimenConstants.marginPaddingSmall),
         TextField(
           textInputAction: TextInputAction.next,
           keyboardType: TextInputType.multiline,
@@ -82,12 +85,12 @@ class AddNoteScreenState extends State<AddNoteScreen> {
           maxLength: 200,
           // en user pre
           style: TextStyle(
-            fontSize: Constants.txtMedium,
+            fontSize: DimenConstants.txtMedium,
             color: Colors.black,
           ),
           decoration: InputDecoration(
             hintStyle: TextStyle(
-              fontSize: Constants.txtMedium,
+              fontSize: DimenConstants.txtMedium,
               color: Colors.grey,
             ),
             hintText: "Type title",
@@ -100,12 +103,13 @@ class AddNoteScreenState extends State<AddNoteScreen> {
             _controllerNoteAdd.setTitle(string);
           }, // / ill adapt to it
         ),
-        SizedBox(height: Constants.heightButton),
+        SizedBox(height: DimenConstants.heightButton),
         Text(
           "Content",
-          style: TextStyle(color: Colors.grey, fontSize: Constants.txtMedium),
+          style:
+              TextStyle(color: Colors.grey, fontSize: DimenConstants.txtMedium),
         ),
-        SizedBox(height: Constants.marginPaddingSmall),
+        SizedBox(height: DimenConstants.marginPaddingSmall),
         TextField(
           // textInputAction: TextInputAction.done,
           keyboardType: TextInputType.multiline,
@@ -115,7 +119,7 @@ class AddNoteScreenState extends State<AddNoteScreen> {
           // wh
           decoration: InputDecoration(
             hintStyle: TextStyle(
-              fontSize: Constants.txtMedium,
+              fontSize: DimenConstants.txtMedium,
               color: Colors.grey,
             ),
             hintText: "Type content",

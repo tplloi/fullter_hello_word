@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
@@ -165,7 +165,7 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
       child: Text(
         label,
         style: TextStyle(
-          fontSize: Constants.txtLarge,
+          fontSize: DimenConstants.txtLarge,
           fontWeight: FontWeight.bold,
           color: Colors.red,
         ),

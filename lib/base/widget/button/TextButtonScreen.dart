@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class TextButtonScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
             // onSurface: Colors.grey,
             textStyle: TextStyle(
               // color: Colors.red,
-              fontSize: Constants.txtMedium,
+              fontSize: DimenConstants.txtMedium,
               fontStyle: FontStyle.italic,
             ),
             elevation: 5,

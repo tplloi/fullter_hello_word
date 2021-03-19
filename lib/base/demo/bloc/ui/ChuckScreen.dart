@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/demo/bloc/ui/ErrorRetryWidget.dart';
 import 'package:hello_word/base/demo/bloc/ui/LoadingWidget.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
@@ -155,7 +155,7 @@ class ChuckWidget extends StatelessWidget {
                   chuck.value,
                   style: TextStyle(
                       color: Colors.red,
-                      fontSize: Constants.txtMedium,
+                      fontSize: DimenConstants.txtMedium,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'Roboto'),
                 ),

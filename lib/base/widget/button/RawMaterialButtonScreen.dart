@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class RawMaterialButtonScreen extends StatelessWidget {
@@ -16,9 +16,9 @@ class RawMaterialButtonScreen extends StatelessWidget {
       body: Center(
         child: RawMaterialButton(
           padding: EdgeInsets.fromLTRB(
-            Constants.marginPaddingMedium,
+            DimenConstants.marginPaddingMedium,
             0,
-            Constants.marginPaddingMedium,
+            DimenConstants.marginPaddingMedium,
             0,
           ),
           onPressed: () {},

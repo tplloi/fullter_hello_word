@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 
 class UIUtils {
   //TODO add onPressCodeGitPubdev
@@ -57,7 +58,7 @@ class UIUtils {
         primary: Colors.white70, //bkg color
         onPrimary: Colors.black, //text color
         shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(Constants.radiusMedium),
+          borderRadius: new BorderRadius.circular(DimenConstants.radiusMedium),
         ),
       ),
 
@@ -65,7 +66,7 @@ class UIUtils {
         text,
         style: TextStyle(
           // color: Colors.black,
-          fontSize: Constants.txtMedium,
+          fontSize: DimenConstants.txtMedium,
         ),
       ),
       // color: Colors.white70,
@@ -90,7 +91,7 @@ class UIUtils {
           color: Colors.red,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Constants.radiusRound),
+          borderRadius: BorderRadius.circular(DimenConstants.radiusRound),
         ),
       ),
     );
@@ -106,7 +107,7 @@ class UIUtils {
   TextStyle getStyleText() {
     return TextStyle(
       color: Colors.black,
-      fontSize: Constants.txtMedium,
+      fontSize: DimenConstants.txtMedium,
     );
   }
 
@@ -248,15 +249,15 @@ class UIUtils {
         return Center(
           child: Container(
             width: 300,
-            margin: EdgeInsets.all(Constants.marginPaddingMedium),
+            margin: EdgeInsets.all(DimenConstants.marginPaddingMedium),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(Constants.radiusMedium),
+              borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(height: Constants.marginPaddingMedium),
+                SizedBox(height: DimenConstants.marginPaddingMedium),
                 AvatarGlow(
                   glowColor: Colors.green,
                   endRadius: 60,
@@ -280,14 +281,14 @@ class UIUtils {
                     color: Color(0xff232426),
                   ),
                 ),
-                SizedBox(height: Constants.radiusMedium),
+                SizedBox(height: DimenConstants.radiusMedium),
                 Divider(
                   color: Color(0xffC8C8CA),
                   height: 1,
                 ),
                 Container(
                   width: double.infinity,
-                  height: Constants.heightButton,
+                  height: DimenConstants.heightButton,
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.fromLTRB(15, 0, 15, 0),

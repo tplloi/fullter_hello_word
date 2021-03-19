@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
-import 'ChuckScreen.dart';
 import '../block/CategoriesBloc.dart';
 import '../model/Categories.dart';
 import '../service/AppResponse.dart';
+import 'ChuckScreen.dart';
 import 'ErrorRetryWidget.dart';
 import 'LoadingWidget.dart';
 
@@ -80,8 +80,8 @@ class CategoriesWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: Constants.marginPaddingMedium,
-            vertical: Constants.marginPaddingMedium,
+            horizontal: DimenConstants.marginPaddingMedium,
+            vertical: DimenConstants.marginPaddingMedium,
           ),
           child: InkWell(
             onTap: () {
@@ -102,10 +102,11 @@ class CategoriesWidget extends StatelessWidget {
                   child: Text(
                     listCategory.categories[index],
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: Constants.txtMedium,
-                        fontWeight: FontWeight.w100,
-                        fontFamily: 'Roboto'),
+                      color: Colors.white,
+                      fontSize: DimenConstants.txtMedium,
+                      fontWeight: FontWeight.w100,
+                      fontFamily: 'Roboto',
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),

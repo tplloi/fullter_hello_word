@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CustomAnimation.dart';
@@ -102,7 +102,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       Get.to(TestPage()),
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("Dismiss"),
                     onPressed: () async {
@@ -111,7 +111,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       print("EasyLoading dismiss");
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("show"),
                     onPressed: () async {
@@ -123,7 +123,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       print('EasyLoading show');
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("showToast"),
                     onPressed: () {
@@ -133,7 +133,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       );
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("showSuccess"),
                     onPressed: () async {
@@ -142,7 +142,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       print("EasyLoading showSuccess");
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("showError"),
                     onPressed: () {
@@ -150,7 +150,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       EasyLoading.showError("Failed with Error");
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("showInfo"),
                     onPressed: () {
@@ -158,7 +158,7 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
                       EasyLoading.showInfo("Useful Information.");
                     },
                   ),
-                  SizedBox(width: Constants.marginPaddingMedium),
+                  SizedBox(width: DimenConstants.marginPaddingMedium),
                   TextButton(
                     child: Text("showProgress"),
                     onPressed: () {
