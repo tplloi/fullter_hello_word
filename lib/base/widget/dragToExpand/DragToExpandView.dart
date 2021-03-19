@@ -2,6 +2,7 @@ import 'package:drag_to_expand/drag_to_expand.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/base/common/const/Constants.dart';
 import 'package:hello_word/base/common/const/DimenConstants.dart';
 import 'package:hello_word/base/core/BaseStatefulState.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
@@ -55,15 +56,15 @@ class _SupportViewState extends BaseStatefulState {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 UIUtils().getButton(
-                  "Open",
+                  "Open Bottom",
                   () => {_dragToExpandControllerBottom.isOpened = true},
                 ),
                 UIUtils().getButton(
-                  "Close",
+                  "Close Bottom",
                   () => {_dragToExpandControllerBottom.isOpened = false},
                 ),
                 UIUtils().getButton(
-                  "Toggle",
+                  "Toggle Bottom",
                   () => {_dragToExpandControllerBottom.toggle()},
                 ),
               ],
@@ -129,6 +130,9 @@ class _SupportViewState extends BaseStatefulState {
       ),
       child: Container(
         color: bkgColor,
+        child: Image.network(
+          Constants.dummyImageLink,
+        ),
       ),
       clipOverflow: true,
       animationDuration: 500,
