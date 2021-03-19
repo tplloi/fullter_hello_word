@@ -14,6 +14,7 @@ import 'checkBox/RadioButtonScreen2.dart';
 import 'cupertino/MenuCupertinoScreen.dart';
 import 'dataTable/DataTableScreen.dart';
 import 'dialog/DialogScreen.dart';
+import 'dragToExpand/DragToExpandView.dart';
 import 'drawer/MenuDrawerScreen.dart';
 import 'easyLoading/EasyLoadingScreen.dart';
 import 'editText/MenuEditTextScreen.dart';
@@ -135,6 +136,12 @@ class MenuWidgetScreen extends StatelessWidget {
             "DialogScreen",
             () => {
               Get.to(DialogScreen()),
+            },
+          ),
+          UIUtils().getButton(
+            "DragToExpandView",
+            () => {
+              Get.to(DragToExpandView()),
             },
           ),
           UIUtils().getButton(
