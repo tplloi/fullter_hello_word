@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/DimenConstants.dart';
+import 'package:hello_word/base/common/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 import 'CustomAnimation.dart';

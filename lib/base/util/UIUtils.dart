@@ -2,8 +2,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
-import 'package:hello_word/base/const/DimenConstants.dart';
+import 'package:hello_word/base/common/const/DimenConstants.dart';
 
 class UIUtils {
   //TODO add onPressCodeGitPubdev

@@ -1,7 +1,7 @@
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/common/const/Constants.dart';
 import 'package:hello_word/base/demo/pdf/PDFViewerScreen.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 

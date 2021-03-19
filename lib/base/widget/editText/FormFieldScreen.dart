@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class FormFieldScreen extends StatefulWidget {
@@ -70,8 +69,8 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                       onSaved: (value) => email = value,
                     ),
                     SizedBox(height: 10),
-                    UIUtils().getButton(
-                        "Validate input", () => validateInputs()),
+                    UIUtils()
+                        .getButton("Validate input", () => validateInputs()),
                   ],
                 ),
               )

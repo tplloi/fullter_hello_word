@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/DimenConstants.dart';
+import 'package:hello_word/base/common/const/DimenConstants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class LoadLocalJsonScreen extends StatefulWidget {

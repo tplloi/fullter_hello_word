@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
-import 'package:hello_word/base/const/DimenConstants.dart';
+import 'package:hello_word/base/common/const/DimenConstants.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/base/demo/todo/controller/ControllerNoteAdd.dart';
 import 'package:hello_word/base/demo/todo/model/Note.dart';

@@ -1,12 +1,8 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
-import 'package:hello_word/base/util/UrlLauncherUtils.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class FocusDetectorScreen extends StatelessWidget {
   @override

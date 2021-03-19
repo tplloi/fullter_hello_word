@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/common/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class InkwellScreen extends StatelessWidget {

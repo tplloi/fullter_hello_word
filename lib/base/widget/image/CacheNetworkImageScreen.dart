@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/const/Constants.dart';
+import 'package:hello_word/base/common/const/Constants.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
 class CacheNetworkImageScreen extends StatelessWidget {
@@ -27,7 +27,8 @@ class CacheNetworkImageScreen extends StatelessWidget {
           image: DecorationImage(
               image: imageProvider,
               fit: BoxFit.none,
-              colorFilter: ColorFilter.mode(Colors.transparent, BlendMode.colorBurn)),
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.colorBurn)),
         ),
       ),
       placeholder: (context, url) => CircularProgressIndicator(),
