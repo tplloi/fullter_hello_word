@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/util/LLog.dart';
+import 'package:hello_word/base/util/LogDogUtil.dart';
 
 import 'MenuScreen.dart';
 import 'base/common/const/Constants.dart';
@@ -36,13 +37,10 @@ void main() {
 }
 
 void testLogger() {
-  LLog.instance.logger.d("testLogger");
-  LLog.instance.logger.e("testLogger");
-  LLog.instance.logger.v("testLogger");
-  LLog.instance.logger.i("testLogger");
-  LLog.instance.loggerNoStack.d("testLogger");
-  LLog.instance.loggerNoStack.v("testLogger");
-  LLog.instance.loggerNoStack.e("testLogger");
+  Dog.d("testLogger");
+  Dog.e("testLogger");
+  Dog.v("testLogger");
+  Dog.i("testLogger");
 }
 
 class SplashScreen extends StatefulWidget {
