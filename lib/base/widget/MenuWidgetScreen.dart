@@ -28,6 +28,7 @@ import 'interactiveViewer/UsingInteractiveViewerScreen.dart';
 import 'layout/MenuLayoutScreen.dart';
 import 'list/MenuListScreen.dart';
 import 'md2TabIndicator/Md2TabIndicatorScreen.dart';
+import 'menuHorizontalDataTable/MenuHorizontalDataTableScreen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';
@@ -180,12 +181,6 @@ class MenuWidgetScreen extends StatelessWidget {
             },
           ),
           UIUtils().getButton(
-            "HorizontalDataTableScreen",
-            () => {
-              Get.to(HorizontalDataTableScreen()),
-            },
-          ),
-          UIUtils().getButton(
             "MenuImageScreen",
             () => {
               Get.to(MenuImageScreen()),
@@ -217,8 +212,14 @@ class MenuWidgetScreen extends StatelessWidget {
           ),
           UIUtils().getButton(
             "MD2TabIndicatorScreen",
-                () => {
+            () => {
               Get.to(MD2TabIndicatorScreen()),
+            },
+          ),
+          UIUtils().getButton(
+            "MenuHorizontalDataTableScreen",
+            () => {
+              Get.to(MenuHorizontalDataTableScreen()),
             },
           ),
           UIUtils().getButton(
