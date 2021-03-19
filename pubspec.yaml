@@ -57,6 +57,7 @@ dependencies:
   intl: ^0.17.0 #https://pub.dev/packages/intl
   horizontal_data_table: ^2.5.2 #https://pub.dev/packages/horizontal_data_table
   md2_tab_indicator: ^1.0.2 #https://pub.dev/packages/md2_tab_indicator
+  drag_to_expand: ^0.0.1 #https://pub.dev/packages/drag_to_expand
 
 dev_dependencies:
   flutter_test:

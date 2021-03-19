@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/base/util/UIUtils.dart';
 
+import 'advance/BookingView.dart';
 import 'simple/HorizontalDataTableScreen.dart';
 
 class MenuHorizontalDataTableScreen extends StatelessWidget {
@@ -19,8 +20,14 @@ class MenuHorizontalDataTableScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         children: [
           UIUtils().getButton(
-            "HorizontalDataTableScreen",
+            "BookingView",
             () => {
+              Get.to(BookingView()),
+            },
+          ),
+          UIUtils().getButton(
+            "HorizontalDataTableScreen",
+                () => {
               Get.to(HorizontalDataTableScreen()),
             },
           ),

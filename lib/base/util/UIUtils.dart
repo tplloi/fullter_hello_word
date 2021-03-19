@@ -228,7 +228,7 @@ class UIUtils {
     Get.snackbar(
       title, // title
       message, // message
-      barBlur: 20,
+      // barBlur: 20,
       isDismissible: true,
       duration: Duration(seconds: 3),
     );
