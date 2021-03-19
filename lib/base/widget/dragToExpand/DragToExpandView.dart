@@ -13,16 +13,25 @@ class DragToExpandView extends StatefulWidget {
 
 class _SupportViewState extends BaseStatefulState {
   DragToExpandController _dragToExpandControllerLeft;
+  DragToExpandController _dragToExpandControllerTop;
+  DragToExpandController _dragToExpandControllerRight;
+  DragToExpandController _dragToExpandControllerBottom;
 
   @override
   void initState() {
     _dragToExpandControllerLeft = DragToExpandController();
+    _dragToExpandControllerTop = DragToExpandController();
+    _dragToExpandControllerRight = DragToExpandController();
+    _dragToExpandControllerBottom = DragToExpandController();
     super.initState();
   }
 
   @override
   void dispose() {
     _dragToExpandControllerLeft?.dispose();
+    _dragToExpandControllerTop?.dispose();
+    _dragToExpandControllerRight?.dispose();
+    _dragToExpandControllerBottom?.dispose();
     super.dispose();
   }
 
@@ -47,6 +56,18 @@ class _SupportViewState extends BaseStatefulState {
             _dragToExpandControllerLeft,
             BaseSide.left,
           ),
+          _buildDragToExpandView(
+            _dragToExpandControllerTop,
+            BaseSide.top,
+          ),
+          _buildDragToExpandView(
+            _dragToExpandControllerRight,
+            BaseSide.right,
+          ),
+          _buildDragToExpandView(
+            _dragToExpandControllerBottom,
+            BaseSide.bottom,
+          ),
         ],
       ),
     );
@@ -57,7 +78,7 @@ class _SupportViewState extends BaseStatefulState {
     return DragToExpand(
       controller: dragToExpandController,
       minSize: 0,
-      maxSize: MediaQuery.of(context).size.height * 0.3,
+      maxSize: MediaQuery.of(context).size.height * 0.2,
       baseSide: baseSide,
       toggleOnTap: true,
       draggable: Center(
