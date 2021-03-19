@@ -86,8 +86,32 @@ class _SupportViewState extends BaseStatefulState {
             maxSize: MediaQuery.of(context).size.height * 0.3,
             baseSide: BaseSide.bottom,
             toggleOnTap: true,
-            draggable: Center(child: Text('drag to open')),
-            draggableWhenOpened: Center(child: Text('close')),
+            draggable: Center(
+              child: Container(
+                color: Colors.red,
+                padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+                child: Text(
+                  "Drag to open",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ),
+            draggableWhenOpened: Center(
+              child: Container(
+                color: Colors.green,
+                padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+                child: Text(
+                  "Drag to close",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ),
             child: Container(color: Colors.yellow),
             clipOverflow: true,
             animationDuration: 500,
@@ -519,8 +543,8 @@ class _SupportViewState extends BaseStatefulState {
             width: widthItem - 1,
             height: heightItem,
             alignment: Alignment.center,
-            child: Image.asset("assets/images/ic_lock.png",
-                width: 15, height: 15),
+            child:
+                Image.asset("assets/images/ic_lock.png", width: 15, height: 15),
           ),
           UIUtils.buildVerticalDivider(Color(0xff5B6CA4), heightItem),
         ],
