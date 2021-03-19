@@ -55,18 +55,22 @@ class _SupportViewState extends BaseStatefulState {
           _buildDragToExpandView(
             _dragToExpandControllerLeft,
             BaseSide.left,
+            Colors.brown,
           ),
           _buildDragToExpandView(
             _dragToExpandControllerTop,
             BaseSide.top,
+            Colors.pink,
           ),
           _buildDragToExpandView(
             _dragToExpandControllerRight,
             BaseSide.right,
+            Colors.white60,
           ),
           _buildDragToExpandView(
             _dragToExpandControllerBottom,
             BaseSide.bottom,
+            Colors.black26,
           ),
         ],
       ),
@@ -74,7 +78,10 @@ class _SupportViewState extends BaseStatefulState {
   }
 
   Widget _buildDragToExpandView(
-      DragToExpandController dragToExpandController, BaseSide baseSide) {
+    DragToExpandController dragToExpandController,
+    BaseSide baseSide,
+    Color bkgColor,
+  ) {
     return DragToExpand(
       controller: dragToExpandController,
       minSize: 0,
@@ -103,7 +110,9 @@ class _SupportViewState extends BaseStatefulState {
           ),
         ),
       ),
-      child: Container(color: Colors.yellow),
+      child: Container(
+        color: bkgColor,
+      ),
       clipOverflow: true,
       animationDuration: 500,
     );
