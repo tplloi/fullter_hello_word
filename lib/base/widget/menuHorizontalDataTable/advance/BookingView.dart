@@ -8,10 +8,10 @@ import 'package:hello_word/base/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
 import 'ControllerBook.dart';
-import 'DummyFloor.dart';
-import 'DummyHeaderDescription.dart';
-import 'DummyHouse.dart';
-import 'DummyModelIndicator.dart';
+import 'model/DummyFloor.dart';
+import 'model/DummyHeaderDescription.dart';
+import 'model/DummyHouse.dart';
+import 'model/DummyModelIndicator.dart';
 import 'indicator/MD2Indicator.dart';
 import 'indicator/MD2IndicatorSize.dart';
 
