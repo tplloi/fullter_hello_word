@@ -51,6 +51,23 @@ class _SupportViewState extends BaseStatefulState {
             color: Colors.blueGrey,
             width: double.infinity,
             height: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                UIUtils().getButton(
+                  "Open",
+                  () => {_dragToExpandControllerBottom.isOpened = true},
+                ),
+                UIUtils().getButton(
+                  "Close",
+                  () => {_dragToExpandControllerBottom.isOpened = false},
+                ),
+                UIUtils().getButton(
+                  "Toggle",
+                  () => {_dragToExpandControllerBottom.toggle()},
+                ),
+              ],
+            ),
           ),
           _buildDragToExpandView(
             _dragToExpandControllerLeft,
