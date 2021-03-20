@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/base/util/LogDogUtils.dart';
 
 import 'MenuScreen.dart';
-import 'base/common/const/Constants.dart';
+import 'lib/common/const/Constants.dart';
+import 'lib/util/LogDogUtils.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
