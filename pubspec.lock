@@ -317,6 +317,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.1"
+  kenburns:
+    dependency: "direct main"
+    description:
+      name: kenburns
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.5"
   logger:
     dependency: "direct main"
     description:

@@ -6,6 +6,7 @@ import 'AvatarGlowScreen.dart';
 import 'CacheNetworkImageScreen.dart';
 import 'GradientScreen.dart';
 import 'ImageScreen.dart';
+import 'KenburnViewScreen.dart';
 
 class MenuImageScreen extends StatelessWidget {
   @override
@@ -13,7 +14,8 @@ class MenuImageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuImageScreen",
-        () => {
+            () =>
+        {
           Get.back(),
         },
         null,
@@ -24,22 +26,31 @@ class MenuImageScreen extends StatelessWidget {
           children: <Widget>[
             UIUtils.getButton(
               "AvatarGlowScreen",
-              () => {Get.to(AvatarGlowScreen())},
+                  () => {Get.to(AvatarGlowScreen())},
             ),
             UIUtils.getButton(
               "CacheNetworkImageScreen +++",
-              () => {Get.to(CacheNetworkImageScreen())},
+                  () => {Get.to(CacheNetworkImageScreen())},
             ),
             UIUtils.getButton(
               "GradientScreen",
-              () => {
+                  () =>
+              {
                 Get.to(GradientScreen()),
               },
             ),
             UIUtils.getButton(
               "ImageScreen",
-              () => {
+                  () =>
+              {
                 Get.to(ImageScreen()),
+              },
+            ),
+            UIUtils.getButton(
+              "KenburnsViewScreen",
+                  () =>
+              {
+                Get.to(KenburnsViewScreen()),
               },
             ),
           ],

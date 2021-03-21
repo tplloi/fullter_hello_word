@@ -22,13 +22,13 @@ import 'expanded/ExpandedScreen.dart';
 import 'expansion/MenuExpansionScreen.dart';
 import 'gesture/GestureScreen.dart';
 import 'grid/MenuGridScreen.dart';
-import 'image/MenuImageScreen.dart';
 import 'inkwell/InkwellScreen.dart';
 import 'interactiveViewer/UsingInteractiveViewerScreen.dart';
 import 'layout/MenuLayoutScreen.dart';
 import 'list/MenuListScreen.dart';
 import 'md2TabIndicator/Md2TabIndicatorScreen.dart';
 import 'menuHorizontalDataTable/MenuHorizontalDataTableScreen.dart';
+import 'menuImage/MenuImageScreen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';
@@ -187,12 +187,6 @@ class MenuWidgetScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
-            "MenuImageScreen",
-            () => {
-              Get.to(MenuImageScreen()),
-            },
-          ),
-          UIUtils.getButton(
             "InkwellScreen",
             () => {
               Get.to(InkwellScreen()),
@@ -226,6 +220,12 @@ class MenuWidgetScreen extends StatelessWidget {
             "MenuHorizontalDataTableScreen",
             () => {
               Get.to(MenuHorizontalDataTableScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "MenuImageScreen",
+            () => {
+              Get.to(MenuImageScreen()),
             },
           ),
           UIUtils.getButton(
