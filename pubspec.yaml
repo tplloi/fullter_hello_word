@@ -41,7 +41,7 @@ dependencies:
   sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
   path_provider: ^1.6.28 #https://pub.dev/packages/path_provider
   scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
-  url_launcher: ^5.7.10 #https://pub.dev/packages/url_launcher
+  url_launcher: ^6.0.2 #https://pub.dev/packages/url_launcher
   crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
   encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
   focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
