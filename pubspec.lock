@@ -208,7 +208,7 @@ packages:
       name: flutter_easyloading
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.2"
+    version: "3.0.0"
   flutter_native_splash:
     dependency: "direct main"
     description:
@@ -229,7 +229,7 @@ packages:
       name: flutter_spinkit
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.1.2+1"
+    version: "5.0.0"
   flutter_swiper:
     dependency: "direct main"
     description:
@@ -751,4 +751,4 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.12.0 <3.0.0"
-  flutter: ">=1.24.0-10"
+  flutter: ">=2.0.0"
