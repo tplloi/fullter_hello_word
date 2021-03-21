@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/util/UrlLauncherUtils.dart';
 
 import 'lib/util/UIUtils.dart';
 import 'sample/animation/MenuAnimationScreen.dart';
@@ -14,11 +15,12 @@ class MenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-          "Main menu",
-          () => {
-                SystemNavigator.pop(),
-              },
-          null),
+        "Main menu",
+        () => {
+          SystemNavigator.pop(),
+        },
+        null,
+      ),
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: [
@@ -50,6 +52,18 @@ class MenuScreen extends StatelessWidget {
             "Widget",
             () => {
               Get.to(MenuWidgetScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Github",
+                () => {
+              UrlLauncherUtils.launchInBrowser("https://github.com/tplloi/fullter_hello_word"),
+            },
+          ),
+          UIUtils.getButton(
+            "More app",
+                () => {
+              UrlLauncherUtils.launchInBrowser("https://play.google.com/store/apps/dev?id=6295678835392563583"),
             },
           ),
         ],
