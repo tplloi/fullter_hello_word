@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 import 'dart:async';
 
 import 'package:multi_image_picker/multi_image_picker.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
+class ImagePickerScreen extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _ImagePickerScreenState createState() => _ImagePickerScreenState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _ImagePickerScreenState extends State<ImagePickerScreen> {
   List<Asset> images = <Asset>[];
-  String _error = 'No Error Dectected';
+  String _error = "No Error Dectected";
 
   @override
   void initState() {
@@ -70,12 +70,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
+        appBar: UIUtils.getAppBar(
+          "ImagePickerScreen",
+          () => {
+            Get.back(),
+          },
+          () => null,
         ),
         body: Column(
           children: <Widget>[
-            Center(child: Text('Error: $_error')),
+            Center(child: Text("Error: $_error")),
             ElevatedButton(
               child: Text("Pick images"),
               onPressed: loadAssets,

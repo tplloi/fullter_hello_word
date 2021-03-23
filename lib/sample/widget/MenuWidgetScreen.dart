@@ -30,6 +30,7 @@ import 'md2TabIndicator/Md2TabIndicatorScreen.dart';
 import 'menuHorizontalDataTable/MenuHorizontalDataTableScreen.dart';
 import 'menuImage/MenuImageScreen.dart';
 import 'picker/DayPickerScreen.dart';
+import 'picker/imagePicker/ImagePickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';
 import 'slider/MenuSliderScreen.dart';
@@ -232,6 +233,12 @@ class MenuWidgetScreen extends StatelessWidget {
             "DayPickerScreen",
             () => {
               Get.to(DayPickerScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "ImagePickerScreen",
+                () => {
+              Get.to(ImagePickerScreen()),
             },
           ),
           UIUtils.getButton(
