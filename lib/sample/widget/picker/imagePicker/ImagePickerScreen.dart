@@ -11,7 +11,7 @@ class ImagePickerScreen extends StatefulWidget {
 }
 
 class _ImagePickerScreenState extends State<ImagePickerScreen> {
-  List<Asset> images = <Asset>[];
+  List<Asset> _listImage = <Asset>[];
   String _error = "No Error Dectected";
 
   @override
@@ -22,8 +22,8 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
   Widget buildGridView() {
     return GridView.count(
       crossAxisCount: 3,
-      children: List.generate(images.length, (index) {
-        Asset asset = images[index];
+      children: List.generate(_listImage.length, (index) {
+        Asset asset = _listImage[index];
         return AssetThumb(
           asset: asset,
           width: 300,
@@ -35,20 +35,20 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
 
   Future<void> loadAssets() async {
     List<Asset> resultList = <Asset>[];
-    String error = 'No Error Detected';
+    String error = "No Error Detected";
 
     try {
       resultList = await MultiImagePicker.pickImages(
-        maxImages: 5,
+        maxImages: 9,
         enableCamera: true,
-        selectedAssets: images,
+        selectedAssets: _listImage,
         cupertinoOptions: CupertinoOptions(takePhotoIcon: "chat"),
         materialOptions: MaterialOptions(
-          actionBarColor: "#abcdef",
-          actionBarTitle: "Example App",
+          actionBarColor: "#ff0000",
+          actionBarTitle: "This is actionBarTitle",
           allViewTitle: "All Photos",
-          useDetailsView: false,
-          selectCircleStrokeColor: "#000000",
+          useDetailsView: true,
+          selectCircleStrokeColor: "#00ff00",
         ),
       );
     } on Exception catch (e) {
@@ -61,7 +61,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
     if (!mounted) return;
 
     setState(() {
-      images = resultList;
+      _listImage = resultList;
       _error = error;
     });
   }
