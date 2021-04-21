@@ -5,8 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'MenuScreen.dart';
-import 'lib/common/const/Constants.dart';
 import 'lib/util/LogDogUtils.dart';
+
+//build: flutter build appbundle
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
