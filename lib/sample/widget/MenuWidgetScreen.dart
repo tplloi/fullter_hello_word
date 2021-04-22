@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
@@ -59,6 +60,7 @@ class MenuWidgetScreen extends StatelessWidget {
         null,
       ),
       body: ListView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         physics: BouncingScrollPhysics(),
         children: [
           UIUtils.getButton(
@@ -237,7 +239,7 @@ class MenuWidgetScreen extends StatelessWidget {
           ),
           UIUtils.getButton(
             "ImagePickerScreen",
-                () => {
+            () => {
               Get.to(ImagePickerScreen()),
             },
           ),

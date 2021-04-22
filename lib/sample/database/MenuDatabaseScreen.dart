@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'sharedPreferences/SharedPreferencesScreen.dart';
@@ -16,24 +17,23 @@ class MenuDatabaseScreen extends StatelessWidget {
         },
         null,
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            UIUtils.getButton(
-              "SharedPreferencesScreen",
-              () => {
-                Get.to(SharedPreferencesScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "SQLiteDemoScreen",
-              () => {
-                Get.to(SQLiteDemoScreen()),
-              },
-            ),
-          ],
-        ),
+      body: ListView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        children: [
+          UIUtils.getButton(
+            "SharedPreferencesScreen",
+            () => {
+              Get.to(SharedPreferencesScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "SQLiteDemoScreen",
+            () => {
+              Get.to(SQLiteDemoScreen()),
+            },
+          ),
+        ],
       ),
     );
   }

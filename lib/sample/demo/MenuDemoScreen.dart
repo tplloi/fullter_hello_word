@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:hello_word/sample/demo/pdf/ViewPDFFileScreen.dart';
 import 'package:hello_word/sample/demo/shop/ShopScreen.dart';
@@ -24,17 +25,17 @@ class MenuDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils.getAppBar(
-        "Demo menu",
-        () => {
-          Get.back(),
-        },
-        null,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+        appBar: UIUtils.getAppBar(
+          "Demo menu",
+          () => {
+            Get.back(),
+          },
+          null,
+        ),
+        body: ListView(
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+          physics: BouncingScrollPhysics(),
+          children: [
             UIUtils.getButton(
               "Async",
               () => {
@@ -138,8 +139,6 @@ class MenuDemoScreen extends StatelessWidget {
               },
             ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }
