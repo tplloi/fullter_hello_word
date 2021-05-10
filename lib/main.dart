@@ -8,7 +8,6 @@ import 'MenuScreen.dart';
 import 'lib/util/LogDogUtils.dart';
 
 //build: flutter build appbundle
-
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
