@@ -37,8 +37,8 @@ dependencies:
   sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
   #scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
   url_launcher: ^6.0.3 #https://pub.dev/packages/url_launcher
-
-
+  focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
+  webview_flutter: ^2.0.6 #https://pub.dev/packages/webview_flutter
 
   #can upgrade
   cached_network_image: ^2.5.1 #https://pub.dev/packages/cached_network_image
@@ -47,6 +47,7 @@ dependencies:
   basic_utils: ^2.7.1 #https://pub.dev/packages/basic_utils
   encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
   shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences
+  crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
 
   #none null safety
   #advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
@@ -64,10 +65,10 @@ dependencies:
 
 
 
-  crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
 
-  focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
-  webview_flutter: ^2.0.2 #https://pub.dev/packages/webview_flutter
+
+
+
   shimmer: ^1.1.2 #https://pub.dev/packages/shimmer
   animated_text_kit: ^4.0.0 #https://pub.dev/packages/animated_text_kit
   logger: ^1.0.0 #https://pub.dev/packages/logger
