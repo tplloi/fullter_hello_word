@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/sample/widget/chart/ChartScreen.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
 import 'bottomBar/MenuBottomBarScreen.dart';
@@ -30,7 +31,6 @@ import 'md2TabIndicator/Md2TabIndicatorScreen.dart';
 import 'menuHorizontalDataTable/MenuHorizontalDataTableScreen.dart';
 import 'menuImage/MenuImageScreen.dart';
 import 'picker/DayPickerScreen.dart';
-import 'picker/imagePicker/ImagePickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';
 import 'slider/MenuSliderScreen.dart';
@@ -94,7 +94,7 @@ class MenuWidgetScreen extends StatelessWidget {
           UIUtils.getButton(
             "ChartScreen",
             () => {
-              Get.to(CardScreen()),
+              Get.to(ChartScreen()),
             },
           ),
           UIUtils.getButton(
@@ -227,12 +227,6 @@ class MenuWidgetScreen extends StatelessWidget {
             "DayPickerScreen",
             () => {
               Get.to(DayPickerScreen()),
-            },
-          ),
-          UIUtils.getButton(
-            "ImagePickerScreen",
-            () => {
-              Get.to(ImagePickerScreen()),
             },
           ),
           UIUtils.getButton(

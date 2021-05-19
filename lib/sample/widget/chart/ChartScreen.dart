@@ -83,7 +83,7 @@ class LineCharts extends StatelessWidget {
             bottomTitles: SideTitles(
                 showTitles: true,
                 reservedSize: 5,
-                textStyle: yearTextStyle,
+                // textStyle: yearTextStyle,
                 getTitles: (value) {
                   switch (value.toInt()) {
                     case 0:
