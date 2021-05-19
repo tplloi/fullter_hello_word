@@ -39,7 +39,6 @@ import 'stack/StackScreen.dart';
 import 'state/StatefulWidgetDemoScreen.dart';
 import 'state/StatelessWidgetDemoScreen.dart';
 import 'stepper/StepperScreen.dart';
-import 'swiper/SwiperScreen.dart';
 import 'switch/SwitchScreen.dart';
 import 'tabPageSelector/TabPageSelectorScreen.dart';
 import 'table/TableScreen.dart';
@@ -283,12 +282,6 @@ class MenuWidgetScreen extends StatelessWidget {
             "StepperScreen",
             () => {
               Get.to(StepperScreen()),
-            },
-          ),
-          UIUtils.getButton(
-            "SwiperScreen",
-            () => {
-              Get.to(SwiperScreen()),
             },
           ),
           UIUtils.getButton(
