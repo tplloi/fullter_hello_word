@@ -36,6 +36,9 @@ dependencies:
   english_words: ^4.0.0 #https://pub.dev/packages/english_words
   sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
   #scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
+  url_launcher: ^6.0.3 #https://pub.dev/packages/url_launcher
+
+
 
   #can upgrade
   cached_network_image: ^2.5.1 #https://pub.dev/packages/cached_network_image
@@ -60,7 +63,7 @@ dependencies:
 
 
 
-  url_launcher: ^6.0.2 #https://pub.dev/packages/url_launcher
+
   crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
 
   focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
