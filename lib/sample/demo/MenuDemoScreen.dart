@@ -14,7 +14,6 @@ import 'getx/GetXScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
 import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'network/GetHttpDataScreen.dart';
-import 'scopedModel/counterScreen/ScopedModelCounterScreen.dart';
 import 'theme/ThemeScreen.dart';
 import 'tipCalculator/TipCalculatorScreen.dart';
 import 'urlLauncher/UrlLauncherScreen.dart';
@@ -98,12 +97,6 @@ class MenuDemoScreen extends StatelessWidget {
               "GetHttpDataScreen",
               () => {
                 Get.to(GetHttpDataScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "ScopedModelCounterScreen",
-              () => {
-                Get.to(ScopedModelCounterScreen()),
               },
             ),
             UIUtils.getButton(

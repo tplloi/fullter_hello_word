@@ -34,7 +34,8 @@ dependencies:
   fl_chart: ^0.36.1 #https://pub.dev/packages/fl_chart
   #table_calendar: ^3.0.0 #https://pub.dev/packages/table_calendar
   english_words: ^4.0.0 #https://pub.dev/packages/english_words
-
+  sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
+  #scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
 
   #can upgrade
   cached_network_image: ^2.5.1 #https://pub.dev/packages/cached_network_image
@@ -42,7 +43,7 @@ dependencies:
   http: ^0.12.2 #https://pub.dev/packages/http
   basic_utils: ^2.7.1 #https://pub.dev/packages/basic_utils
   encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
-
+  shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences
 
   #none null safety
   #advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
@@ -56,9 +57,9 @@ dependencies:
 
 
 
-  shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences
-  sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
-  scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
+
+
+
   url_launcher: ^6.0.2 #https://pub.dev/packages/url_launcher
   crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
 
