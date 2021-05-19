@@ -76,9 +76,9 @@ class SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             Container(
               child: Image.network(
-                "https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png",
-                width: 200,
-                height: 200,
+                "https://flutter.dev/assets/homepage/carousel/phone_bezel-467ab8d838e5e2d2d3f347f766173ccc365220223692215416e4ce7342f2212f.png",
+                width: double.infinity,
+                height: 300,
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),

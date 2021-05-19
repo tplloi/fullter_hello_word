@@ -49,14 +49,14 @@ dependencies:
   horizontal_data_table: ^3.3.0 #https://pub.dev/packages/horizontal_data_table
 
   #can upgrade
-  cached_network_image: ^2.5.1 #https://pub.dev/packages/cached_network_image
-  path_provider: ^1.6.28 #https://pub.dev/packages/path_provider
-  http: ^0.12.2 #https://pub.dev/packages/http
-  basic_utils: ^2.7.1 #https://pub.dev/packages/basic_utils
-  encrypt: ^4.1.0 #https://pub.dev/packages/encrypt
-  shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences
-  crypto: ^2.1.5 #https://pub.dev/packages/crypto/install
-  flutter_native_splash: ^0.3.2 #https://pub.dev/packages/flutter_native_splash
+  cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image
+  path_provider: ^2.0.1 #https://pub.dev/packages/path_provider
+  http: ^0.13.3 #https://pub.dev/packages/http
+  basic_utils: ^3.1.0 #https://pub.dev/packages/basic_utils
+  encrypt: ^5.0.0 #https://pub.dev/packages/encrypt
+  crypto: ^3.0.1 #https://pub.dev/packages/crypto/install
+  flutter_native_splash: ^1.1.8+4 #https://pub.dev/packages/flutter_native_splash
+  shared_preferences: ^2.0.5 #https://pub.dev/packages/shared_preferences
 
   #none null safety
   #advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
@@ -64,7 +64,6 @@ dependencies:
   md2_tab_indicator: ^1.0.2 #https://pub.dev/packages/md2_tab_indicator
   drag_to_expand: ^0.0.1 #https://pub.dev/packages/drag_to_expand
   kenburns: ^1.0.5 #https://pub.dev/packages/kenburns
-
 
 dev_dependencies:
   flutter_test:
