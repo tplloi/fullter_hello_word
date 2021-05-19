@@ -32,6 +32,8 @@ dependencies:
   draggable_scrollbar: ^0.1.0 #https://pub.dev/packages/draggable_scrollbar
   transparent_image: ^2.0.0 #https://pub.dev/packages/transparent_image
   fl_chart: ^0.36.1 #https://pub.dev/packages/fl_chart
+  #table_calendar: ^3.0.0 #https://pub.dev/packages/table_calendar
+
 
 
   #can upgrade
@@ -50,7 +52,7 @@ dependencies:
 
 
 
-  table_calendar: ^2.3.3 #https://pub.dev/packages/table_calendar
+
   english_words: ^3.1.5 #https://pub.dev/packages/english_words
   http: ^0.12.0+1 #https://pub.dev/packages/http
   shared_preferences: ^0.5.12+4 #https://pub.dev/packages/shared_preferences

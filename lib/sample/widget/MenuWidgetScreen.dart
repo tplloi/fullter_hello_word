@@ -7,7 +7,6 @@ import 'appbar/SliverAppBarScreen.dart';
 import 'bottomBar/MenuBottomBarScreen.dart';
 import 'bottomSheet/BottomSheetScreen.dart';
 import 'button/MenuButtonScreen.dart';
-import 'calendar/CalendarScreen.dart';
 import 'card/CardScreen.dart';
 import 'checkBox/CheckBoxScreen.dart';
 import 'checkBox/RadioButtonScreen.dart';
@@ -84,12 +83,6 @@ class MenuWidgetScreen extends StatelessWidget {
             "MenuButtonScreen",
             () => {
               Get.to(MenuButtonScreen()),
-            },
-          ),
-          UIUtils.getButton(
-            "CalendarScreen",
-            () => {
-              Get.to(CalendarScreen()),
             },
           ),
           UIUtils.getButton(
