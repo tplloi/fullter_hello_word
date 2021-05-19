@@ -1,4 +1,3 @@
-import 'package:drag_to_expand/drag_to_expand.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,11 +23,9 @@ class _SupportViewState extends BaseStatefulState {
   final ControllerBook _controllerBook = Get.put(ControllerBook());
   final double widthItem = 50;
   final double heightItem = 70;
-  DragToExpandController _dragToExpandController;
 
   @override
   void initState() {
-    _dragToExpandController = DragToExpandController();
     int sizeItem = 15;
     _controllerBook.buildListDummyModelIndicator();
     _controllerBook.buildListDummyHeaderDescription(sizeItem);
@@ -38,7 +35,6 @@ class _SupportViewState extends BaseStatefulState {
 
   @override
   void dispose() {
-    _dragToExpandController?.dispose();
     super.dispose();
   }
 
@@ -79,42 +75,6 @@ class _SupportViewState extends BaseStatefulState {
                   Color(0xffF9A117), double.maxFinite),
               _getGridWidget(),
             ],
-          ),
-          DragToExpand(
-            controller: _dragToExpandController,
-            minSize: 0,
-            maxSize: MediaQuery.of(context).size.height * 0.3,
-            baseSide: BaseSide.bottom,
-            toggleOnTap: true,
-            draggable: Center(
-              child: Container(
-                color: Colors.red,
-                padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-                child: Text(
-                  "Drag to open",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400),
-                ),
-              ),
-            ),
-            draggableWhenOpened: Center(
-              child: Container(
-                color: Colors.green,
-                padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-                child: Text(
-                  "Drag to close",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400),
-                ),
-              ),
-            ),
-            child: Container(color: Colors.yellow),
-            clipOverflow: true,
-            animationDuration: 500,
           ),
         ],
       ),
