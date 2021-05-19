@@ -63,7 +63,7 @@ dependencies:
   #flutter_swiper: ^1.1.6 #https://pub.dev/packages/flutter_swiper
   #md2_tab_indicator: ^1.0.2 #https://pub.dev/packages/md2_tab_indicator
   #drag_to_expand: ^0.0.1 #https://pub.dev/packages/drag_to_expand
-  kenburns: ^1.0.5 #https://pub.dev/packages/kenburns
+  #kenburns: ^1.0.5 #https://pub.dev/packages/kenburns
 
 dev_dependencies:
   flutter_test:
