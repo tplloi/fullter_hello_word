@@ -246,7 +246,7 @@ packages:
       name: horizontal_data_table
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.5.2"
+    version: "3.3.0"
   http:
     dependency: "direct main"
     description:
@@ -442,7 +442,7 @@ packages:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.3.3"
+    version: "5.0.0"
   rxdart:
     dependency: transitive
     description:
