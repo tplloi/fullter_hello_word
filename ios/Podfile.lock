@@ -1,6 +1,4 @@
 PODS:
-  - advance_pdf_viewer (1.0.5):
-    - Flutter
   - BSGridCollectionViewLayout (1.2.5)
   - BSImagePicker (2.10.3):
     - BSGridCollectionViewLayout (= 1.2.5)
@@ -26,7 +24,6 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - advance_pdf_viewer (from `.symlinks/plugins/advance_pdf_viewer/ios`)
   - Flutter (from `Flutter`)
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
@@ -43,8 +40,6 @@ SPEC REPOS:
     - FMDB
 
 EXTERNAL SOURCES:
-  advance_pdf_viewer:
-    :path: ".symlinks/plugins/advance_pdf_viewer/ios"
   Flutter:
     :path: Flutter
   multi_image_picker:
@@ -61,7 +56,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
-  advance_pdf_viewer: 5c832f382b4ca84fe735f893b7e91aa830c27d7b
   BSGridCollectionViewLayout: 333dcb457a5a3bdd9212607ab5756553dcfe06cb
   BSImagePicker: 07404254f2fcdaf5a2eb403c0f8c337267ce8738
   BSImageView: a149459433a2687157d034c78e059d30ac7f2544

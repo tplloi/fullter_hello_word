@@ -30,11 +30,20 @@ dependencies:
 
   #null safety
   draggable_scrollbar: ^0.1.0 #https://pub.dev/packages/draggable_scrollbar
-
-  #none null safety
-  advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
   transparent_image: ^2.0.0 #https://pub.dev/packages/transparent_image
   cached_network_image: ^2.5.1 #https://pub.dev/packages/cached_network_image
+
+
+
+
+  #none null safety
+  #advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
+
+
+
+
+
+
   flutter_swiper: ^1.1.6 #https://pub.dev/packages/flutter_swiper
   fl_chart: ^0.20.1 #https://pub.dev/packages/fl_chart
   table_calendar: ^2.3.3 #https://pub.dev/packages/table_calendar

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
-import 'package:hello_word/sample/demo/pdf/ViewPDFFileScreen.dart';
 import 'package:hello_word/sample/demo/shop/ShopScreen.dart';
-
 import 'async/MenuAsyncScreen.dart';
 import 'bloc/ui/CategoriesScreen.dart';
 import 'communicationBetweenWidget/CommunicationBetweenWidgetScreen.dart';
@@ -100,12 +98,6 @@ class MenuDemoScreen extends StatelessWidget {
               "GetHttpDataScreen",
               () => {
                 Get.to(GetHttpDataScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "PDF",
-              () => {
-                Get.to(ViewPDFFileScreen()),
               },
             ),
             UIUtils.getButton(
