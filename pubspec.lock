@@ -140,7 +140,7 @@ packages:
       name: english_words
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.5"
+    version: "4.0.0"
   equatable:
     dependency: transitive
     description:
