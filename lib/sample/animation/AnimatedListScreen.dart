@@ -62,7 +62,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
 
   Widget _buildItem(String item, Animation animation, int index) {
     return SizeTransition(
-      sizeFactor: animation,
+      sizeFactor: animation as Animation<double>,
       child: Card(
         elevation: 5.0,
         child: ListTile(
@@ -94,7 +94,7 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
     }
     String item = "Item ${itemNo = itemNo + 1}";
     _data.insert(insertIndex, item);
-    _listKey.currentState.insertItem(insertIndex);
+    _listKey.currentState!.insertItem(insertIndex);
   }
 
   /// Method to remove an item at an index from the list
@@ -108,6 +108,6 @@ class _AnimatedListWidgetState extends State<AnimatedListWidget> {
       // A method to build the Card widget.
       return _buildItem(removedItem, animation, removeAt);
     };
-    _listKey.currentState.removeItem(removeIndex, builder);
+    _listKey.currentState!.removeItem(removeIndex, builder);
   }
 }

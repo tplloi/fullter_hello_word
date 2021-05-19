@@ -33,7 +33,7 @@ class Child extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     debugPrint('build');
-    Root root = Root.of(context);
+    Root root = Root.of(context)!;
     return Column(
       children: <Widget>[
         Padding(
@@ -58,18 +58,18 @@ class Child extends StatelessWidget {
 
 // Support both reading and writing
 class Root extends InheritedWidget {
-  static Root of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<Root>() as Root;
+  static Root? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<Root>() as Root?;
 
   final _InheritedWidgetScreenState state;
 
   final increment;
 
   Root({
-    Key key,
-    @required this.state,
-    @required this.increment,
-    @required Widget child,
+    Key? key,
+    required this.state,
+    required this.increment,
+    required Widget child,
   }) : super(key: key, child: child);
 
   // Determine if it needs to be updated
@@ -80,15 +80,15 @@ class Root extends InheritedWidget {
 
 // Only supports reading attributes
 class ReadOnlyRoot extends InheritedWidget {
-  static ReadOnlyRoot of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<Root>() as ReadOnlyRoot;
+  static ReadOnlyRoot? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<Root>() as ReadOnlyRoot?;
 
   final int count;
 
   ReadOnlyRoot({
-    Key key,
-    @required this.count,
-    @required Widget child,
+    Key? key,
+    required this.count,
+    required Widget child,
   }) : super(key: key, child: child);
 
   @override

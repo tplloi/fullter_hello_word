@@ -11,26 +11,26 @@ class DropDownScreen extends StatefulWidget {
 
 class DropDownScreenState extends State<DropDownScreen> {
   List listFruit = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
-  List<DropdownMenuItem<String>> listDropdownMenu;
-  String _selectedFruit;
+  List<DropdownMenuItem<String>>? listDropdownMenu;
+  String? _selectedFruit;
 
   @override
   void initState() {
     listDropdownMenu = buildAndGetDropDownMenuItems(listFruit);
-    _selectedFruit = listDropdownMenu[0].value;
+    _selectedFruit = listDropdownMenu![0].value;
     super.initState();
   }
 
   List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(List fruits) {
     List<DropdownMenuItem<String>> items = [];
-    for (String fruit in fruits) {
+    for (String fruit in fruits as Iterable<String>) {
       items.add(DropdownMenuItem(value: fruit, child: Text(fruit)));
     }
     return items;
   }
 
-  void changedDropDownItem(String selectedFruit) {
-    handleChange(selectedFruit);
+  void changedDropDownItem(String? selectedFruit) {
+    handleChange(selectedFruit!);
     setState(() {
       _selectedFruit = selectedFruit;
     });

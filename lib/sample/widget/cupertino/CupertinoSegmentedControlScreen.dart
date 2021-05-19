@@ -74,7 +74,7 @@ class CupertinoSlidingSegmentedControlWidget extends StatefulWidget {
 
 class _CupertinoSlidingSegmentedControlWidgetState
     extends State<CupertinoSlidingSegmentedControlWidget> {
-  var groupValue = 1;
+  int? groupValue = 1;
 
   @override
   Widget build(BuildContext context) {

@@ -14,7 +14,7 @@ class TabBarScreen extends StatefulWidget {
 // SingleTickerProviderStateMixin is used for animation
 class TabBarScreenState extends State<TabBarScreen>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class TabBarScreenState extends State<TabBarScreen>
 
   @override
   void dispose() {
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 

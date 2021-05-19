@@ -9,7 +9,7 @@ class SearchDelegateScreen extends StatefulWidget {
 
 class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
   final List<String> listWord;
-  MySearchDelegate mySearchDelegate;
+  late MySearchDelegate mySearchDelegate;
 
   _SearchDelegateScreenState()
       : listWord = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']
@@ -33,7 +33,7 @@ class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
             tooltip: 'Search',
             icon: const Icon(Icons.search),
             onPressed: () async {
-              final String selected = await showSearch<String>(
+              final String? selected = await showSearch<String?>(
                 context: context,
                 delegate: mySearchDelegate,
               );

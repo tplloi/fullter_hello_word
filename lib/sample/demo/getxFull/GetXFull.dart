@@ -231,7 +231,7 @@ class ControllerX extends GetxController {
 
   updateUser() {
     user.update((value) {
-      value.name = 'Jose';
+      value!.name = 'Jose';
       value.age = 30;
     });
   }
@@ -245,24 +245,24 @@ class ControllerX extends GetxController {
   /// Here is an outline of how you can use them:
 
   /// made this if you need cancel you worker
-  Worker _ever;
+  late Worker _ever;
 
   @override
   onInit() {
     /// Called every time the variable $_ is changed
-    _ever = ever(count1, (_) => print("$_ has been changed (ever)"));
+    _ever = ever(count1, (dynamic _) => print("$_ has been changed (ever)"));
 
     everAll([count1, count2], (_) => print("$_ has been changed (everAll)"));
 
     /// Called first time the variable $_ is changed
-    once(count1, (_) => print("$_ was changed once (once)"));
+    once(count1, (dynamic _) => print("$_ was changed once (once)"));
 
     /// Anti DDos - Called every time the user stops typing for 1 second, for example.
-    debounce(count1, (_) => print("debouce$_ (debounce)"),
+    debounce(count1, (dynamic _) => print("debouce$_ (debounce)"),
         time: Duration(seconds: 1));
 
     /// Ignore all changes within 1 second.
-    interval(count1, (_) => print("interval $_ (interval)"),
+    interval(count1, (dynamic _) => print("interval $_ (interval)"),
         time: Duration(seconds: 1));
   }
 
@@ -284,8 +284,8 @@ class SizeTransitions extends CustomTransition {
   @override
   Widget buildTransition(
       BuildContext context,
-      Curve curve,
-      Alignment alignment,
+      Curve? curve,
+      Alignment? alignment,
       Animation<double> animation,
       Animation<double> secondaryAnimation,
       Widget child) {
@@ -294,7 +294,7 @@ class SizeTransitions extends CustomTransition {
       child: SizeTransition(
         sizeFactor: CurvedAnimation(
           parent: animation,
-          curve: curve,
+          curve: curve!,
         ),
         child: child,
       ),

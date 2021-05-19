@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ArrowsDemo extends StatelessWidget {
   final ScrollController controller;
 
-  const ArrowsDemo({Key key, @required this.controller}) : super(key: key);
+  const ArrowsDemo({Key? key, required this.controller}) : super(key: key);
 
   final _itemExtent = 100.0;
 
@@ -12,7 +12,7 @@ class ArrowsDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return DraggableScrollbar.arrows(
       alwaysVisibleScrollThumb: true,
-      backgroundColor: Colors.grey[850],
+      backgroundColor: Colors.grey[850]!,
       padding: EdgeInsets.only(right: 4.0),
       labelTextBuilder: (double offset) => Text("${offset ~/ _itemExtent}",
           style: TextStyle(color: Colors.white)),

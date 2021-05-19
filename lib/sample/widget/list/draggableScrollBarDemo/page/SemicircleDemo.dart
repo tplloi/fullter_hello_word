@@ -8,8 +8,8 @@ class SemicircleDemo extends StatelessWidget {
   final ScrollController controller;
 
   const SemicircleDemo({
-    Key key,
-    @required this.controller,
+    Key? key,
+    required this.controller,
   }) : super(key: key);
 
   @override

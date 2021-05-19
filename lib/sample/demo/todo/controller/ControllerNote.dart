@@ -22,7 +22,7 @@ class ControllerNote extends BaseController {
     _updateData();
   }
 
-  int _getIndex(Note note) {
+  int? _getIndex(Note note) {
     for (int i = 0; i < listNote.length; i++) {
       if (note.millisecondsSinceEpoch == listNote[i].millisecondsSinceEpoch) {
         return i;
@@ -32,7 +32,7 @@ class ControllerNote extends BaseController {
   }
 
   void setNoteComplete(Note note) {
-    int index = _getIndex(note);
+    int index = _getIndex(note)!;
     listNote[index].isComplete = !listNote[index].isComplete;
     listNote.refresh();
     _updateData();

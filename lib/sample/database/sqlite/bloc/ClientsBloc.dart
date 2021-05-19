@@ -21,7 +21,7 @@ class ClientsBloc {
     await getAllClients();
   }
 
-  Future<void> delete(int id) async {
+  Future<void> delete(int? id) async {
     await DBProvider.db.deleteClientById(id);
     await getAllClients();
   }

@@ -7,16 +7,16 @@ import 'RatingBox.dart';
 
 class ProductPageScreen extends StatelessWidget {
   ProductPageScreen({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
-  final Product product;
+  final Product? product;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "ProductPageScreen " + product.name,
+        "ProductPageScreen " + product!.name,
         () => Get.back(),
         null,
       ),
@@ -25,15 +25,15 @@ class ProductPageScreen extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
-              Image.asset("assets/images/" + product.image),
-              Text(product.name),
-              Text(product.description),
-              Text(product.price.toString()),
+              Image.asset("assets/images/" + product!.image),
+              Text(product!.name),
+              Text(product!.description),
+              Text(product!.price.toString()),
               RatingBox(
-                product.rating,
+                product!.rating,
                 (rating) => {
                   print("ProductPage rating " + rating.toString()),
-                  product.rating = rating,
+                  product!.rating = rating,
                 },
               )
             ],

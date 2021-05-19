@@ -59,7 +59,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
     UIUtils.showDialogSuccess(
       context,
       msg,
-      onClickConfirm,
+      onClickConfirm as void Function(),
     );
   }
 }

@@ -13,8 +13,8 @@ class CircularProgressIndicatorApp extends StatefulWidget {
 
 class CircularProgressIndicatorAppState
     extends State<CircularProgressIndicatorApp> {
-  bool _loading;
-  double _progressValue;
+  late bool _loading;
+  double _progressValue = 0;
 
   @override
   void initState() {

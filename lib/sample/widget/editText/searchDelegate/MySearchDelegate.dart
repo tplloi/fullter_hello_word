@@ -3,7 +3,7 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'SuggestionListWidget.dart';
 
-class MySearchDelegate extends SearchDelegate<String> {
+class MySearchDelegate extends SearchDelegate<String?> {
   final List<String> listWord;
   final List<String> listHistory;
 
@@ -45,7 +45,7 @@ class MySearchDelegate extends SearchDelegate<String> {
                 this.query,
                 style: Theme.of(context)
                     .textTheme
-                    .display1
+                    .display1!
                     .copyWith(fontWeight: FontWeight.bold),
               ),
             ),

@@ -5,7 +5,7 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 
 class TextAnimatedTextKitScreen extends StatefulWidget {
   TextAnimatedTextKitScreen({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -14,7 +14,7 @@ class TextAnimatedTextKitScreen extends StatefulWidget {
 }
 
 class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
-  List<AnimatedTextExample> _examples;
+  late List<AnimatedTextExample> _examples;
   int _index = 0;
   int _tapCount = 0;
 
@@ -77,17 +77,17 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
 
 class AnimatedTextExample {
   final String label;
-  final Color color;
+  final Color? color;
   final Widget child;
 
   const AnimatedTextExample({
-    @required this.label,
-    @required this.color,
-    @required this.child,
+    required this.label,
+    required this.color,
+    required this.child,
   });
 }
 
-List<AnimatedTextExample> animatedTextExamples({VoidCallback onTap}) =>
+List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
     <AnimatedTextExample>[
       AnimatedTextExample(
         label: 'Rotate',

@@ -30,7 +30,7 @@ class _RotationTransitionWidgetState extends State<RotationTransitionWidget>
     begin: 1,
     end: 3,
   );
-  AnimationController controller;
+  late AnimationController controller;
   bool status = true;
 
   @override

@@ -36,14 +36,16 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
                         //valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),
                         );
                   }
+                  double h = snapshot.data as double;
+                  double w = snapshot.data as double;
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.all(24),
-                        height: snapshot.data,
-                        width: snapshot.data,
+                        height: h,
+                        width: w,
                         color: Colors.amber[500],
                       ),
                       Container(

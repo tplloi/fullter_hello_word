@@ -19,7 +19,7 @@ class MD2TabIndicatorScreen extends StatelessWidget {
 }
 
 class IndicatorHomePage extends StatefulWidget {
-  IndicatorHomePage({Key key}) : super(key: key);
+  IndicatorHomePage({Key? key}) : super(key: key);
 
   @override
   _IndicatorHomePageState createState() => _IndicatorHomePageState();
@@ -127,13 +127,13 @@ class MD2Indicator extends Decoration {
   final MD2IndicatorSize indicatorSize;
 
   const MD2Indicator({
-    @required this.indicatorHeight,
-    @required this.indicatorColor,
-    @required this.indicatorSize,
+    required this.indicatorHeight,
+    required this.indicatorColor,
+    required this.indicatorSize,
   });
 
   @override
-  _MD2Painter createBoxPainter([VoidCallback onChanged]) {
+  _MD2Painter createBoxPainter([VoidCallback? onChanged]) {
     return new _MD2Painter(this, onChanged);
   }
 }
@@ -141,7 +141,7 @@ class MD2Indicator extends Decoration {
 class _MD2Painter extends BoxPainter {
   final MD2Indicator decoration;
 
-  _MD2Painter(this.decoration, VoidCallback onChanged)
+  _MD2Painter(this.decoration, VoidCallback? onChanged)
       : assert(decoration != null),
         super(onChanged);
 
@@ -150,18 +150,18 @@ class _MD2Painter extends BoxPainter {
     assert(configuration != null);
     assert(configuration.size != null);
 
-    Rect rect;
+    late Rect rect;
     if (decoration.indicatorSize == MD2IndicatorSize.full) {
       rect = Offset(offset.dx,
-              (configuration.size.height - decoration.indicatorHeight ?? 3)) &
-          Size(configuration.size.width, decoration.indicatorHeight ?? 3);
+              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
+          Size(configuration.size!.width, decoration.indicatorHeight ?? 3);
     } else if (decoration.indicatorSize == MD2IndicatorSize.normal) {
       rect = Offset(offset.dx + 6,
-              (configuration.size.height - decoration.indicatorHeight ?? 3)) &
-          Size(configuration.size.width - 12, decoration.indicatorHeight ?? 3);
+              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
+          Size(configuration.size!.width - 12, decoration.indicatorHeight ?? 3);
     } else if (decoration.indicatorSize == MD2IndicatorSize.tiny) {
-      rect = Offset(offset.dx + configuration.size.width / 2 - 8,
-              (configuration.size.height - decoration.indicatorHeight ?? 3)) &
+      rect = Offset(offset.dx + configuration.size!.width / 2 - 8,
+              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
           Size(16, decoration.indicatorHeight ?? 3);
     }
 

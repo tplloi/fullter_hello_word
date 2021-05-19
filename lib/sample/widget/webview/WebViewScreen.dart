@@ -103,7 +103,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
         if (controller.hasData) {
           return FloatingActionButton(
             onPressed: () async {
-              final String url = (await controller.data.currentUrl());
+              final String? url = (await controller.data!.currentUrl());
               // ignore: deprecated_member_use
               Scaffold.of(context).showSnackBar(
                 SnackBar(content: Text("Favorited $url")),
@@ -144,25 +144,25 @@ class SampleMenu extends StatelessWidget {
           onSelected: (MenuOptions value) {
             switch (value) {
               case MenuOptions.showUserAgent:
-                _onShowUserAgent(controller.data, context);
+                _onShowUserAgent(controller.data!, context);
                 break;
               case MenuOptions.listCookies:
-                _onListCookies(controller.data, context);
+                _onListCookies(controller.data!, context);
                 break;
               case MenuOptions.clearCookies:
                 _onClearCookies(context);
                 break;
               case MenuOptions.addToCache:
-                _onAddToCache(controller.data, context);
+                _onAddToCache(controller.data!, context);
                 break;
               case MenuOptions.listCache:
-                _onListCache(controller.data, context);
+                _onListCache(controller.data!, context);
                 break;
               case MenuOptions.clearCache:
-                _onClearCache(controller.data, context);
+                _onClearCache(controller.data!, context);
                 break;
               case MenuOptions.navigationDelegate:
-                _onNavigationDelegateExample(controller.data, context);
+                _onNavigationDelegateExample(controller.data!, context);
                 break;
             }
           },
@@ -301,7 +301,7 @@ class NavigationControls extends StatelessWidget {
           (BuildContext context, AsyncSnapshot<WebViewController> snapshot) {
         final bool webViewReady =
             snapshot.connectionState == ConnectionState.done;
-        final WebViewController controller = snapshot.data;
+        final WebViewController? controller = snapshot.data;
         return Row(
           children: <Widget>[
             IconButton(
@@ -309,7 +309,7 @@ class NavigationControls extends StatelessWidget {
               onPressed: !webViewReady
                   ? null
                   : () async {
-                      if (await controller.canGoBack()) {
+                      if (await controller!.canGoBack()) {
                         await controller.goBack();
                       } else {
                         // ignore: deprecated_member_use
@@ -325,7 +325,7 @@ class NavigationControls extends StatelessWidget {
               onPressed: !webViewReady
                   ? null
                   : () async {
-                      if (await controller.canGoForward()) {
+                      if (await controller!.canGoForward()) {
                         await controller.goForward();
                       } else {
                         // ignore: deprecated_member_use
@@ -342,7 +342,7 @@ class NavigationControls extends StatelessWidget {
               onPressed: !webViewReady
                   ? null
                   : () {
-                      controller.reload();
+                      controller!.reload();
                     },
             ),
           ],

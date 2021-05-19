@@ -25,7 +25,7 @@ User user = User();
 
 class DataTableHomePage extends StatefulWidget {
   DataTableHomePage({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

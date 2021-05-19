@@ -39,7 +39,7 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
           ) {
             return AnimatedBuilder(
                 animation: animation,
-                builder: (BuildContext context, Widget child) {
+                builder: (BuildContext context, Widget? child) {
                   return Opacity(
                     opacity: animation.value,
                     child: page,

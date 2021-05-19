@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ProductBox extends StatelessWidget {
   ProductBox({
-    Key key,
+    Key? key,
     this.name,
     this.description,
     this.price,
@@ -10,19 +10,19 @@ class ProductBox extends StatelessWidget {
     this.color,
   }) : super(key: key);
 
-  final String name;
-  final String description;
-  final int price;
-  final String image;
-  final Color color;
+  final String? name;
+  final String? description;
+  final int? price;
+  final String? image;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        print("onTap: " + this.name);
+        print("onTap: " + this.name!);
         final snackBar = SnackBar(
-          content: Text("Hello " + this.name),
+          content: Text("Hello " + this.name!),
           backgroundColor: this.color,
         );
         Scaffold.of(context).showSnackBar(snackBar);
@@ -36,7 +36,7 @@ class ProductBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Image.asset(
-                "assets/images/" + this.image,
+                "assets/images/" + this.image!,
               ),
               Expanded(
                 child: Container(
@@ -45,11 +45,11 @@ class ProductBox extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        this.name,
+                        this.name!,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        this.description,
+                        this.description!,
                       ),
                       Text(
                         "Price: " + this.price.toString(),

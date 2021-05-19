@@ -9,7 +9,7 @@ class SharedPreferencesUtil {
     prefs.setInt(key, value);
   }
 
-  static Future<int> getInt(String key) async {
+  static Future<int?> getInt(String key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getInt(key);
   }

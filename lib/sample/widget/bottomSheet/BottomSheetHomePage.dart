@@ -4,9 +4,9 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 import 'utils.dart';
 
 class BottomSheetHomePage extends StatefulWidget {
-  BottomSheetHomePage({Key key, this.title}) : super(key: key);
+  BottomSheetHomePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _BottomSheetHomePageState createState() => _BottomSheetHomePageState();
@@ -17,7 +17,7 @@ class _BottomSheetHomePageState extends State<BottomSheetHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        widget.title,
+        widget.title!,
         () => Get.back(),
         null,
       ),

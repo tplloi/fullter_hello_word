@@ -11,7 +11,7 @@ class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderS
    *-------------------- Setup Tabs ------------------*
    */
   // Create a tab controller
-  TabController tabController;
+  TabController? tabController;
 
   @override
   void initState() {
@@ -24,7 +24,7 @@ class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderS
   @override
   void dispose() {
     // Dispose of the Tab Controller
-    tabController.dispose();
+    tabController!.dispose();
     super.dispose();
   }
 

@@ -30,7 +30,7 @@ class CounterScreen extends StatelessWidget {
 }
 
 class CounterHomePage extends StatefulWidget {
-  CounterHomePage({Key key, this.title}) : super(key: key);
+  CounterHomePage({Key? key, this.title}) : super(key: key);
 
   // This base.widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -41,7 +41,7 @@ class CounterHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  final String? title;
 
   @override
   _CounterHomePageState createState() => _CounterHomePageState();
@@ -71,7 +71,7 @@ class _CounterHomePageState extends State<CounterHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        widget.title,
+        widget.title!,
         () => Get.back(),
         null,
       ),

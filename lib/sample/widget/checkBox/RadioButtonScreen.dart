@@ -27,7 +27,7 @@ class RadioWidget extends StatefulWidget {
 }
 
 class _RadioWidgetState extends State<RadioWidget> {
-  var selectValue = 1;
+  int? selectValue = 1;
 
   onChange(value) {
     setState(() => selectValue = value);
@@ -40,17 +40,17 @@ class _RadioWidgetState extends State<RadioWidget> {
         Radio(
           value: 1,
           groupValue: selectValue,
-          onChanged: (value) => onChange(value),
+          onChanged: (dynamic value) => onChange(value),
         ),
         Radio(
           value: 2,
           groupValue: selectValue,
-          onChanged: (value) => onChange(value),
+          onChanged: (dynamic value) => onChange(value),
         ),
         Radio(
           value: 3,
           groupValue: selectValue,
-          onChanged: (value) => onChange(value),
+          onChanged: (dynamic value) => onChange(value),
         ),
       ],
     );

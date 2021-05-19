@@ -28,10 +28,10 @@ class DayPickerWidget extends StatefulWidget {
 
 class _DayPickerWidgetState extends State<DayPickerWidget> {
   DateTime _date = DateTime.now();
-  TimeOfDay _time = TimeOfDay.now();
+  TimeOfDay? _time = TimeOfDay.now();
 
   Future<void> chooseDate(BuildContext context) async {
-    final DateTime picked = await showDatePicker(
+    final DateTime? picked = await showDatePicker(
       context: context,
       selectableDayPredicate: (datetime) {
         if (datetime.day == 10 || datetime.day == 11 || datetime.day == 12) {
@@ -53,9 +53,9 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
   }
 
   Future<void> chooseTime(BuildContext context) async {
-    final TimeOfDay picked = await showTimePicker(
+    final TimeOfDay? picked = await showTimePicker(
       context: context,
-      initialTime: _time,
+      initialTime: _time!,
     );
     setState(() => {
           _time = picked,

@@ -190,7 +190,7 @@ class _SupportViewState extends BaseStatefulState {
     for (int i = 0; i < _controllerBook.listDummyModelIndicator.length; i++) {
       DummyModelIndicator dummyModelIndicator =
           _controllerBook.listDummyModelIndicator[i];
-      bool isSelected = dummyModelIndicator.isSelected;
+      bool? isSelected = dummyModelIndicator.isSelected;
       Container container = Container(
         padding: EdgeInsets.fromLTRB(
           0,

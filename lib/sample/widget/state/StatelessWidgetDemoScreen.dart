@@ -69,8 +69,8 @@ class MyCard extends StatelessWidget {
 
   // Constructor. {} here denote that they are optional values i.e you can use as: MyCard()
   MyCard({
-    this.title,
-    this.icon,
+    required this.title,
+    required this.icon,
   });
 
   @override
@@ -84,10 +84,12 @@ class MyCard extends StatelessWidget {
             onTap: () {
               print("onTap");
             },
-            child: Column(children: <Widget>[
-              this.title,
-              this.icon,
-            ]),
+            child: Column(
+              children: [
+                this.title,
+                this.icon,
+              ],
+            ),
           ),
         ),
       ),

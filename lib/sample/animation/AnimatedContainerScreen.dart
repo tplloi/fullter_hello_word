@@ -28,7 +28,7 @@ class AnimatedContainerWidget extends StatefulWidget {
 
 class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
   double size = 200;
-  Color color = Colors.blue.shade200;
+  Color? color = Colors.blue.shade200;
   double radius = 0;
   Future future = Future.delayed(Duration(seconds: 3));
 

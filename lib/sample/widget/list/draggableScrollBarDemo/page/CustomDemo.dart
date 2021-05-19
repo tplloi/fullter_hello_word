@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CustomDemo extends StatelessWidget {
   final ScrollController controller;
 
-  const CustomDemo({Key key, @required this.controller}) : super(key: key);
+  const CustomDemo({Key? key, required this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +35,8 @@ class CustomDemo extends StatelessWidget {
         Animation<double> thumbAnimation,
         Animation<double> labelAnimation,
         double height, {
-        Text labelText,
-        BoxConstraints labelConstraints,
+        Text? labelText,
+        BoxConstraints? labelConstraints,
       }) {
         return FadeTransition(
           opacity: thumbAnimation,

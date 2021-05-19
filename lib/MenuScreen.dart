@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UrlLauncherUtils.dart';
-
 import 'lib/util/UIUtils.dart';
 import 'sample/animation/MenuAnimationScreen.dart';
 import 'sample/database/MenuDatabaseScreen.dart';

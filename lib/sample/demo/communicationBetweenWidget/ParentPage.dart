@@ -10,31 +10,31 @@ class ParentPage extends StatefulWidget {
 }
 
 class ParentProvider extends InheritedWidget {
-  final TabController tabController;
+  final TabController? tabController;
   final Widget child;
-  final String title;
+  final String? title;
 
   ParentProvider({
     this.tabController,
-    this.child,
+    required this.child,
     this.title,
-  });
+  }) : super(child: child);
 
   @override
   bool updateShouldNotify(ParentProvider oldWidget) {
     return true;
   }
 
-  static ParentProvider of(BuildContext context) =>
+  static ParentProvider? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<ParentProvider>();
 }
 
 class ParentPageState extends State<ParentPage>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
   String myParentTitle = "My Parent Title";
-  String updateChild1Title;
-  String updateChild2Title;
+  String? updateChild1Title;
+  String? updateChild2Title;
 
   @override
   void initState() {
@@ -47,7 +47,7 @@ class ParentPageState extends State<ParentPage>
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 

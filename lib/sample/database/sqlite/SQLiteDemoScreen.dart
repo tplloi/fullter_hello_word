@@ -44,9 +44,9 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
         builder: (BuildContext context, AsyncSnapshot<List<Client>> snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(
-              itemCount: snapshot.data.length,
+              itemCount: snapshot.data!.length,
               itemBuilder: (BuildContext context, int index) {
-                Client item = snapshot.data[index];
+                Client item = snapshot.data![index];
                 return Dismissible(
                   key: UniqueKey(),
                   background: Container(color: Colors.red),
@@ -54,10 +54,10 @@ class _SQLiteDemoScreenState extends State<SQLiteDemoScreen> {
                     clientsBloc.delete(item.id);
                   },
                   child: ListTile(
-                    title: Text(item.lastName),
+                    title: Text(item.lastName!),
                     leading: Text(item.id.toString()),
                     trailing: Checkbox(
-                      onChanged: (bool value) {
+                      onChanged: (bool? value) {
                         clientsBloc.blockUnblock(item);
                       },
                       value: item.blocked,

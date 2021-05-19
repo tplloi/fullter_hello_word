@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:path/path.dart';
@@ -13,9 +14,9 @@ class DBProvider {
   String dbName = "TestDB.db";
   String tableNameClient = "Client";
 
-  Database _database;
+  Database? _database;
 
-  Future<Database> get database async {
+  Future<Database?> get database async {
     if (_database != null) return _database;
     // if _database is null we instantiate it
     _database = await initDB();
@@ -37,10 +38,11 @@ class DBProvider {
   }
 
   addClient(Client newClient) async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
     //get the biggest id in the table
-    var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM $tableNameClient");
-    int id = table.first["id"];
+    var table =
+        await db.rawQuery("SELECT MAX(id)+1 as id FROM $tableNameClient");
+    int? id = table.first["id"] as int?;
     //insert to the table using the new id
     var raw = await db.rawInsert(
         "INSERT Into $tableNameClient (id,first_name,last_name,blocked)"
@@ -50,36 +52,38 @@ class DBProvider {
   }
 
   blockOrUnblock(Client client) async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
     Client blocked = Client(
         id: client.id,
         firstName: client.firstName,
         lastName: client.lastName,
-        blocked: !client.blocked);
+        blocked: !client.blocked!);
     var res = await db.update("$tableNameClient", blocked.toMap(),
         where: "id = ?", whereArgs: [client.id]);
     return res;
   }
 
   updateClient(Client newClient) async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
     var res = await db.update("$tableNameClient", newClient.toMap(),
         where: "id = ?", whereArgs: [newClient.id]);
     return res;
   }
 
   getClientById(int id) async {
-    final db = await database;
-    var res = await db.query("$tableNameClient", where: "id = ?", whereArgs: [id]);
+    final db = await (database as FutureOr<Database>);
+    var res =
+        await db.query("$tableNameClient", where: "id = ?", whereArgs: [id]);
     return res.isNotEmpty ? Client.fromMap(res.first) : null;
   }
 
   Future<List<Client>> getBlockedClients() async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
 
     print("works");
     // var res = await db.rawQuery("SELECT * FROM $tableNameClient WHERE blocked=1");
-    var res = await db.query("$tableNameClient", where: "blocked = ? ", whereArgs: [1]);
+    var res = await db
+        .query("$tableNameClient", where: "blocked = ? ", whereArgs: [1]);
 
     List<Client> list =
         res.isNotEmpty ? res.map((c) => Client.fromMap(c)).toList() : [];
@@ -87,20 +91,20 @@ class DBProvider {
   }
 
   Future<List<Client>> getAllClients() async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
     var res = await db.query("$tableNameClient");
     List<Client> list =
         res.isNotEmpty ? res.map((c) => Client.fromMap(c)).toList() : [];
     return list;
   }
 
-  deleteClientById(int id) async {
-    final db = await database;
+  deleteClientById(int? id) async {
+    final db = await (database as FutureOr<Database>);
     return db.delete("$tableNameClient", where: "id = ?", whereArgs: [id]);
   }
 
   deleteAllDb() async {
-    final db = await database;
+    final db = await (database as FutureOr<Database>);
     db.rawDelete("Delete * from $tableNameClient");
   }
 }

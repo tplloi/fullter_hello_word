@@ -48,11 +48,11 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
         return ExpansionPanel(
           headerBuilder: (BuildContext context, bool isExpanded) {
             return ListTile(
-              title: Text(item.headerValue),
+              title: Text(item.headerValue!),
             );
           },
           body: ListTile(
-              title: Text(item.expandedValue),
+              title: Text(item.expandedValue!),
               subtitle: Text('Click to delete'),
               trailing: Icon(Icons.delete),
               onTap: () => setState(() =>

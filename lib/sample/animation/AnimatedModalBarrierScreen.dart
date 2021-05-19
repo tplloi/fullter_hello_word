@@ -66,8 +66,8 @@ class _AnimatedModalBarrierWidgetState
 
 class MyPageRoute extends TransitionRoute {
   MyPageRoute({
-    @required this.page,
-    @required this.dismissible,
+    required this.page,
+    required this.dismissible,
   });
 
   final Widget page;
@@ -89,10 +89,10 @@ class MyPageRoute extends TransitionRoute {
 
   Widget _buildModalBarrier(BuildContext context) {
     return IgnorePointer(
-      ignoring: animation.status == AnimationStatus.reverse ||
-          animation.status == AnimationStatus.dismissed,
+      ignoring: animation!.status == AnimationStatus.reverse ||
+          animation!.status == AnimationStatus.dismissed,
       child: AnimatedModalBarrier(
-        color: animation.drive(
+        color: animation!.drive(
           ColorTween(
             begin: Colors.transparent,
             end: Colors.black.withAlpha(80),

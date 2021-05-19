@@ -5,8 +5,8 @@ class Item {
     this.isExpanded = false,
   });
 
-  String expandedValue;
-  String headerValue;
+  String? expandedValue;
+  String? headerValue;
   bool isExpanded;
 }
 

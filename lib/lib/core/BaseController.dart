@@ -51,7 +51,7 @@ class AppLoading {
 
   bool isLoading;
   String messageLoading;
-  TypeApp typeApp;
+  TypeApp? typeApp;
   int millisecondsSinceEpoch;
 }
 
@@ -59,7 +59,7 @@ class AppError {
   AppError(this.messageError, this.typeApp, this.millisecondsSinceEpoch);
 
   String messageError;
-  TypeApp typeApp;
+  TypeApp? typeApp;
   int millisecondsSinceEpoch;
 }
 

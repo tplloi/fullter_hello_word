@@ -13,8 +13,8 @@ class LinearProgressIndicatorApp extends StatefulWidget {
 
 class LinearProgressIndicatorAppState
     extends State<LinearProgressIndicatorApp> {
-  bool _loading;
-  double _progressValue;
+  late bool _loading;
+  double _progressValue = 0;
 
   @override
   void initState() {

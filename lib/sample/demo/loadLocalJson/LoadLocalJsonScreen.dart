@@ -11,7 +11,7 @@ class LoadLocalJsonScreen extends StatefulWidget {
 }
 
 class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
-  List data;
+  List? data;
 
   @override
   Widget build(BuildContext context) {

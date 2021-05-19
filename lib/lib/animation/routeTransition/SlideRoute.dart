@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlideRightRoute extends PageRouteBuilder {
-  final Widget page;
+  final Widget? page;
 
   SlideRightRoute({this.page})
       : super(
@@ -10,7 +10,7 @@ class SlideRightRoute extends PageRouteBuilder {
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page,
+              page!,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -28,7 +28,7 @@ class SlideRightRoute extends PageRouteBuilder {
 }
 
 class SlideLeftRoute extends PageRouteBuilder {
-  final Widget page;
+  final Widget? page;
 
   SlideLeftRoute({this.page})
       : super(
@@ -37,7 +37,7 @@ class SlideLeftRoute extends PageRouteBuilder {
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page,
+              page!,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -55,7 +55,7 @@ class SlideLeftRoute extends PageRouteBuilder {
 }
 
 class SlideTopRoute extends PageRouteBuilder {
-  final Widget page;
+  final Widget? page;
 
   SlideTopRoute({this.page})
       : super(
@@ -64,7 +64,7 @@ class SlideTopRoute extends PageRouteBuilder {
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page,
+              page!,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -82,7 +82,7 @@ class SlideTopRoute extends PageRouteBuilder {
 }
 
 class SlideBottomRoute extends PageRouteBuilder {
-  final Widget page;
+  final Widget? page;
 
   SlideBottomRoute({this.page})
       : super(
@@ -91,7 +91,7 @@ class SlideBottomRoute extends PageRouteBuilder {
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page,
+              page!,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,

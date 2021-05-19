@@ -21,8 +21,8 @@ class User {
   /// Single sort, sort Name's id
   void sortName(bool isAscending) {
     listUserInfo.sort((a, b) {
-      int aId = int.tryParse(a.name.replaceFirst('User_', ''));
-      int bId = int.tryParse(b.name.replaceFirst('User_', ''));
+      int aId = int.tryParse(a.name.replaceFirst('User_', ''))!;
+      int bId = int.tryParse(b.name.replaceFirst('User_', ''))!;
       return (aId - bId) * (isAscending ? 1 : -1);
     });
   }
@@ -32,8 +32,8 @@ class User {
   void sortStatus(bool isAscending) {
     listUserInfo.sort((a, b) {
       if (a.status == b.status) {
-        int aId = int.tryParse(a.name.replaceFirst('User_', ''));
-        int bId = int.tryParse(b.name.replaceFirst('User_', ''));
+        int aId = int.tryParse(a.name.replaceFirst('User_', ''))!;
+        int bId = int.tryParse(b.name.replaceFirst('User_', ''))!;
         return (aId - bId);
       } else if (a.status) {
         return isAscending ? 1 : -1;

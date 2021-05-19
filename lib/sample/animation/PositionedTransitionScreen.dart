@@ -30,7 +30,7 @@ class _PositionedTransitionWidgetState extends State<PositionedTransitionWidget>
     begin: RelativeRect.fromLTRB(100, 100, 0, 0),
     end: RelativeRect.fromLTRB(0, 0, 50, 50),
   );
-  AnimationController controller;
+  late AnimationController controller;
   bool status = true;
 
   @override

@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'PasswordField.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
-  const TextFormFieldWidget({Key key}) : super(key: key);
+  const TextFormFieldWidget({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _TextFormFieldWidgetState();
@@ -14,13 +14,13 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   final GlobalKey<FormFieldState<String>> _passwordFieldKey =
       new GlobalKey<FormFieldState<String>>();
 
-  String _name;
-  String _phoneNumber;
-  String _email;
-  String _password;
+  String? _name;
+  String? _phoneNumber;
+  String? _email;
+  String? _password;
 
-  String _validateName(String value) {
-    if (value.isEmpty) return 'Name is required.';
+  String? _validateName(String? value) {
+    if (value!.isEmpty) return 'Name is required.';
     final RegExp nameExp = new RegExp(r'^[A-Za-z ]+$');
     if (!nameExp.hasMatch(value))
       return 'Please enter only alphabetical characters.';
@@ -43,7 +43,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             hintText: 'What do people call you?',
             labelText: 'Name *',
           ),
-          onSaved: (String value) {
+          onSaved: (String? value) {
             this._name = value;
           },
           validator: _validateName,
@@ -60,7 +60,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             prefixText: '+86',
           ),
           keyboardType: TextInputType.phone,
-          onSaved: (String value) {
+          onSaved: (String? value) {
             this._phoneNumber = value;
           },
           // TextInputFormatters are applied in sequence.
@@ -79,7 +79,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             labelText: 'E-mail',
           ),
           keyboardType: TextInputType.emailAddress,
-          onSaved: (String value) {
+          onSaved: (String? value) {
             this._email = value;
           },
         ),
@@ -121,7 +121,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
         SizedBox(height: 15.0),
         // "Re-type password" form.
         TextFormField(
-          enabled: this._password != null && this._password.isNotEmpty,
+          enabled: this._password != null && this._password!.isNotEmpty,
           decoration: const InputDecoration(
             border: UnderlineInputBorder(),
             filled: true,

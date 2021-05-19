@@ -20,7 +20,7 @@ class LayoutSingleScreen extends StatelessWidget {
 }
 
 class MyButton extends StatelessWidget {
-  MyButton({Key key}) : super(key: key);
+  MyButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

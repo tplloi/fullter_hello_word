@@ -11,13 +11,13 @@ class PasswordField extends StatefulWidget {
     this.onFieldSubmitted,
   });
 
-  final Key fieldKey;
-  final String hintText;
-  final String labelText;
-  final String helperText;
-  final FormFieldSetter<String> onSaved;
-  final FormFieldValidator<String> validator;
-  final ValueChanged<String> onFieldSubmitted;
+  final Key? fieldKey;
+  final String? hintText;
+  final String? labelText;
+  final String? helperText;
+  final FormFieldSetter<String>? onSaved;
+  final FormFieldValidator<String>? validator;
+  final ValueChanged<String>? onFieldSubmitted;
 
   @override
   _PasswordFieldState createState() => new _PasswordFieldState();

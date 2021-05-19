@@ -1,8 +1,8 @@
 class DummyModelIndicator {
-  String name;
-  int no1;
-  int no2;
-  bool isSelected;
+  String? name;
+  int? no1;
+  int? no2;
+  bool? isSelected;
 
   DummyModelIndicator({
     this.name,

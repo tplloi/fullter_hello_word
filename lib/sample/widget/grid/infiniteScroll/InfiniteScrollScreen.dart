@@ -13,7 +13,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
   List listData = [];
   bool isLoading = false;
   int pageCount = 1;
-  ScrollController _scrollController;
+  ScrollController? _scrollController;
 
   @override
   void initState() {
@@ -64,9 +64,9 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
 
   //// ADDING THE SCROLL
   _scrollListener() {
-    if (_scrollController.offset >=
-            _scrollController.position.maxScrollExtent &&
-        !_scrollController.position.outOfRange) {
+    if (_scrollController!.offset >=
+            _scrollController!.position.maxScrollExtent &&
+        !_scrollController!.position.outOfRange) {
       setState(() {
         print("comes to bottom $isLoading");
         isLoading = true;
@@ -91,7 +91,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
 
   @override
   void dispose() {
-    _scrollController.dispose();
+    _scrollController!.dispose();
     super.dispose();
   }
 }

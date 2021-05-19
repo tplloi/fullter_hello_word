@@ -19,15 +19,15 @@ class GestureScreen extends StatelessWidget {
 }
 
 class GestureWidget extends StatelessWidget {
-  GestureWidget({Key key, this.title}) : super(key: key);
-  final String title;
+  GestureWidget({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
         child: Text(
-          this.title,
+          this.title!,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,

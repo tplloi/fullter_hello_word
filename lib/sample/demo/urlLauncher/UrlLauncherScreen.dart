@@ -30,7 +30,7 @@ class UrlLauncherScreen extends StatelessWidget {
 
 class UrlLauncherHomePage extends StatefulWidget {
   UrlLauncherHomePage({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -38,7 +38,7 @@ class UrlLauncherHomePage extends StatefulWidget {
 }
 
 class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
-  Future<void> _launched;
+  Future<void>? _launched;
   String _phone = '';
 
   Future<void> _launchInBrowser(String url) async {

@@ -25,8 +25,8 @@ class FadeTransitionWidget extends StatefulWidget {
 
 class _FadeTransitionWidgetState extends State<FadeTransitionWidget>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
   bool status = true;
 
   @override

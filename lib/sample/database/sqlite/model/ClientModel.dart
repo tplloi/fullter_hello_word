@@ -11,10 +11,10 @@ String clientToJson(Client data) {
 }
 
 class Client {
-  int id;
-  String firstName;
-  String lastName;
-  bool blocked;
+  int? id;
+  String? firstName;
+  String? lastName;
+  bool? blocked;
 
   Client({
     this.id,

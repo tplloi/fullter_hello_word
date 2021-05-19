@@ -18,8 +18,8 @@ class ListViewSearchScreen extends StatelessWidget {
 }
 
 class ListViewSearchWidget extends StatefulWidget {
-  ListViewSearchWidget({Key key, this.title}) : super(key: key);
-  final String title;
+  ListViewSearchWidget({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   _ListViewSearchWidgetState createState() => new _ListViewSearchWidgetState();

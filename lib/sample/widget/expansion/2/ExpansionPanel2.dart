@@ -19,7 +19,7 @@ class ExpansionPanelScreen2 extends StatelessWidget {
 }
 
 class ExpansionTileWidget extends StatelessWidget {
-  const ExpansionTileWidget({Key key}) : super(key: key);
+  const ExpansionTileWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

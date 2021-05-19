@@ -56,20 +56,20 @@ class _InheritedModelScreenState extends State<InheritedModelScreen> {
 }
 
 class InheritedRoot extends InheritedWidget {
-  final InheritedRootModel inheritedRootModel;
+  final InheritedRootModel? inheritedRootModel;
 
   final Function() add;
   final Function() minus;
 
   InheritedRoot({
-    Key key,
-    @required this.inheritedRootModel,
-    @required this.add,
-    @required this.minus,
-    @required Widget child,
+    Key? key,
+    required this.inheritedRootModel,
+    required this.add,
+    required this.minus,
+    required Widget child,
   }) : super(key: key, child: child);
 
-  static InheritedRoot of(BuildContext context) {
+  static InheritedRoot? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<InheritedRoot>();
   }
 
@@ -80,7 +80,7 @@ class InheritedRoot extends InheritedWidget {
 }
 
 class InheritedRootModel {
-  final int count;
+  final int? count;
 
   const InheritedRootModel(this.count);
 }
@@ -88,7 +88,7 @@ class InheritedRootModel {
 class AddWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final root = InheritedRoot.of(context);
+    final root = InheritedRoot.of(context)!;
     return Container(
       child: RaisedButton(
         onPressed: root.add,
@@ -101,7 +101,7 @@ class AddWidget extends StatelessWidget {
 class MinusWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final root = InheritedRoot.of(context);
+    final root = InheritedRoot.of(context)!;
 
     return Container(
       child: RaisedButton(
@@ -115,10 +115,10 @@ class MinusWidget extends StatelessWidget {
 class ShowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final root = InheritedRoot.of(context);
+    final root = InheritedRoot.of(context)!;
 
     return Container(
-      child: UIUtils.getText('Show ${root.inheritedRootModel.count}'),
+      child: UIUtils.getText('Show ${root.inheritedRootModel!.count}'),
     );
   }
 }

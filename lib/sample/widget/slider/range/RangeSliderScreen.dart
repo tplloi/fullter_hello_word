@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class RangeSliderScreen extends StatefulWidget {
-  RangeSliderScreen({Key key}) : super(key: key);
+  RangeSliderScreen({Key? key}) : super(key: key);
 
   @override
   _RangeSliderScreenState createState() => _RangeSliderScreenState();

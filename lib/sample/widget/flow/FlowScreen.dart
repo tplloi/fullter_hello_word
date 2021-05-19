@@ -23,7 +23,7 @@ class FlowWidget extends StatefulWidget {
 
 class _FlowWidgetState extends State<FlowWidget>
     with SingleTickerProviderStateMixin {
-  AnimationController menuAnimation;
+  AnimationController? menuAnimation;
   IconData lastTapped = Icons.notifications;
 
   final List<IconData> listIconData = <IconData>[
@@ -60,9 +60,9 @@ class _FlowWidgetState extends State<FlowWidget>
         onPressed: () {
           print("flowMenuItem onPressed");
           _updateMenu(iconData);
-          menuAnimation.status == AnimationStatus.completed
-              ? menuAnimation.reverse()
-              : menuAnimation.forward();
+          menuAnimation!.status == AnimationStatus.completed
+              ? menuAnimation!.reverse()
+              : menuAnimation!.forward();
         },
         child: Icon(
           iconData,
@@ -87,7 +87,7 @@ class _FlowWidgetState extends State<FlowWidget>
 class FlowMenuDelegate extends FlowDelegate {
   FlowMenuDelegate({this.menuAnimation}) : super(repaint: menuAnimation);
 
-  final Animation<double> menuAnimation;
+  final Animation<double>? menuAnimation;
 
   @override
   bool shouldRepaint(FlowMenuDelegate oldDelegate) {
@@ -98,11 +98,11 @@ class FlowMenuDelegate extends FlowDelegate {
   void paintChildren(FlowPaintingContext context) {
     double dx = 0.0;
     for (int i = 0; i < context.childCount; ++i) {
-      dx = context.getChildSize(i).width * i;
+      dx = context.getChildSize(i)!.width * i;
       context.paintChild(
         i,
         transform: Matrix4.translationValues(
-          dx * menuAnimation.value,
+          dx * menuAnimation!.value,
           0,
           0,
         ),

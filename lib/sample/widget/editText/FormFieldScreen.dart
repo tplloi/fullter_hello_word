@@ -36,7 +36,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                       decoration: const InputDecoration(labelText: 'Name'),
                       keyboardType: TextInputType.text,
                       validator: (value) {
-                        if (value.isEmpty) {
+                        if (value!.isEmpty) {
                           return 'Please enter some text';
                         }
                         return null;
@@ -47,7 +47,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                       decoration: const InputDecoration(labelText: 'Tel'),
                       keyboardType: TextInputType.phone,
                       validator: (value) {
-                        if (value.length != 11)
+                        if (value!.length != 11)
                           return 'Tel Number must be 11 digit';
                         else
                           return null;
@@ -60,8 +60,8 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                       validator: (value) {
                         Pattern pattern =
                             r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-                        RegExp regex = new RegExp(pattern);
-                        if (!regex.hasMatch(value))
+                        RegExp regex = new RegExp(pattern as String);
+                        if (!regex.hasMatch(value!))
                           return 'Not Valid Email';
                         else
                           return null;
@@ -79,8 +79,8 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
   }
 
   void validateInputs() {
-    if (formKey.currentState.validate()) {
-      formKey.currentState.save();
+    if (formKey.currentState!.validate()) {
+      formKey.currentState!.save();
     } else {
       // After input, turn on automatic inspection
       setState(() => isAutoValidate = true);

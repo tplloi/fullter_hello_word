@@ -18,8 +18,8 @@ class ListViewLoadMoreScreen extends StatelessWidget {
 }
 
 class ListTileWidget extends StatefulWidget {
-  ListTileWidget({Key key, this.title}) : super(key: key);
-  final String title;
+  ListTileWidget({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   _ListTileWidgetState createState() => new _ListTileWidgetState();
@@ -63,7 +63,7 @@ class _ListTileWidgetState extends State<ListTileWidget> {
             // loadMore();
           }
           return;
-        },
+        } as bool Function(ScrollNotification)?,
         child: ListView.builder(
           itemCount: (present <= originalItems.length)
               ? items.length + 1

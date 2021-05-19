@@ -18,23 +18,23 @@ class DataTableScreen extends StatelessWidget {
 }
 
 class DataTableWidget extends StatefulWidget {
-  const DataTableWidget({Key key}) : super(key: key);
+  const DataTableWidget({Key? key}) : super(key: key);
 
   @override
   _DataTableWidgetState createState() => _DataTableWidgetState();
 }
 
 class _DataTableWidgetState extends State<DataTableWidget> {
-  int _rowsPerPage = PaginatedDataTable.defaultRowsPerPage;
+  int? _rowsPerPage = PaginatedDataTable.defaultRowsPerPage;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: PaginatedDataTable(
         header: Text('Nutrition'),
-        rowsPerPage: _rowsPerPage,
+        rowsPerPage: _rowsPerPage!,
         availableRowsPerPage: <int>[5, 10, 20],
-        onRowsPerPageChanged: (int value) {
+        onRowsPerPageChanged: (int? value) {
           setState(() {
             _rowsPerPage = value;
           });
@@ -105,7 +105,7 @@ class Dessert {
   final int sodium;
   final int calcium;
   final int iron;
-  bool selected = false;
+  bool? selected = false;
 }
 
 ////// Data source class for obtaining row data for PaginatedDataTable.
@@ -143,16 +143,16 @@ class DessertDataSource extends DataTableSource {
   ];
 
   @override
-  DataRow getRow(int index) {
+  DataRow? getRow(int index) {
     assert(index >= 0);
     if (index >= _desserts.length) return null;
     final Dessert dessert = _desserts[index];
     return DataRow.byIndex(
         index: index,
-        selected: dessert.selected,
-        onSelectChanged: (bool value) {
+        selected: dessert.selected!,
+        onSelectChanged: (bool? value) {
           if (dessert.selected != value) {
-            _selectedCount += value ? 1 : -1;
+            _selectedCount += value! ? 1 : -1;
             assert(_selectedCount >= 0);
             dessert.selected = value;
             notifyListeners();

@@ -47,19 +47,19 @@ void _configLoading() {
 
 class EasyLoadingHomePage extends StatefulWidget {
   EasyLoadingHomePage({
-    Key key,
+    Key? key,
     this.title,
   }) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _EasyLoadingHomePageState createState() => _EasyLoadingHomePageState();
 }
 
 class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
-  Timer _timer;
-  double _progress;
+  Timer? _timer;
+  late double _progress;
 
   @override
   void initState() {

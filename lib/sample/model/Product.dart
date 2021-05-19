@@ -1,9 +1,9 @@
 class Product {
-  String name;
-  String description;
-  int price;
-  String image;
-  int rating;
+  late String name;
+  late String description;
+  int? price;
+  late String image;
+  int? rating;
 
   Product(
       String name, String description, int price, String image, int rating) {

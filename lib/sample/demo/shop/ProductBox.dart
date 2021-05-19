@@ -5,15 +5,15 @@ import 'RatingBox.dart';
 
 class ProductBox extends StatelessWidget {
   ProductBox({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
 
-  final Product product;
+  final Product? product;
 
   @override
   Widget build(BuildContext context) {
-    print("ProductBox build product " + product.name);
+    print("ProductBox build product " + product!.name);
 
     return Container(
       padding: EdgeInsets.all(5),
@@ -26,7 +26,7 @@ class ProductBox extends StatelessWidget {
               width: 200,
               height: 200,
               child: Image.asset(
-                "assets/images/" + this.product.image,
+                "assets/images/" + this.product!.image,
                 fit: BoxFit.fitWidth,
               ),
             ),
@@ -37,22 +37,22 @@ class ProductBox extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      product.name + " - " + product.rating.toString(),
+                      product!.name + " - " + product!.rating.toString(),
                       style: TextStyle(fontSize: 22, color: Colors.green),
                     ),
-                    Text(product.description),
+                    Text(product!.description),
                     Text(
-                      product.price.toString(),
+                      product!.price.toString(),
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.pink),
                     ),
                     RatingBox(
-                        product.rating,
+                        product!.rating,
                         (rating) => {
                               print("RatingBox rating " + rating.toString()),
-                              product.rating = rating,
+                              product!.rating = rating,
                             }),
                   ],
                 ),

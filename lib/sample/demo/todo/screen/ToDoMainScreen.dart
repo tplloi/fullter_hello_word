@@ -16,7 +16,7 @@ class ToDoMainScreen extends StatefulWidget {
 // SingleTickerProviderStateMixin is used for animation
 class ToDoMainScreenState extends State<ToDoMainScreen>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
 
   @override
   void initState() {
@@ -27,7 +27,7 @@ class ToDoMainScreenState extends State<ToDoMainScreen>
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 

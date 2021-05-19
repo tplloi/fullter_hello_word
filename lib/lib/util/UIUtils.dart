@@ -5,11 +5,11 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
 class UIUtils {
-  //TODO add onPressCodeGitPubdev
+  //TODO add onPressCodeGitPubDev
   static AppBar getAppBar(
     String text,
-    Function() onPressed,
-    Function() onPressCodeViewer,
+    Function()? onPressed,
+    Function()? onPressCodeViewer,
   ) {
     Widget _buildActionCodeWidget() {
       if (onPressCodeViewer == null) {
@@ -21,7 +21,7 @@ class UIUtils {
             color: Colors.white,
           ),
           onPressed: () {
-            onPressCodeViewer?.call();
+            onPressCodeViewer.call();
           },
         );
       }
@@ -35,14 +35,13 @@ class UIUtils {
           Icons.arrow_back,
           color: Colors.white,
         ),
-        onPressed: () => onPressed.call(),
+        onPressed: () => onPressed?.call(),
       ),
 
       //add action on appbar
       actions: <Widget>[
         _buildActionCodeWidget(),
       ],
-
       backgroundColor: Colors.blue,
       brightness: Brightness.dark,
     );
@@ -50,7 +49,7 @@ class UIUtils {
 
   static ElevatedButton getButton(
     String text,
-    Function() func,
+    Function()? func,
   ) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -70,19 +69,19 @@ class UIUtils {
       ),
       // color: Colors.white70,
       onPressed: () => {
-        func.call(),
+        func?.call(),
       },
     );
   }
 
   static OutlinedButton getOutlineButton(
     String text,
-    Function() func,
+    Function()? func,
   ) {
     return OutlinedButton(
       child: Text(text),
       onPressed: () {
-        func.call();
+        func?.call();
       },
       style: ElevatedButton.styleFrom(
         side: BorderSide(
@@ -134,10 +133,10 @@ class UIUtils {
     );
   }
 
-  static Future sleep(int timeInSecond, Function function) {
+  static Future sleep(int timeInSecond, Function? function) {
     return new Future.delayed(
       Duration(seconds: timeInSecond),
-      () => function.call(),
+      () => function?.call(),
     );
   }
 
@@ -145,8 +144,8 @@ class UIUtils {
     BuildContext context,
     String title,
     String message,
-    String cancelTitle,
-    VoidCallback cancelAction,
+    String? cancelTitle,
+    VoidCallback? cancelAction,
     String okTitle,
     VoidCallback okAction,
   ) {
@@ -161,7 +160,7 @@ class UIUtils {
             color: Color(0xff232426),
           ),
         ),
-        title: title == null ? null : Text(title),
+        title: Text(title),
         actions: [
           if (cancelTitle != null)
             CupertinoDialogAction(
@@ -181,23 +180,20 @@ class UIUtils {
                 }
               },
             ),
-          if (okTitle != null)
-            CupertinoDialogAction(
-              child: Text(
-                okTitle,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xffFF0000),
-                ),
+          CupertinoDialogAction(
+            child: Text(
+              okTitle,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Color(0xffFF0000),
               ),
-              onPressed: () {
-                Navigator.of(context, rootNavigator: true).pop("Discard");
-                if (okAction != null) {
-                  okAction();
-                }
-              },
             ),
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).pop("Discard");
+              okAction();
+            },
+          ),
         ],
       ),
     );
@@ -237,7 +233,7 @@ class UIUtils {
   static void showDialogSuccess(
     BuildContext context,
     String msg,
-    VoidCallback onClickConfirm,
+    VoidCallback? onClickConfirm,
   ) {
     showGeneralDialog(
       barrierDismissible: false,
@@ -300,6 +296,7 @@ class UIUtils {
                     ),
                     onPressed: () {
                       Get.back();
+                      onClickConfirm?.call();
                     },
                     child: Text(
                       "Đóng",

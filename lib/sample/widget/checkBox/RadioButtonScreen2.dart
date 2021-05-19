@@ -26,14 +26,14 @@ class RadioButtonScreen2 extends StatelessWidget {
 enum BestTutorSite { javatPoint, w3schools, tutorialAndExample }
 
 class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+  MyStatefulWidget({Key? key}) : super(key: key);
 
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  BestTutorSite _site = BestTutorSite.javatPoint;
+  BestTutorSite? _site = BestTutorSite.javatPoint;
 
   Widget build(BuildContext context) {
     return Column(
@@ -43,7 +43,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           leading: Radio(
             value: BestTutorSite.javatPoint,
             groupValue: _site,
-            onChanged: (BestTutorSite value) {
+            onChanged: (BestTutorSite? value) {
               setState(() {
                 _site = value;
               });
@@ -55,7 +55,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           leading: Radio(
             value: BestTutorSite.w3schools,
             groupValue: _site,
-            onChanged: (BestTutorSite value) {
+            onChanged: (BestTutorSite? value) {
               setState(() {
                 _site = value;
               });
@@ -67,7 +67,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           leading: Radio(
             value: BestTutorSite.tutorialAndExample,
             groupValue: _site,
-            onChanged: (BestTutorSite value) {
+            onChanged: (BestTutorSite? value) {
               setState(() {
                 _site = value;
               });

@@ -25,7 +25,7 @@ class AnimatedIconWidget extends StatefulWidget {
 
 class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
     with TickerProviderStateMixin {
-  AnimationController controller;
+  late AnimationController controller;
   bool flag = false;
   bool isSlow = false;
 

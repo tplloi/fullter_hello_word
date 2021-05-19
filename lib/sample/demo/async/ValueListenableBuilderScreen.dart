@@ -35,7 +35,7 @@ class _ValueListenableBuilderScreenState
             SizedBox(height: 20),
             ValueListenableBuilder(
               valueListenable: _notifier,
-              builder: (context, value, widget) {
+              builder: (context, dynamic value, widget) {
                 return UIUtils.getText(
                     'Click with ValueListenableBuilder $value');
               },

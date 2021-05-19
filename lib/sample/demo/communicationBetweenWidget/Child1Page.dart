@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'ParentPage.dart';
 
 class Child1Page extends StatefulWidget {
-  final String title;
-  final ValueChanged<String> child2Action3;
-  final ValueChanged<String> child2Action2;
+  final String? title;
+  final ValueChanged<String>? child2Action3;
+  final ValueChanged<String>? child2Action2;
 
   const Child1Page({
-    Key key,
+    Key? key,
     this.title,
     this.child2Action2,
     this.child2Action3,
@@ -35,7 +35,7 @@ class Child1PageState extends State<Child1Page> {
             //Update Parent from Child 1
             child: Text("Action 2"),
             onPressed: () {
-              widget.child2Action2("Update from Child 1 " +
+              widget.child2Action2!("Update from Child 1 " +
                   DateTime.now().millisecondsSinceEpoch.toString());
             },
           ),
@@ -43,7 +43,7 @@ class Child1PageState extends State<Child1Page> {
             //Update Child 2 from Child 1
             child: Text("Action 3"),
             onPressed: () {
-              widget.child2Action3("Update from Child 1 " +
+              widget.child2Action3!("Update from Child 1 " +
                   DateTime.now().millisecondsSinceEpoch.toString());
             },
           ),
@@ -51,7 +51,7 @@ class Child1PageState extends State<Child1Page> {
             //Change Tab from Child 1 to Child 2
             child: Text("Action 4"),
             onPressed: () {
-              final controller = ParentProvider.of(context).tabController;
+              final controller = ParentProvider.of(context)!.tabController!;
               controller.index = 1;
             },
           )
