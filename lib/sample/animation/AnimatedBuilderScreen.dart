@@ -65,13 +65,10 @@ class _AnimatedBuilderWidgetState extends State<AnimatedBuilderWidget>
         SizedBox(
           height: 50,
         ),
-        RaisedButton(
-          onPressed: () {
-            status ? _controller.forward() : _controller.reverse();
-            status = !status;
-          },
-          child: Text("Click"),
-        )
+        UIUtils.getButton("Click", () {
+          status ? _controller.forward() : _controller.reverse();
+          status = !status;
+        }),
       ],
     );
   }

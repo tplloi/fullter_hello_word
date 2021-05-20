@@ -49,27 +49,18 @@ class _AnimatedContainerWidgetState extends State<AnimatedContainerWidget> {
             curve: Curves.easeIn,
             duration: Duration(milliseconds: 300),
           ),
-          RaisedButton(
-            onPressed: () {
-              size = Random().nextInt(300).toDouble();
-              setState(() {});
-            },
-            child: Text('Change Size'),
-          ),
-          RaisedButton(
-            onPressed: () {
-              color = Colors.blue[100 + 100 * Random().nextInt(8)];
-              setState(() {});
-            },
-            child: Text('Change Color'),
-          ),
-          RaisedButton(
-            onPressed: () {
-              radius = 100 * Random().nextDouble();
-              setState(() {});
-            },
-            child: Text('Change Radius'),
-          ),
+          UIUtils.getButton("Change Size", () {
+            size = Random().nextInt(300).toDouble();
+            setState(() {});
+          }),
+          UIUtils.getButton("Change Color", () {
+            color = Colors.blue[100 + 100 * Random().nextInt(8)];
+            setState(() {});
+          }),
+          UIUtils.getButton("Change Radius", () {
+            radius = 100 * Random().nextDouble();
+            setState(() {});
+          }),
         ],
       ),
     );
