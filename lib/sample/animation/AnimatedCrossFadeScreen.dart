@@ -48,12 +48,9 @@ class _AnimatedCrossFadeWidgetState extends State<AnimatedCrossFadeWidget> {
           crossFadeState:
               isFirst ? CrossFadeState.showFirst : CrossFadeState.showSecond,
         ),
-        RaisedButton(
-          onPressed: () {
-            setState(() => isFirst = !isFirst);
-          },
-          child: Text('Click Me!'),
-        ),
+        UIUtils.getButton("Click Me!", () {
+          setState(() => isFirst = !isFirst);
+        }),
       ],
     );
   }

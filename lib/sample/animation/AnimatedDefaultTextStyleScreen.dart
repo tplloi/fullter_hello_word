@@ -47,18 +47,13 @@ class _AnimatedDefaultTextStyleWidgetState
             child: Text('Flutter'),
           ),
         ),
-        RaisedButton(
-          onPressed: () {
-            setState(() {
-              _fontSize = _first ? 90 : 60;
-              _color = _first ? Colors.blue : Colors.orange;
-              _first = !_first;
-            });
-          },
-          child: Text(
-            "CLICK ME!",
-          ),
-        )
+        UIUtils.getButton("CLICK ME", () {
+          setState(() {
+            _fontSize = _first ? 90 : 60;
+            _color = _first ? Colors.blue : Colors.orange;
+            _first = !_first;
+          });
+        }),
       ],
     );
   }
