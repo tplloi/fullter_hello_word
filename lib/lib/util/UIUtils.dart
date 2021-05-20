@@ -5,11 +5,10 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
 class UIUtils {
-  //TODO add onPressCodeGitPubDev
   static AppBar getAppBar(
     String text,
-    Function()? onPressed,
-    Function()? onPressCodeViewer,
+    VoidCallback? onPressed,
+    VoidCallback? onPressCodeViewer,
   ) {
     Widget _buildActionCodeWidget() {
       if (onPressCodeViewer == null) {
@@ -20,9 +19,7 @@ class UIUtils {
             Icons.code,
             color: Colors.white,
           ),
-          onPressed: () {
-            onPressCodeViewer.call();
-          },
+          onPressed: onPressCodeViewer,
         );
       }
     }
@@ -35,7 +32,7 @@ class UIUtils {
           Icons.arrow_back,
           color: Colors.white,
         ),
-        onPressed: () => onPressed?.call(),
+        onPressed: onPressed,
       ),
 
       //add action on appbar
@@ -49,7 +46,7 @@ class UIUtils {
 
   static ElevatedButton getButton(
     String text,
-    Function()? func,
+    VoidCallback? onPressed,
   ) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -68,21 +65,17 @@ class UIUtils {
         ),
       ),
       // color: Colors.white70,
-      onPressed: () => {
-        func?.call(),
-      },
+      onPressed: onPressed,
     );
   }
 
   static OutlinedButton getOutlineButton(
     String text,
-    Function()? func,
+    VoidCallback? onPressed,
   ) {
     return OutlinedButton(
       child: Text(text),
-      onPressed: () {
-        func?.call();
-      },
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         side: BorderSide(
           width: 2.0,
@@ -120,11 +113,12 @@ class UIUtils {
 
   static LinearGradient getCustomGradient() {
     return LinearGradient(
-        colors: [Colors.pink, Colors.blueAccent],
-        begin: const FractionalOffset(0.0, 0.0),
-        end: const FractionalOffset(0.6, 0.0),
-        stops: [0.0, 0.6],
-        tileMode: TileMode.clamp);
+      colors: [Colors.pink, Colors.blueAccent],
+      begin: const FractionalOffset(0.0, 0.0),
+      end: const FractionalOffset(0.6, 0.0),
+      stops: [0.0, 0.6],
+      tileMode: TileMode.clamp,
+    );
   }
 
   static CircularProgressIndicator getCircularProgressIndicator(Color color) {
@@ -147,7 +141,7 @@ class UIUtils {
     String? cancelTitle,
     VoidCallback? cancelAction,
     String okTitle,
-    VoidCallback okAction,
+    VoidCallback? okAction,
   ) {
     showCupertinoDialog(
       context: context,
@@ -174,10 +168,8 @@ class UIUtils {
               ),
               isDefaultAction: true,
               onPressed: () {
-                Navigator.of(context, rootNavigator: true).pop("Discard");
-                if (cancelAction != null) {
-                  cancelAction();
-                }
+                Get.back();
+                cancelAction?.call();
               },
             ),
           CupertinoDialogAction(
@@ -190,8 +182,8 @@ class UIUtils {
               ),
             ),
             onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop("Discard");
-              okAction();
+              Get.back();
+              okAction?.call();
             },
           ),
         ],
@@ -204,7 +196,7 @@ class UIUtils {
     String title,
     String message,
     String okTitle,
-    VoidCallback okCallback,
+    VoidCallback? okCallback,
   ) {
     showAlertDialog(
       context,
