@@ -10,7 +10,7 @@ class CustomAnimation extends EasyLoadingAnimation {
     AnimationController controller,
     AlignmentGeometry alignment,
   ) {
-    double opacity = controller?.value ?? 0;
+    double opacity = controller.value;
     return Opacity(
       opacity: opacity,
       child: RotationTransition(

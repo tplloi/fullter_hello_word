@@ -156,10 +156,9 @@ class _HeroAnimationDemoScreenState extends State<HeroAnimationDemoScreen> {
               )),
         ),
         actions: <Widget>[
-          OutlineButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Icon(Icons.close),
-          ),
+          UIUtils.getButton("Close", () {
+            Get.back();
+          }),
         ],
       ),
     );

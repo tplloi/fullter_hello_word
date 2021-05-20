@@ -142,31 +142,29 @@ class _MD2Painter extends BoxPainter {
   final MD2Indicator decoration;
 
   _MD2Painter(this.decoration, VoidCallback? onChanged)
-      : assert(decoration != null),
-        super(onChanged);
+      : super(onChanged);
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
-    assert(configuration != null);
     assert(configuration.size != null);
 
     late Rect rect;
     if (decoration.indicatorSize == MD2IndicatorSize.full) {
       rect = Offset(offset.dx,
-              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
-          Size(configuration.size!.width, decoration.indicatorHeight ?? 3);
+              (configuration.size!.height - decoration.indicatorHeight)) &
+          Size(configuration.size!.width, decoration.indicatorHeight);
     } else if (decoration.indicatorSize == MD2IndicatorSize.normal) {
       rect = Offset(offset.dx + 6,
-              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
-          Size(configuration.size!.width - 12, decoration.indicatorHeight ?? 3);
+              (configuration.size!.height - decoration.indicatorHeight)) &
+          Size(configuration.size!.width - 12, decoration.indicatorHeight);
     } else if (decoration.indicatorSize == MD2IndicatorSize.tiny) {
       rect = Offset(offset.dx + configuration.size!.width / 2 - 8,
-              (configuration.size!.height - decoration.indicatorHeight ?? 3)) &
-          Size(16, decoration.indicatorHeight ?? 3);
+              (configuration.size!.height - decoration.indicatorHeight)) &
+          Size(16, decoration.indicatorHeight);
     }
 
     final Paint paint = Paint();
-    paint.color = decoration.indicatorColor ?? Color(0xff1967d2);
+    paint.color = decoration.indicatorColor;
     paint.style = PaintingStyle.fill;
     canvas.drawRRect(
         RRect.fromRectAndCorners(rect,
