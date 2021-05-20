@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/animation/routeTransition/RotationRoute.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 import '../RouteTransitionScreen.dart';
 
 class RotationScreen extends StatelessWidget {
@@ -8,11 +9,9 @@ class RotationScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
-        child: RaisedButton(
-          child: Text('RotationTransition'),
-          onPressed: () =>
-              Navigator.push(context, RotationRoute(page: Screen2())),
-        ),
+        child: UIUtils.getButton("RotationTransition", () {
+          Navigator.push(context, RotationRoute(page: Screen2()));
+        }),
       ),
     );
   }

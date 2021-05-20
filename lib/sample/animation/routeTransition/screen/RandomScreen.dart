@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/animation/routeTransition/EnterExitRoute.dart';
 import 'package:hello_word/lib/animation/routeTransition/ScaleRoute.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 
 import '../RouteTransitionScreen.dart';
 
@@ -15,16 +16,13 @@ class RandomScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
-              child: Text('EnterExitSlideTransition'),
-              onPressed: () => Navigator.push(context,
-                  EnterExitRoute(exitPage: this, enterPage: Screen2())),
-            ),
-            RaisedButton(
-              child: Text('ScaleRotateTransition'),
-              onPressed: () =>
-                  Navigator.push(context, ScaleRoute(page: Screen2())),
-            ),
+            UIUtils.getButton("EnterExitSlideTransition", () {
+              Navigator.push(context,
+                  EnterExitRoute(exitPage: this, enterPage: Screen2()));
+            }),
+            UIUtils.getButton("ScaleRotateTransition", () {
+              Navigator.push(context, ScaleRoute(page: Screen2()));
+            }),
           ],
         ),
       ),

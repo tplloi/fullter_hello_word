@@ -52,16 +52,12 @@ class Screen1 extends StatelessWidget {
     );
   }
 
-  List<RaisedButton> buttons(context) {
-    List<RaisedButton> buttons = [];
+  List<ElevatedButton> buttons(context) {
+    List<ElevatedButton> buttons = [];
     screens.forEach(
-      (k, v) => buttons.add(
-        RaisedButton(
-          child: Text(k),
-          onPressed: () => Navigator.push(
-              context, CupertinoPageRoute(builder: (context) => v)),
-        ),
-      ),
+      (k, v) => buttons.add(UIUtils.getButton(k, () {
+        Navigator.push(context, CupertinoPageRoute(builder: (context) => v));
+      })),
     );
     return buttons;
   }
@@ -73,11 +69,9 @@ class Screen2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.green,
       body: Center(
-        child: RaisedButton(
-          child: Text('Go Back!'),
-          onPressed: () => Get.back(),
-        ),
-      ),
+          child: UIUtils.getButton("Go Back!", () {
+        Get.back();
+      })),
     );
   }
 }

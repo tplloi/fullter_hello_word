@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/animation/routeTransition/FadeRoute.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 import '../RouteTransitionScreen.dart';
 
 class FadeScreen extends StatelessWidget {
@@ -8,10 +9,9 @@ class FadeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Center(
-        child: RaisedButton(
-          child: Text("FadeTransition"),
-          onPressed: () => Navigator.push(context, FadeRoute(page: Screen2())),
-        ),
+        child: UIUtils.getButton("FadeTransition", () {
+          Navigator.push(context, FadeRoute(page: Screen2()));
+        }),
       ),
     );
   }
