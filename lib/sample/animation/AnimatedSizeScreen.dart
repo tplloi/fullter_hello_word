@@ -51,16 +51,11 @@ class _AnimatedSizeWidgetState extends State<AnimatedSizeWidget>
             ),
           ),
         ),
-        RaisedButton(
-          child: Text('Change Size'),
-          onPressed: () {
-            setState(() {
-              width = status ? 250 : 200;
-              height = status ? 150 : 200;
-              status = !status;
-            });
-          },
-        ),
+        UIUtils.getButton("Change Size", () {
+          width = status ? 250 : 200;
+          height = status ? 150 : 200;
+          status = !status;
+        }),
       ],
     );
   }

@@ -87,17 +87,14 @@ class _DecoratedBoxTransitionWidgetState
         ),
         Container(
           margin: EdgeInsets.only(top: 20),
-          child: RaisedButton(
-            onPressed: () {
-              if (status) {
-                _controller.forward();
-              } else {
-                _controller.reverse();
-              }
-              status = !status;
-            },
-            child: Text("Change DecoratedBoxTransition"),
-          ),
+          child: UIUtils.getButton("Change DecoratedBoxTransition", () {
+            if (status) {
+              _controller.forward();
+            } else {
+              _controller.reverse();
+            }
+            status = !status;
+          }),
         )
       ],
     );

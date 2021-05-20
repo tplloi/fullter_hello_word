@@ -46,12 +46,9 @@ class _AnimatedThemeWidgetState extends State<AnimatedThemeWidget> {
             ),
           ),
         ),
-        RaisedButton(
-          onPressed: () {
-            setState(() => isLight = !isLight);
-          },
-          child: Text('Change theme'),
-        ),
+        UIUtils.getButton("Change theme", () {
+          setState(() => isLight = !isLight);
+        }),
       ],
     );
   }

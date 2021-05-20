@@ -57,13 +57,10 @@ class _RotationTransitionWidgetState extends State<RotationTransitionWidget>
             child: FlutterLogo(),
           ),
         ),
-        RaisedButton(
-          onPressed: () {
-            status ? controller.forward() : controller.reverse();
-            status = !status;
-          },
-          child: Text("Change Rotation"),
-        )
+        UIUtils.getButton("Change Rotation", () {
+          status ? controller.forward() : controller.reverse();
+          status = !status;
+        }),
       ],
     );
   }

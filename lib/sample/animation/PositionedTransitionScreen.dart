@@ -66,13 +66,10 @@ class _PositionedTransitionWidgetState extends State<PositionedTransitionWidget>
             ],
           ),
         ),
-        RaisedButton(
-          onPressed: () {
-            status ? controller.forward() : controller.reverse();
-            status = !status;
-          },
-          child: Text("Change Positione"),
-        )
+        UIUtils.getButton("Change Position", () {
+          status ? controller.forward() : controller.reverse();
+          status = !status;
+        }),
       ],
     );
   }

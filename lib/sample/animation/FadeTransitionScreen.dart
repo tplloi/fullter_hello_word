@@ -58,13 +58,10 @@ class _FadeTransitionWidgetState extends State<FadeTransitionWidget>
             color: Colors.green,
           ),
         ),
-        RaisedButton(
-          onPressed: () {
-            status ? controller.forward() : controller.reverse();
-            status = !status;
-          },
-          child: Text('Start FadeTransition'),
-        ),
+        UIUtils.getButton("Start FadeTransition", () {
+          status ? controller.forward() : controller.reverse();
+          status = !status;
+        }),
       ],
     );
   }
