@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'CustomLogo.dart';
 
@@ -34,10 +36,9 @@ class Page2 extends StatelessWidget {
                     )),
               ),
             ),
-            OutlineButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: Icon(Icons.close),
-            )
+            UIUtils.getButton("Close", () {
+              Get.back();
+            }),
           ],
         ),
       ),
