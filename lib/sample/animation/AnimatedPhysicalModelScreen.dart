@@ -52,12 +52,9 @@ class _AnimatedPhysicalModelWidgetState
         ),
         Container(
           margin: EdgeInsets.only(top: 20),
-          child: RaisedButton(
-            child: const Text('Change elevation and borderRadius'),
-            onPressed: () {
-              setState(() => status = !status);
-            },
-          ),
+          child: UIUtils.getButton("Change elevation and borderRadius", () {
+            setState(() => status = !status);
+          }),
         ),
       ],
     );

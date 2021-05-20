@@ -56,16 +56,13 @@ class _AnimatedPositionedWidgetState extends State<AnimatedPositionedWidget> {
             ],
           ),
         ),
-        RaisedButton(
-          child: Text('Change position'),
-          onPressed: () => setState(() {
-            left = status ? 10 : 50;
-            top = status ? 20 : 40;
-            right = status ? 20 : 40;
-            bottom = status ? 20 : 70;
-            status = !status;
-          }),
-        ),
+        UIUtils.getButton("Change position", () {
+          left = status ? 10 : 50;
+          top = status ? 20 : 40;
+          right = status ? 20 : 40;
+          bottom = status ? 20 : 70;
+          status = !status;
+        }),
       ],
     );
   }

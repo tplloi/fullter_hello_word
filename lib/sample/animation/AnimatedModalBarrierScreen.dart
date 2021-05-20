@@ -35,15 +35,12 @@ class _AnimatedModalBarrierWidgetState
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          RaisedButton(
-            child: const Text('Open Modal View'),
-            onPressed: () {
-              Navigator.of(context).push(MyPageRoute(
-                page: _ModalPage(),
-                dismissible: _dismissible,
-              ));
-            },
-          ),
+          UIUtils.getButton("Open Modal View", () {
+            Navigator.of(context).push(MyPageRoute(
+              page: _ModalPage(),
+              dismissible: _dismissible,
+            ));
+          }),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -116,12 +113,9 @@ class _ModalPage extends StatelessWidget {
           children: [
             const Text('Modal View'),
             const SizedBox(height: 16),
-            RaisedButton(
-              child: const Text('Close view'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            )
+            UIUtils.getButton("Close view", () {
+              Get.back();
+            }),
           ],
         ),
       ),

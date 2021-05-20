@@ -52,10 +52,9 @@ class _AnimatedPaddingWidgetState extends State<AnimatedPaddingWidget> {
             ),
           ),
         ),
-        RaisedButton(
-          onPressed: _changePadding,
-          child: Text('change padding'),
-        ),
+        UIUtils.getButton("change padding", () {
+          _changePadding();
+        }),
       ],
     );
   }

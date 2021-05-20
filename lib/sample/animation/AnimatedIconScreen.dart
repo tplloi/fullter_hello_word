@@ -79,13 +79,10 @@ class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            RaisedButton(
-              onPressed: () {
-                flag = !flag;
-                flag ? controller.forward() : controller.reverse();
-              },
-              child: Text('Start'),
-            ),
+            UIUtils.getButton("Start", () {
+              flag = !flag;
+              flag ? controller.forward() : controller.reverse();
+            }),
             Text('Slow'),
             Switch(
               value: isSlow,
