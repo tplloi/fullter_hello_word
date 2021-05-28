@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
+import 'package:hello_word/lib/util/SharedPreferencesUtil.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -14,6 +15,7 @@ class SharedPreferencesScreen extends StatefulWidget {
 class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
   var nameOfApp = "SharedPreferencesScreen";
   var counter = 0;
+  bool? boolValue = false;
 
   // define a key to use later
   var key = "counter";
@@ -29,6 +31,11 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
     setState(() {
       // Get value
       counter = (prefs.getInt(key) ?? 0);
+    });
+
+    SharedPreferencesUtil.getBool(SharedPreferencesUtil.KEY_TEST_BOOL)
+        .then((value) {
+      boolValue = value;
     });
   }
 
@@ -79,6 +86,26 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
                   padding: EdgeInsets.all(DimenConstants.marginPaddingMedium)),
               UIUtils.getButton("Increment Counter", () => _onIncrementHit()),
               UIUtils.getButton("Decrement Counter", () => _onDecrementHit()),
+              SizedBox(height: 50),
+              UIUtils.getText("$boolValue"),
+              UIUtils.getButton("set true", () {
+                SharedPreferencesUtil.setBool(
+                        SharedPreferencesUtil.KEY_TEST_BOOL, true)
+                    .then((value) {
+                  setState(() {
+                    boolValue = true;
+                  });
+                });
+              }),
+              UIUtils.getButton("set false", () {
+                SharedPreferencesUtil.setBool(
+                        SharedPreferencesUtil.KEY_TEST_BOOL, false)
+                    .then((value) {
+                  setState(() {
+                    boolValue = false;
+                  });
+                });
+              }),
             ],
           ),
         ),
