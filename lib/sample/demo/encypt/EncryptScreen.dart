@@ -10,8 +10,8 @@ class EncryptScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "EncryptScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),

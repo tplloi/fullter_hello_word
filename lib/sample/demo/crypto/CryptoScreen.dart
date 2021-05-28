@@ -12,8 +12,8 @@ class CryptoScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CryptoScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
