@@ -18,7 +18,9 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
     return Scaffold(
         appBar: UIUtils.getAppBar(
           "Load local JSON file",
-          () => Get.back(),
+          () {
+            Get.back();
+          },
           null,
         ),
         body: Container(
@@ -28,12 +30,10 @@ class LoadLocalJsonScreenState extends State<LoadLocalJsonScreen> {
                 future: DefaultAssetBundle.of(context)
                     .loadString('data_repo/starwars_data.json'),
                 builder: (context, snapshot) {
-                  // Decode the JSON
                   var newData = json.decode(snapshot.data.toString());
                   print("newData " + newData.toString());
 
                   return ListView.builder(
-                    // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
                         padding:
