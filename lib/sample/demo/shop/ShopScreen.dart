@@ -14,8 +14,10 @@ class ShopScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "Shop",
-        () => Get.back(),
+        "ShopScreen",
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -26,7 +28,6 @@ class ShopScreen extends StatelessWidget {
                 product: listProduct[index],
               ),
               onTap: () {
-                print("onTap " + listProduct[index].name);
                 Navigator.push(
                   context,
                   MaterialPageRoute(

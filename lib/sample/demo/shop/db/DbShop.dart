@@ -7,7 +7,7 @@ class DbShop {
       String img = i.isOdd ? ("iv.png") : ("iv.jpg");
       Product p = Product(
         "Name " + i.toString(),
-        "Description loitp " + i.toString(),
+        "Description " + i.toString(),
         i * 1000,
         img,
         0,
