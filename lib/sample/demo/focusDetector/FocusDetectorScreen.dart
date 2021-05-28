@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class FocusDetectorScreen extends StatelessWidget {
@@ -9,8 +10,8 @@ class FocusDetectorScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "FocusDetectorScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
@@ -65,11 +66,16 @@ class FocusDetectorScreen extends StatelessWidget {
           'device\'s screen back on while your widget was visible.',
         );
       },
-      child: UIUtils.getButton(
-        "Go to other screen",
-        () => {
-          Get.to(OtherPage()),
-        },
+      child: Container(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        child: Column(
+          children: [
+            UIUtils.getText("Check logcat"),
+            UIUtils.getButton("Go to other screen", () {
+              Get.to(OtherPage());
+            }),
+          ],
+        ),
       ),
     );
   }
@@ -78,15 +84,18 @@ class FocusDetectorScreen extends StatelessWidget {
 class OtherPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: UIUtils.getAppBar(
-            "OtherPage",
-            () => {
-                  Get.back(),
-                },
-            () => null),
-        body: Center(
-          child: UIUtils.getText(
-              "Look at the console and return to the first screen."),
+        appBar: UIUtils.getAppBar("OtherPage", () {
+          Get.back();
+        }, () => null),
+        body: Container(
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+          child: Column(
+            children: [
+              UIUtils.getText("Check logcat"),
+              UIUtils.getText(
+                  "Look at the console and return to the first screen."),
+            ],
+          ),
         ),
       );
 }
