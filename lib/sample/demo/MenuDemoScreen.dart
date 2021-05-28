@@ -20,96 +20,97 @@ class MenuDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: UIUtils.getAppBar(
-          "Demo menu",
-          () => {
-            Get.back(),
-          },
-          null,
-        ),
-        body: ListView(
-          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-          physics: BouncingScrollPhysics(),
-          children: [
-            UIUtils.getButton(
-              "Async",
-              () => {
-                Get.to(MenuAsyncScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "CommunicationBetweenWidgetScreen",
-              () => {
-                Get.to(CommunicationBetweenWidgetScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Counter",
-              () => {
-                Get.to(CounterScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "CryptoScreen",
-              () => {
-                Get.to(CryptoScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "EncryptScreen",
-              () => {
-                Get.to(EncryptScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "FocusDetectorScreen",
-              () => {
-                Get.to(FocusDetectorScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "GetXScreen",
-              () => {
-                Get.to(GetXScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Inherited",
-              () => {
-                Get.to(MenuInheritedScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Load Local Json",
-              () => {
-                Get.to(LoadLocalJsonScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Shop",
-              () => {
-                Get.to(ShopScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Theme",
-              () => {
-                Get.to(ThemeScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "Tip calculator",
-              () => {
-                Get.to(TipCalculatorScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "UrlLauncherScreen",
-              () => {
-                Get.to(UrlLauncherScreen()),
-              },
-            ),
-          ],
-        ));
+      appBar: UIUtils.getAppBar(
+        "Demo menu",
+        () => {
+          Get.back(),
+        },
+        null,
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        physics: BouncingScrollPhysics(),
+        children: [
+          UIUtils.getButton(
+            "Async",
+            () => {
+              Get.to(MenuAsyncScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "CommunicationBetweenWidgetScreen",
+            () => {
+              Get.to(CommunicationBetweenWidgetScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Counter",
+            () => {
+              Get.to(CounterScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "CryptoScreen",
+            () => {
+              Get.to(CryptoScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "EncryptScreen",
+            () => {
+              Get.to(EncryptScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "FocusDetectorScreen",
+            () => {
+              Get.to(FocusDetectorScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "GetXScreen",
+            () => {
+              Get.to(GetXScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Inherited",
+            () => {
+              Get.to(MenuInheritedScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Load Local Json",
+            () => {
+              Get.to(LoadLocalJsonScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Shop",
+            () => {
+              Get.to(ShopScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Theme",
+            () => {
+              Get.to(ThemeScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "Tip calculator",
+            () => {
+              Get.to(TipCalculatorScreen()),
+            },
+          ),
+          UIUtils.getButton(
+            "UrlLauncherScreen",
+            () => {
+              Get.to(UrlLauncherScreen()),
+            },
+          ),
+        ],
+      ),
+    );
   }
 }

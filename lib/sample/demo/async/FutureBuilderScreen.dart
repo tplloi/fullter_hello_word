@@ -10,10 +10,10 @@ class FutureBuilderScreen extends StatefulWidget {
 }
 
 class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
-  var show = '';
-  bool isClick = false;
+  var _show = '';
+  bool _isClick = false;
 
-  Future<String> getData() async {
+  Future<String> _getData() async {
     await Future.delayed(Duration(seconds: 3));
     return Future.value(
       'Fetch data from mock',
@@ -25,7 +25,9 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "FutureBuilderScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Column(
@@ -34,21 +36,18 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
             height: 300,
             child: Center(
               child: FutureBuilder<String>(
-                future: isClick ? getData() : null,
+                future: _isClick ? _getData() : null,
                 builder: (context, snapshot) {
                   switch (snapshot.connectionState) {
                     case ConnectionState.none:
                       print("ConnectionState.none");
                       return UIUtils.getText("No FutureBuilder attached");
-                      break;
                     case ConnectionState.waiting:
                       print("ConnectionState.waiting");
                       return CircularProgressIndicator();
-                      break;
                     case ConnectionState.active:
                       print("ConnectionState.active");
                       return CircularProgressIndicator();
-                      break;
                     case ConnectionState.done:
                       print("ConnectionState.done");
                       if (snapshot.hasError) {
@@ -56,23 +55,18 @@ class _FutureBuilderScreenState extends State<FutureBuilderScreen> {
                       } else {
                         return UIUtils.getText(snapshot.data.toString());
                       }
-                      break;
                     default:
                       return CircularProgressIndicator();
-                      break;
                   }
                 },
               ),
             ),
           ),
-          RaisedButton(
-            onPressed: () {
-              setState(() {
-                isClick = !isClick;
-              });
-            },
-            child: Text('Fetch data'),
-          ),
+          UIUtils.getButton("Fetch data", () {
+            setState(() {
+              _isClick = !_isClick;
+            });
+          }),
         ],
       ),
     );
