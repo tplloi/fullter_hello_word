@@ -38,7 +38,10 @@ class DBProvider {
   }
 
   addClient(Client newClient) async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     //get the biggest id in the table
     var table =
         await db.rawQuery("SELECT MAX(id)+1 as id FROM $tableNameClient");
@@ -52,7 +55,10 @@ class DBProvider {
   }
 
   blockOrUnblock(Client client) async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     Client blocked = Client(
         id: client.id,
         firstName: client.firstName,
@@ -64,21 +70,30 @@ class DBProvider {
   }
 
   updateClient(Client newClient) async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     var res = await db.update("$tableNameClient", newClient.toMap(),
         where: "id = ?", whereArgs: [newClient.id]);
     return res;
   }
 
   getClientById(int id) async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     var res =
         await db.query("$tableNameClient", where: "id = ?", whereArgs: [id]);
     return res.isNotEmpty ? Client.fromMap(res.first) : null;
   }
 
   Future<List<Client>> getBlockedClients() async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return List.empty();
+    }
 
     print("works");
     // var res = await db.rawQuery("SELECT * FROM $tableNameClient WHERE blocked=1");
@@ -91,7 +106,10 @@ class DBProvider {
   }
 
   Future<List<Client>> getAllClients() async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return List.empty();
+    }
     var res = await db.query("$tableNameClient");
     List<Client> list =
         res.isNotEmpty ? res.map((c) => Client.fromMap(c)).toList() : [];
@@ -99,12 +117,18 @@ class DBProvider {
   }
 
   deleteClientById(int? id) async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     return db.delete("$tableNameClient", where: "id = ?", whereArgs: [id]);
   }
 
   deleteAllDb() async {
-    final db = await (database as FutureOr<Database>);
+    final db = await (database);
+    if (db == null) {
+      return;
+    }
     db.rawDelete("Delete * from $tableNameClient");
   }
 }
