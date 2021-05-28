@@ -90,10 +90,7 @@ class AddWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final root = InheritedRoot.of(context)!;
     return Container(
-      child: RaisedButton(
-        onPressed: root.add,
-        child: UIUtils.getText("+"),
-      ),
+      child: UIUtils.getButton("+", root.add),
     );
   }
 }
@@ -102,11 +99,10 @@ class MinusWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final root = InheritedRoot.of(context)!;
-
     return Container(
-      child: RaisedButton(
-        onPressed: root.minus,
-        child: UIUtils.getText("-"),
+      child: UIUtils.getButton(
+        "-",
+        root.minus,
       ),
     );
   }
