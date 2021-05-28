@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,8 +12,7 @@ class SharedPreferencesScreen extends StatefulWidget {
 }
 
 class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
-  var nameOfApp = "Persist Key Value";
-
+  var nameOfApp = "SharedPreferencesScreen";
   var counter = 0;
 
   // define a key to use later
@@ -25,7 +25,6 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
   }
 
   _loadSavedData() async {
-    // Get shared preference instance
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       // Get value
@@ -75,13 +74,10 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                '$counter',
-                textScaleFactor: 10.0,
-              ),
-              Padding(padding: EdgeInsets.all(10.0)),
+              UIUtils.getText("$counter"),
+              Padding(
+                  padding: EdgeInsets.all(DimenConstants.marginPaddingMedium)),
               UIUtils.getButton("Increment Counter", () => _onIncrementHit()),
-              Padding(padding: EdgeInsets.all(10.0)),
               UIUtils.getButton("Decrement Counter", () => _onDecrementHit()),
             ],
           ),
