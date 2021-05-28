@@ -12,8 +12,8 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "SecondScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
@@ -21,9 +21,10 @@ class SecondScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() =>
-                UIUtils.getText("${_controller.count} ~~~ ${_controller.text}")),
-            // UIUtils().getButton("Next Screen", () => null),
+            Obx(() {
+              return UIUtils.getText(
+                  "${_controller.count} ~~~ ${_controller.text}");
+            }),
           ],
         ),
       ),

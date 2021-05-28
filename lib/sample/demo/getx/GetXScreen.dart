@@ -9,7 +9,7 @@ import 'SecondScreen.dart';
 class GetXScreen extends GetWidget with WidgetsBindingObserver {
   final Controller _controller = Get.put(Controller());
 
-  Widget testListen() {
+  Widget _testListen() {
     Dog.d("==============testListen " + _controller.text.value);
     return Obx(() {
       Dog.d(">>>>>>>testListen count " + _controller.count.value.toString());
@@ -20,7 +20,7 @@ class GetXScreen extends GetWidget with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    testListen();
+    _testListen();
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "GetXScreen",
@@ -35,18 +35,14 @@ class GetXScreen extends GetWidget with WidgetsBindingObserver {
           children: [
             Obx(() => UIUtils.getText("${_controller.count}")),
             UIUtils.getButton("Next Screen", () => Get.to(SecondScreen())),
-            testListen(),
-            UIUtils.getButton(
-                "Set count = 69",
-                () => {
-                      _controller.setCount(69),
-                    }),
-            UIUtils.getButton(
-                "Pop this screen and reset all value",
-                () => {
-                      _controller.clearAllValue(),
-                      Get.back(),
-                    }),
+            _testListen(),
+            UIUtils.getButton("Set count = 69", () {
+              _controller.setCount(69);
+            }),
+            UIUtils.getButton("Pop this screen and reset all value", () {
+              _controller.clearAllValue();
+              Get.back();
+            }),
           ],
         ),
       ),
