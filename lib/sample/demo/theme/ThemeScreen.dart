@@ -8,7 +8,9 @@ class ThemeScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ThemeScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
@@ -20,7 +22,7 @@ class ThemeScreen extends StatelessWidget {
             child: Text(
               'Hello World!',
               // Set text style as per theme
-              style: Theme.of(context).textTheme.title,
+              style: Theme.of(context).textTheme.headline6,
             ),
           ),
         ),

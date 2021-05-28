@@ -8,7 +8,6 @@ class TipCalculatorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Create first input field
     TextField billAmountField = TextField(
       keyboardType: TextInputType.number,
       onChanged: (String value) {
@@ -38,31 +37,30 @@ class TipCalculatorScreen extends StatelessWidget {
           }
         });
 
-    // Create button
-    RaisedButton calculateButton = RaisedButton(
-        child: Text("Calculate"),
-        onPressed: () {
-          // Calculate tip and total
-          double calculatedTip = billAmount * tipPercentage / 100.0;
-          double total = billAmount + calculatedTip;
-
-          // Generate dialog
-          AlertDialog dialog = AlertDialog(
-              content: Text("Tip: \$$calculatedTip \n"
-                  "Total: \$$total"));
-
-          // Show dialog
-          showDialog(
-              context: context, builder: (BuildContext context) => dialog);
-        });
-
     Container container = Container(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(children: [
-          billAmountField,
-          tipPercentageField,
-          calculateButton,
-        ]));
+      padding: const EdgeInsets.all(16.0),
+      child: Column(children: [
+        billAmountField,
+        tipPercentageField,
+        UIUtils.getButton(
+          "Calculate",
+          () {
+            // Calculate tip and total
+            double calculatedTip = billAmount * tipPercentage / 100.0;
+            double total = billAmount + calculatedTip;
+
+            // Generate dialog
+            AlertDialog dialog = AlertDialog(
+                content: Text("Tip: \$$calculatedTip \n"
+                    "Total: \$$total"));
+
+            // Show dialog
+            showDialog(
+                context: context, builder: (BuildContext context) => dialog);
+          },
+        ),
+      ]),
+    );
 
     AppBar appBar = UIUtils.getAppBar(
       "Tip Calculator",
