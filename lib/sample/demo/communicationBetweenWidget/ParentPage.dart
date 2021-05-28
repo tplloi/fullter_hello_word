@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'Child1Page.dart';
 import 'Child2Page.dart';
@@ -79,16 +80,12 @@ class ParentPageState extends State<ParentPage>
               ),
             ),
           ),
-          RaisedButton(
-            //Update Child 1 from Parent
-            child: Text("Action 1"),
-            onPressed: () {
-              setState(() {
-                updateChild1Title = "Update from Parent " +
-                    DateTime.now().millisecondsSinceEpoch.toString();
-              });
-            },
-          ),
+          UIUtils.getButton("Action 1", () {
+            setState(() {
+              updateChild1Title = "Update from Parent " +
+                  DateTime.now().millisecondsSinceEpoch.toString();
+            });
+          }),
           TabBar(
             labelColor: Colors.red,
             indicatorColor: Colors.green,

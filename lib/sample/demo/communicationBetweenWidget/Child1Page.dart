@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'ParentPage.dart';
 
@@ -31,30 +32,18 @@ class Child1PageState extends State<Child1Page> {
             widget.title ?? value,
             style: Theme.of(context).primaryTextTheme.headline5,
           ),
-          RaisedButton(
-            //Update Parent from Child 1
-            child: Text("Action 2"),
-            onPressed: () {
-              widget.child2Action2!("Update from Child 1 " +
-                  DateTime.now().millisecondsSinceEpoch.toString());
-            },
-          ),
-          RaisedButton(
-            //Update Child 2 from Child 1
-            child: Text("Action 3"),
-            onPressed: () {
-              widget.child2Action3!("Update from Child 1 " +
-                  DateTime.now().millisecondsSinceEpoch.toString());
-            },
-          ),
-          RaisedButton(
-            //Change Tab from Child 1 to Child 2
-            child: Text("Action 4"),
-            onPressed: () {
-              final controller = ParentProvider.of(context)!.tabController!;
-              controller.index = 1;
-            },
-          )
+          UIUtils.getButton("Action 2", () {
+            widget.child2Action2!("Update from Child 1 " +
+                DateTime.now().millisecondsSinceEpoch.toString());
+          }),
+          UIUtils.getButton("Action 3", () {
+            widget.child2Action3!("Update from Child 1 " +
+                DateTime.now().millisecondsSinceEpoch.toString());
+          }),
+          UIUtils.getButton("Action 4", () {
+            final controller = ParentProvider.of(context)!.tabController!;
+            controller.index = 1;
+          }),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
 import 'ParentPage.dart';
 
@@ -21,7 +22,7 @@ class Child2PageState extends State<Child2Page> {
   Widget build(BuildContext context) {
     final title = ParentProvider.of(context)!.title;
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
       child: Column(
         children: [
           Text(

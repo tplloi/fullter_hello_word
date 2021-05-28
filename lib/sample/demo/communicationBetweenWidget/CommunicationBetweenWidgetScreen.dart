@@ -11,8 +11,10 @@ class CommunicationBetweenWidgetScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: UIUtils.getAppBar(
-        "text",
-        () => Get.back(),
+        "CommunicationBetweenWidgetScreen",
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ParentPage(),
