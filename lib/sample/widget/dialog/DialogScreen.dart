@@ -6,14 +6,16 @@ class DialogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
       appBar: UIUtils.getAppBar(
         "DialogScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Container(
             width: double.infinity,
             child: Column(
@@ -31,13 +33,12 @@ class DialogScreen extends StatelessWidget {
 class SimpleDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      onPressed: () => showSimpleDialog(context),
-      child: UIUtils.getText("Show SimpleDialog"),
-    );
+    return UIUtils.getButton("Show SimpleDialog", () {
+      _showSimpleDialog(context);
+    });
   }
 
-  void showSimpleDialog(BuildContext context) {
+  void _showSimpleDialog(BuildContext context) {
     showDialog<Null>(
       context: context,
       builder: (BuildContext context) {

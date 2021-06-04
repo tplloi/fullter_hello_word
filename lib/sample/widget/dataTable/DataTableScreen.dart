@@ -9,7 +9,9 @@ class DataTableScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils.getAppBar(
         "DataTableScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: DataTableWidget(),
@@ -46,7 +48,6 @@ class _DataTableWidgetState extends State<DataTableWidget> {
   }
 }
 
-////// Columns in table.
 const kTableColumns = <DataColumn>[
   DataColumn(
     label: const Text('Dessert (100g serving)'),
@@ -108,7 +109,6 @@ class Dessert {
   bool? selected = false;
 }
 
-////// Data source class for obtaining row data for PaginatedDataTable.
 class DessertDataSource extends DataTableSource {
   int _selectedCount = 0;
   final List<Dessert> _desserts = <Dessert>[
