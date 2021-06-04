@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class CupertinoWidgetScreen extends StatelessWidget {
@@ -9,10 +10,14 @@ class CupertinoWidgetScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CupertinoWidgetScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Container(
           width: double.infinity,
           child: Column(
