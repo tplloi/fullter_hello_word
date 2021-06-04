@@ -5,26 +5,19 @@ class TabBarScreen2 extends StatefulWidget {
   TabBarScreen2State createState() => TabBarScreen2State();
 }
 
-// SingleTickerProviderStateMixin is used for animation
-class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderStateMixin {
-  /*
-   *-------------------- Setup Tabs ------------------*
-   */
-  // Create a tab controller
-  TabController? tabController;
+class TabBarScreen2State extends State<TabBarScreen2>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
 
   @override
   void initState() {
     super.initState();
-
-    // Initialize the Tab Controller
-    tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    // Dispose of the Tab Controller
-    tabController!.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 
@@ -32,7 +25,6 @@ class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderS
     return TabBar(
       tabs: <Tab>[
         Tab(
-          // set icon to the tab
           icon: Icon(Icons.favorite),
         ),
         Tab(
@@ -43,7 +35,7 @@ class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderS
         ),
       ],
       // setup the controller
-      controller: tabController,
+      controller: _tabController,
     );
   }
 
@@ -52,25 +44,18 @@ class TabBarScreen2State extends State<TabBarScreen2> with SingleTickerProviderS
       // Add tabs as widgets
       children: tabs,
       // set the controller
-      controller: tabController,
+      controller: _tabController,
     );
   }
 
-  /*
-   *-------------------- Setup the page by setting up tabs in the body ------------------*
-   */
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         // Appbar
         appBar: AppBar(
-            // Title
             title: Text("Using Tabs"),
-            // Set the background color of the App Bar
             backgroundColor: Colors.blue,
-            // Set the bottom property of the Appbar to include a Tab Bar
             bottom: getTabBar()),
-        // Set the TabBar view as the body of the Scaffold
         body: getTabBarView(<Widget>[First(), Second(), Third()]));
   }
 }

@@ -11,21 +11,20 @@ class TabBarScreen extends StatefulWidget {
   TabBarScreenState createState() => TabBarScreenState();
 }
 
-// SingleTickerProviderStateMixin is used for animation
 class TabBarScreenState extends State<TabBarScreen>
     with SingleTickerProviderStateMixin {
-  TabController? tabController;
+  TabController? _tabController;
 
   @override
   void initState() {
     super.initState();
 
-    tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    tabController!.dispose();
+    _tabController!.dispose();
     super.dispose();
   }
 
@@ -35,7 +34,7 @@ class TabBarScreenState extends State<TabBarScreen>
       // Appbar
       appBar: UIUtils.getAppBar(
         "TabBarScreen",
-        () => Get.back(),
+            () => Get.back(),
         null,
       ),
       // Set the TabBar view as the body of the Scaffold
@@ -47,28 +46,30 @@ class TabBarScreenState extends State<TabBarScreen>
           Tab3(),
         ],
         // set the controller
-        controller: tabController,
+        controller: _tabController,
       ),
       // Set the bottom navigation bar
       bottomNavigationBar: Material(
         color: Colors.blue,
-        child: TabBar(
-          tabs: <Tab>[
-            Tab(
-              icon: Icon(Icons.favorite),
-              text: "Favorite",
-            ),
-            Tab(
-              icon: Icon(Icons.adb),
-              text: "adb",
-            ),
-            Tab(
-              icon: Icon(Icons.airport_shuttle),
-              text: "Shuttle",
-            ),
-          ],
-          // setup the controller
-          controller: tabController,
+        child: SafeArea(
+          child: TabBar(
+            tabs: <Tab>[
+              Tab(
+                icon: Icon(Icons.favorite),
+                text: "Favorite",
+              ),
+              Tab(
+                icon: Icon(Icons.adb),
+                text: "adb",
+              ),
+              Tab(
+                icon: Icon(Icons.airport_shuttle),
+                text: "Shuttle",
+              ),
+            ],
+            // setup the controller
+            controller: _tabController,
+          ),
         ),
       ),
     );

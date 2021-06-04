@@ -12,8 +12,8 @@ class MenuBottomBarScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuBottomBarScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
@@ -23,20 +23,20 @@ class MenuBottomBarScreen extends StatelessWidget {
           children: <Widget>[
             UIUtils.getButton(
               "BottomAppBarScreen",
-              () => {
-                Get.to(BottomAppBarScreen()),
+              () {
+                Get.to(BottomAppBarScreen());
               },
             ),
             UIUtils.getButton(
               "TabBarScreen",
-              () => {
-                Get.to(TabBarScreen()),
+              () {
+                Get.to(TabBarScreen());
               },
             ),
             UIUtils.getButton(
               "TabBarScreen2",
-              () => {
-                Get.to(TabBarScreen2()),
+              () {
+                Get.to(TabBarScreen2());
               },
             ),
           ],
