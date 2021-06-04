@@ -4,39 +4,39 @@ import 'package:hello_word/lib/common/const/Constants.dart';
 class SliverAppBarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        SliverAppBar(
-          title: Text(
-            "SliverAppBarScreen",
-          ),
-          snap: true,
-          floating: true,
-          pinned: true,
-          stretch: true,
-          //Max height of background Image
-          expandedHeight: 160.0,
-          flexibleSpace: FlexibleSpaceBar(
-            collapseMode: CollapseMode.parallax,
-            background: Image.network(
-              Constants.dummyImageLink,
-              fit: BoxFit.fill,
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            title: Text(
+              "SliverAppBarScreen",
             ),
-          ),
-        ),
-        // SliverList(
-        SliverFillRemaining(
-          child: Center(
-            child: Text(
-              "Body",
-              style: TextStyle(
-                fontSize: 44,
-                color: Colors.amberAccent,
+            snap: true,
+            floating: true,
+            pinned: true,
+            stretch: true,
+            expandedHeight: 160.0,
+            flexibleSpace: FlexibleSpaceBar(
+              collapseMode: CollapseMode.parallax,
+              background: Image.network(
+                Constants.dummyImageLink,
+                fit: BoxFit.fill,
               ),
             ),
           ),
-        ),
-      ],
+          SliverFillRemaining(
+            child: Center(
+              child: Text(
+                "Body",
+                style: TextStyle(
+                  fontSize: 44,
+                  color: Colors.red,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
