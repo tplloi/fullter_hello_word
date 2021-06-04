@@ -127,19 +127,20 @@ class _UrlLauncherHomePageState extends State<UrlLauncherHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const String toLaunch = 'https://www.cylog.org/headers/';
+    const String toLaunch = 'https://www.facebook.com/hoidammedocsach';
     return ListView(
+      physics: BouncingScrollPhysics(),
+      padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
       children: <Widget>[
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
-              child: TextField(
-                  onChanged: (String text) => _phone = text,
-                  decoration: const InputDecoration(
-                      hintText: 'Input the phone number to launch')),
+            TextField(
+              onChanged: (String text) => _phone = text,
+              decoration: const InputDecoration(
+                  hintText: 'Input the phone number to launch'),
             ),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             ElevatedButton(
               onPressed: () => setState(() {
                 _launched = _makePhoneCall('tel:$_phone');
