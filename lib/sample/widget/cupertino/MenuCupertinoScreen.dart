@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'CupertinoActionSheetScreen.dart';
@@ -13,37 +14,39 @@ class MenuCupertinoScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuCupertinoScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
               "CupertinoActionSheetScreen",
-              () => {
-                Get.to(CupertinoActionSheetScreen()),
+              () {
+                Get.to(CupertinoActionSheetScreen());
               },
             ),
             UIUtils.getButton(
               "CupertinoSegmentedControlScreen",
-              () => {
-                Get.to(CupertinoSegmentedControlScreen()),
+              () {
+                Get.to(CupertinoSegmentedControlScreen());
               },
             ),
             UIUtils.getButton(
               "CupertinoTimerPickerScreen",
-              () => {
-                Get.to(CupertinoTimerPickerScreen()),
+              () {
+                Get.to(CupertinoTimerPickerScreen());
               },
             ),
             UIUtils.getButton(
               "CupertinoWidgetScreen",
-              () => {
-                Get.to(CupertinoWidgetScreen()),
+              () {
+                Get.to(CupertinoWidgetScreen());
               },
             ),
           ],

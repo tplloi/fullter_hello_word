@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class CupertinoTimerPickerScreen extends StatelessWidget {
@@ -9,23 +10,24 @@ class CupertinoTimerPickerScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CupertinoTimerPickerScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ListView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: <Widget>[
-          RaisedButton(
-            onPressed: () => _showCupertinoPicker(context),
-            child: Text('CupertinoPicker'),
-          ),
-          RaisedButton(
-            onPressed: () => _showCupertinoDatePicker(context),
-            child: Text('CupertinoDatePicker'),
-          ),
-          RaisedButton(
-            onPressed: () => _showCupertinoTimerPicker(context),
-            child: Text('CupertinoTimerPicker'),
-          ),
+          UIUtils.getButton("CupertinoPicker", () {
+            _showCupertinoPicker(context);
+          }),
+          UIUtils.getButton("CupertinoDatePicker", () {
+            _showCupertinoDatePicker(context);
+          }),
+          UIUtils.getButton("CupertinoTimerPicker", () {
+            _showCupertinoTimerPicker(context);
+          }),
         ],
       ),
     );
@@ -51,6 +53,7 @@ class CupertinoTimerPickerScreen extends StatelessWidget {
       context: cxt,
       builder: (cxt) {
         return Container(
+          color: Colors.red,
           height: 200,
           child: picker,
         );
@@ -69,6 +72,7 @@ class CupertinoTimerPickerScreen extends StatelessWidget {
       context: cxt,
       builder: (cxt) {
         return Container(
+          color: Colors.yellow,
           height: 200,
           child: picker,
         );
@@ -78,6 +82,7 @@ class CupertinoTimerPickerScreen extends StatelessWidget {
 
   void _showCupertinoTimerPicker(BuildContext cxt) {
     showModalBottomSheet(
+      backgroundColor: Colors.green,
       context: cxt,
       builder: (BuildContext context) => CupertinoTimerPicker(
         mode: CupertinoTimerPickerMode.hms,

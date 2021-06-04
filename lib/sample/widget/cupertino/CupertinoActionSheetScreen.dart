@@ -9,13 +9,17 @@ class CupertinoActionSheetScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CupertinoActionSheetScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: () => showActionSheet(context),
-          child: Text('Show ActionSheet'),
+        child: UIUtils.getButton(
+          "Show ActionSheet",
+          () {
+            showActionSheet(context);
+          },
         ),
       ),
     );
