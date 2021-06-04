@@ -10,7 +10,9 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "AccountScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
