@@ -13,8 +13,10 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "FlatButtonScreen",
-        () => Get.back(),
+        "TextButtonScreen",
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -22,16 +24,14 @@ class _TextButtonScreenState extends State<TextButtonScreen> {
           style: TextButton.styleFrom(
             primary: Colors.teal,
             backgroundColor: Colors.yellow,
-            // onSurface: Colors.grey,
             textStyle: TextStyle(
-              // color: Colors.red,
               fontSize: DimenConstants.txtMedium,
               fontStyle: FontStyle.italic,
             ),
             elevation: 5,
             side: BorderSide(color: Colors.pink, width: 2),
             shape: const BeveledRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(45)),
+              borderRadius: BorderRadius.all(Radius.circular(15)),
             ),
           ),
           onPressed: () {
@@ -57,9 +57,16 @@ class DummyScreen extends StatefulWidget {
 class _DummyScreenState extends State<DummyScreen> {
   @override
   Widget build(BuildContext context) {
-    return UIUtils.getButton(
-      "Tap",
-      () => Get.back(),
+    return Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        child: UIUtils.getButton(
+          "Tap",
+          () {
+            Get.back();
+          },
+        ),
+      ),
     );
   }
 }

@@ -6,11 +6,12 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 class RawMaterialButtonScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //RawMaterialButton basic use
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "RawMaterialButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -22,7 +23,7 @@ class RawMaterialButtonScreen extends StatelessWidget {
             0,
           ),
           onPressed: () {},
-          child: Text('RawMaterialButton'),
+          child: UIUtils.getText("RawMaterialButton"),
         ),
       ),
     );

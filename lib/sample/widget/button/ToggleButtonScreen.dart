@@ -8,14 +8,16 @@ class ToggleButtonScreen extends StatefulWidget {
 }
 
 class _ToggleButtonScreenState extends State<ToggleButtonScreen> {
-  var selectedList1 = [true, false, false, false];
+  var _listSelected = [true, false, false, false];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ToggleButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -28,9 +30,9 @@ class _ToggleButtonScreenState extends State<ToggleButtonScreen> {
           ],
           onPressed: (int index) {
             print("index " + index.toString());
-            setState(() => selectedList1[index] = !selectedList1[index]);
+            setState(() => _listSelected[index] = !_listSelected[index]);
           },
-          isSelected: selectedList1,
+          isSelected: _listSelected,
         ),
       ),
     );

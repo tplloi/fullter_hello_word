@@ -13,10 +13,13 @@ class _RaisedButtonScreenState extends State<RaisedButtonScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "RaisedButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
+        // ignore: deprecated_member_use
         child: RaisedButton(
           onPressed: () {},
           child: Text('RaisedButton'),
