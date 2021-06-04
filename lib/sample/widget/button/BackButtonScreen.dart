@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class BackButtonScreen extends StatelessWidget {
@@ -8,18 +9,17 @@ class BackButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "BackButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            //'BackButton basic use'
-            SizedBox(height: 20),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             BackButton(color: Colors.red),
-
-            SizedBox(height: 20),
-            //'CloseButton has the same function as BackButton, with different icons'
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             CloseButton(),
           ],
         ),
