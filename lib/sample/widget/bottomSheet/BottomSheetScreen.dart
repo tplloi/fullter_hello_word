@@ -6,7 +6,7 @@ class BottomSheetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BottomSheetHomePage(title: 'BottomSheetScreen'),
+      body: BottomSheetHomePage(title: "BottomSheetScreen"),
     );
   }
 }
