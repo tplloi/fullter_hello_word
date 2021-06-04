@@ -12,7 +12,9 @@ class RadioButtonScreen2 extends StatelessWidget {
       home: Scaffold(
         appBar: UIUtils.getAppBar(
           _title,
-          () => Get.back(),
+          () {
+            Get.back();
+          },
           null,
         ),
         body: Center(

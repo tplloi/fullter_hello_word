@@ -8,7 +8,9 @@ class RadioButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "RadioButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
@@ -27,10 +29,10 @@ class RadioWidget extends StatefulWidget {
 }
 
 class _RadioWidgetState extends State<RadioWidget> {
-  int? selectValue = 1;
+  int _selectValue = 1;
 
   onChange(value) {
-    setState(() => selectValue = value);
+    setState(() => _selectValue = value);
   }
 
   @override
@@ -39,17 +41,17 @@ class _RadioWidgetState extends State<RadioWidget> {
       children: <Widget>[
         Radio(
           value: 1,
-          groupValue: selectValue,
+          groupValue: _selectValue,
           onChanged: (dynamic value) => onChange(value),
         ),
         Radio(
           value: 2,
-          groupValue: selectValue,
+          groupValue: _selectValue,
           onChanged: (dynamic value) => onChange(value),
         ),
         Radio(
           value: 3,
-          groupValue: selectValue,
+          groupValue: _selectValue,
           onChanged: (dynamic value) => onChange(value),
         ),
       ],

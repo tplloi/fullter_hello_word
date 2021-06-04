@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class ChartScreen extends StatelessWidget {
@@ -9,7 +10,9 @@ class ChartScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ChartScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -18,15 +21,17 @@ class ChartScreen extends StatelessWidget {
           children: <Widget>[
             LineCharts(),
             Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  "Traffic Source Chart",
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.purple,
-                      fontWeight: FontWeight.w700,
-                      fontStyle: FontStyle.italic),
-                )),
+              padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+              child: Text(
+                "Traffic Source Chart",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.purple,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -8,11 +8,14 @@ class CardScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CardScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Container(
             width: double.infinity,
             child: Column(
@@ -48,11 +51,13 @@ class CardWidget extends StatelessWidget {
             ),
             ButtonBar(
               children: <Widget>[
+                // ignore: deprecated_member_use
                 FlatButton(
                   child:
                       const Text('Edit', style: TextStyle(color: Colors.white)),
                   onPressed: () {},
                 ),
+                // ignore: deprecated_member_use
                 FlatButton(
                   child: const Text('Delete',
                       style: TextStyle(color: Colors.white)),

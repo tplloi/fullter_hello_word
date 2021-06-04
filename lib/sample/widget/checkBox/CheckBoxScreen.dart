@@ -9,11 +9,12 @@ class CheckBoxScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils.getAppBar(
         "CheckBoxScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
-        // Another way to set the background color
         decoration: BoxDecoration(color: Colors.white),
         child: Center(
           child: CheckBoxWidget(),
@@ -29,18 +30,21 @@ class CheckBoxWidget extends StatefulWidget {
 }
 
 class _CheckBoxWidgetState extends State<CheckBoxWidget> {
-  bool? isChecked = false;
+  bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-        activeColor: Colors.red,
-        tristate: false,
-        value: isChecked,
-        onChanged: (value) {
-          setState(() {
-            isChecked = value;
-          });
+      activeColor: Colors.red,
+      tristate: false,
+      value: _isChecked,
+      onChanged: (value) {
+        setState(() {
+          if (value != null) {
+            _isChecked = value;
+          }
         });
+      },
+    );
   }
 }
