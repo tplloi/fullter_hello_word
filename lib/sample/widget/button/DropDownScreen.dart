@@ -17,7 +17,7 @@ class DropDownScreenState extends State<DropDownScreen> {
   @override
   void initState() {
     _listDropdownMenu = buildAndGetDropDownMenuItems(_listFruit);
-    _selectedFruit = _listDropdownMenu![0].value;
+    _selectedFruit = _listDropdownMenu?[0].value;
     super.initState();
   }
 
@@ -30,7 +30,10 @@ class DropDownScreenState extends State<DropDownScreen> {
   }
 
   void changedDropDownItem(String? selectedFruit) {
-    handleChange(selectedFruit!);
+    if (selectedFruit == null) {
+      return;
+    }
+    handleChange(selectedFruit);
     setState(() {
       _selectedFruit = selectedFruit;
     });

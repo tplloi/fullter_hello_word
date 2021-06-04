@@ -15,7 +15,9 @@ class _PopupMenuButtonScreenState extends State<PopupMenuButtonScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "PopupMenuButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -27,7 +29,14 @@ class _PopupMenuButtonScreenState extends State<PopupMenuButtonScreen> {
           itemBuilder: (BuildContext context) => <PopupMenuEntry<Selections>>[
             const PopupMenuItem<Selections>(
               value: Selections.java,
-              child: Text('Choose java'),
+              child: Text(
+                'Choose java',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             const PopupMenuItem<Selections>(
               value: Selections.c,
@@ -37,10 +46,20 @@ class _PopupMenuButtonScreenState extends State<PopupMenuButtonScreen> {
               value: Selections.swift,
               child: Text('Choose swift'),
             ),
-            const PopupMenuDivider(),
             const PopupMenuItem<Selections>(
               value: Selections.dart,
               child: Text('Choose dart'),
+            ),
+            const PopupMenuDivider(),
+            const PopupMenuDivider(),
+            const PopupMenuDivider(),
+            PopupMenuItem<Selections>(
+              value: Selections.dart,
+              child: Image.asset(
+                "assets/images/ic_l.png",
+                width: 50,
+                height: 50,
+              ),
             ),
           ],
         ),

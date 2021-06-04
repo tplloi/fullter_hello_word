@@ -8,13 +8,17 @@ class OutlineButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "OutlineButtonScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: UIUtils.getOutlineButton(
           "OutlineButton",
-          () => Get.back(),
+          () {
+            Get.back();
+          },
         ),
       ),
     );
