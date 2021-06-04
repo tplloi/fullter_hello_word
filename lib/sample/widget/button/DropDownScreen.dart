@@ -10,20 +10,20 @@ class DropDownScreen extends StatefulWidget {
 }
 
 class DropDownScreenState extends State<DropDownScreen> {
-  List listFruit = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
-  List<DropdownMenuItem<String>>? listDropdownMenu;
+  List _listFruit = ["Apple", "Banana", "Pineapple", "Mango", "Grapes"];
+  List<DropdownMenuItem<String>>? _listDropdownMenu;
   String? _selectedFruit;
 
   @override
   void initState() {
-    listDropdownMenu = buildAndGetDropDownMenuItems(listFruit);
-    _selectedFruit = listDropdownMenu![0].value;
+    _listDropdownMenu = buildAndGetDropDownMenuItems(_listFruit);
+    _selectedFruit = _listDropdownMenu![0].value;
     super.initState();
   }
 
   List<DropdownMenuItem<String>> buildAndGetDropDownMenuItems(List fruits) {
     List<DropdownMenuItem<String>> items = [];
-    for (String fruit in fruits as Iterable<String>) {
+    for (String fruit in fruits) {
       items.add(DropdownMenuItem(value: fruit, child: Text(fruit)));
     }
     return items;
@@ -41,7 +41,9 @@ class DropDownScreenState extends State<DropDownScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "DropDownScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
@@ -50,10 +52,10 @@ class DropDownScreenState extends State<DropDownScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Please choose a fruit: "),
+              UIUtils.getText("Please choose a fruit: "),
               DropdownButton(
                 value: _selectedFruit,
-                items: listDropdownMenu,
+                items: _listDropdownMenu,
                 onChanged: changedDropDownItem,
               )
             ],
