@@ -33,7 +33,6 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(height: 15.0),
-        // "Name" form.
         TextFormField(
           textCapitalization: TextCapitalization.words,
           decoration: InputDecoration(

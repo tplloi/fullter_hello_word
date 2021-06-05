@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 import 'TextFieldWidget.dart';
@@ -12,11 +13,14 @@ class TextFieldScreen extends StatelessWidget {
       // AppBar
       appBar: UIUtils.getAppBar(
         "TextFieldScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(15),
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -6,14 +6,14 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
-  var selection;
-  var textInputActionSelection = TextInputAction.done;
+  var _selection;
+  var _textInputActionSelection = TextInputAction.done;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: TextField(
-        keyboardType: selection,
+        keyboardType: _selection,
         decoration: InputDecoration(
           labelText: 'labelText',
           contentPadding: EdgeInsets.all(15.0),
