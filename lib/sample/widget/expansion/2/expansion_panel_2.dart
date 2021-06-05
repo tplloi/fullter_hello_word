@@ -10,7 +10,9 @@ class ExpansionPanelScreen2 extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ExpansionPanelScreen2",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ExpansionTileWidget(),

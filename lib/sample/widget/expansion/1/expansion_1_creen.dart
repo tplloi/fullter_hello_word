@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'Item.dart';
+import 'item.dart';
 
 class Expansion1Screen extends StatelessWidget {
   @override
@@ -24,7 +24,7 @@ class ExpansionPanelWidget extends StatefulWidget {
 }
 
 class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
-  List<Item> _data = generateItems(3);
+  List<Item> _listItem = generateItems(3);
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +41,10 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
     return ExpansionPanelList(
       expansionCallback: (int index, bool isExpanded) {
         setState(() {
-          _data[index].isExpanded = !isExpanded;
+          _listItem[index].isExpanded = !isExpanded;
         });
       },
-      children: _data.map<ExpansionPanel>((Item item) {
+      children: _listItem.map<ExpansionPanel>((Item item) {
         return ExpansionPanel(
           headerBuilder: (BuildContext context, bool isExpanded) {
             return ListTile(
@@ -56,7 +56,7 @@ class _ExpansionPanelWidgetState extends State<ExpansionPanelWidget> {
               subtitle: Text('Click to delete'),
               trailing: Icon(Icons.delete),
               onTap: () => setState(() =>
-                  _data.removeWhere((currentItem) => item == currentItem))),
+                  _listItem.removeWhere((currentItem) => item == currentItem))),
           isExpanded: item.isExpanded,
         );
       }).toList(),

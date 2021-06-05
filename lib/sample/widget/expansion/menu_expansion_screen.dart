@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import '1/Expansion1Screen.dart';
-import '2/ExpansionPanel2.dart';
+import '1/expansion_1_creen.dart';
+import '2/expansion_panel_2.dart';
 
 class MenuExpansionScreen extends StatelessWidget {
   @override
@@ -11,25 +12,27 @@ class MenuExpansionScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuExpansionScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
               "Expansion1Screen",
-              () => {
-                Get.to(Expansion1Screen()),
+              () {
+                Get.to(Expansion1Screen());
               },
             ),
             UIUtils.getButton(
               "ExpansionPanelScreen2",
-              () => {
-                Get.to(ExpansionPanelScreen2()),
+              () {
+                Get.to(ExpansionPanelScreen2());
               },
             ),
           ],

@@ -8,7 +8,9 @@ class ExpandedScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ExpandedScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
