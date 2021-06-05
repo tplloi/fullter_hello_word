@@ -8,8 +8,8 @@ class MD2TabIndicatorScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MD2TabIndicatorScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
@@ -19,7 +19,9 @@ class MD2TabIndicatorScreen extends StatelessWidget {
 }
 
 class IndicatorHomePage extends StatefulWidget {
-  IndicatorHomePage({Key? key}) : super(key: key);
+  IndicatorHomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _IndicatorHomePageState createState() => _IndicatorHomePageState();
@@ -141,8 +143,7 @@ class MD2Indicator extends Decoration {
 class _MD2Painter extends BoxPainter {
   final MD2Indicator decoration;
 
-  _MD2Painter(this.decoration, VoidCallback? onChanged)
-      : super(onChanged);
+  _MD2Painter(this.decoration, VoidCallback? onChanged) : super(onChanged);
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
