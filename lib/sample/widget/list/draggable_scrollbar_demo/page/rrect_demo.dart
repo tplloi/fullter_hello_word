@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 class RRectDemo extends StatelessWidget {
   final ScrollController controller;
 
-  const RRectDemo({Key? key, required this.controller}) : super(key: key);
+  const RRectDemo({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

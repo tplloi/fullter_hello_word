@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 class CustomDemo extends StatelessWidget {
   final ScrollController controller;
 
-  const CustomDemo({Key? key, required this.controller}) : super(key: key);
+  const CustomDemo({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

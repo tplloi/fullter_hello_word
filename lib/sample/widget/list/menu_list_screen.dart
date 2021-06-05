@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:hello_word/sample/widget/list/contact_page_screen/contact_page_screen.dart';
+import 'package:hello_word/sample/widget/list/draggable_scrollbar_demo/draggable_scrollbar_demo_screen.dart';
 
-import 'draggableScrollBarDemo/DraggableScrollBarDemo.dart';
 import 'listBodyWidget/ListBodyScreen.dart';
 import 'listRandomWords/RandomWordsScreen.dart';
 import 'listSearch/ListViewSearchScreen.dart';

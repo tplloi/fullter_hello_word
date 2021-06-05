@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'page/ArrowsDemo.dart';
-import 'page/CustomDemo.dart';
-import 'page/RRectDemo.dart';
-import 'page/SemicircleDemo.dart';
+import 'page/arrows_demo.dart';
+import 'page/custom_demo.dart';
+import 'page/rrect_demo.dart';
+import 'page/semi_circle_demo.dart';
 
 //https://medium.com/flutter-community/creating-draggable-scrollbar-in-flutter-a0ae8cf3143b
 //https://github.com/fluttercommunity/flutter-draggable-scrollbar
