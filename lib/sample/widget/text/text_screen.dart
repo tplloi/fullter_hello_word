@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class TextScreen extends StatelessWidget {
@@ -8,36 +9,35 @@ class TextScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "TextScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
-          child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(15),
-        child: Column(
-          children: <Widget>[
-            text1(),
-            SizedBox(
-              height: 50,
-            ),
-            text2(),
-            SizedBox(
-              height: 50,
-            ),
-            text3(),
-            SizedBox(
-              height: 50,
-            ),
-            TextWidget(),
-          ],
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+          child: Column(
+            children: <Widget>[
+              _text1(),
+              SizedBox(height: 50),
+              _text2(),
+              SizedBox(height: 50),
+              _text3(),
+              SizedBox(height: 50),
+              TextWidget(),
+            ],
+          ),
         ),
-      )),
+      ),
       backgroundColor: Colors.white,
     );
   }
 
-  Widget text1() {
+  Widget _text1() {
     return Text(
       'Hello World!\nLoitp1\nLoitp2\nLoitp3',
       style: TextStyle(fontWeight: FontWeight.bold),
@@ -47,7 +47,7 @@ class TextScreen extends StatelessWidget {
     );
   }
 
-  Widget text2() {
+  Widget _text2() {
     return Text.rich(
       TextSpan(
         children: <TextSpan>[
@@ -61,7 +61,7 @@ class TextScreen extends StatelessWidget {
     );
   }
 
-  Widget text3() {
+  Widget _text3() {
     return Text(
       'Hello World!\nLoitp1\nLoitp2\nLoitp3',
       style: UIUtils.getCustomFontTextStyle(),

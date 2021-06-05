@@ -6,6 +6,7 @@ import 'package:hello_word/sample/widget/chart/ChartScreen.dart';
 import 'package:hello_word/sample/widget/interactive_viewer/using_interactive_viewer_screen.dart';
 import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_screen.dart';
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
+import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
 import 'bottomBar/MenuBottomBarScreen.dart';
@@ -38,12 +39,11 @@ import 'state/stateful_widget_demo_screen.dart';
 import 'state/stateless_widget_demo_screen.dart';
 import 'stepper/stepper_screen.dart';
 import 'switch/switch_screen.dart';
-import 'tabPageSelector/TabPageSelectorScreen.dart';
 import 'table/table_screen.dart';
-import 'text/TextAnimatedTextKit.dart';
-import 'text/TextScreen.dart';
-import 'tooltip/TooltipScreen.dart';
-import 'webview/WebViewScreen.dart';
+import 'text/text_animated_text_kit_view.dart';
+import 'text/text_screen.dart';
+import 'tooltip/tooltip_screen.dart';
+import 'webview/web_view_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override

@@ -5,7 +5,7 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 class TabPageSelectorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List tabs = ['Tab1', 'Tab2', 'Tab3', 'Tab4'];
+    List _listTab = ['Tab1', 'Tab2', 'Tab3', 'Tab4'];
 
     return Column(
       children: <Widget>[
@@ -13,18 +13,20 @@ class TabPageSelectorScreen extends StatelessWidget {
           child: Scaffold(
             appBar: UIUtils.getAppBar(
               "TabPageSelectorScreen",
-              () => Get.back(),
+              () {
+                Get.back();
+              },
               null,
             ),
             body: DefaultTabController(
-              length: tabs.length,
+              length: _listTab.length,
               child: Builder(builder: (context) {
                 return Column(
                   children: <Widget>[
                     TabPageSelector(),
                     Expanded(
                       child: TabBarView(
-                          children: tabs.map((value) {
+                          children: _listTab.map((value) {
                         return UIUtils.getButton(
                           "TabBarView " + value,
                           () => Get.back(),

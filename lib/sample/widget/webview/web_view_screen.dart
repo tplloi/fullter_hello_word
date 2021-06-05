@@ -79,7 +79,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
           gestureNavigationEnabled: true,
         );
       }),
-      floatingActionButton: favoriteButton(),
+      floatingActionButton: _favoriteButton(),
     );
   }
 
@@ -95,7 +95,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
     );
   }
 
-  Widget favoriteButton() {
+  Widget _favoriteButton() {
     return FutureBuilder<WebViewController>(
       future: _controller.future,
       builder:
@@ -273,7 +273,7 @@ Cache cleared."""),
   }
 
   Widget _getCookieList(String cookies) {
-    if (cookies == null || cookies == '""') {
+    if (cookies == '""') {
       return Container();
     }
     final List<String> cookieList = cookies.split(';');
@@ -288,8 +288,7 @@ Cache cleared."""),
 }
 
 class NavigationControls extends StatelessWidget {
-  const NavigationControls(this._webViewControllerFuture)
-      : assert(_webViewControllerFuture != null);
+  const NavigationControls(this._webViewControllerFuture);
 
   final Future<WebViewController> _webViewControllerFuture;
 

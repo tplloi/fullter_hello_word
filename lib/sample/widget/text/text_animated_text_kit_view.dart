@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class TextAnimatedTextKitScreen extends StatefulWidget {
@@ -36,8 +37,10 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         animatedTextExample.label,
-        () => Get.back(),
-        () => null,
+        () {
+          Get.back();
+        },
+        null,
       ),
       body: Column(
         children: <Widget>[
@@ -77,7 +80,7 @@ class _TextAnimatedTextKitScreenState extends State<TextAnimatedTextKitScreen> {
 
 class AnimatedTextExample {
   final String label;
-  final Color? color;
+  final Color color;
   final Widget child;
 
   const AnimatedTextExample({
@@ -91,8 +94,10 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
     <AnimatedTextExample>[
       AnimatedTextExample(
         label: 'Rotate',
-        color: Colors.orange[800],
+        color: Colors.orange.withOpacity(0.5),
         child: ListView(
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
           scrollDirection: Axis.horizontal,
           children: <Widget>[
             Row(
@@ -127,7 +132,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Fade',
-        color: Colors.brown[600],
+        color: Colors.brown.withOpacity(0.6),
         child: FadeAnimatedTextKit(
           onTap: onTap,
           text: ['do IT!', 'do it RIGHT!!', 'do it RIGHT NOW!!!'],
@@ -136,7 +141,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Typer',
-        color: Colors.lightGreen[800],
+        color: Colors.lightGreen.withOpacity(0.8),
         child: SizedBox(
           width: 250.0,
           child: TyperAnimatedTextKit(
@@ -156,7 +161,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Typewriter',
-        color: Colors.teal[700],
+        color: Colors.teal.withOpacity(0.7),
         child: SizedBox(
           width: 250.0,
           child: TypewriterAnimatedTextKit(
@@ -176,7 +181,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Scale',
-        color: Colors.blue[700],
+        color: Colors.blue.withOpacity(0.7),
         child: ScaleAnimatedTextKit(
           onTap: onTap,
           text: ['Think', 'Build', 'Ship'],
@@ -188,7 +193,7 @@ List<AnimatedTextExample> animatedTextExamples({VoidCallback? onTap}) =>
       ),
       AnimatedTextExample(
         label: 'Colorize',
-        color: Colors.blueGrey[50],
+        color: Colors.blueGrey.withOpacity(0.5),
         child: ColorizeAnimatedTextKit(
           onTap: onTap,
           text: [

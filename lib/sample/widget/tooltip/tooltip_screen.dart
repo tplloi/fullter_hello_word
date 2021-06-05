@@ -13,7 +13,9 @@ class _TooltipScreenState extends State<TooltipScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "TooltipScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Row(
