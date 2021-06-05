@@ -3,12 +3,12 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-class TestPage extends StatefulWidget {
+class TestPageScreen extends StatefulWidget {
   @override
-  _TestPageState createState() => _TestPageState();
+  _TestPageScreenState createState() => _TestPageScreenState();
 }
 
-class _TestPageState extends State<TestPage> {
+class _TestPageScreenState extends State<TestPageScreen> {
   @override
   void initState() {
     super.initState();
@@ -51,8 +51,10 @@ class _TestPageState extends State<TestPage> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "TestPage",
-        () => Get.back(),
-        () => null,
+        () {
+          Get.back();
+        },
+        null,
       ),
       body: Center(
         child: UIUtils.getButton(

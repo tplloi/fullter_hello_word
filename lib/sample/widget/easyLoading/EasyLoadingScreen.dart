@@ -11,7 +11,6 @@ import 'CustomAnimation.dart';
 import 'TestPage.dart';
 
 class EasyLoadingScreen extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     //should in func main();
@@ -86,20 +85,21 @@ class _EasyLoadingHomePageState extends State<EasyLoadingHomePage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 50),
               Wrap(
                 runAlignment: WrapAlignment.center,
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: <Widget>[
                   UIUtils.getButton(
                     "open test page",
-                    () => {
-                      _timer?.cancel(),
-                      Get.to(TestPage()),
+                    ()  {
+                      _timer?.cancel();
+                      Get.to(TestPageScreen());
                     },
                   ),
                   SizedBox(width: DimenConstants.marginPaddingMedium),
