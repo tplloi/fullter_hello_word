@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'MD2IndicatorSize.dart';
+import 'md2_indicator_size.dart';
 
 class MD2Indicator extends Decoration {
   final double indicatorHeight;
@@ -22,8 +22,7 @@ class MD2Indicator extends Decoration {
 class _MD2Painter extends BoxPainter {
   final MD2Indicator decoration;
 
-  _MD2Painter(this.decoration, VoidCallback? onChanged)
-      : super(onChanged);
+  _MD2Painter(this.decoration, VoidCallback? onChanged) : super(onChanged);
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {

@@ -1,4 +1,4 @@
-import 'UserInfo.dart';
+import 'user_info.dart';
 
 class User {
   List<UserInfo> listUserInfo = [];

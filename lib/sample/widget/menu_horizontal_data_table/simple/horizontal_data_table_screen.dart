@@ -4,7 +4,7 @@ import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
-import 'User.dart';
+import 'user.dart';
 
 //https://pub.dev/packages/horizontal_data_table
 class HorizontalDataTableScreen extends StatelessWidget {
@@ -13,7 +13,9 @@ class HorizontalDataTableScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "HorizontalDataTableScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: DataTableHomePage(),
@@ -34,11 +36,10 @@ class DataTableHomePage extends StatefulWidget {
 
 class _DataTableHomePageState extends State<DataTableHomePage> {
   HDTRefreshController _hdtRefreshController = HDTRefreshController();
-
-  static const int sortName = 0;
-  static const int sortStatus = 1;
-  bool isAscending = true;
-  int sortType = sortName;
+  static const int _sortName = 0;
+  static const int _sortStatus = 1;
+  bool _isAscending = true;
+  int _sortType = _sortName;
 
   @override
   void initState() {
@@ -103,14 +104,14 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           side: BorderSide(color: Colors.pink, width: 2),
         ),
         child: _getTitleItemWidget(
-          'Name' + (sortType == sortName ? (isAscending ? '↓' : '↑') : ''),
+          'Name' + (_sortType == _sortName ? (_isAscending ? '↓' : '↑') : ''),
           100,
           Colors.yellow,
         ),
         onPressed: () {
-          sortType = sortName;
-          isAscending = !isAscending;
-          user.sortName(isAscending);
+          _sortType = _sortName;
+          _isAscending = !_isAscending;
+          user.sortName(_isAscending);
           setState(() {});
         },
       ),
@@ -126,14 +127,15 @@ class _DataTableHomePageState extends State<DataTableHomePage> {
           side: BorderSide(color: Colors.pink, width: 2),
         ),
         child: _getTitleItemWidget(
-          'Status' + (sortType == sortStatus ? (isAscending ? '↓' : '↑') : ''),
+          'Status' +
+              (_sortType == _sortStatus ? (_isAscending ? '↓' : '↑') : ''),
           100,
           Colors.green,
         ),
         onPressed: () {
-          sortType = sortStatus;
-          isAscending = !isAscending;
-          user.sortStatus(isAscending);
+          _sortType = _sortStatus;
+          _isAscending = !_isAscending;
+          user.sortStatus(_isAscending);
           setState(() {});
         },
       ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'advance/BookingView.dart';
-import 'simple/HorizontalDataTableScreen.dart';
+import 'advance/booking_view.dart';
+import 'simple/horizontal_data_table_screen.dart';
 
 class MenuHorizontalDataTableScreen extends StatelessWidget {
   @override
@@ -11,24 +12,25 @@ class MenuHorizontalDataTableScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuHorizontalDataTableScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: ListView(
         physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           UIUtils.getButton(
             "BookingView",
-            () => {
-              Get.to(BookingView()),
+            () {
+              Get.to(BookingView());
             },
           ),
           UIUtils.getButton(
             "HorizontalDataTableScreen",
-            () => {
-              Get.to(HorizontalDataTableScreen()),
+            () {
+              Get.to(HorizontalDataTableScreen());
             },
           ),
         ],

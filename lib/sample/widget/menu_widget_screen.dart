@@ -5,6 +5,7 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:hello_word/sample/widget/chart/ChartScreen.dart';
 import 'package:hello_word/sample/widget/interactive_viewer/using_interactive_viewer_screen.dart';
 import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_screen.dart';
+import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
 import 'bottomBar/MenuBottomBarScreen.dart';
@@ -27,7 +28,6 @@ import 'grid/menu_grid_screen.dart';
 import 'inkwell/inkwell_screen.dart';
 import 'layout/menu_layout_screen.dart';
 import 'list/menu_list_screen.dart';
-import 'menuHorizontalDataTable/MenuHorizontalDataTableScreen.dart';
 import 'menuImage/MenuImageScreen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';

@@ -1,4 +1,4 @@
-import 'DummyHouse.dart';
+import 'dummy_house.dart';
 
 class DummyFloor {
   int floorIndex;

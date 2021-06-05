@@ -6,13 +6,13 @@ import 'package:hello_word/lib/core/BaseStatefulState.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
-import 'ControllerBook.dart';
-import 'model/DummyFloor.dart';
-import 'model/DummyHeaderDescription.dart';
-import 'model/DummyHouse.dart';
-import 'model/DummyModelIndicator.dart';
-import 'indicator/MD2Indicator.dart';
-import 'indicator/MD2IndicatorSize.dart';
+import 'controller_book.dart';
+import 'model/dummy_floor.dart';
+import 'model/dummy_header_description.dart';
+import 'model/dummy_house.dart';
+import 'model/dummy_model_indicator.dart';
+import 'indicator/md2_indicator.dart';
+import 'indicator/md2_indicator_size.dart';
 
 class BookingView extends StatefulWidget {
   @override
@@ -21,8 +21,8 @@ class BookingView extends StatefulWidget {
 
 class _SupportViewState extends BaseStatefulState {
   final ControllerBook _controllerBook = Get.put(ControllerBook());
-  final double widthItem = 50;
-  final double heightItem = 70;
+  final double _widthItem = 50;
+  final double _heightItem = 70;
 
   @override
   void initState() {
@@ -260,8 +260,8 @@ class _SupportViewState extends BaseStatefulState {
       return Expanded(
         child: Container(
           child: HorizontalDataTable(
-            leftHandSideColumnWidth: widthItem,
-            rightHandSideColumnWidth: widthItem *
+            leftHandSideColumnWidth: _widthItem,
+            rightHandSideColumnWidth: _widthItem *
                 (_controllerBook.listDummyHeaderDescription.length - 1),
             isFixedHeader: true,
             headerWidgets: _generateHeaderWidget(),
@@ -304,14 +304,14 @@ class _SupportViewState extends BaseStatefulState {
     return Row(
       children: [
         Container(
-          width: widthItem - 1,
-          height: widthItem * 4,
+          width: _widthItem - 1,
+          height: _widthItem * 4,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
-                height: widthItem - 1,
+                height: _widthItem - 1,
                 padding: EdgeInsets.all(DimenConstants.marginPaddingTiny),
                 alignment: Alignment.center,
                 child: Text(
@@ -324,10 +324,10 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
-                height: widthItem - 1,
+                height: _widthItem - 1,
                 padding: EdgeInsets.all(DimenConstants.marginPaddingTiny),
                 alignment: Alignment.center,
                 child: Text(
@@ -340,10 +340,10 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
-                height: widthItem - 1,
+                height: _widthItem - 1,
                 padding: EdgeInsets.all(DimenConstants.marginPaddingTiny),
                 alignment: Alignment.center,
                 child: Text(
@@ -356,10 +356,10 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
-                height: widthItem - 1,
+                height: _widthItem - 1,
                 padding: EdgeInsets.all(DimenConstants.marginPaddingTiny),
                 alignment: Alignment.center,
                 child: Text(
@@ -375,7 +375,7 @@ class _SupportViewState extends BaseStatefulState {
             ],
           ),
         ),
-        UIUtils.buildVerticalDivider(Color(0xff5B6CA4), widthItem * 4),
+        UIUtils.buildVerticalDivider(Color(0xff5B6CA4), _widthItem * 4),
       ],
     );
   }
@@ -386,8 +386,8 @@ class _SupportViewState extends BaseStatefulState {
   ) {
     DummyFloor dummyFloor = _controllerBook.listDummyFloor[index];
     return Container(
-      width: widthItem,
-      height: heightItem,
+      width: _widthItem,
+      height: _heightItem,
       padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
       alignment: Alignment.center,
       child: Row(
@@ -426,7 +426,7 @@ class _SupportViewState extends BaseStatefulState {
               ],
             ),
           ),
-          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), heightItem),
+          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), _heightItem),
         ],
       ),
     );
@@ -457,8 +457,8 @@ class _SupportViewState extends BaseStatefulState {
         children: [
           Container(
             color: isSelected ? Color(0xff59C36A) : Colors.transparent,
-            width: widthItem - 1,
-            height: heightItem,
+            width: _widthItem - 1,
+            height: _heightItem,
             alignment: Alignment.center,
             child: Text(
               text,
@@ -471,7 +471,7 @@ class _SupportViewState extends BaseStatefulState {
               maxLines: 2,
             ),
           ),
-          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), heightItem),
+          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), _heightItem),
         ],
       );
     }
@@ -500,13 +500,13 @@ class _SupportViewState extends BaseStatefulState {
       return Row(
         children: [
           Container(
-            width: widthItem - 1,
-            height: heightItem,
+            width: _widthItem - 1,
+            height: _heightItem,
             alignment: Alignment.center,
             child:
                 Image.asset("assets/images/ic_lock.png", width: 15, height: 15),
           ),
-          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), heightItem),
+          UIUtils.buildVerticalDivider(Color(0xff5B6CA4), _heightItem),
         ],
       );
     }

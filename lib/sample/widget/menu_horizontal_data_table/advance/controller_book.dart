@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:hello_word/lib/core/BaseController.dart';
 
-import 'model/DummyFloor.dart';
-import 'model/DummyHeaderDescription.dart';
-import 'model/DummyHouse.dart';
-import 'model/DummyModelIndicator.dart';
+import 'model/dummy_floor.dart';
+import 'model/dummy_header_description.dart';
+import 'model/dummy_house.dart';
+import 'model/dummy_model_indicator.dart';
 
 class ControllerBook extends BaseController {
   var listDummyModelIndicator = <DummyModelIndicator>[].obs;
