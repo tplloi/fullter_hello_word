@@ -28,7 +28,9 @@ class LinearProgressIndicatorAppState
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "LinearProgressIndicatorApp",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(

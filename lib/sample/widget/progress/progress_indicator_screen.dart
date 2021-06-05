@@ -8,16 +8,16 @@ class ProgressIndicatorScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ProgressIndicatorScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             CircularProgressIndicatorWidget(),
-            SizedBox(
-              height: 50,
-            ),
+            SizedBox(height: 50),
             LinearProgressIndicatorWidget(),
           ],
         ),

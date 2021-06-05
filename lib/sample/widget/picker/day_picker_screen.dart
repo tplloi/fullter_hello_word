@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class DayPickerScreen extends StatelessWidget {
@@ -8,7 +9,9 @@ class DayPickerScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "DayPickerScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
@@ -28,7 +31,7 @@ class DayPickerWidget extends StatefulWidget {
 
 class _DayPickerWidgetState extends State<DayPickerWidget> {
   DateTime _date = DateTime.now();
-  TimeOfDay? _time = TimeOfDay.now();
+  TimeOfDay _time = TimeOfDay.now();
 
   Future<void> chooseDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -55,18 +58,22 @@ class _DayPickerWidgetState extends State<DayPickerWidget> {
   Future<void> chooseTime(BuildContext context) async {
     final TimeOfDay? picked = await showTimePicker(
       context: context,
-      initialTime: _time!,
+      initialTime: _time,
     );
-    setState(() => {
-          _time = picked,
-          print("chooseTime _time " + _time.toString()),
-        });
+    setState(() {
+      if (picked != null) {
+        _time = picked;
+        print("chooseTime _time " + _time.toString());
+      }
+    });
     if (picked == null) _time = TimeOfDay.now();
   }
 
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+      physics: BouncingScrollPhysics(),
       children: <Widget>[
         UIUtils.getButton("Choose date", () => chooseDate(context)),
         UIUtils.getButton("Choose time", () => chooseTime(context)),

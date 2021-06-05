@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class CircularProgressIndicatorApp extends StatefulWidget {
@@ -28,12 +29,14 @@ class CircularProgressIndicatorAppState
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CircularProgressIndicatorApp",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(14.0),
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
           child: _loading
               ? Column(
                   mainAxisAlignment: MainAxisAlignment.center,
