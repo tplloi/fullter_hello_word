@@ -28,7 +28,7 @@ import 'grid/menu_grid_screen.dart';
 import 'inkwell/inkwell_screen.dart';
 import 'layout/menu_layout_screen.dart';
 import 'list/menu_list_screen.dart';
-import 'menuImage/MenuImageScreen.dart';
+import 'menuImage/menu_image_screen.dart';
 import 'picker/DayPickerScreen.dart';
 import 'progress/MenuProgressScreen.dart';
 import 'shimmer/ShimmerScreen.dart';

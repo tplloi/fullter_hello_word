@@ -8,23 +8,19 @@ class GradientScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "GradientScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: Container(
-        // Center the content
         child: Center(
-          // Add Text
           child: Text(
             "Hello World!",
             style: TextStyle(color: Colors.white),
           ),
         ),
-        // Set background
         decoration: BoxDecoration(
-          // Add Gradient
           gradient: UIUtils.getCustomGradient(),
         ),
       ),

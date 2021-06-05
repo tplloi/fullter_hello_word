@@ -9,7 +9,9 @@ class AvatarGlowScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "AvatarGlowScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(

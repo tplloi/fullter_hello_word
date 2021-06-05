@@ -10,8 +10,8 @@ class CacheNetworkImageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "CacheNetworkImageScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
