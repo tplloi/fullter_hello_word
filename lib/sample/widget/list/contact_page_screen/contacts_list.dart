@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
-import 'ContactListItem.dart';
-import 'ContactModal.dart';
+import 'contact_list_item.dart';
+import 'contact_modal.dart';
 
 class ContactsList extends StatelessWidget {
   final List<ContactModal> listContactModal;
@@ -11,7 +12,8 @@ class ContactsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.symmetric(vertical: 8.0),
+      physics: BouncingScrollPhysics(),
+      padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
       children: _buildContactsList(),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
-import 'ContactModal.dart';
-import 'ContactsList.dart';
+import 'contact_modal.dart';
+import 'contacts_list.dart';
 
 class ContactPageScreen extends StatelessWidget {
   _buildContactList() {
@@ -51,7 +51,9 @@ class ContactPageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ContactPageScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ContactsList(_buildContactList()),

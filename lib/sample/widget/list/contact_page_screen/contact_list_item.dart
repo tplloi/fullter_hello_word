@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ContactModal.dart';
+import 'contact_modal.dart';
 
 class ContactListItem extends StatelessWidget {
   final ContactModal _contactModal;
@@ -10,8 +10,9 @@ class ContactListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        leading: CircleAvatar(child: Text(_contactModal.fullName![0])),
-        title: Text(_contactModal.fullName!),
-        subtitle: Text(_contactModal.email!));
+      leading: CircleAvatar(child: Text(_contactModal.fullName![0])),
+      title: Text(_contactModal.fullName!),
+      subtitle: Text(_contactModal.email!),
+    );
   }
 }

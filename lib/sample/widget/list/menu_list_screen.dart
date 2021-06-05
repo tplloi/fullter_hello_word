@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/sample/widget/list/contact_page_screen/contact_page_screen.dart';
 
-import 'contactPageScreen/ContactPageScreen.dart';
 import 'draggableScrollBarDemo/DraggableScrollBarDemo.dart';
 import 'listBodyWidget/ListBodyScreen.dart';
 import 'listRandomWords/RandomWordsScreen.dart';
@@ -16,55 +17,57 @@ class MenuListScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuListScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
               "ContactPageScreen",
-              () => {
-                Get.to(ContactPageScreen()),
+              () {
+                Get.to(ContactPageScreen());
               },
             ),
             UIUtils.getButton(
               "DraggableScrollBarDemo",
-              () => {
-                Get.to(DraggableScrollBarDemo()),
+              () {
+                Get.to(DraggableScrollBarDemo());
               },
             ),
             UIUtils.getButton(
               "RandomWordsScreen",
-              () => {
-                Get.to(RandomWordsScreen()),
+              () {
+                Get.to(RandomWordsScreen());
               },
             ),
             UIUtils.getButton(
               "ListViewSearchScreen",
-              () => {
-                Get.to(ListViewSearchScreen()),
+              () {
+                Get.to(ListViewSearchScreen());
               },
             ),
             UIUtils.getButton(
               "ListBodyScreen",
-              () => {
-                Get.to(ListBodyScreen()),
+              () {
+                Get.to(ListBodyScreen());
               },
             ),
             UIUtils.getButton(
               "ListTileScreen",
-              () => {
-                Get.to(ListTileScreen()),
+              () {
+                Get.to(ListTileScreen());
               },
             ),
             UIUtils.getButton(
               "ListViewLoadMoreScreen",
-              () => {
-                Get.to(ListViewLoadMoreScreen()),
+              () {
+                Get.to(ListViewLoadMoreScreen());
               },
             ),
           ],
