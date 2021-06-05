@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class FormFieldScreen extends StatefulWidget {
@@ -8,28 +9,31 @@ class FormFieldScreen extends StatefulWidget {
 }
 
 class _FormFieldScreenState extends State<FormFieldScreen> {
-  final formKey = GlobalKey<FormState>();
-  bool isAutoValidate = false;
-  var name;
-  var tel;
-  var email;
+  final _formKey = GlobalKey<FormState>();
+  bool _isAutoValidate = false;
+  var _name;
+  var _tel;
+  var _email;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: UIUtils.getAppBar(
           "FormFieldScreen",
-          () => Get.back(),
+          () {
+            Get.back();
+          },
           null,
         ),
         body: Container(
-          margin: const EdgeInsets.all(15),
+          margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
           child: ListView(
+            physics: BouncingScrollPhysics(),
             children: <Widget>[
               Form(
                 // onWillPop: willPop,
-                key: formKey,
-                autovalidate: isAutoValidate,
+                key: _formKey,
+                autovalidate: _isAutoValidate,
                 child: Column(
                   children: <Widget>[
                     TextFormField(
@@ -41,7 +45,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                         }
                         return null;
                       },
-                      onSaved: (value) => name = value,
+                      onSaved: (value) => _name = value,
                     ),
                     TextFormField(
                       decoration: const InputDecoration(labelText: 'Tel'),
@@ -52,7 +56,7 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                         else
                           return null;
                       },
-                      onSaved: (value) => tel = value,
+                      onSaved: (value) => _tel = value,
                     ),
                     TextFormField(
                       decoration: const InputDecoration(labelText: 'Email'),
@@ -66,10 +70,10 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
                         else
                           return null;
                       },
-                      onSaved: (value) => email = value,
+                      onSaved: (value) => _email = value,
                     ),
                     SizedBox(height: 10),
-                    UIUtils.getButton("Validate input", () => validateInputs()),
+                    UIUtils.getButton("Validate input", () => _validateInputs()),
                   ],
                 ),
               )
@@ -78,12 +82,12 @@ class _FormFieldScreenState extends State<FormFieldScreen> {
         ));
   }
 
-  void validateInputs() {
-    if (formKey.currentState!.validate()) {
-      formKey.currentState!.save();
+  void _validateInputs() {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
     } else {
       // After input, turn on automatic inspection
-      setState(() => isAutoValidate = true);
+      setState(() => _isAutoValidate = true);
     }
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class EditTextScreen extends StatefulWidget {
@@ -8,20 +9,21 @@ class EditTextScreen extends StatefulWidget {
 }
 
 class EditTextScreenState extends State<EditTextScreen> {
-  String results = "";
-
-  final TextEditingController controller = TextEditingController();
+  String _results = "";
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "EditTextScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -33,13 +35,13 @@ class EditTextScreenState extends State<EditTextScreen> {
                 ),
                 onSubmitted: (String str) {
                   setState(() {
-                    results = results + "\n" + str;
-                    controller.text = "";
+                    _results = _results + "\n" + str;
+                    _controller.text = "";
                   });
                 },
-                controller: controller,
+                controller: _controller,
               ),
-              UIUtils.getText(results),
+              UIUtils.getText(_results),
             ],
           ),
         ),
