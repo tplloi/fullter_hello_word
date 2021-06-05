@@ -20,7 +20,7 @@ import 'easyLoading/EasyLoadingScreen.dart';
 import 'editText/MenuEditTextScreen.dart';
 import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
-import 'gesture/GestureScreen.dart';
+import 'gesture/gesture_screen.dart';
 import 'grid/MenuGridScreen.dart';
 import 'inkwell/InkwellScreen.dart';
 import 'interactiveViewer/UsingInteractiveViewerScreen.dart';

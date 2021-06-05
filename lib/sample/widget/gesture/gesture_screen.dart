@@ -8,7 +8,9 @@ class GestureScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "GestureScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: GestureWidget(
@@ -19,15 +21,18 @@ class GestureScreen extends StatelessWidget {
 }
 
 class GestureWidget extends StatelessWidget {
-  GestureWidget({Key? key, this.title}) : super(key: key);
-  final String? title;
+  GestureWidget({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
         child: Text(
-          this.title!,
+          this.title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
@@ -58,22 +63,12 @@ class GestureWidget extends StatelessWidget {
           style: TextStyle(fontSize: 18, color: Colors.red),
         ),
         actions: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: Text(
-              "Action",
-              style: TextStyle(fontSize: 25, color: Colors.black),
-            ),
-          ),
-          FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                "Close",
-              ))
+          UIUtils.getButton("Action", () {
+            Navigator.of(context).pop();
+          }),
+          UIUtils.getButton("Close", () {
+            Navigator.of(context).pop();
+          }),
         ],
       ),
     );

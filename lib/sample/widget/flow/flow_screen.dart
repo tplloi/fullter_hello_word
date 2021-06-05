@@ -8,7 +8,9 @@ class FlowScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "FlowScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: FlowWidget(),
@@ -23,8 +25,8 @@ class FlowWidget extends StatefulWidget {
 
 class _FlowWidgetState extends State<FlowWidget>
     with SingleTickerProviderStateMixin {
-  AnimationController? menuAnimation;
-  IconData lastTapped = Icons.notifications;
+  AnimationController? _menuAnimation;
+  IconData _iconDataLastTapped = Icons.notifications;
 
   final List<IconData> listIconData = <IconData>[
     Icons.home,
@@ -35,13 +37,13 @@ class _FlowWidgetState extends State<FlowWidget>
   ];
 
   void _updateMenu(IconData icon) {
-    if (icon != Icons.menu) setState(() => lastTapped = icon);
+    if (icon != Icons.menu) setState(() => _iconDataLastTapped = icon);
   }
 
   @override
   void initState() {
     super.initState();
-    menuAnimation = AnimationController(
+    _menuAnimation = AnimationController(
       duration: const Duration(milliseconds: 250),
       vsync: this,
     );
@@ -53,16 +55,17 @@ class _FlowWidgetState extends State<FlowWidget>
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: RawMaterialButton(
-        fillColor: lastTapped == iconData ? Colors.amber[700] : Colors.blue,
+        fillColor:
+            _iconDataLastTapped == iconData ? Colors.amber[700] : Colors.blue,
         splashColor: Colors.amber[100],
         shape: CircleBorder(),
         constraints: BoxConstraints.tight(Size(buttonDiameter, buttonDiameter)),
         onPressed: () {
           print("flowMenuItem onPressed");
           _updateMenu(iconData);
-          menuAnimation!.status == AnimationStatus.completed
-              ? menuAnimation!.reverse()
-              : menuAnimation!.forward();
+          _menuAnimation!.status == AnimationStatus.completed
+              ? _menuAnimation!.reverse()
+              : _menuAnimation!.forward();
         },
         child: Icon(
           iconData,
@@ -76,7 +79,7 @@ class _FlowWidgetState extends State<FlowWidget>
   @override
   Widget build(BuildContext context) {
     return Flow(
-      delegate: FlowMenuDelegate(menuAnimation: menuAnimation),
+      delegate: FlowMenuDelegate(menuAnimation: _menuAnimation),
       children: listIconData
           .map<Widget>((IconData icon) => flowMenuItem(icon))
           .toList(),
