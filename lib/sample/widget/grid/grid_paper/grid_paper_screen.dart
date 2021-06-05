@@ -8,7 +8,9 @@ class GridPaperScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "GridPaperScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: GridPaperWidget(),

@@ -21,7 +21,7 @@ import 'editText/MenuEditTextScreen.dart';
 import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gesture_screen.dart';
-import 'grid/MenuGridScreen.dart';
+import 'grid/menu_grid_screen.dart';
 import 'inkwell/InkwellScreen.dart';
 import 'interactiveViewer/UsingInteractiveViewerScreen.dart';
 import 'layout/MenuLayoutScreen.dart';

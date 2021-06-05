@@ -10,9 +10,9 @@ class InfiniteScrollScreen extends StatefulWidget {
 }
 
 class InfiniteScrollState extends State<InfiniteScrollScreen> {
-  List listData = [];
-  bool isLoading = false;
-  int pageCount = 1;
+  List _listData = [];
+  bool _isLoading = false;
+  int _pageCount = 1;
   ScrollController? _scrollController;
 
   @override
@@ -39,7 +39,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
         crossAxisCount: 2,
         mainAxisSpacing: 15.0,
         physics: const AlwaysScrollableScrollPhysics(),
-        children: listData.map((value) {
+        children: _listData.map((value) {
           return InkWell(
             child: Container(
               alignment: Alignment.center,
@@ -52,7 +52,7 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
             ),
             onTap: () {
               print("onTap");
-              listData.remove(value);
+              _listData.remove(value);
               //do sth better
               setState(() {});
             },
@@ -68,14 +68,14 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
             _scrollController!.position.maxScrollExtent &&
         !_scrollController!.position.outOfRange) {
       setState(() {
-        print("comes to bottom $isLoading");
-        isLoading = true;
+        print("comes to bottom $_isLoading");
+        _isLoading = true;
 
-        if (isLoading) {
+        if (_isLoading) {
           print("RUNNING LOAD MORE");
 
-          pageCount = pageCount + 1;
-          addItemIntoLisT(pageCount);
+          _pageCount = _pageCount + 1;
+          addItemIntoLisT(_pageCount);
         }
       });
     }
@@ -84,8 +84,8 @@ class InfiniteScrollState extends State<InfiniteScrollScreen> {
   ////ADDING DATA INTO ARRAY LIST
   void addItemIntoLisT(var pageCount) {
     for (int i = (pageCount * 10) - 10; i < pageCount * 10; i++) {
-      listData.add(i);
-      isLoading = false;
+      _listData.add(i);
+      _isLoading = false;
     }
   }
 

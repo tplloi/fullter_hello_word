@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'MyGridView.dart';
+import 'my_grid_view.dart';
 
 class GridScreen extends StatelessWidget {
   @override
@@ -10,7 +10,9 @@ class GridScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "GridScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: MyGridView().build(),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class MyGridView {
   GestureDetector getStructuredGridCell(name, image) {
-    // Wrap the child under GestureDetector to setup a on click action
     return GestureDetector(
       onTap: () {
         print("onTap called.");
