@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
-import 'CustomEnum.dart';
+import 'custom_enum.dart';
 
 class CustomMultiChildLayoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
       appBar: UIUtils.getAppBar(
         "CustomMultiChildLayoutScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: CustomMultiChildLayoutWidget(),

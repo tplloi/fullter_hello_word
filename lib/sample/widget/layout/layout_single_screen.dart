@@ -8,7 +8,9 @@ class LayoutSingleScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "LayoutSingleScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(

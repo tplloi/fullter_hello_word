@@ -6,10 +6,11 @@ class LayoutBuilderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
       appBar: UIUtils.getAppBar(
         "LayoutBuilderScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: LayoutBuilderWidget(),
@@ -23,7 +24,7 @@ class LayoutBuilderWidget extends StatefulWidget {
 }
 
 class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
-  double index = 300;
+  double _index = 300;
 
   @override
   Widget build(BuildContext context) {
@@ -31,19 +32,18 @@ class _LayoutBuilderWidgetState extends State<LayoutBuilderWidget> {
       child: Column(
         children: <Widget>[
           //'The direct child of LayoutBuilder will match the size of the MatchParent. To maintain the size of the child, you need to add an Align or similar widget.
-
           Slider(
-            value: index,
+            value: _index,
             min: 300,
             max: 400,
             onChanged: (value) {
-              setState(() => index = value);
+              setState(() => _index = value);
             },
           ),
           Container(
             color: Colors.red,
-            width: index,
-            height: index,
+            width: _index,
+            height: _index,
             child: LayoutBuilder(builder: (context, constraints) {
               if (constraints.maxWidth < 350) {
                 return Align(

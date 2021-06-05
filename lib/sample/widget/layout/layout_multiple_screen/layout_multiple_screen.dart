@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
-import 'ProductBox.dart';
+import 'product_box.dart';
 
 class LayoutMultipleScreen extends StatelessWidget {
   @override
@@ -9,10 +10,13 @@ class LayoutMultipleScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "LayoutMultipleScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
-      body: Center(
+      body: Container(
+        color: Colors.white,
         child: MyHomePage(
           title: "MyHomePage",
         ),
@@ -23,15 +27,19 @@ class LayoutMultipleScreen extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key, this.title}) : super(key: key);
+  MyHomePage({
+    Key? key,
+    this.title,
+  }) : super(key: key);
   final String? title;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         shrinkWrap: true,
-        padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: <Widget>[
           ProductBox(
             name: "Suzuki",

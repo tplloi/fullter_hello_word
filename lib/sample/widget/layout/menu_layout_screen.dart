@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/sample/widget/layout/custom_multi_child_layout/custom_multi_child_layout_screen.dart';
+import 'package:hello_word/sample/widget/layout/layout_multiple_screen/layout_multiple_screen.dart';
 
-import 'LayoutBuilderScreen.dart';
-import 'LayoutSingleScreen.dart';
-import 'customMultiChildLayout/CustomMultiChildLayoutScreen.dart';
-import 'layoutMultipleScreen/LayoutMultipleScreen.dart';
+import 'layout_builder_screen.dart';
+import 'layout_single_screen.dart';
 
 class MenuLayoutScreen extends StatelessWidget {
   @override
@@ -13,37 +14,39 @@ class MenuLayoutScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "MenuLayoutScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
               "CustomMultiChildLayoutScreen",
-              () => {
-                Get.to(CustomMultiChildLayoutScreen()),
+              () {
+                Get.to(CustomMultiChildLayoutScreen());
               },
             ),
             UIUtils.getButton(
               "LayoutBuilderScreen",
-              () => {
-                Get.to(LayoutBuilderScreen()),
+              () {
+                Get.to(LayoutBuilderScreen());
               },
             ),
             UIUtils.getButton(
               "LayoutMultipleScreen",
-              () => {
-                Get.to(LayoutMultipleScreen()),
+              () {
+                Get.to(LayoutMultipleScreen());
               },
             ),
             UIUtils.getButton(
               "LayoutSingleScreen",
-              () => {
-                Get.to(LayoutSingleScreen()),
+              () {
+                Get.to(LayoutSingleScreen());
               },
             ),
           ],
