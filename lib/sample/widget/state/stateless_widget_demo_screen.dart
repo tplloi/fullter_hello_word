@@ -5,10 +5,10 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 class StatelessWidgetDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final double myTextSize = 30.0;
-    final double myIconSize = 40.0;
-    final TextStyle myTextStyle =
-        TextStyle(color: Colors.grey, fontSize: myTextSize);
+    final double _myTextSize = 30.0;
+    final double _myIconSize = 40.0;
+    final TextStyle _myTextStyle =
+        TextStyle(color: Colors.grey, fontSize: _myTextSize);
 
     var column = Column(
       // Makes the cards stretch in horizontal axis
@@ -19,40 +19,41 @@ class StatelessWidgetDemoScreen extends StatelessWidget {
             // Setup the text
             title: Text(
               "Favorite",
-              style: myTextStyle,
+              style: _myTextStyle,
             ),
             // Setup the icon
-            icon: Icon(Icons.favorite, size: myIconSize, color: Colors.red)),
+            icon: Icon(Icons.favorite, size: _myIconSize, color: Colors.red)),
         MyCard(
             title: Text(
               "Alarm",
-              style: myTextStyle,
+              style: _myTextStyle,
             ),
-            icon: Icon(Icons.alarm, size: myIconSize, color: Colors.blue)),
+            icon: Icon(Icons.alarm, size: _myIconSize, color: Colors.blue)),
         MyCard(
             title: Text(
               "Airport Shuttle",
-              style: myTextStyle,
+              style: _myTextStyle,
             ),
             icon: Icon(Icons.airport_shuttle,
-                size: myIconSize, color: Colors.amber)),
+                size: _myIconSize, color: Colors.amber)),
         MyCard(
             title: Text(
               "Done",
-              style: myTextStyle,
+              style: _myTextStyle,
             ),
-            icon: Icon(Icons.done, size: myIconSize, color: Colors.green)),
+            icon: Icon(Icons.done, size: _myIconSize, color: Colors.green)),
       ],
     );
 
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "StatelessWidgetDemoScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Container(
-        // Sets the padding in the main container
         padding: const EdgeInsets.only(bottom: 2.0),
         child: Center(
           child: SingleChildScrollView(child: column),

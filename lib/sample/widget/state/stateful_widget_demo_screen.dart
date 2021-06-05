@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
+import 'package:hello_word/lib/util/UIUtils.dart';
 
 class StatefulWidgetDemoScreen extends StatefulWidget {
   @override
@@ -8,14 +10,14 @@ class StatefulWidgetDemoScreen extends StatefulWidget {
 }
 
 class StatefulWidgetDemoScreenState extends State<StatefulWidgetDemoScreen> {
-  int counter = 0;
-  List<String> strings = ['Flutter', 'is', 'cool', "and", "awesome!"];
-  String displayedString = "Hello World!";
+  int _counter = 0;
+  List<String> _listString = ['Flutter', 'is', 'cool', "and", "awesome!"];
+  String _displayedString = "Hello World!";
 
   void onPressOfButton() {
     setState(() {
-      displayedString = strings[counter];
-      counter = counter < 4 ? counter + 1 : 0;
+      _displayedString = _listString[_counter];
+      _counter = _counter < 4 ? _counter + 1 : 0;
     });
   }
 
@@ -31,16 +33,12 @@ class StatefulWidgetDemoScreenState extends State<StatefulWidgetDemoScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(displayedString, style: TextStyle(fontSize: 40.0)),
-              Padding(padding: EdgeInsets.all(10.0)),
-              RaisedButton(
-                child: Text(
-                  "Press me",
-                  style: TextStyle(color: Colors.white),
-                ),
-                color: Colors.red,
-                onPressed: onPressOfButton,
-              )
+              Text(_displayedString, style: TextStyle(fontSize: 40.0)),
+              Padding(
+                  padding: EdgeInsets.all(DimenConstants.marginPaddingMedium)),
+              UIUtils.getButton("Press me", () {
+                onPressOfButton();
+              }),
             ],
           ),
         ),
