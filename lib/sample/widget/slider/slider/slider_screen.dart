@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'SliderThemeWidget.dart';
-import 'SliderWidget.dart';
+import 'slider_theme_widget.dart';
+import 'slider_widget.dart';
 
 class SliderScreen extends StatelessWidget {
   @override
@@ -11,10 +12,14 @@ class SliderScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "SliderScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             SliderWidget(),

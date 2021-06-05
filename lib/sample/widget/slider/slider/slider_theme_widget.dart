@@ -6,7 +6,7 @@ class SliderThemeWidget extends StatefulWidget {
 }
 
 class _SliderThemeWidgetState extends State<SliderThemeWidget> {
-  double value = 0;
+  double _value = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +39,13 @@ class _SliderThemeWidgetState extends State<SliderThemeWidget> {
             Expanded(
               flex: 1,
               child: Slider(
-                value: value,
-                label: '$value',
+                value: _value,
+                label: '$_value',
                 divisions: 10,
                 onChanged: (v) {
                   setState(() {
-                    value = v.floorToDouble();
-                    print("SliderThemeWidget value " + value.toString());
+                    _value = v.floorToDouble();
+                    print("SliderThemeWidget value " + _value.toString());
                   });
                 },
                 min: 0.0,

@@ -31,11 +31,12 @@ class _ShimmerHomePageState extends State<ShimmerHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-          "ShimmerScreen",
-          () => {
-                Get.back(),
-              },
-          () => null),
+        "ShimmerScreen",
+        () {
+          Get.back();
+        },
+        null,
+      ),
       body: Column(
         children: [
           ListTile(
@@ -65,8 +66,10 @@ class _LoadingListPageState extends State<LoadingListPage> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "LoadingListPage",
-        () => Get.back(),
-        () => null,
+        () {
+          Get.back();
+        },
+        null,
       ),
       body: Container(
         width: double.infinity,
@@ -79,8 +82,8 @@ class _LoadingListPageState extends State<LoadingListPage> {
           children: <Widget>[
             Expanded(
               child: Shimmer.fromColors(
-                baseColor: Colors.grey[300]!,
-                highlightColor: Colors.grey[100]!,
+                baseColor: Colors.grey.withOpacity(0.5),
+                highlightColor: Colors.grey.withOpacity(0.1),
                 enabled: _enabled,
                 child: ListView.builder(
                   itemBuilder: (_, __) => Padding(

@@ -6,20 +6,22 @@ class SliderWidget extends StatefulWidget {
 }
 
 class _SliderWidgetState extends State<SliderWidget> {
-  double value = 0;
-  var rangeValues = const RangeValues(20, 80);
+  double _value = 0;
+  var _rangeValues = const RangeValues(20, 80);
 
   @override
   Widget build(BuildContext context) {
     return Slider(
-      value: value,
+      value: _value,
       min: 0,
       max: 100,
       onChanged: (v) {
-        setState(() => {
-              print("Slider value " + value.toString()),
-              value = v.roundToDouble()
-            });
+        setState(
+          () {
+            print("Slider value " + _value.toString());
+            _value = v.roundToDouble();
+          },
+        );
       },
     );
   }
