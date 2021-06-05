@@ -8,7 +8,7 @@ import 'sample/animation/MenuAnimationScreen.dart';
 import 'sample/database/MenuDatabaseScreen.dart';
 import 'sample/demo/MenuDemoScreen.dart';
 import 'sample/demo/syntax/SyntaxScreen.dart';
-import 'sample/widget/MenuWidgetScreen.dart';
+import 'sample/widget/menu_widget_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   @override

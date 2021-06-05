@@ -9,7 +9,9 @@ class InkwellScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "InkwellScreen - check logcat see event",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SizedBox(

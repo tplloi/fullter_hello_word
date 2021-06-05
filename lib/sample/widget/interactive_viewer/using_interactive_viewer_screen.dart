@@ -9,7 +9,9 @@ class UsingInteractiveViewerScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "UsingInteractiveViewerScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: InteractiveViewer(
