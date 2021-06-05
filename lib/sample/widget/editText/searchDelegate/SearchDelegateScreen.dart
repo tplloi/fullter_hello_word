@@ -8,18 +8,18 @@ class SearchDelegateScreen extends StatefulWidget {
 }
 
 class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
-  final List<String> listWord;
-  late MySearchDelegate mySearchDelegate;
+  final List<String> _listWord;
+  late MySearchDelegate _mySearchDelegate;
 
   _SearchDelegateScreenState()
-      : listWord = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']
+      : _listWord = ['a', 'ab', 'abc', 'ac', 'ad', 'ae', 'af', 'ag', 'ah', 'aj']
           ..sort((w1, w2) => w1.toLowerCase().compareTo(w2.toLowerCase())),
         super();
 
   @override
   void initState() {
     super.initState();
-    mySearchDelegate = MySearchDelegate(listWord);
+    _mySearchDelegate = MySearchDelegate(_listWord);
   }
 
   @override
@@ -35,7 +35,7 @@ class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
             onPressed: () async {
               final String? selected = await showSearch<String?>(
                 context: context,
-                delegate: mySearchDelegate,
+                delegate: _mySearchDelegate,
               );
               if (selected != null) {
                 Scaffold.of(context).showSnackBar(
@@ -50,9 +50,9 @@ class _SearchDelegateScreenState extends State<SearchDelegateScreen> {
       ),
       body: Scrollbar(
         child: ListView.builder(
-          itemCount: listWord.length,
+          itemCount: _listWord.length,
           itemBuilder: (context, idx) => ListTile(
-            title: Text(listWord[idx]),
+            title: Text(_listWord[idx]),
           ),
         ),
       ),

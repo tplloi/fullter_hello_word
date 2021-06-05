@@ -4,12 +4,12 @@ import 'package:hello_word/lib/util/UIUtils.dart';
 import 'SuggestionListWidget.dart';
 
 class MySearchDelegate extends SearchDelegate<String?> {
-  final List<String> listWord;
-  final List<String> listHistory;
+  final List<String> _listWord;
+  final List<String> _listHistory;
 
   MySearchDelegate(List<String> words)
-      : listWord = words,
-        listHistory = <String>['apple', 'hello', 'world', 'flutter'],
+      : _listWord = words,
+        _listHistory = <String>['apple', 'hello', 'world', 'flutter'],
         super();
 
   @override
@@ -58,15 +58,15 @@ class MySearchDelegate extends SearchDelegate<String?> {
   @override
   Widget buildSuggestions(BuildContext context) {
     final Iterable<String> suggestions = this.query.isEmpty
-        ? listHistory
-        : listWord.where((word) => word.startsWith(query));
+        ? _listHistory
+        : _listWord.where((word) => word.startsWith(query));
 
     return SuggestionListWidget(
       query: this.query,
       listSuggestion: suggestions.toList(),
       onSelected: (String suggestion) {
         this.query = suggestion;
-        this.listHistory.insert(0, suggestion);
+        this._listHistory.insert(0, suggestion);
         showResults(context);
       },
     );
