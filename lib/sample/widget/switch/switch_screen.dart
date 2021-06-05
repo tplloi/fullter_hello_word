@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 class SwitchScreen extends StatelessWidget {
@@ -8,16 +9,18 @@ class SwitchScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "SwitchScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             SwitchWidget(),
-            SizedBox(
-              height: 50,
-            ),
+            SizedBox(height: 50),
             SizedBox(
               height: 300,
               child: SwitchListTileWidget(),
