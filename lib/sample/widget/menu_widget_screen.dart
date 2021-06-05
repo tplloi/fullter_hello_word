@@ -36,7 +36,7 @@ import 'slider/menu_slider_screen.dart';
 import 'stack/stack_screen.dart';
 import 'state/stateful_widget_demo_screen.dart';
 import 'state/stateless_widget_demo_screen.dart';
-import 'stepper/StepperScreen.dart';
+import 'stepper/stepper_screen.dart';
 import 'switch/SwitchScreen.dart';
 import 'tabPageSelector/TabPageSelectorScreen.dart';
 import 'table/TableScreen.dart';

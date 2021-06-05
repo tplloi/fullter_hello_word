@@ -9,8 +9,8 @@ class StepperScreen extends StatefulWidget {
 
 class StepperScreenState extends State<StepperScreen> {
   // init the step to 0th position
-  int currentStep = 0;
-  List<Step> listMySteps = [
+  int _currentStep = 0;
+  List<Step> _listMySteps = [
     Step(
         // Title of the Step
         title: Text("Step 1"),
@@ -35,16 +35,18 @@ class StepperScreenState extends State<StepperScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "StepperScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       // Body
       body: Container(
           child: Stepper(
         // Using a variable here for handling the currentStep
-        currentStep: this.currentStep,
+        currentStep: this._currentStep,
         // List the steps you would like to have
-        steps: listMySteps,
+        steps: _listMySteps,
         // Define the type of Stepper style
         // StepperType.horizontal :  Horizontal Style
         // StepperType.vertical   :  Vertical Style
@@ -55,7 +57,7 @@ class StepperScreenState extends State<StepperScreen> {
           setState(() {
             // update the variable handling the current step value
             // jump to the tapped step
-            currentStep = step;
+            _currentStep = step;
           });
           // Log function call
           print("onStepTapped : " + step.toString());
@@ -65,28 +67,28 @@ class StepperScreenState extends State<StepperScreen> {
           setState(() {
             // update the variable handling the current step value
             // going back one step i.e subtracting 1, until its 0
-            if (currentStep > 0) {
-              currentStep = currentStep - 1;
+            if (_currentStep > 0) {
+              _currentStep = _currentStep - 1;
             } else {
-              currentStep = 0;
+              _currentStep = 0;
             }
           });
           // Log function call
-          print("onStepCancel : " + currentStep.toString());
+          print("onStepCancel : " + _currentStep.toString());
         },
         // On hitting continue button, change the state
         onStepContinue: () {
           setState(() {
             // update the variable handling the current step value
             // going back one step i.e adding 1, until its the length of the step
-            if (currentStep < listMySteps.length - 1) {
-              currentStep = currentStep + 1;
+            if (_currentStep < _listMySteps.length - 1) {
+              _currentStep = _currentStep + 1;
             } else {
-              currentStep = 0;
+              _currentStep = 0;
             }
           });
           // Log function call
-          print("onStepContinue : " + currentStep.toString());
+          print("onStepContinue : " + _currentStep.toString());
         },
       )),
     );

@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
-import 'MenuScreen.dart';
+import 'menu_screen.dart';
 import 'lib/util/LogDogUtils.dart';
 
 //build: flutter build appbundle
