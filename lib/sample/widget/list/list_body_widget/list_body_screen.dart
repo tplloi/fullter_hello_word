@@ -10,7 +10,9 @@ class ListBodyScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ListBodyScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ListBodyWidget(),

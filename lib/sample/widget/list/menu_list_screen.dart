@@ -4,12 +4,11 @@ import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 import 'package:hello_word/sample/widget/list/contact_page_screen/contact_page_screen.dart';
 import 'package:hello_word/sample/widget/list/draggable_scrollbar_demo/draggable_scrollbar_demo_screen.dart';
-
-import 'listBodyWidget/ListBodyScreen.dart';
-import 'listRandomWords/RandomWordsScreen.dart';
-import 'listSearch/ListViewSearchScreen.dart';
-import 'listTitleWidget/ListTileScreen.dart';
-import 'loadMore/ListViewLoadMoreScreen.dart';
+import 'package:hello_word/sample/widget/list/list_body_widget/list_body_screen.dart';
+import 'package:hello_word/sample/widget/list/list_random_words/random_words_screen.dart';
+import 'package:hello_word/sample/widget/list/list_search/list_view_search_screen.dart';
+import 'package:hello_word/sample/widget/list/list_title_widget/list_tile_screen.dart';
+import 'package:hello_word/sample/widget/list/load_more/list_view_load_more_screen.dart';
 
 class MenuListScreen extends StatelessWidget {
   @override

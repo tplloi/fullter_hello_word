@@ -8,7 +8,9 @@ class ListTileScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ListTileScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ListTileWidget(),

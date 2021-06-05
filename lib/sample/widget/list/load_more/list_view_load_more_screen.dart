@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
 //https://karthikponnam.medium.com/flutter-loadmore-in-listview-23820612907d
@@ -9,7 +10,9 @@ class ListViewLoadMoreScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ListViewLoadMoreScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ListTileWidget(),
@@ -18,7 +21,10 @@ class ListViewLoadMoreScreen extends StatelessWidget {
 }
 
 class ListTileWidget extends StatefulWidget {
-  ListTileWidget({Key? key, this.title}) : super(key: key);
+  ListTileWidget({
+    Key? key,
+    this.title,
+  }) : super(key: key);
   final String? title;
 
   @override
@@ -62,8 +68,8 @@ class _ListTileWidgetState extends State<ListTileWidget> {
           if (scrollInfo.metrics.pixels == scrollInfo.metrics.maxScrollExtent) {
             // loadMore();
           }
-          return;
-        } as bool Function(ScrollNotification)?,
+          return false;
+        },
         child: ListView.builder(
           itemCount: (present <= originalItems.length)
               ? items.length + 1
@@ -71,10 +77,10 @@ class _ListTileWidgetState extends State<ListTileWidget> {
           itemBuilder: (context, index) {
             return (index == items.length)
                 ? Container(
-                    color: Colors.greenAccent,
-                    child: FlatButton(
-                      child: Text("Load More"),
-                      onPressed: () {
+                    padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+                    child: UIUtils.getButton(
+                      "Load More",
+                      () {
                         loadMore();
                       },
                     ),

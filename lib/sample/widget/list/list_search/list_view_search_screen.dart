@@ -9,7 +9,9 @@ class ListViewSearchScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ListViewSearchScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: ListViewSearchWidget(title: "Suzuki"),
@@ -18,7 +20,10 @@ class ListViewSearchScreen extends StatelessWidget {
 }
 
 class ListViewSearchWidget extends StatefulWidget {
-  ListViewSearchWidget({Key? key, this.title}) : super(key: key);
+  ListViewSearchWidget({
+    Key? key,
+    this.title,
+  }) : super(key: key);
   final String? title;
 
   @override
@@ -26,25 +31,25 @@ class ListViewSearchWidget extends StatefulWidget {
 }
 
 class _ListViewSearchWidgetState extends State<ListViewSearchWidget> {
-  TextEditingController textEditingController = TextEditingController();
+  TextEditingController _textEditingController = TextEditingController();
 
-  final listDuplicateItem = List<String>.generate(10000, (i) => "Item $i");
-  var listItem = [];
+  final _listDuplicateItem = List<String>.generate(10000, (i) => "Item $i");
+  var _listItem = [];
 
   @override
   void initState() {
-    listItem.addAll(listDuplicateItem);
+    _listItem.addAll(_listDuplicateItem);
     super.initState();
   }
 
   void filterSearchResults(String query) {
     List<String> listDummySearch = [];
-    listDummySearch.addAll(listDuplicateItem);
+    listDummySearch.addAll(_listDuplicateItem);
 
     if (query.isEmpty) {
       setState(() {
-        listItem.clear();
-        listItem.addAll(listDuplicateItem);
+        _listItem.clear();
+        _listItem.addAll(_listDuplicateItem);
       });
     } else {
       List<String> listDummyData = [];
@@ -54,8 +59,8 @@ class _ListViewSearchWidgetState extends State<ListViewSearchWidget> {
         }
       });
       setState(() {
-        listItem.clear();
-        listItem.addAll(listDummyData);
+        _listItem.clear();
+        _listItem.addAll(listDummyData);
       });
     }
   }
@@ -71,7 +76,7 @@ class _ListViewSearchWidgetState extends State<ListViewSearchWidget> {
               onChanged: (value) {
                 filterSearchResults(value);
               },
-              controller: textEditingController,
+              controller: _textEditingController,
               decoration: InputDecoration(
                 labelText: "Search",
                 hintText: "Search",
@@ -87,10 +92,10 @@ class _ListViewSearchWidgetState extends State<ListViewSearchWidget> {
           Expanded(
             child: ListView.builder(
               shrinkWrap: true,
-              itemCount: listItem.length,
+              itemCount: _listItem.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text('${listItem[index]}'),
+                  title: Text('${_listItem[index]}'),
                 );
               },
             ),
