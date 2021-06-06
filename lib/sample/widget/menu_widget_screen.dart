@@ -18,7 +18,7 @@ import 'checkBox/RadioButtonScreen.dart';
 import 'checkBox/RadioButtonScreen2.dart';
 import 'cupertino/MenuCupertinoScreen.dart';
 import 'dataTable/DataTableScreen.dart';
-import 'dialog/DialogScreen.dart';
+import 'dialog/dialog_screen.dart';
 import 'drawer/MenuDrawerScreen.dart';
 import 'easyLoading/EasyLoadingScreen.dart';
 import 'editText/MenuEditTextScreen.dart';
