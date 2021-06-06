@@ -313,11 +313,11 @@ class UIUtils {
     );
   }
 
-  static Widget buildHorizontalDivider(Color color, double widget) {
+  static Widget buildHorizontalDivider(Color color, double width, double height) {
     return Container(
       margin: EdgeInsets.all(0.0),
-      height: 1,
-      width: widget,
+      height: height,
+      width: width,
       color: color,
     );
   }
@@ -330,4 +330,346 @@ class UIUtils {
       color: color,
     );
   }
+
+  static void showFullWidthSnackBar(String title, String message) {
+    Get.snackbar(
+      title,
+      message,
+      isDismissible: true,
+      duration: Duration(seconds: 2),
+      titleText: Text(
+        title,
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
+          color: Color(0xff232426),
+        ),
+      ),
+      icon: Image(
+        image: AssetImage('assets/images/ic_check_mark_green.png'),
+        width: 20,
+        height: 15,
+      ),
+      backgroundColor: Color.fromARGB(255, 212, 245, 217),
+      snackStyle: SnackStyle.GROUNDED,
+      margin: EdgeInsets.zero,
+      colorText: Color.fromARGB(255, 35, 36, 38),
+    );
+  }
+
+  static void showFullWidthSnackBarError(String title, String message) {
+    Get.snackbar(
+      title,
+      message,
+      isDismissible: true,
+      duration: Duration(seconds: 2),
+      titleText: Text(
+        title,
+        style: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
+          color: Color(0xff232426),
+        ),
+      ),
+      icon: Image(
+        image: AssetImage('assets/images/ic_x.png'),
+        width: 20,
+        height: 20,
+        color: Color(0xffF13232),
+      ),
+      backgroundColor: Color(0xffFFDFDF),
+      snackStyle: SnackStyle.GROUNDED,
+      margin: EdgeInsets.zero,
+      colorText: Color(0xff232426),
+    );
+  }
+
+  // static void showBottomSheetSingleChoice(
+  //     BuildContext context,
+  //     String title,
+  //     List<String> list,
+  //     Function(int) selectedPosition,
+  //     int firstSelectedPosition,
+  //     ) {
+  //   List<Widget> _buildListWidget() {
+  //     var listWidget = <Widget>[];
+  //
+  //     listWidget.add(
+  //       Container(
+  //         alignment: Alignment.center,
+  //         padding: EdgeInsets.fromLTRB(
+  //           0,
+  //           DimenConstants.marginPaddingSmall,
+  //           0,
+  //           0,
+  //         ),
+  //         child: Image.asset(
+  //           "resources/images/ic_slide_controller.png",
+  //           width: 45,
+  //           height: 5,
+  //         ),
+  //       ),
+  //     );
+  //     listWidget.add(
+  //       Container(
+  //         padding: EdgeInsets.fromLTRB(
+  //           DimenConstants.marginPaddingMedium,
+  //           0,
+  //           0,
+  //           0,
+  //         ),
+  //         child: Row(
+  //           children: [
+  //             Expanded(
+  //               child: Text(
+  //                 title,
+  //                 textAlign: TextAlign.start,
+  //                 style: TextStyle(
+  //                   fontSize: 20,
+  //                   fontWeight: FontWeight.w500,
+  //                   color: Color(0xff232426),
+  //                 ),
+  //               ),
+  //             ),
+  //             Material(
+  //               color: Colors.transparent,
+  //               child: InkWell(
+  //                 customBorder: new CircleBorder(),
+  //                 child: Container(
+  //                   padding: EdgeInsets.all(15),
+  //                   child: Image.asset(
+  //                     "resources/images/ic_slide_down.png",
+  //                     width: 34,
+  //                     height: 34,
+  //                   ),
+  //                 ),
+  //                 onTap: () {
+  //                   Get.back();
+  //                 },
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     );
+  //     for (int i = 0; i < list.length; i++) {
+  //       listWidget.add(
+  //         Material(
+  //           color: Colors.transparent,
+  //           child: InkWell(
+  //             highlightColor: Colors.transparent,
+  //             child: Container(
+  //               alignment: Alignment.centerLeft,
+  //               padding: EdgeInsets.fromLTRB(
+  //                 DimenConstants.marginPaddingMedium,
+  //                 0,
+  //                 DimenConstants.marginPaddingMedium,
+  //                 0,
+  //               ),
+  //               height: DimenConstants.buttonHeight * 2 / 3,
+  //               child: Row(
+  //                 mainAxisAlignment: MainAxisAlignment.center,
+  //                 children: [
+  //                   Image.asset(
+  //                     i == firstSelectedPosition
+  //                         ? "resources/images/ic_checkbox_select_circle.png"
+  //                         : "resources/images/ic_checkbox_unselect_circle.png",
+  //                     width: 18,
+  //                     height: 18,
+  //                   ),
+  //                   SizedBox(width: DimenConstants.marginPaddingMedium),
+  //                   Expanded(
+  //                     child: Text(
+  //                       list[i],
+  //                       style: TextStyle(
+  //                         fontSize: 14,
+  //                         fontWeight: FontWeight.w500,
+  //                         color: Color(0xff232426),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //             onTap: () {
+  //               Get.back();
+  //               selectedPosition.call(i);
+  //             },
+  //           ),
+  //         ),
+  //       );
+  //     }
+  //
+  //     return listWidget;
+  //   }
+  //
+  //   showMaterialModalBottomSheet(
+  //     context: context,
+  //     backgroundColor: Colors.transparent,
+  //     builder: (builder) {
+  //       return Container(
+  //         padding: EdgeInsets.only(bottom: DimenConstants.marginPaddingMedium),
+  //         decoration: BoxDecoration(
+  //           color: Colors.white,
+  //           borderRadius: BorderRadius.only(
+  //             topLeft: Radius.circular(25),
+  //             topRight: Radius.circular(25),
+  //           ),
+  //         ),
+  //         child: Wrap(
+  //           children: _buildListWidget(),
+  //         ),
+  //       );
+  //     },
+  //   );
+  // }
+  //
+  // static void showBottomSheetSingleChoiceWithLargeData(
+  //     BuildContext context,
+  //     String title,
+  //     List<String> list,
+  //     Function(int) selectedPosition,
+  //     int firstSelectedPosition,
+  //     ) {
+  //   if (list == null || list.isEmpty) {
+  //     return;
+  //   }
+  //
+  //   List<Widget> _buildListWidget() {
+  //     var listWidget = <Widget>[];
+  //     for (int i = 0; i < list.length; i++) {
+  //       listWidget.add(
+  //         Material(
+  //           color: Colors.transparent,
+  //           child: InkWell(
+  //             child: Container(
+  //               alignment: Alignment.centerLeft,
+  //               padding: EdgeInsets.fromLTRB(
+  //                 DimenConstants.marginPaddingMedium,
+  //                 0,
+  //                 DimenConstants.marginPaddingMedium,
+  //                 0,
+  //               ),
+  //               height: DimenConstants.buttonHeight * 2 / 3,
+  //               child: Row(
+  //                 mainAxisAlignment: MainAxisAlignment.center,
+  //                 children: [
+  //                   Image.asset(
+  //                     i == firstSelectedPosition
+  //                         ? "resources/images/ic_checkbox_select_circle.png"
+  //                         : "resources/images/ic_checkbox_unselect_circle.png",
+  //                     width: 18,
+  //                     height: 18,
+  //                   ),
+  //                   SizedBox(width: DimenConstants.marginPaddingMedium),
+  //                   Expanded(
+  //                     child: Text(
+  //                       list[i],
+  //                       style: TextStyle(
+  //                         fontSize: 14,
+  //                         fontWeight: FontWeight.w500,
+  //                         color: Color(0xff232426),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //             onTap: () {
+  //               Get.back();
+  //               selectedPosition.call(i);
+  //             },
+  //           ),
+  //         ),
+  //       );
+  //     }
+  //     return listWidget;
+  //   }
+  //
+  //   double _height = (list.length > 10) ? Get.height / 2 : Get.height / 3;
+  //   showMaterialModalBottomSheet(
+  //     context: context,
+  //     backgroundColor: Colors.transparent,
+  //     enableDrag: false,
+  //     builder: (builder) {
+  //       return Container(
+  //         height: _height,
+  //         margin: EdgeInsets.only(top: DimenConstants.marginPaddingLarge),
+  //         padding: EdgeInsets.only(bottom: DimenConstants.marginPaddingMedium),
+  //         decoration: BoxDecoration(
+  //           color: Colors.white,
+  //           borderRadius: BorderRadius.only(
+  //             topLeft: Radius.circular(25),
+  //             topRight: Radius.circular(25),
+  //           ),
+  //         ),
+  //         child: Column(
+  //           children: [
+  //             Container(
+  //               alignment: Alignment.center,
+  //               padding: EdgeInsets.fromLTRB(
+  //                 0,
+  //                 DimenConstants.marginPaddingSmall,
+  //                 0,
+  //                 0,
+  //               ),
+  //               child: Image.asset(
+  //                 "resources/images/ic_slide_controller.png",
+  //                 width: 45,
+  //                 height: 5,
+  //               ),
+  //             ),
+  //             Container(
+  //               padding: EdgeInsets.fromLTRB(
+  //                 DimenConstants.marginPaddingMedium,
+  //                 0,
+  //                 0,
+  //                 0,
+  //               ),
+  //               child: Row(
+  //                 children: [
+  //                   Expanded(
+  //                     child: Text(
+  //                       title,
+  //                       textAlign: TextAlign.start,
+  //                       style: TextStyle(
+  //                         fontSize: 20,
+  //                         fontWeight: FontWeight.w500,
+  //                         color: Color(0xff232426),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                   Material(
+  //                     color: Colors.transparent,
+  //                     child: InkWell(
+  //                       customBorder: new CircleBorder(),
+  //                       child: Container(
+  //                         padding: EdgeInsets.all(15),
+  //                         child: Image.asset(
+  //                           "resources/images/ic_slide_down.png",
+  //                           width: 34,
+  //                           height: 34,
+  //                         ),
+  //                       ),
+  //                       onTap: () {
+  //                         Get.back();
+  //                       },
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //             Expanded(
+  //               child: ListView(
+  //                 padding: EdgeInsets.all(0),
+  //                 physics: BouncingScrollPhysics(),
+  //                 children: _buildListWidget(),
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       );
+  //     },
+  //   );
+  // }
 }

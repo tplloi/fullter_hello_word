@@ -72,7 +72,7 @@ class _SupportViewState extends BaseStatefulState {
               SizedBox(height: DimenConstants.marginPaddingTiny),
               _buildIndicator(),
               UIUtils.buildHorizontalDivider(
-                  Color(0xffF9A117), double.maxFinite),
+                  Color(0xffF9A117), double.maxFinite, 1),
               _getGridWidget(),
             ],
           ),
@@ -324,7 +324,7 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem, 1),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
                 height: _widthItem - 1,
@@ -340,7 +340,7 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem, 1),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
                 height: _widthItem - 1,
@@ -356,7 +356,7 @@ class _SupportViewState extends BaseStatefulState {
                   textAlign: TextAlign.center,
                 ),
               ),
-              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem),
+              UIUtils.buildHorizontalDivider(Color(0xff5B6CA4), _widthItem, 1),
               Container(
                 color: index == 0 ? Colors.transparent : Color(0xff142B74),
                 height: _widthItem - 1,
