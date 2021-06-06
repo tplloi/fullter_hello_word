@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/model/People.dart';
 
 class SyntaxScreen extends StatelessWidget {

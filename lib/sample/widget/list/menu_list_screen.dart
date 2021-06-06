@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/list/contact_page_screen/contact_page_screen.dart';
 import 'package:hello_word/sample/widget/list/draggable_scrollbar_demo/draggable_scrollbar_demo_screen.dart';
 import 'package:hello_word/sample/widget/list/list_body_widget/list_body_screen.dart';

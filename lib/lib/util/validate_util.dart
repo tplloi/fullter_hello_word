@@ -1,4 +1,4 @@
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 
 class ValidateUtil {
   static bool isValidPassword(String pw) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/grid/grid_paper/grid_paper_screen.dart';
 import 'package:hello_word/sample/widget/grid/infinite_scroll/infinite_scroll_screen.dart';
 

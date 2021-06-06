@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 
 import 'menu_screen.dart';
-import 'lib/util/LogDogUtils.dart';
+import 'lib/util/log_dog_utils.dart';
 
 //build: flutter build appbundle
 void main() {

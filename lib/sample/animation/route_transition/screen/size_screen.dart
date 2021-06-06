@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/lib/animation/routeTransition/SizeRoute.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/animation/route_transition/size_route.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 import '../RouteTransitionScreen.dart';
 

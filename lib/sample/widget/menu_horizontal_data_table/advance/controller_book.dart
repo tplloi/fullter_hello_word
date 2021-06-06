@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:hello_word/lib/core/BaseController.dart';
+import 'package:hello_word/lib/core/base_controller.dart';
 
 import 'model/dummy_floor.dart';
 import 'model/dummy_header_description.dart';

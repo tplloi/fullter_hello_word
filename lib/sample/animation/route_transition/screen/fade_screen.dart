@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/lib/animation/routeTransition/FadeRoute.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/animation/route_transition/fade_route.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import '../RouteTransitionScreen.dart';
 
 class FadeScreen extends StatelessWidget {

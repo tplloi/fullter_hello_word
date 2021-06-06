@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 //https://blog.usejournal.com/flutter-search-in-listview-1ffa40956685
 class ListViewSearchScreen extends StatelessWidget {

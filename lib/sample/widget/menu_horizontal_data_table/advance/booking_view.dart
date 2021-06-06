@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/core/BaseStatefulState.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/core/base_stateful_state.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
 import 'controller_book.dart';

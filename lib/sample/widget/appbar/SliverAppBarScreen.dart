@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/lib/common/const/Constants.dart';
+import 'package:hello_word/lib/common/const/constants.dart';
 
 class SliverAppBarScreen extends StatelessWidget {
   @override

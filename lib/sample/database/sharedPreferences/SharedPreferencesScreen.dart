@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/util/SharedPreferencesUtil.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/shared_preferences_util.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesScreen extends StatefulWidget {

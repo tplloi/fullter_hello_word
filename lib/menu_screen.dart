@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/util/UrlLauncherUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
-import 'lib/util/UIUtils.dart';
-import 'sample/animation/MenuAnimationScreen.dart';
+import 'lib/util/uI_utils.dart';
+import 'sample/animation/menu_animation_screen.dart';
 import 'sample/database/MenuDatabaseScreen.dart';
 import 'sample/demo/menu_demo_screen.dart';
 import 'sample/demo/syntax/SyntaxScreen.dart';

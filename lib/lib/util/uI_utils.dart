@@ -2,7 +2,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 
 class UIUtils {
   static AppBar getAppBar(

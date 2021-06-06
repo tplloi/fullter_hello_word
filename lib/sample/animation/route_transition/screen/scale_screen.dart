@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/lib/animation/routeTransition/ScaleRoute.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/animation/route_transition/scale_route.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import '../RouteTransitionScreen.dart';
 
 class ScaleScreen extends StatelessWidget {

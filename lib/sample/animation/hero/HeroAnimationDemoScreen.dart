@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
-import '../../../lib/animation/hero/HeroDialogRoute.dart';
+import '../../../lib/animation/hero/hero_dialog_route.dart';
 import 'CustomLogo.dart';
 import 'Page1.dart';
 import 'Page2.dart';
