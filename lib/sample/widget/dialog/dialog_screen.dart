@@ -27,7 +27,7 @@ class _DialogScreenState extends BaseStatefulState {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "DialogScreen",
-            () {
+        () {
           Get.back();
         },
         null,
@@ -43,7 +43,10 @@ class _DialogScreenState extends BaseStatefulState {
               "title",
               Column(
                 children: [
-                  Text("abc"),
+                  Text(
+                    "abc",
+                    style: TextStyle(decoration: TextDecoration.none),
+                  ),
                   UIUtils.getButton("Click", () {}),
                   Image.asset(
                     "assets/images/bkg_city.JPG",
@@ -54,9 +57,9 @@ class _DialogScreenState extends BaseStatefulState {
                 ],
               ),
               "cancelTitle",
-                  () {},
+              () {},
               "okTitle",
-                  () {},
+              () {},
             );
           }),
           UIUtils.getButton("showAlertDialog", () {
@@ -65,9 +68,9 @@ class _DialogScreenState extends BaseStatefulState {
               "title",
               "message",
               "cancelTitle",
-                (){},
+              () {},
               "okTitle",
-                (){},
+              () {},
             );
           }),
           UIUtils.getButton("showErrorDialog", () {
@@ -75,7 +78,7 @@ class _DialogScreenState extends BaseStatefulState {
               "title",
               "message",
               "cancelTitle",
-                (){},
+              () {},
             );
           }),
           UIUtils.getButton("showConfirmDialog", () {
@@ -83,7 +86,7 @@ class _DialogScreenState extends BaseStatefulState {
               "title",
               "message",
               "okTitle",
-                (){},
+              () {},
             );
           }),
           UIUtils.getButton("showSnackBarFull", () {
@@ -96,7 +99,10 @@ class _DialogScreenState extends BaseStatefulState {
             showDialogSuccess(
               Column(
                 children: [
-                  Text("abc"),
+                  Text(
+                    "abc",
+                    style: TextStyle(decoration: TextDecoration.none),
+                  ),
                   UIUtils.getButton("Click", () {}),
                   Image.asset(
                     "assets/images/bkg_city.JPG",
@@ -107,7 +113,7 @@ class _DialogScreenState extends BaseStatefulState {
                 ],
               ),
               true,
-                (){},
+              () {},
             );
           }),
         ],
