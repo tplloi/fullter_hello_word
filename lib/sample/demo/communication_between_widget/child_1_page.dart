@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'ParentPage.dart';
+import 'parent_page.dart';
 
 class Child1Page extends StatefulWidget {
   final String? title;

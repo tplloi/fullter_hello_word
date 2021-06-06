@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/sample/demo/communication_between_widget/communication_between_widget_screen.dart';
+import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
+import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/shop/ShopScreen.dart';
+import 'package:hello_word/sample/demo/tip_calculator/tip_calculator_screen.dart';
+import 'package:hello_word/sample/demo/url_launcher/url_launcher_screen.dart';
+
 import 'async/MenuAsyncScreen.dart';
-import 'communicationBetweenWidget/CommunicationBetweenWidgetScreen.dart';
 import 'counter/CounterScreen.dart';
 import 'crypto/CryptoScreen.dart';
 import 'encypt/EncryptScreen.dart';
-import 'focusDetector/FocusDetectorScreen.dart';
 import 'getx/GetXScreen.dart';
 import 'inherited/MenuInheritedScreen.dart';
-import 'loadLocalJson/LoadLocalJsonScreen.dart';
 import 'theme/ThemeScreen.dart';
-import 'tipCalculator/TipCalculatorScreen.dart';
-import 'urlLauncher/UrlLauncherScreen.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override

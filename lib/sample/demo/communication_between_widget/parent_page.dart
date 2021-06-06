@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/util/UIUtils.dart';
 
-import 'Child1Page.dart';
-import 'Child2Page.dart';
+import 'child_1_page.dart';
+import 'child_2_page.dart';
 
 //https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e
 class ParentPage extends StatefulWidget {

@@ -18,7 +18,7 @@ class UrlLauncherScreen extends StatelessWidget {
         },
         () => {
           UrlLauncherUtils.launchInBrowser(UrlLauncherUtils.getLinkGit(
-              "\\lib\\base\\demo\\urlLauncher\\UrlLauncherScreen.dart")),
+              "\\lib\\base\\demo\\urlLauncher\\url_launcher_screen.dart")),
         },
       ),
       body: Center(

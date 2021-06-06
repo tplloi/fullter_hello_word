@@ -7,7 +7,7 @@ import 'package:hello_word/lib/util/UrlLauncherUtils.dart';
 import 'lib/util/UIUtils.dart';
 import 'sample/animation/MenuAnimationScreen.dart';
 import 'sample/database/MenuDatabaseScreen.dart';
-import 'sample/demo/MenuDemoScreen.dart';
+import 'sample/demo/menu_demo_screen.dart';
 import 'sample/demo/syntax/SyntaxScreen.dart';
 import 'sample/widget/menu_widget_screen.dart';
 

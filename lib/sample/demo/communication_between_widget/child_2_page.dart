@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/common/const/DimenConstants.dart';
 
-import 'ParentPage.dart';
+import 'parent_page.dart';
 
 class Child2Page extends StatefulWidget {
   final String? title;
