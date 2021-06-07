@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
 import 'package:photo_view/photo_view.dart';
 
@@ -15,7 +17,8 @@ class _DialogExampleState extends State<DialogExample> {
             child: Container(
               child: PhotoView(
                 tightMode: true,
-                imageProvider: const AssetImage("assets/large-image.jpg"),
+                imageProvider:
+                    const AssetImage("assets/images/large-image.jpg"),
                 heroAttributes: const PhotoViewHeroAttributes(tag: "someTag"),
               ),
             ),
@@ -32,9 +35,9 @@ class _DialogExampleState extends State<DialogExample> {
             axis: Axis.vertical,
             child: PhotoView(
               backgroundDecoration: BoxDecoration(
-                color: Colors.black.withAlpha(240),
+                color: Colors.red.withOpacity(0.5),
               ),
-              imageProvider: const AssetImage("assets/large-image.jpg"),
+              imageProvider: const AssetImage("assets/images/large-image.jpg"),
               heroAttributes: const PhotoViewHeroAttributes(tag: "someTag"),
             ),
           );
@@ -52,8 +55,12 @@ class _DialogExampleState extends State<DialogExample> {
                 axis: Axis.vertical,
                 child: PhotoView(
                   tightMode: true,
-                  imageProvider: const AssetImage("assets/large-image.jpg"),
+                  imageProvider:
+                      const AssetImage("assets/images/large-image.jpg"),
                   heroAttributes: const PhotoViewHeroAttributes(tag: "someTag"),
+                  backgroundDecoration: BoxDecoration(
+                    color: Colors.red.withOpacity(0.5),
+                  ),
                 ),
               ),
             ),
@@ -63,32 +70,39 @@ class _DialogExampleState extends State<DialogExample> {
 
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Dialogs integration",
-      showGoBack: true,
-      child: Builder(
-        builder: (context) => Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              decoration: const BoxDecoration(color: Colors.red),
-            ),
-            ElevatedButton(
-              child: const Text("Dialog"),
-              onPressed: () => openDialog(context),
-            ),
-            const Divider(),
-            ElevatedButton(
-              child: const Text("Bottom sheet"),
-              onPressed: () => openBottomSheet(context),
-            ),
-            const Divider(),
-            ElevatedButton(
-              child: const Text("Bottom sheet tight mode"),
-              onPressed: () => openBottomSheetModal(context),
-            ),
-          ],
-        ),
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "DialogExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: Builder(
+        builder: (BuildContext context) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                decoration: const BoxDecoration(color: Colors.red),
+              ),
+              ElevatedButton(
+                child: const Text("Dialog"),
+                onPressed: () => openDialog(context),
+              ),
+              const Divider(),
+              ElevatedButton(
+                child: const Text("Bottom sheet"),
+                onPressed: () => openBottomSheet(context),
+              ),
+              const Divider(),
+              ElevatedButton(
+                child: const Text("Bottom sheet tight mode"),
+                onPressed: () => openBottomSheetModal(context),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
