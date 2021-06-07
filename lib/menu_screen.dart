@@ -64,6 +64,12 @@ class MenuScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
+            "Rate app",
+            () {
+              UrlLauncherUtils.rateApp(null, null);
+            },
+          ),
+          UIUtils.getButton(
             "More app",
             () {
               UrlLauncherUtils.launchInBrowser(

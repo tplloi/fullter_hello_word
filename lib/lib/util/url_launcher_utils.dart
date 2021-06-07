@@ -1,7 +1,7 @@
+import 'package:in_app_review/in_app_review.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLauncherUtils {
-
   static String getLinkGit(String path) {
     return "https://github.com/tplloi/fullter_hello_word/tree/master/$path";
   }
@@ -31,11 +31,20 @@ class UrlLauncherUtils {
     }
   }
 
-  Future<void> _makePhoneCall(String url) async {
+  static Future<void> makePhoneCall(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
       throw 'Could not launch $url';
     }
   }
+
+  static Future<void> rateApp(
+    String? appStoreId,
+    String? microsoftStoreId,
+  ) =>
+      InAppReview.instance.openStoreListing(
+        appStoreId: appStoreId,
+        microsoftStoreId: microsoftStoreId,
+      );
 }
