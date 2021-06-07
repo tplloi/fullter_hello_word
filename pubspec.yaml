@@ -96,6 +96,7 @@ flutter:
           weight: 400
 
   assets:
+    - assets/videos/
     - assets/images/
     - assets/pdf/
     - data_repo/starwars_data.json
