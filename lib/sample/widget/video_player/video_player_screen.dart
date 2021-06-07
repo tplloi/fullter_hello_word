@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hello_word/sample/widget/video_player/controls_overlay.dart';
 import 'package:hello_word/sample/widget/video_player/player_video_and_pop_page.dart';
 import 'package:hello_word/sample/widget/video_player/tab/bumble_bee_remote_video.dart';
-import 'package:video_player/video_player.dart';
+import 'package:hello_word/sample/widget/video_player/tab/butter_fly_asset_video.dart';
 
 class VideoPlayerScreen extends StatelessWidget {
   @override
@@ -43,7 +42,7 @@ class VideoPlayerScreen extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             BumbleBeeRemoteVideo(),
-            _ButterFlyAssetVideo(),
+            ButterFlyAssetVideo(),
             _ButterFlyAssetVideoInList(),
           ],
         ),
@@ -76,7 +75,7 @@ class _ButterFlyAssetVideoInList extends StatelessWidget {
                   alignment: FractionalOffset.bottomRight +
                       const FractionalOffset(-0.1, -0.1),
                   children: <Widget>[
-                    _ButterFlyAssetVideo(),
+                    ButterFlyAssetVideo(),
                     Image.asset('assets/images/flutter-mark-square-64.png'),
                   ]),
             ],
@@ -123,63 +122,6 @@ class _ExampleCard extends StatelessWidget {
                 },
               ),
             ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _ButterFlyAssetVideo extends StatefulWidget {
-  @override
-  _ButterFlyAssetVideoState createState() => _ButterFlyAssetVideoState();
-}
-
-class _ButterFlyAssetVideoState extends State<_ButterFlyAssetVideo> {
-  late VideoPlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller =
-        VideoPlayerController.asset('assets/videos/Butterfly-209.mp4');
-
-    _controller.addListener(() {
-      setState(() {});
-    });
-    _controller.setLooping(true);
-    _controller.initialize().then((_) => setState(() {}));
-    _controller.play();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Container(
-            padding: const EdgeInsets.only(top: 20.0),
-          ),
-          const Text('With assets mp4'),
-          Container(
-            padding: const EdgeInsets.all(20),
-            child: AspectRatio(
-              aspectRatio: _controller.value.aspectRatio,
-              child: Stack(
-                alignment: Alignment.bottomCenter,
-                children: <Widget>[
-                  VideoPlayer(_controller),
-                  ControlsOverlay(controller: _controller),
-                  VideoProgressIndicator(_controller, allowScrubbing: true),
-                ],
-              ),
-            ),
           ),
         ],
       ),
