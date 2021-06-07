@@ -17,4 +17,25 @@ class UrlLauncherUtils {
       print("Could not launch $url");
     }
   }
+
+  static Future<void> launchInWebViewWithJavaScript(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: true,
+        enableJavaScript: true,
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Future<void> _makePhoneCall(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 }

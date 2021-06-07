@@ -64,7 +64,7 @@ class _InAppReviewScreenState extends State<InAppReviewScreen> {
             Get.back();
           },
           () {
-            UrlLauncherUtils.launchInBrowser(
+            UrlLauncherUtils.launchInWebViewWithJavaScript(
                 "https://pub.dev/packages/in_app_review");
           },
         ),
@@ -74,6 +74,7 @@ class _InAppReviewScreenState extends State<InAppReviewScreen> {
           children: [
             UIUtils.getText(
                 "Flutter plugin for showing the In-App Review/System Rating pop up on Android, IOS and MacOS. It makes it easy for users to rate your app."),
+            SizedBox(height: DimenConstants.marginPaddingMedium),
             Text('InAppReview status: ${_availability.stringify()}'),
             TextField(
               onChanged: _setAppStoreId,
