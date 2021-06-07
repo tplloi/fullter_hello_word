@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'CupertinoActionSheetScreen.dart';
-import 'CupertinoSegmentedControlScreen.dart';
-import 'CupertinoTimerPickerScreen.dart';
-import 'CupertinoWidgetScreen.dart';
+import 'cupertino_action_sheet_screen.dart';
+import 'cupertino_segmented_control_screen.dart';
+import 'cupertino_timer_picker_screen.dart';
+import 'cupertino_widget_screen.dart';
 
 class MenuCupertinoScreen extends StatelessWidget {
   @override

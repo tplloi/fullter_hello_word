@@ -50,6 +50,7 @@ dependencies:
   horizontal_data_table: ^3.3.0 #https://pub.dev/packages/horizontal_data_table
   easy_debounce: ^2.0.0 #https://pub.dev/packages/easy_debounce
   advance_pdf_viewer: ^2.0.0 #https://pub.dev/packages/advance_pdf_viewer
+  video_player: ^2.1.5 #https://pub.dev/packages/video_player
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
-
-import 'bottomBar/BottomAppBarScreen.dart';
-import 'tabBar/TabBarScreen.dart';
-import 'tabBar2/TabBarScreen2.dart';
+import 'package:hello_word/sample/widget/bottom_bar/bottom_bar/bottom_app_bar_screen.dart';
+import 'package:hello_word/sample/widget/bottom_bar/tab_bar/tab_bar_screen.dart';
+import 'package:hello_word/sample/widget/bottom_bar/tab_bar_2/tab_bar_screen_2.dart';
 
 class MenuBottomBarScreen extends StatelessWidget {
   @override
