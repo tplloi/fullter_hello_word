@@ -1,19 +1,27 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
 import 'package:photo_view/photo_view.dart';
 
 class GestureRotationExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Rotation Examples",
-      showGoBack: true,
-      child: Column(
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "GestureRotationExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: Column(
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
             child: const Text(
               "Example using option enableRotation, just pinch an rotate",
               style: const TextStyle(fontSize: 18.0),
@@ -25,7 +33,8 @@ class GestureRotationExample extends StatelessWidget {
               height: 300.0,
               child: ClipRect(
                 child: PhotoView(
-                  imageProvider: const AssetImage("assets/large-image.jpg"),
+                  imageProvider:
+                      const AssetImage("assets/images/large-image.jpg"),
                   maxScale: PhotoViewComputedScale.covered,
                   initialScale: PhotoViewComputedScale.contained * 0.8,
                   enableRotation: true,
@@ -59,42 +68,38 @@ class _ProgrammaticRotationExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "ProgrammaticRotationExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const ExampleAppBar(
-            title: "Programmatic Rotation Example",
-            showGoBack: true,
+          Container(
+            padding: const EdgeInsets.all(20.0),
+            child: const Text(
+              "Example without manual rotation, click the button to rotate",
+              style: const TextStyle(fontSize: 18.0),
+            ),
           ),
           Expanded(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(20.0),
-                  child: const Text(
-                    "Example without manual rotation, click the button to rotate",
-                    style: const TextStyle(fontSize: 18.0),
-                  ),
+            child: Container(
+              margin: const EdgeInsets.symmetric(vertical: 20.0),
+              height: 300.0,
+              child: ClipRect(
+                child: PhotoView(
+                  controller: _controller,
+                  imageProvider:
+                  const AssetImage("assets/images/large-image.jpg"),
+                  maxScale: PhotoViewComputedScale.covered,
+                  initialScale: PhotoViewComputedScale.contained * 0.8,
+                  enableRotation: false,
                 ),
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20.0),
-                    height: 300.0,
-                    child: ClipRect(
-                      child: PhotoView(
-                        controller: _controller,
-                        imageProvider:
-                            const AssetImage("assets/large-image.jpg"),
-                        maxScale: PhotoViewComputedScale.covered,
-                        initialScale: PhotoViewComputedScale.contained * 0.8,
-                        enableRotation: false,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-          )
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
