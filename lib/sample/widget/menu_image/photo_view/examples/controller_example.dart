@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:photo_view/photo_view.dart';
 
 class ControllerExample extends StatefulWidget {
@@ -51,15 +52,21 @@ class _ControllerExampleState extends State<ControllerExample> {
 
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Controller",
-      showGoBack: true,
-      child: ClipRect(
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "ControllerExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: ClipRect(
         child: Stack(
           children: <Widget>[
             Positioned.fill(
               child: PhotoView(
-                imageProvider: const AssetImage("assets/images/large-image.jpg"),
+                imageProvider:
+                    const AssetImage("assets/images/large-image.jpg"),
                 controller: controller,
                 scaleStateController: scaleStateController,
                 enableRotation: true,
