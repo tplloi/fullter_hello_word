@@ -72,14 +72,13 @@ class MenuScreen extends StatelessWidget {
           UIUtils.getButton(
             "More app",
             () {
-              UrlLauncherUtils.launchInBrowser(
-                  "https://play.google.com/store/apps/dev?id=6295678835392563583");
+              UrlLauncherUtils.moreApp();
             },
           ),
           UIUtils.getButton(
             "Policy",
             () {
-              UrlLauncherUtils.launchInBrowser(
+              UrlLauncherUtils.launchInWebViewWithJavaScript(
                   "https://loitp.wordpress.com/2018/06/10/dieu-khoan-su-dung-chinh-sach-bao-mat-va-quyen-rieng-tu/");
             },
           ),

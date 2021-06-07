@@ -47,4 +47,9 @@ class UrlLauncherUtils {
         appStoreId: appStoreId,
         microsoftStoreId: microsoftStoreId,
       );
+
+  static void moreApp() {
+    UrlLauncherUtils.launchInBrowser(
+        "https://play.google.com/store/apps/dev?id=6295678835392563583");
+  }
 }
