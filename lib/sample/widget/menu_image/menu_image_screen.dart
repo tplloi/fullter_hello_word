@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/menu_image/photo_view/photo_view_screen.dart';
 
 import 'avatar_glow_screen.dart';
 import 'cache_network_image_screen.dart';
@@ -47,6 +48,12 @@ class MenuImageScreen extends StatelessWidget {
               "ImageScreen",
               () {
                 Get.to(ImageScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "PhotoViewScreen",
+              () {
+                Get.to(PhotoViewScreen());
               },
             ),
           ],
