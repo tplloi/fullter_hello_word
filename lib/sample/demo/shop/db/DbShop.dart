@@ -1,4 +1,4 @@
-import 'package:hello_word/sample/model/Product.dart';
+import 'package:hello_word/sample/model/product.dart';
 
 class DbShop {
   static List<Product> getListProduct() {
@@ -7,7 +7,7 @@ class DbShop {
       String img = i.isOdd ? ("iv.png") : ("iv.jpg");
       Product p = Product(
         "Name " + i.toString(),
-        "Description loitp " + i.toString(),
+        "Description " + i.toString(),
         i * 1000,
         img,
         0,

@@ -14,7 +14,7 @@ class HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.all(0.0),
       child: Container(
         width: double.infinity,
-        color: Colors.yellow,
+        color: Colors.white,
         child: Center(
           child: Text(
             "HomeScreenState Header",
@@ -41,9 +41,7 @@ class HomeScreenState extends State<HomeScreen> {
         title: Text(s),
         onTap: () {
           setState(() {
-            // pop closes the drawer
             Navigator.of(context).pop();
-            // navigate to the route
             Navigator.of(context).pushNamed(routeName);
           });
         },
@@ -88,7 +86,6 @@ class HomeScreenState extends State<HomeScreen> {
           child: Text("Home Screen"),
         ),
       ),
-      // Set the nav drawer
       drawer: getNavDrawer(context),
     );
   }

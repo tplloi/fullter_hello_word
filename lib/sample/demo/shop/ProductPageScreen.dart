@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
-import 'package:hello_word/sample/model/Product.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/model/product.dart';
 
 import 'RatingBox.dart';
 
 class ProductPageScreen extends StatelessWidget {
   ProductPageScreen({
-    Key key,
-    this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
   final Product product;
 
@@ -17,12 +18,14 @@ class ProductPageScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "ProductPageScreen " + product.name,
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
           child: Column(
             children: <Widget>[
               Image.asset("assets/images/" + product.image),

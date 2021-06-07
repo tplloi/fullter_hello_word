@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
-
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'FutureBuilderScreen.dart';
 import 'StreamBuilderScreen.dart';
 import 'ValueListenableBuilderScreen.dart';
@@ -11,13 +11,14 @@ class MenuAsyncScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "Demo async",
+        "MenuAsyncScreen",
         () => {
           Get.back(),
         },
         null,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[

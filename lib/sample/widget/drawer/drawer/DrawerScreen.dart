@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/Constants.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 class DrawerScreen extends StatelessWidget {
   @override

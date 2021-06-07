@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 import 'Controller.dart';
 
@@ -12,8 +12,8 @@ class SecondScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "SecondScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),
@@ -21,9 +21,10 @@ class SecondScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Obx(() =>
-                UIUtils.getText("${_controller.count} ~~~ ${_controller.text}")),
-            // UIUtils().getButton("Next Screen", () => null),
+            Obx(() {
+              return UIUtils.getText(
+                  "${_controller.count} ~~~ ${_controller.text}");
+            }),
           ],
         ),
       ),

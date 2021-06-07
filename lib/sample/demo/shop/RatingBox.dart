@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 typedef RatingBoxCallBack = void Function(int rating);
 
 class RatingBox extends StatefulWidget {
-  final int rating;
+  final int? rating;
   final RatingBoxCallBack _ratingBoxCallBack;
 
   RatingBox(this.rating, this._ratingBoxCallBack);
@@ -15,9 +15,9 @@ class RatingBox extends StatefulWidget {
 }
 
 class _RatingBoxState extends State<RatingBox> {
-  int rate;
+  int? rate;
 
-  _RatingBoxState(int rate) {
+  _RatingBoxState(int? rate) {
     this.rate = rate;
   }
 
@@ -40,7 +40,7 @@ class _RatingBoxState extends State<RatingBox> {
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rate >= 1
+              icon: this.rate! >= 1
                   ? (Icon(
                       Icons.star,
                       size: _size,
@@ -58,7 +58,7 @@ class _RatingBoxState extends State<RatingBox> {
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rate >= 2
+              icon: this.rate! >= 2
                   ? (Icon(
                       Icons.star,
                       size: _size,
@@ -76,7 +76,7 @@ class _RatingBoxState extends State<RatingBox> {
         Container(
             padding: EdgeInsets.all(0),
             child: IconButton(
-              icon: this.rate >= 3
+              icon: this.rate! >= 3
                   ? (Icon(
                       Icons.star,
                       size: _size,

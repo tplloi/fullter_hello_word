@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 import 'ProductBox.dart';
 import 'ProductPageScreen.dart';
@@ -14,8 +14,10 @@ class ShopScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "Shop",
-        () => Get.back(),
+        "ShopScreen",
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -26,7 +28,6 @@ class ShopScreen extends StatelessWidget {
                 product: listProduct[index],
               ),
               onTap: () {
-                print("onTap " + listProduct[index].name);
                 Navigator.push(
                   context,
                   MaterialPageRoute(

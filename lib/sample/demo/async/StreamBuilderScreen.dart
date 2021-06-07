@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 class StreamBuilderScreen extends StatefulWidget {
   @override
@@ -19,7 +20,9 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "StreamBuilderScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Center(
@@ -30,46 +33,29 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
                 stream: _isButtonClicked ? counterStream : null,
                 builder: (context, snapshot) {
                   if (!snapshot.hasData) {
-                    return Container(
-                        //margin: EdgeInsets.all(12),
-                        //child: CircularProgressIndicator(
-                        //valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),),
-                        );
+                    return Container();
                   }
+                  double h = snapshot.data as double;
+                  double w = snapshot.data as double;
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.all(24),
-                        height: snapshot.data,
-                        width: snapshot.data,
+                        height: h,
+                        width: w,
                         color: Colors.amber[500],
                       ),
                       Container(
-                        margin: EdgeInsets.all(24),
+                        margin:
+                            EdgeInsets.all(DimenConstants.marginPaddingMedium),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.all(6),
-                              child: Text(
-                                "Height: ${snapshot.data}",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 18),
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.all(6),
-                              child: Text(
-                                "Width: ${snapshot.data}",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 18),
-                              ),
-                            )
+                            UIUtils.getText("Height: ${snapshot.data}"),
+                            UIUtils.getText("Width: ${snapshot.data}"),
                           ],
                         ),
                       ),
@@ -77,8 +63,9 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
                   );
                 },
               ),
-              RaisedButton(
-                onPressed: _isButtonClicked == false
+              UIUtils.getButton(
+                "Start Stream",
+                _isButtonClicked == false
                     ? () {
                         ///You need to reset UI by calling setState.
                         setState(() {
@@ -88,7 +75,6 @@ class _StreamBuilderScreenState extends State<StreamBuilderScreen> {
                         });
                       }
                     : null,
-                child: UIUtils.getText("Start Stream"),
               ),
             ],
           ),

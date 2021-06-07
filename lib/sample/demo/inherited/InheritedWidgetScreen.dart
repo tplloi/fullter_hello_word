@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 class InheritedWidgetScreen extends StatefulWidget {
   @override
@@ -17,7 +18,9 @@ class _InheritedWidgetScreenState extends State<InheritedWidgetScreen> {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "InheritedWidgetScreen",
-        () => Get.back(),
+        () {
+          Get.back();
+        },
         null,
       ),
       body: Root(
@@ -33,11 +36,11 @@ class Child extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     debugPrint('build');
-    Root root = Root.of(context);
+    Root root = Root.of(context)!;
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
           child: UIUtils.getText(
               "InheritedWidget itself does not have the function of writing data. It needs to combine State to obtain the ability to modify data."),
         ),
@@ -45,12 +48,9 @@ class Child extends StatelessWidget {
           'show ${root.state.count}',
           style: TextStyle(fontSize: 20),
         ),
-        RaisedButton(
-          onPressed: () {
-            root.increment();
-          },
-          child: UIUtils.getText("Add"),
-        ),
+        UIUtils.getButton("Add", () {
+          root.increment();
+        }),
       ],
     );
   }
@@ -58,18 +58,18 @@ class Child extends StatelessWidget {
 
 // Support both reading and writing
 class Root extends InheritedWidget {
-  static Root of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<Root>() as Root;
+  static Root? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<Root>();
 
   final _InheritedWidgetScreenState state;
 
   final increment;
 
   Root({
-    Key key,
-    @required this.state,
-    @required this.increment,
-    @required Widget child,
+    Key? key,
+    required this.state,
+    required this.increment,
+    required Widget child,
   }) : super(key: key, child: child);
 
   // Determine if it needs to be updated
@@ -80,15 +80,15 @@ class Root extends InheritedWidget {
 
 // Only supports reading attributes
 class ReadOnlyRoot extends InheritedWidget {
-  static ReadOnlyRoot of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<Root>() as ReadOnlyRoot;
+  static ReadOnlyRoot? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<Root>() as ReadOnlyRoot?;
 
   final int count;
 
   ReadOnlyRoot({
-    Key key,
-    @required this.count,
-    @required Widget child,
+    Key? key,
+    required this.count,
+    required Widget child,
   }) : super(key: key, child: child);
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 import 'InheritedModelScreen.dart';
 import 'InheritedWidgetScreen.dart';
@@ -10,26 +11,27 @@ class MenuInheritedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "Menu inherited",
-        () => {
-          Get.back(),
+        "MenuInheritedScreen",
+        () {
+          Get.back();
         },
         null,
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
               "InheritedModelScreen",
-              () => {
-                Get.to(InheritedModelScreen()),
+              () {
+                Get.to(InheritedModelScreen());
               },
             ),
             UIUtils.getButton(
               "InheritedWidgetScreen",
-              () => {
-                Get.to(InheritedWidgetScreen()),
+              () {
+                Get.to(InheritedWidgetScreen());
               },
             ),
           ],

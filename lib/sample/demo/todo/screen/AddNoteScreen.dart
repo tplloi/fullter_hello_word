@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/DimenConstants.dart';
-import 'package:hello_word/lib/util/TimeUtils.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/lib/util/time_utils.dart';
 import 'package:hello_word/sample/demo/todo/controller/ControllerNote.dart';
 import 'package:hello_word/sample/demo/todo/controller/ControllerNoteAdd.dart';
 import 'package:hello_word/sample/demo/todo/model/Note.dart';

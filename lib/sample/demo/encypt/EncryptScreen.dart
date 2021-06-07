@@ -1,7 +1,7 @@
 import 'package:encrypt/encrypt.dart' as Encrypted;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 
 class EncryptScreen extends StatelessWidget {
   @override
@@ -10,8 +10,8 @@ class EncryptScreen extends StatelessWidget {
     return Scaffold(
       appBar: UIUtils.getAppBar(
         "EncryptScreen",
-        () => {
-          Get.back(),
+        () {
+          Get.back();
         },
         null,
       ),

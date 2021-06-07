@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/UIUtils.dart';
-import 'package:hello_word/sample/model/People.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/model/people.dart';
 
 class SyntaxScreen extends StatelessWidget {
   void test() {
@@ -46,7 +46,7 @@ class SyntaxScreen extends StatelessWidget {
     add(6, 9);
 
     print("--------------------------------------------");
-    People p = People("Loitp123456");
+    People p = People("People 123456");
     p.showData();
   }
 
@@ -55,9 +55,9 @@ class SyntaxScreen extends StatelessWidget {
     test();
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "Syntax1",
-        () => {
-          Get.back(),
+        "SyntaxScreen",
+        () {
+          Get.back();
         },
         null,
       ),
