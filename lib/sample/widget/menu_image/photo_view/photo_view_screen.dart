@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/examples/common_use_cases_examples.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/examples/controller_example.dart';
@@ -16,11 +18,16 @@ class PhotoViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      appBar: UIUtils.getAppBar("PhotoViewScreen", () {
+        Get.back();
+      }, () {
+        UrlLauncherUtils.launchInWebViewWithJavaScript(
+            "https://pub.dev/packages/photo_view");
+      }),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const ExampleAppBar(title: "PhotoViewScreen"),
+          // const ExampleAppBar(title: "PhotoViewScreen"),
           Container(
             padding: const EdgeInsets.all(20.0),
             child: const Text(
