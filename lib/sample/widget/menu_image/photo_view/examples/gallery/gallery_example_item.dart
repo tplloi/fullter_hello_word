@@ -43,7 +43,8 @@ List<GalleryExampleItem> galleryItems = <GalleryExampleItem>[
     id: "tag1",
     resource: "assets/images/gallery1.jpg",
   ),
-  GalleryExampleItem(id: "tag2", resource: "assets/images/firefox.svg", isSvg: true),
+  GalleryExampleItem(
+      id: "tag2", resource: "assets/images/firefox.svg", isSvg: true),
   GalleryExampleItem(
     id: "tag3",
     resource: "assets/images/gallery2.jpg",

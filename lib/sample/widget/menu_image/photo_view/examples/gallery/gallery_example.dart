@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/examples/gallery/gallery_example_item.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
@@ -15,10 +16,15 @@ class _GalleryExampleState extends State<GalleryExample> {
 
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Gallery Example",
-      showGoBack: true,
-      child: Center(
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "GalleryExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -66,17 +72,14 @@ class _GalleryExampleState extends State<GalleryExample> {
   }
 
   void open(BuildContext context, final int index) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => GalleryPhotoViewWrapper(
-          galleryItems: galleryItems,
-          backgroundDecoration: const BoxDecoration(
-            color: Colors.black,
-          ),
-          initialIndex: index,
-          scrollDirection: verticalGallery ? Axis.vertical : Axis.horizontal,
+    Get.to(
+      GalleryPhotoViewWrapper(
+        galleryItems: galleryItems,
+        backgroundDecoration: const BoxDecoration(
+          color: Colors.black,
         ),
+        initialIndex: index,
+        scrollDirection: verticalGallery ? Axis.vertical : Axis.horizontal,
       ),
     );
   }
