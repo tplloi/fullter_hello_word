@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:photo_view/photo_view.dart';
 
 class HeroExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Hero",
-      showGoBack: true,
-      child: Center(
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "HeroExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: Align(
+        alignment: Alignment.bottomCenter,
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HeroPhotoViewRouteWrapper(
-                  imageProvider: NetworkImage(
-                    "https://source.unsplash.com/4900x3600/?camera,paper",
-                  ),
+            Get.to(
+              HeroPhotoViewRouteWrapper(
+                imageProvider: NetworkImage(
+                  "https://source.unsplash.com/4900x3600/?camera,paper",
+                ),
+                backgroundDecoration: BoxDecoration(
+                  color: Colors.white,
                 ),
               ),
             );
