@@ -59,7 +59,7 @@ class _ControllerExampleState extends State<ControllerExample> {
           children: <Widget>[
             Positioned.fill(
               child: PhotoView(
-                imageProvider: const AssetImage("assets/large-image.jpg"),
+                imageProvider: const AssetImage("assets/images/large-image.jpg"),
                 controller: controller,
                 scaleStateController: scaleStateController,
                 enableRotation: true,

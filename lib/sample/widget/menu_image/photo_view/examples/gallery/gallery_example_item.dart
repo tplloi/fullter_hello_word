@@ -41,15 +41,15 @@ class GalleryExampleItemThumbnail extends StatelessWidget {
 List<GalleryExampleItem> galleryItems = <GalleryExampleItem>[
   GalleryExampleItem(
     id: "tag1",
-    resource: "assets/gallery1.jpg",
+    resource: "assets/images/gallery1.jpg",
   ),
-  GalleryExampleItem(id: "tag2", resource: "assets/firefox.svg", isSvg: true),
+  GalleryExampleItem(id: "tag2", resource: "assets/images/firefox.svg", isSvg: true),
   GalleryExampleItem(
     id: "tag3",
-    resource: "assets/gallery2.jpg",
+    resource: "assets/images/gallery2.jpg",
   ),
   GalleryExampleItem(
     id: "tag4",
-    resource: "assets/gallery3.jpg",
+    resource: "assets/images/gallery3.jpg",
   ),
 ];

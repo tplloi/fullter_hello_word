@@ -39,7 +39,7 @@ class CustomChildExample extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       SvgPicture.asset(
-                        "assets/firefox.svg",
+                        "assets/images/firefox.svg",
                         height: 250.0,
                       )
                     ],

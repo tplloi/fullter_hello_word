@@ -32,7 +32,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/large-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/large-image.jpg"),
                     filterQuality: FilterQuality.medium,
                   ),
                 ),
@@ -46,7 +46,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/small-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/small-image.jpg"),
                     backgroundDecoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: <Color>[Colors.white, Colors.grey],
@@ -65,7 +65,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/small-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/small-image.jpg"),
                     backgroundDecoration: BoxDecoration(
                       color: Colors.white,
                     ),
@@ -82,7 +82,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/neat.gif"),
+                    imageProvider: const AssetImage("assets/images/neat.gif"),
                   ),
                 ),
               );
@@ -95,7 +95,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/large-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/large-image.jpg"),
                     minScale: PhotoViewComputedScale.contained * 0.8,
                     maxScale: PhotoViewComputedScale.covered * 1.1,
                     initialScale: PhotoViewComputedScale.covered * 1.1,
@@ -111,7 +111,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/large-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/large-image.jpg"),
                     initialScale: PhotoViewComputedScale.contained * 0.7,
                   ),
                 ),
@@ -125,7 +125,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const OneTapWrapper(
-                    imageProvider: const AssetImage("assets/large-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/large-image.jpg"),
                   ),
                 ),
               );
@@ -138,7 +138,7 @@ class CommonUseCasesExamples extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const CommonExampleRouteWrapper(
-                    imageProvider: const AssetImage("assets/large-image.jpg"),
+                    imageProvider: const AssetImage("assets/images/large-image.jpg"),
                     disableGestures: true,
                   ),
                 ),
