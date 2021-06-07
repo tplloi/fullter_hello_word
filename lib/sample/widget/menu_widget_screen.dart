@@ -9,6 +9,7 @@ import 'package:hello_word/sample/widget/chart/chart_screen.dart';
 import 'package:hello_word/sample/widget/check_box/check_box_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen_2.dart';
+import 'package:hello_word/sample/widget/in_app_review/in_app_review_screen.dart';
 import 'package:hello_word/sample/widget/interactive_viewer/using_interactive_viewer_screen.dart';
 import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_screen.dart';
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
@@ -176,6 +177,12 @@ class MenuWidgetScreen extends StatelessWidget {
               "MenuGridScreen",
                   () {
                 Get.to(MenuGridScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "InAppReviewScreen",
+                  () {
+                Get.to(InAppReviewScreen());
               },
             ),
             UIUtils.getButton(

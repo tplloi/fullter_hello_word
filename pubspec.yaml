@@ -51,6 +51,7 @@ dependencies:
   easy_debounce: ^2.0.0 #https://pub.dev/packages/easy_debounce
   advance_pdf_viewer: ^2.0.0 #https://pub.dev/packages/advance_pdf_viewer
   video_player: ^2.1.5 #https://pub.dev/packages/video_player
+  in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image
