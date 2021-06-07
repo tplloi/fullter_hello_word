@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word/sample/widget/menu_image/photo_view/common/example_app_bar.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:photo_view/photo_view.dart';
 
 class InlineExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ExampleAppBarLayout(
-      title: "Inline usage",
-      showGoBack: true,
-      child: ListView(
+    return Scaffold(
+      appBar: UIUtils.getAppBar(
+        "InlineExample",
+        () {
+          Get.back();
+        },
+        null,
+      ),
+      body: ListView(
+        physics: BouncingScrollPhysics(),
         children: <Widget>[
           Container(
             padding: const EdgeInsets.all(20.0),
@@ -25,7 +32,8 @@ class InlineExample extends StatelessWidget {
             height: 200.0,
             child: ClipRect(
               child: PhotoView(
-                imageProvider: const AssetImage("assets/large-image.jpg"),
+                imageProvider:
+                    const AssetImage("assets/images/large-image.jpg"),
                 maxScale: PhotoViewComputedScale.covered * 2.0,
                 minScale: PhotoViewComputedScale.contained * 0.8,
                 initialScale: PhotoViewComputedScale.covered,
