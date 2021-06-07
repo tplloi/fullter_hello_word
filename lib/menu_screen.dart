@@ -59,7 +59,7 @@ class MenuScreen extends StatelessWidget {
           UIUtils.getButton(
             "Github",
             () {
-              UrlLauncherUtils.launchInBrowser(
+              UrlLauncherUtils.launchInWebViewWithJavaScript(
                   "https://github.com/tplloi/fullter_hello_word");
             },
           ),
