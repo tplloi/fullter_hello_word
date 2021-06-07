@@ -49,6 +49,7 @@ dependencies:
   intl: ^0.17.0 #https://pub.dev/packages/intl
   horizontal_data_table: ^3.3.0 #https://pub.dev/packages/horizontal_data_table
   easy_debounce: ^2.0.0 #https://pub.dev/packages/easy_debounce
+  advance_pdf_viewer: ^2.0.0 #https://pub.dev/packages/advance_pdf_viewer
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image
@@ -61,7 +62,6 @@ dependencies:
   shared_preferences: ^2.0.5 #https://pub.dev/packages/shared_preferences
 
   #none null safety
-  #advance_pdf_viewer: ^1.2.2 #https://pub.dev/packages/advance_pdf_viewer
   #flutter_swiper: ^1.1.6 #https://pub.dev/packages/flutter_swiper
   #md2_tab_indicator: ^1.0.2 #https://pub.dev/packages/md2_tab_indicator
   #drag_to_expand: ^0.0.1 #https://pub.dev/packages/drag_to_expand
