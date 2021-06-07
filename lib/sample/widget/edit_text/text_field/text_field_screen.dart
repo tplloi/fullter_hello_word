@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'TextFieldWidget.dart';
-import 'TextFormFieldWidget.dart';
+import 'text_field_widget.dart';
+import 'text_form_field_widget.dart';
 
 class TextFieldScreen extends StatelessWidget {
   @override

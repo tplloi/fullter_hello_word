@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'CustomAnimation.dart';
-import 'TestPage.dart';
+import 'custom_animation.dart';
+import 'test_page.dart';
 
 class EasyLoadingScreen extends StatelessWidget {
   @override

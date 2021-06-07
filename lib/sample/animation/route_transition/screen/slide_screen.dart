@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_word/lib/animation/route_transition/slide_route.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import '../RouteTransitionScreen.dart';
+import '../route_transition_screen.dart';
 
 class SlideScreen extends StatelessWidget {
   @override

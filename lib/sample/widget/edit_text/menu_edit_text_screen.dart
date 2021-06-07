@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/edit_text/search_delegate/search_delegate_screen.dart';
+import 'package:hello_word/sample/widget/edit_text/text_field/text_field_screen.dart';
 
-import 'EditTextScreen.dart';
-import 'FormFieldScreen.dart';
-import 'searchDelegate/SearchDelegateScreen.dart';
-import 'textField/TextFieldScreen.dart';
+import 'edit_text_screen.dart';
+import 'form_field_screen.dart';
 
 class MenuEditTextScreen extends StatelessWidget {
   @override
@@ -28,38 +28,25 @@ class MenuEditTextScreen extends StatelessWidget {
             UIUtils.getButton(
               "EditTextScreen",
               () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => EditTextScreen()),
-                );
+                Get.to(EditTextScreen());
               },
             ),
             UIUtils.getButton(
               "FormFieldScreen",
               () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FormFieldScreen()),
-                );
+                Get.to(FormFieldScreen());
               },
             ),
             UIUtils.getButton(
               "SearchDelegateScreen",
               () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SearchDelegateScreen()),
-                );
+                Get.to(SearchDelegateScreen());
               },
             ),
             UIUtils.getButton(
               "TextFieldScreen",
               () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TextFieldScreen()),
-                );
+                Get.to(TextFieldScreen());
               },
             ),
           ],

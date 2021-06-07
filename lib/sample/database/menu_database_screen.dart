@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/database/shared_preferences/shared_preferences_screen.dart';
 
-import 'sharedPreferences/SharedPreferencesScreen.dart';
-import 'sqlite/SQLiteDemoScreen.dart';
+import 'sqlite/sqlite_demo_screen.dart';
 
 class MenuDatabaseScreen extends StatelessWidget {
   @override

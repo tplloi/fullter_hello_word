@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'bloc/ClientsBloc.dart';
-import 'model/ClientModel.dart';
+import 'bloc/clients_bloc.dart';
+import 'model/client_model.dart';
 
 //https://medium.com/flutter-community/using-sqlite-in-flutter-187c1a82e8b
 class SQLiteDemoScreen extends StatefulWidget {
