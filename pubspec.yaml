@@ -58,6 +58,7 @@ dependencies:
   device_info_plus: ^1.0.1 #https://pub.dev/packages/device_info_plus
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
   connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
+  battery_plus: ^1.0.1 #https://pub.dev/packages/battery_plus
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image

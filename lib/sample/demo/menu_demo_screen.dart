@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/demo/advance_pdf_viewer/advance_pdf_viewer_screen.dart';
+import 'package:hello_word/sample/demo/battery_plus/battery_plus_screen.dart';
 import 'package:hello_word/sample/demo/communication_between_widget/communication_between_widget_screen.dart';
 import 'package:hello_word/sample/demo/connectivity_plus/connectivity_plus_screen.dart';
 import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.dart';
@@ -50,6 +51,12 @@ class MenuDemoScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
+            "BatteryPlusScreen",
+            () {
+              Get.to(BatteryPlusScreen());
+            },
+          ),
+          UIUtils.getButton(
             "CommunicationBetweenWidgetScreen",
             () {
               Get.to(CommunicationBetweenWidgetScreen());
@@ -57,7 +64,7 @@ class MenuDemoScreen extends StatelessWidget {
           ),
           UIUtils.getButton(
             "ConnectivityPlusScreen",
-                () {
+            () {
               Get.to(ConnectivityPlusScreen());
             },
           ),
