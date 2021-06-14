@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/main.dart';
 import 'package:hello_word/sample/demo/advance_pdf_viewer/advance_pdf_viewer_screen.dart';
 import 'package:hello_word/sample/demo/battery_plus/battery_plus_screen.dart';
 import 'package:hello_word/sample/demo/communication_between_widget/communication_between_widget_screen.dart';
@@ -101,8 +103,12 @@ class MenuDemoScreen extends StatelessWidget {
           ),
           UIUtils.getButton(
             "FlutterLocalNotificationScreen",
-                () {
-              Get.to(FlutterLocalNotificationScreen());
+            () async {
+              final NotificationAppLaunchDetails? notificationAppLaunchDetails =
+                  await flutterLocalNotificationsPlugin
+                      .getNotificationAppLaunchDetails();
+              Get.to(
+                  FlutterLocalNotificationScreen(notificationAppLaunchDetails));
             },
           ),
           UIUtils.getButton(
