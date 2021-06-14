@@ -12,7 +12,6 @@ import 'sample/demo/syntax/syntax_screen.dart';
 import 'sample/widget/menu_widget_screen.dart';
 
 class MenuScreen extends StatelessWidget {
-  static const String ROUTE_NAME = "/MenuScreen";
 
   @override
   Widget build(BuildContext context) {

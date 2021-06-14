@@ -31,12 +31,7 @@ void main() {
         accentColor: Colors.blueAccent,
         backgroundColor: Colors.white,
       ),
-      // unknownRoute: GetPage(name: '/notfound', page: () => UnknownRoutePage()),
-      initialRoute: '/',
-      getPages: [
-        GetPage(name: SplashScreen.ROUTE_NAME, page: () => SplashScreen()),
-        GetPage(name: MenuScreen.ROUTE_NAME, page: () => MenuScreen()),
-      ],
+      home: SplashScreen(),
     ),
   );
 }
@@ -49,8 +44,6 @@ void testLogger() {
 }
 
 class SplashScreen extends StatefulWidget {
-  static const String ROUTE_NAME = "/";
-
   @override
   State<StatefulWidget> createState() {
     return SplashScreenState();
@@ -72,7 +65,7 @@ class SplashScreenState extends State<SplashScreen> {
 
   route() {
     print("delay finish");
-    Get.offNamed(MenuScreen.ROUTE_NAME);
+    Get.off(MenuScreen());
   }
 
   @override
