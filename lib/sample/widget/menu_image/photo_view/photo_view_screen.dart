@@ -39,76 +39,77 @@ class PhotoViewScreen extends StatelessWidget {
             child: ListView(
               physics: BouncingScrollPhysics(),
               children: <Widget>[
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(CommonUseCasesExamples());
-                  },
-                  text: "Common use cases",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(GalleryExample());
-                  },
-                  text: "Gallery",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(HeroExample());
-                  },
-                  text: "Hero animation",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(NetworkExamples());
-                  },
-                  text: "Network images",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(ControllerExample());
-                  },
-                  text: "Controller",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(InlineExample());
-                  },
-                  text: "Part of the screen",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(CustomChildExample());
-                  },
-                  text: "Custom child",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(DialogExample());
-                  },
-                  text: "Integrated to dialogs",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(GestureRotationExample());
-                  },
-                  text: "Rotation Gesture",
-                ),
-                _buildItem(
-                  context,
-                  onPressed: () {
-                    Get.to(ProgrammaticRotationExample());
-                  },
-                  text: "Rotation Programmatic",
-                ),
+                //TODO
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(CommonUseCasesExamples());
+                //   },
+                //   text: "Common use cases",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(GalleryExample());
+                //   },
+                //   text: "Gallery",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(HeroExample());
+                //   },
+                //   text: "Hero animation",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(NetworkExamples());
+                //   },
+                //   text: "Network images",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(ControllerExample());
+                //   },
+                //   text: "Controller",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(InlineExample());
+                //   },
+                //   text: "Part of the screen",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(CustomChildExample());
+                //   },
+                //   text: "Custom child",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(DialogExample());
+                //   },
+                //   text: "Integrated to dialogs",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(GestureRotationExample());
+                //   },
+                //   text: "Rotation Gesture",
+                // ),
+                // _buildItem(
+                //   context,
+                //   onPressed: () {
+                //     Get.to(ProgrammaticRotationExample());
+                //   },
+                //   text: "Rotation Programmatic",
+                // ),
               ],
             ),
           ),

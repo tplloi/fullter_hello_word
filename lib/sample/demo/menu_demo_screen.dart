@@ -8,6 +8,7 @@ import 'package:hello_word/sample/demo/communication_between_widget/communicatio
 import 'package:hello_word/sample/demo/connectivity_plus/connectivity_plus_screen.dart';
 import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.dart';
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
+import 'package:hello_word/sample/demo/flutter_local_notifications/flutter_local_notifications_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
@@ -96,6 +97,12 @@ class MenuDemoScreen extends StatelessWidget {
             "EncryptScreen",
             () {
               Get.to(EncryptScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "FlutterLocalNotificationScreen",
+                () {
+              Get.to(FlutterLocalNotificationScreen());
             },
           ),
           UIUtils.getButton(
