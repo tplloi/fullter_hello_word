@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
-import 'package:hello_word/sample/widget/text/text_animated_text_kit_view.dart';
-import 'package:hello_word/sample/widget/text/text_screen.dart';
+import 'package:hello_word/sample/widget/text_view/text_animated_text_kit_view.dart';
+import 'package:hello_word/sample/widget/text_view/text_screen.dart';
 
 class MenuTextScreen extends StatelessWidget {
   @override
