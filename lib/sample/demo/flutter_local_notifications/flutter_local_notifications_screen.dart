@@ -13,10 +13,10 @@ import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/main.dart';
 import 'package:hello_word/sample/demo/flutter_local_notifications/padded_elevated_button.dart';
+import 'package:hello_word/sample/demo/flutter_local_notifications/received_notification.dart';
 import 'package:hello_word/sample/demo/flutter_local_notifications/second_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
 //FlutterLocalNotificationScreen
@@ -25,8 +25,6 @@ class FlutterLocalNotificationScreen extends StatefulWidget {
     this.notificationAppLaunchDetails, {
     Key? key,
   }) : super(key: key);
-
-  static const String routeName = '/';
 
   final NotificationAppLaunchDetails? notificationAppLaunchDetails;
 
@@ -103,7 +101,7 @@ class _FlutterLocalNotificationScreenState
 
   void _configureSelectNotificationSubject() {
     selectNotificationSubject.stream.listen((String? payload) async {
-      await Navigator.pushNamed(context, '/secondPage');
+      Get.to(SecondPage(payload));
     });
   }
 

@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
+import 'package:hello_word/sample/demo/flutter_local_notifications/received_notification.dart';
 import 'package:rxdart/subjects.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -25,20 +26,6 @@ final BehaviorSubject<String?> selectNotificationSubject =
 
 const MethodChannel platform =
     MethodChannel('dexterx.dev/flutter_local_notifications_example');
-
-class ReceivedNotification {
-  ReceivedNotification({
-    required this.id,
-    required this.title,
-    required this.body,
-    required this.payload,
-  });
-
-  final int id;
-  final String? title;
-  final String? body;
-  final String? payload;
-}
 
 String? selectedNotificationPayload;
 
@@ -64,17 +51,15 @@ void main() async {
   testLogger();
   // needed if you intend to initialize in the `main` function
   WidgetsFlutterBinding.ensureInitialized();
-
   _configureLocalTimeZone();
 
-  // final NotificationAppLaunchDetails? notificationAppLaunchDetails =
-  //     await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
-  // String initialRoute = HomePage.routeName;
-  // if (notificationAppLaunchDetails?.didNotificationLaunchApp ?? false) {
-  //   selectedNotificationPayload = notificationAppLaunchDetails!.payload;
-  //   initialRoute = SecondPage.routeName;
-  // }
-
+  final NotificationAppLaunchDetails? notificationAppLaunchDetails =
+      await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+  if (notificationAppLaunchDetails?.didNotificationLaunchApp ?? false) {
+    selectedNotificationPayload = notificationAppLaunchDetails?.payload;
+    Dog.d("payload ${notificationAppLaunchDetails?.payload}");
+    //dua vao payload de load screen tuong ung <<< phan nay ko iplm
+  }
   const AndroidInitializationSettings initializationSettingsAndroid =
       AndroidInitializationSettings('app_icon');
 
@@ -107,6 +92,7 @@ void main() async {
     selectedNotificationPayload = payload;
     selectNotificationSubject.add(payload);
   });
+
   runApp(
     GetMaterialApp(
       enableLog: true,

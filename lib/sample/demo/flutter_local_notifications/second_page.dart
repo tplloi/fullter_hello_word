@@ -6,8 +6,6 @@ class SecondPage extends StatefulWidget {
     Key? key,
   }) : super(key: key);
 
-  static const String routeName = '/secondPage';
-
   final String? payload;
 
   @override
