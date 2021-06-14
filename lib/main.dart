@@ -26,12 +26,17 @@ void main() {
       enableLog: true,
       debugShowCheckedModeBanner: true,
       defaultTransition: Transition.cupertino,
-      home: SplashScreen(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
         accentColor: Colors.blueAccent,
         backgroundColor: Colors.white,
       ),
+      // unknownRoute: GetPage(name: '/notfound', page: () => UnknownRoutePage()),
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: SplashScreen.ROUTE_NAME, page: () => SplashScreen()),
+        GetPage(name: MenuScreen.ROUTE_NAME, page: () => MenuScreen()),
+      ],
     ),
   );
 }
@@ -44,6 +49,8 @@ void testLogger() {
 }
 
 class SplashScreen extends StatefulWidget {
+  static const String ROUTE_NAME = "/";
+
   @override
   State<StatefulWidget> createState() {
     return SplashScreenState();
@@ -59,13 +66,13 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   startTime() async {
-    var duration = new Duration(seconds: 3);
+    var duration = new Duration(seconds: 1);
     return new Timer(duration, route);
   }
 
   route() {
     print("delay finish");
-    Get.off(MenuScreen());
+    Get.offNamed(MenuScreen.ROUTE_NAME);
   }
 
   @override
@@ -85,7 +92,9 @@ class SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
-            Padding(padding: EdgeInsets.only(top: DimenConstants.marginPaddingMedium)),
+            Padding(
+                padding:
+                    EdgeInsets.only(top: DimenConstants.marginPaddingMedium)),
             CircularProgressIndicator(
               backgroundColor: Colors.white,
               strokeWidth: 3,
