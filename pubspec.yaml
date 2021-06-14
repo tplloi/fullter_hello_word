@@ -57,6 +57,7 @@ dependencies:
   flutter_svg: ^0.22.0 #https://pub.dev/packages/flutter_svg
   device_info_plus: ^1.0.1 #https://pub.dev/packages/device_info_plus
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
+  connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image

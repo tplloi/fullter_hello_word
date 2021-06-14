@@ -4,6 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/demo/advance_pdf_viewer/advance_pdf_viewer_screen.dart';
 import 'package:hello_word/sample/demo/communication_between_widget/communication_between_widget_screen.dart';
+import 'package:hello_word/sample/demo/connectivity_plus/connectivity_plus_screen.dart';
 import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.dart';
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
@@ -52,6 +53,12 @@ class MenuDemoScreen extends StatelessWidget {
             "CommunicationBetweenWidgetScreen",
             () {
               Get.to(CommunicationBetweenWidgetScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "ConnectivityPlusScreen",
+                () {
+              Get.to(ConnectivityPlusScreen());
             },
           ),
           UIUtils.getButton(
