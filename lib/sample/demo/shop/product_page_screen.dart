@@ -4,7 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/model/product.dart';
 
-import 'RatingBox.dart';
+import 'rating_box.dart';
 
 class ProductPageScreen extends StatelessWidget {
   ProductPageScreen({

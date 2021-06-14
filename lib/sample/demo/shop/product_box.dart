@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_word/sample/model/product.dart';
 
-import 'RatingBox.dart';
+import 'rating_box.dart';
 
 class ProductBox extends StatelessWidget {
   ProductBox({

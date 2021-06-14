@@ -7,17 +7,17 @@ import 'package:hello_word/sample/demo/communication_between_widget/communicatio
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
-import 'package:hello_word/sample/demo/shop/ShopScreen.dart';
+import 'package:hello_word/sample/demo/shop/shop_screen.dart';
 import 'package:hello_word/sample/demo/tip_calculator/tip_calculator_screen.dart';
 import 'package:hello_word/sample/demo/url_launcher/url_launcher_screen.dart';
 
-import 'async/MenuAsyncScreen.dart';
-import 'counter/CounterScreen.dart';
+import 'async/menu_async_screen.dart';
+import 'counter/counter_screen.dart';
 import 'crypto/crypto_screen.dart';
-import 'encypt/EncryptScreen.dart';
-import 'getx/GetXScreen.dart';
-import 'inherited/MenuInheritedScreen.dart';
-import 'theme/ThemeScreen.dart';
+import 'encypt/encrypt_screen.dart';
+import 'getx/getx_screen.dart';
+import 'inherited/menu_inherited_screen.dart';
+import 'theme/theme_screen.dart';
 
 class MenuDemoScreen extends StatelessWidget {
   @override
