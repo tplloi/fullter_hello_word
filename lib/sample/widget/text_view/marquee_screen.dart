@@ -23,9 +23,20 @@ class MarqueeScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
-          _buildMarquee(),
-          _buildComplexMarquee(),
-        ].map(_wrapWithStuff).toList(),
+          Container(
+            height: 50,
+            color: Colors.yellow,
+            padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+            child: _buildMarquee(),
+          ),
+          SizedBox(height: DimenConstants.marginPaddingMedium),
+          Container(
+            height: 50,
+            color: Colors.red,
+            padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+            child: _buildComplexMarquee(),
+          ),
+        ],
       ),
     );
   }
@@ -40,7 +51,8 @@ class MarqueeScreen extends StatelessWidget {
     return Marquee(
       text:
           'Some sample text that takes some space. Some sample text that takes some space. Some sample text that takes some space. Some sample text that takes some space.',
-      style: TextStyle(fontWeight: FontWeight.bold),
+      style: TextStyle(
+          fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18),
       scrollAxis: Axis.horizontal,
       crossAxisAlignment: CrossAxisAlignment.center,
       blankSpace: 20.0,
@@ -55,13 +67,6 @@ class MarqueeScreen extends StatelessWidget {
       accelerationCurve: Curves.linear,
       decelerationDuration: Duration(milliseconds: 500),
       decelerationCurve: Curves.easeOut,
-    );
-  }
-
-  Widget _wrapWithStuff(Widget child) {
-    return Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Container(height: 50.0, color: Colors.white, child: child),
     );
   }
 }
