@@ -8,6 +8,7 @@ import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
+import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
 import 'package:hello_word/sample/demo/shop/shop_screen.dart';
 import 'package:hello_word/sample/demo/tip_calculator/tip_calculator_screen.dart';
 import 'package:hello_word/sample/demo/url_launcher/url_launcher_screen.dart';
@@ -105,6 +106,12 @@ class MenuDemoScreen extends StatelessWidget {
             "Load Local Json",
             () {
               Get.to(LoadLocalJsonScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "PackageInforPlusScreen",
+            () {
+              Get.to(PackageInforPlusScreen());
             },
           ),
           UIUtils.getButton(
