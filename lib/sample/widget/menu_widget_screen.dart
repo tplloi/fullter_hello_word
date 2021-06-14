@@ -18,6 +18,7 @@ import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_scr
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
 import 'package:hello_word/sample/widget/menu_image/menu_image_screen.dart';
 import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
+import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
 import 'package:hello_word/sample/widget/video_player/video_player_screen.dart';
 
 import 'appbar/SliverAppBarScreen.dart';
@@ -43,8 +44,6 @@ import 'state/stateless_widget_demo_screen.dart';
 import 'stepper/stepper_screen.dart';
 import 'switch/switch_screen.dart';
 import 'table/table_screen.dart';
-import 'text/text_animated_text_kit_view.dart';
-import 'text/text_screen.dart';
 import 'tooltip/tooltip_screen.dart';
 import 'webview/web_view_screen.dart';
 
@@ -294,15 +293,9 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "TextAnimatedTextKitScreen",
+              "MenuTextScreen",
               () {
-                Get.to(TextAnimatedTextKitScreen());
-              },
-            ),
-            UIUtils.getButton(
-              "TextScreen",
-              () {
-                Get.to(TextScreen());
+                Get.to(MenuTextScreen());
               },
             ),
             UIUtils.getButton(
