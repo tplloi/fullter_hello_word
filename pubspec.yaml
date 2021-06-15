@@ -61,6 +61,7 @@ dependencies:
   connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
   battery_plus: ^1.0.1 #https://pub.dev/packages/battery_plus
   pin_code_fields: ^7.2.0 #https://pub.dev/packages/pin_code_fields
+  flutter_slidable: ^0.6.0 #https://pub.dev/packages/flutter_slidable
 
   #can upgrade
   cached_network_image: ^3.0.0 #https://pub.dev/packages/cached_network_image
