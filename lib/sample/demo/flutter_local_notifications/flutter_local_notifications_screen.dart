@@ -592,6 +592,8 @@ class _FlutterLocalNotificationScreenState
       'your other channel name',
       'your other channel description',
       sound: RawResourceAndroidNotificationSound('slow_spring_board'),
+      importance: Importance.max,
+      priority: Priority.max,
     );
     const IOSNotificationDetails iOSPlatformChannelSpecifics =
         IOSNotificationDetails(sound: 'slow_spring_board.aiff');
@@ -616,16 +618,21 @@ class _FlutterLocalNotificationScreenState
     vibrationPattern[3] = 2000;
 
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('other custom channel id',
-            'other custom channel name', 'other custom channel description',
-            icon: 'secondary_icon',
-            largeIcon: const DrawableResourceAndroidBitmap('sample_large_icon'),
-            vibrationPattern: vibrationPattern,
-            enableLights: true,
-            color: const Color.fromARGB(255, 255, 0, 0),
-            ledColor: const Color.fromARGB(255, 255, 0, 0),
-            ledOnMs: 1000,
-            ledOffMs: 500);
+        AndroidNotificationDetails(
+      'other custom channel id',
+      'other custom channel name',
+      'other custom channel description',
+      icon: 'secondary_icon',
+      largeIcon: const DrawableResourceAndroidBitmap('sample_large_icon'),
+      vibrationPattern: vibrationPattern,
+      enableLights: true,
+      color: const Color.fromARGB(255, 255, 0, 0),
+      ledColor: const Color.fromARGB(255, 255, 0, 0),
+      ledOnMs: 1000,
+      ledOffMs: 500,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
 
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
@@ -643,8 +650,13 @@ class _FlutterLocalNotificationScreenState
         'scheduled body',
         tz.TZDateTime.now(tz.local).add(const Duration(seconds: 5)),
         const NotificationDetails(
-            android: AndroidNotificationDetails('your channel id',
-                'your channel name', 'your channel description')),
+            android: AndroidNotificationDetails(
+          'your channel id',
+          'your channel name',
+          'your channel description',
+          importance: Importance.max,
+          priority: Priority.max,
+        )),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime);
@@ -652,10 +664,15 @@ class _FlutterLocalNotificationScreenState
 
   Future<void> _showNotificationWithNoSound() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('silent channel id', 'silent channel name',
-            'silent channel description',
-            playSound: false,
-            styleInformation: DefaultStyleInformation(true, true));
+        AndroidNotificationDetails(
+      'silent channel id',
+      'silent channel name',
+      'silent channel description',
+      playSound: false,
+      styleInformation: DefaultStyleInformation(true, true),
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     const IOSNotificationDetails iOSPlatformChannelSpecifics =
         IOSNotificationDetails(presentSound: false);
     const MacOSNotificationDetails macOSPlatformChannelSpecifics =
@@ -677,9 +694,14 @@ class _FlutterLocalNotificationScreenState
         UriAndroidNotificationSound(alarmUri!);
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-            'uri channel id', 'uri channel name', 'uri channel description',
-            sound: uriSound,
-            styleInformation: const DefaultStyleInformation(true, true));
+      'uri channel id',
+      'uri channel name',
+      'uri channel description',
+      sound: uriSound,
+      styleInformation: const DefaultStyleInformation(true, true),
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -688,10 +710,15 @@ class _FlutterLocalNotificationScreenState
 
   Future<void> _showTimeoutNotification() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('silent channel id', 'silent channel name',
-            'silent channel description',
-            timeoutAfter: 3000,
-            styleInformation: DefaultStyleInformation(true, true));
+        AndroidNotificationDetails(
+      'silent channel id',
+      'silent channel name',
+      'silent channel description',
+      timeoutAfter: 3000,
+      styleInformation: DefaultStyleInformation(true, true),
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(0, 'timeout notification',
@@ -703,11 +730,14 @@ class _FlutterLocalNotificationScreenState
     const int insistentFlag = 4;
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-            'your channel id', 'your channel name', 'your channel description',
-            importance: Importance.max,
-            priority: Priority.max,
-            ticker: 'ticker',
-            additionalFlags: Int32List.fromList(<int>[insistentFlag]));
+      'your channel id',
+      'your channel name',
+      'your channel description',
+      importance: Importance.max,
+      priority: Priority.max,
+      ticker: 'ticker',
+      additionalFlags: Int32List.fromList(<int>[insistentFlag]),
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -737,9 +767,14 @@ class _FlutterLocalNotificationScreenState
             summaryText: 'summary <i>text</i>',
             htmlFormatSummaryText: true);
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('big text channel id',
-            'big text channel name', 'big text channel description',
-            styleInformation: bigPictureStyleInformation);
+        AndroidNotificationDetails(
+      'big text channel id',
+      'big text channel name',
+      'big text channel description',
+      styleInformation: bigPictureStyleInformation,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -759,10 +794,15 @@ class _FlutterLocalNotificationScreenState
             summaryText: 'summary <i>text</i>',
             htmlFormatSummaryText: true);
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('big text channel id',
-            'big text channel name', 'big text channel description',
-            largeIcon: FilePathAndroidBitmap(largeIconPath),
-            styleInformation: bigPictureStyleInformation);
+        AndroidNotificationDetails(
+      'big text channel id',
+      'big text channel name',
+      'big text channel description',
+      largeIcon: FilePathAndroidBitmap(largeIconPath),
+      styleInformation: bigPictureStyleInformation,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -779,6 +819,8 @@ class _FlutterLocalNotificationScreenState
       'media channel description',
       largeIcon: FilePathAndroidBitmap(largeIconPath),
       styleInformation: const MediaStyleInformation(),
+      importance: Importance.max,
+      priority: Priority.max,
     );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
@@ -797,9 +839,14 @@ class _FlutterLocalNotificationScreenState
       htmlFormatSummaryText: true,
     );
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('big text channel id',
-            'big text channel name', 'big text channel description',
-            styleInformation: bigTextStyleInformation);
+        AndroidNotificationDetails(
+      'big text channel id',
+      'big text channel name',
+      'big text channel description',
+      styleInformation: bigTextStyleInformation,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -816,9 +863,14 @@ class _FlutterLocalNotificationScreenState
         summaryText: 'summary <i>text</i>',
         htmlFormatSummaryText: true);
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('inbox channel id', 'inboxchannel name',
-            'inbox channel description',
-            styleInformation: inboxStyleInformation);
+        AndroidNotificationDetails(
+      'inbox channel id',
+      'inboxchannel name',
+      'inbox channel description',
+      styleInformation: inboxStyleInformation,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -873,9 +925,15 @@ class _FlutterLocalNotificationScreenState
         htmlFormatTitle: true,
         messages: messages);
     final AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('message channel id', 'message channel name',
-            'message channel description',
-            category: 'msg', styleInformation: messagingStyle);
+        AndroidNotificationDetails(
+      'message channel id',
+      'message channel name',
+      'message channel description',
+      category: 'msg',
+      styleInformation: messagingStyle,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     final NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -935,10 +993,15 @@ class _FlutterLocalNotificationScreenState
         summaryText: 'janedoe@example.com');
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-            groupChannelId, groupChannelName, groupChannelDescription,
-            styleInformation: inboxStyleInformation,
-            groupKey: groupKey,
-            setAsGroupSummary: true);
+      groupChannelId,
+      groupChannelName,
+      groupChannelDescription,
+      styleInformation: inboxStyleInformation,
+      groupKey: groupKey,
+      setAsGroupSummary: true,
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -948,8 +1011,13 @@ class _FlutterLocalNotificationScreenState
   Future<void> _showNotificationWithTag() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-            'your channel id', 'your channel name', 'your channel description',
-            importance: Importance.max, priority: Priority.max, tag: 'tag');
+      'your channel id',
+      'your channel name',
+      'your channel description',
+      importance: Importance.max,
+      priority: Priority.max,
+      tag: 'tag',
+    );
     const NotificationDetails platformChannelSpecifics = NotificationDetails(
       android: androidPlatformChannelSpecifics,
     );
@@ -998,8 +1066,13 @@ class _FlutterLocalNotificationScreenState
 
   Future<void> _repeatNotification() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails('repeating channel id',
-            'repeating channel name', 'repeating description');
+        AndroidNotificationDetails(
+      'repeating channel id',
+      'repeating channel name',
+      'repeating description',
+      importance: Importance.max,
+      priority: Priority.max,
+    );
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.periodicallyShow(0, 'repeating title',
@@ -1015,9 +1088,12 @@ class _FlutterLocalNotificationScreenState
         _nextInstanceOfTenAM(),
         const NotificationDetails(
           android: AndroidNotificationDetails(
-              'daily notification channel id',
-              'daily notification channel name',
-              'daily notification description'),
+            'daily notification channel id',
+            'daily notification channel name',
+            'daily notification description',
+            importance: Importance.max,
+            priority: Priority.max,
+          ),
         ),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
@@ -1034,9 +1110,12 @@ class _FlutterLocalNotificationScreenState
         _nextInstanceOfTenAMLastYear(),
         const NotificationDetails(
           android: AndroidNotificationDetails(
-              'daily notification channel id',
-              'daily notification channel name',
-              'daily notification description'),
+            'daily notification channel id',
+            'daily notification channel name',
+            'daily notification description',
+            importance: Importance.max,
+            priority: Priority.max,
+          ),
         ),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
@@ -1052,9 +1131,12 @@ class _FlutterLocalNotificationScreenState
         _nextInstanceOfTenAM(),
         const NotificationDetails(
           android: AndroidNotificationDetails(
-              'weekly notification channel id',
-              'weekly notification channel name',
-              'weekly notificationdescription'),
+            'weekly notification channel id',
+            'weekly notification channel name',
+            'weekly notificationdescription',
+            importance: Importance.max,
+            priority: Priority.max,
+          ),
         ),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
@@ -1070,9 +1152,12 @@ class _FlutterLocalNotificationScreenState
         _nextInstanceOfMondayTenAM(),
         const NotificationDetails(
           android: AndroidNotificationDetails(
-              'weekly notification channel id',
-              'weekly notification channel name',
-              'weekly notificationdescription'),
+            'weekly notification channel id',
+            'weekly notification channel name',
+            'weekly notificationdescription',
+            importance: Importance.max,
+            priority: Priority.max,
+          ),
         ),
         androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
@@ -1106,11 +1191,14 @@ class _FlutterLocalNotificationScreenState
   Future<void> _showNotificationWithNoBadge() async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-            'no badge channel', 'no badge name', 'no badge description',
-            channelShowBadge: false,
-            importance: Importance.max,
-            priority: Priority.max,
-            onlyAlertOnce: true);
+      'no badge channel',
+      'no badge name',
+      'no badge description',
+      channelShowBadge: false,
+      importance: Importance.max,
+      priority: Priority.max,
+      onlyAlertOnce: true,
+    );
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
@@ -1123,15 +1211,18 @@ class _FlutterLocalNotificationScreenState
     for (int i = 0; i <= maxProgress; i++) {
       await Future<void>.delayed(const Duration(seconds: 1), () async {
         final AndroidNotificationDetails androidPlatformChannelSpecifics =
-            AndroidNotificationDetails('progress channel', 'progress channel',
-                'progress channel description',
-                channelShowBadge: false,
-                importance: Importance.max,
-                priority: Priority.max,
-                onlyAlertOnce: true,
-                showProgress: true,
-                maxProgress: maxProgress,
-                progress: i);
+            AndroidNotificationDetails(
+          'progress channel',
+          'progress channel',
+          'progress channel description',
+          channelShowBadge: false,
+          importance: Importance.max,
+          priority: Priority.max,
+          onlyAlertOnce: true,
+          showProgress: true,
+          maxProgress: maxProgress,
+          progress: i,
+        );
         final NotificationDetails platformChannelSpecifics =
             NotificationDetails(android: androidPlatformChannelSpecifics);
         await flutterLocalNotificationsPlugin.show(
