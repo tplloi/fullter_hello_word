@@ -3,10 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/widget/slider/flutter_slidable/home_item.dart';
+import 'package:hello_word/sample/widget/slider/flutter_slidable/horizontal_list_item.dart';
+import 'package:hello_word/sample/widget/slider/flutter_slidable/vertical_list_item.dart';
 
 class FlutterSlidableScreen extends StatefulWidget {
   @override
@@ -18,9 +20,9 @@ class FlutterSlidableScreen extends StatefulWidget {
 class _FlutterSlidableScreenState
     extends BaseStatefulState<FlutterSlidableScreen> {
   late final SlidableController slidableController;
-  final List<_HomeItem> items = List.generate(
+  final List<HomeItem> items = List.generate(
     20,
-    (i) => _HomeItem(
+    (i) => HomeItem(
       i,
       'Tile n°$i',
       _getSubtitle(i),
@@ -92,6 +94,7 @@ class _FlutterSlidableScreenState
 
   Widget _buildList(BuildContext context, Axis direction) {
     return ListView.builder(
+      physics: BouncingScrollPhysics(),
       scrollDirection: direction,
       itemBuilder: (context, index) {
         final Axis slidableDirection =
@@ -109,7 +112,7 @@ class _FlutterSlidableScreenState
 
   Widget _getSlidableWithLists(
       BuildContext context, int index, Axis direction) {
-    final _HomeItem item = items[index];
+    final HomeItem item = items[index];
     //final int t = index;
     return Slidable(
       key: Key(item.title),
@@ -172,7 +175,7 @@ class _FlutterSlidableScreenState
 
   Widget _getSlidableWithDelegates(
       BuildContext context, int index, Axis direction) {
-    final _HomeItem item = items[index];
+    final HomeItem item = items[index];
 
     return Slidable.builder(
       key: Key(item.title),
@@ -347,79 +350,4 @@ class _FlutterSlidableScreenState
       ..hideCurrentSnackBar()
       ..showSnackBar(SnackBar(content: Text(text)));
   }
-}
-
-class HorizontalListItem extends StatelessWidget {
-  HorizontalListItem(this.item);
-
-  final _HomeItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      width: 160.0,
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Expanded(
-            child: CircleAvatar(
-              backgroundColor: item.color,
-              child: Text('${item.index}'),
-              foregroundColor: Colors.white,
-            ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                item.subtitle!,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class VerticalListItem extends StatelessWidget {
-  VerticalListItem(this.item);
-
-  final _HomeItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () =>
-          Slidable.of(context)?.renderingMode == SlidableRenderingMode.none
-              ? Slidable.of(context)?.open()
-              : Slidable.of(context)?.close(),
-      child: Container(
-        color: Colors.white,
-        child: ListTile(
-          leading: CircleAvatar(
-            backgroundColor: item.color,
-            child: Text('${item.index}'),
-            foregroundColor: Colors.white,
-          ),
-          title: Text(item.title),
-          subtitle: Text(item.subtitle!),
-        ),
-      ),
-    );
-  }
-}
-
-class _HomeItem {
-  const _HomeItem(
-    this.index,
-    this.title,
-    this.subtitle,
-    this.color,
-  );
-
-  final int index;
-  final String title;
-  final String? subtitle;
-  final Color? color;
 }
