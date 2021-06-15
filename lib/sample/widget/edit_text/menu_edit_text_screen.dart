@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/edit_text/pin_code_fields/pin_code_fields_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/search_delegate/search_delegate_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/text_field/text_field_screen.dart';
 
@@ -26,8 +27,14 @@ class MenuEditTextScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
-              "EditTextScreen",
+              "PinCodeFieldsScreen",
               () {
+                Get.to(PinCodeFieldsScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "EditTextScreen",
+                  () {
                 Get.to(EditTextScreen());
               },
             ),
