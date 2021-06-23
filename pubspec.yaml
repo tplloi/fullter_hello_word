@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.3
 
   #null safety
+  dotted_border: ^2.0.0 #https://pub.dev/packages/dotted_border
   draggable_scrollbar: ^0.1.0 #https://pub.dev/packages/draggable_scrollbar
   transparent_image: ^2.0.0 #https://pub.dev/packages/transparent_image
   fl_chart: ^0.36.1 #https://pub.dev/packages/fl_chart
