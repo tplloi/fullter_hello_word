@@ -21,6 +21,7 @@ import 'package:hello_word/sample/widget/menu_image/menu_image_screen.dart';
 import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
 import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
 import 'package:hello_word/sample/widget/video_player/video_player_screen.dart';
+import 'package:hello_word/sample/widget/wave/wave_screen.dart';
 
 import 'appbar/sliver_app_bar_screen.dart';
 import 'button/menu_button_screen.dart';
@@ -318,8 +319,14 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "WebViewScreen",
+              "WaveScreen",
               () {
+                Get.to(WaveScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "WebViewScreen",
+                  () {
                 Get.to(WebViewScreen());
               },
             ),
