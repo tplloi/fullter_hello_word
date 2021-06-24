@@ -10,6 +10,7 @@ import 'package:hello_word/sample/widget/check_box/check_box_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen_2.dart';
 import 'package:hello_word/sample/widget/data_table/data_table_screen.dart';
+import 'package:hello_word/sample/widget/dotted_border/dotted_border_screen.dart';
 import 'package:hello_word/sample/widget/easy_loading/easy_loading_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/menu_edit_text_screen.dart';
 import 'package:hello_word/sample/widget/in_app_review/in_app_review_screen.dart';
@@ -17,15 +18,18 @@ import 'package:hello_word/sample/widget/interactive_viewer/using_interactive_vi
 import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_screen.dart';
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
 import 'package:hello_word/sample/widget/menu_image/menu_image_screen.dart';
+import 'package:hello_word/sample/widget/overflow_view/overflow_screen.dart';
 import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
+import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
 import 'package:hello_word/sample/widget/video_player/video_player_screen.dart';
+import 'package:hello_word/sample/widget/wave/wave_screen.dart';
 
-import 'appbar/SliverAppBarScreen.dart';
+import 'appbar/sliver_app_bar_screen.dart';
 import 'button/menu_button_screen.dart';
 import 'card/card_screen.dart';
 import 'cupertino/menu_cupertino_screen.dart';
 import 'dialog/dialog_screen.dart';
-import 'drawer/MenuDrawerScreen.dart';
+import 'drawer/menu_drawer_screen.dart';
 import 'expanded/expanded_screen.dart';
 import 'expansion/menu_expansion_screen.dart';
 import 'gesture/gesture_screen.dart';
@@ -43,8 +47,6 @@ import 'state/stateless_widget_demo_screen.dart';
 import 'stepper/stepper_screen.dart';
 import 'switch/switch_screen.dart';
 import 'table/table_screen.dart';
-import 'text/text_animated_text_kit_view.dart';
-import 'text/text_screen.dart';
 import 'tooltip/tooltip_screen.dart';
 import 'webview/web_view_screen.dart';
 
@@ -228,9 +230,21 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
+              "OverflowScreen",
+                  () {
+                Get.to(OverflowScreen());
+              },
+            ),
+            UIUtils.getButton(
               "DayPickerScreen",
               () {
                 Get.to(DayPickerScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "DottedBorderScreen",
+                  () {
+                Get.to(DottedBorderScreen());
               },
             ),
             UIUtils.getButton(
@@ -294,15 +308,9 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "TextAnimatedTextKitScreen",
+              "MenuTextScreen",
               () {
-                Get.to(TextAnimatedTextKitScreen());
-              },
-            ),
-            UIUtils.getButton(
-              "TextScreen",
-              () {
-                Get.to(TextScreen());
+                Get.to(MenuTextScreen());
               },
             ),
             UIUtils.getButton(
@@ -318,8 +326,14 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "WebViewScreen",
+              "WaveScreen",
               () {
+                Get.to(WaveScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "WebViewScreen",
+                  () {
                 Get.to(WebViewScreen());
               },
             ),

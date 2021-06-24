@@ -2,44 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
-import 'package:hello_word/sample/widget/slider/flutter_slidable/flutter_slidable_screen.dart';
+import 'future_builder_screen.dart';
+import 'stream_builder_screen.dart';
+import 'value_listenable_builder_screen.dart';
 
-import 'range/range_slider_screen.dart';
-import 'slider/slider_screen.dart';
-
-class MenuSliderScreen extends StatelessWidget {
+class MenuAsyncScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "MenuSliderScreen",
-        () {
-          Get.back();
+        "MenuAsyncScreen",
+        () => {
+          Get.back(),
         },
         null,
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
-              "FlutterSlidableScreen",
-              () {
-                Get.to(FlutterSlidableScreen());
+              "FutureBuilderScreen",
+              () => {
+                Get.to(FutureBuilderScreen()),
               },
             ),
             UIUtils.getButton(
-              "RangeSliderScreen",
-              () {
-                Get.to(RangeSliderScreen());
+              "StreamBuilderScreen",
+              () => {
+                Get.to(StreamBuilderScreen()),
               },
             ),
             UIUtils.getButton(
-              "SliderScreen",
-              () {
-                Get.to(SliderScreen());
+              "ValueListenableBuilderScreen",
+              () => {
+                Get.to(ValueListenableBuilderScreen()),
               },
             ),
           ],
