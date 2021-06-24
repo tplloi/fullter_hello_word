@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/sample/demo/todo/controller/ControllerNote.dart';
+import 'package:hello_word/sample/demo/todo/controller/controller_note.dart';
 
-import 'TabNoteAll.dart';
-import 'TabNoteComplete.dart';
-import 'TabNoteIncomplete.dart';
+import 'tab_note_all.dart';
+import 'tab_note_complete.dart';
+import 'tab_note_in_complete.dart';
 
 class ToDoMainScreen extends StatefulWidget {
   final ControllerNote _controllerNote = Get.put(ControllerNote());

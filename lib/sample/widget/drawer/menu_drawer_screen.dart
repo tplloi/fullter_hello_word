@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/drawer/navigation_drawer/navigation_drawer_screen.dart';
 
-import 'drawer/DrawerScreen.dart';
-import 'navigationDrawer/NavigationDrawerScreen.dart';
+import 'drawer/drawer_screen.dart';
 
 class MenuDrawerScreen extends StatelessWidget {
   @override

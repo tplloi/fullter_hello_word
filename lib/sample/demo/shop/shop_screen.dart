@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'ProductBox.dart';
-import 'ProductPageScreen.dart';
-import 'db/DbShop.dart';
+import 'product_box.dart';
+import 'product_page_screen.dart';
+import 'db/db_shop.dart';
 
 class ShopScreen extends StatelessWidget {
   final listProduct = DbShop.getListProduct();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
-import 'Controller.dart';
+import 'controller.dart';
 
 class SecondScreen extends StatelessWidget {
   final Controller _controller = Get.find();

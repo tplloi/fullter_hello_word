@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
-import 'FutureBuilderScreen.dart';
-import 'StreamBuilderScreen.dart';
-import 'ValueListenableBuilderScreen.dart';
 
-class MenuAsyncScreen extends StatelessWidget {
+import 'inherited_model_screen.dart';
+import 'inherited_widget_screen.dart';
+
+class MenuInheritedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: UIUtils.getAppBar(
-        "MenuAsyncScreen",
-        () => {
-          Get.back(),
+        "MenuInheritedScreen",
+        () {
+          Get.back();
         },
         null,
       ),
@@ -23,21 +23,15 @@ class MenuAsyncScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
-              "FutureBuilderScreen",
-              () => {
-                Get.to(FutureBuilderScreen()),
+              "InheritedModelScreen",
+              () {
+                Get.to(InheritedModelScreen());
               },
             ),
             UIUtils.getButton(
-              "StreamBuilderScreen",
-              () => {
-                Get.to(StreamBuilderScreen()),
-              },
-            ),
-            UIUtils.getButton(
-              "ValueListenableBuilderScreen",
-              () => {
-                Get.to(ValueListenableBuilderScreen()),
+              "InheritedWidgetScreen",
+              () {
+                Get.to(InheritedWidgetScreen());
               },
             ),
           ],

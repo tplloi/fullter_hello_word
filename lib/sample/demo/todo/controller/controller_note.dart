@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:hello_word/lib/core/base_controller.dart';
-import 'package:hello_word/sample/demo/todo/model/Note.dart';
+import 'package:hello_word/sample/demo/todo/model/note.dart';
 
 class ControllerNote extends BaseController {
   var listNote = <Note>[].obs;

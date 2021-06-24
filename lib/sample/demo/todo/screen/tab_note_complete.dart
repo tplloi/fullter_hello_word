@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/time_utils.dart';
-import 'package:hello_word/sample/demo/todo/controller/ControllerNote.dart';
-import 'package:hello_word/sample/demo/todo/model/Note.dart';
+import 'package:hello_word/sample/demo/todo/controller/controller_note.dart';
+import 'package:hello_word/sample/demo/todo/model/note.dart';
 
 class TabNoteComplete extends GetWidget {
   final ControllerNote _controllerNote = Get.find();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'AccountScreen.dart';
-import 'SettingsScreen.dart';
+import 'account_screen.dart';
+import 'settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

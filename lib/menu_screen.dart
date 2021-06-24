@@ -8,10 +8,11 @@ import 'lib/util/uI_utils.dart';
 import 'sample/animation/menu_animation_screen.dart';
 import 'sample/database/menu_database_screen.dart';
 import 'sample/demo/menu_demo_screen.dart';
-import 'sample/demo/syntax/SyntaxScreen.dart';
+import 'sample/demo/syntax/syntax_screen.dart';
 import 'sample/widget/menu_widget_screen.dart';
 
 class MenuScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

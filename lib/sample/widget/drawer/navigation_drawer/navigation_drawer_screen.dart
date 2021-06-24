@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'AccountScreen.dart';
-import 'HomeScreen.dart';
-import 'SettingsScreen.dart';
+import 'account_screen.dart';
+import 'home_screen.dart';
+import 'settings_screen.dart';
 
 class NavigationDrawerScreen extends StatelessWidget {
   @override
