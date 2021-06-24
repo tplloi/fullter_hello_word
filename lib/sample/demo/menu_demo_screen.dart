@@ -15,6 +15,7 @@ import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
 import 'package:hello_word/sample/demo/shop/shop_screen.dart';
+import 'package:hello_word/sample/demo/tiengviet/tieng_viet_screen.dart';
 import 'package:hello_word/sample/demo/tip_calculator/tip_calculator_screen.dart';
 import 'package:hello_word/sample/demo/url_launcher/url_launcher_screen.dart';
 
@@ -151,6 +152,12 @@ class MenuDemoScreen extends StatelessWidget {
             "Theme",
             () {
               Get.to(ThemeScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "TiengVietScreen",
+            () {
+              Get.to(TiengVietScreen());
             },
           ),
           UIUtils.getButton(
