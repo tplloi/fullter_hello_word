@@ -48,6 +48,7 @@ dependencies:
   shimmer: ^2.0.0 #https://pub.dev/packages/shimmer
   marquee: ^2.1.0 #https://pub.dev/packages/marquee
   logger: ^1.0.0 #https://pub.dev/packages/logger
+  like_button: ^2.0.2 #https://pub.dev/packages/like_button
   get: ^4.1.4 #https://pub.dev/packages/get
   rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
   intl: ^0.17.0 #https://pub.dev/packages/intl

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/button/like_button_screen.dart';
 
 import 'back_button_screen.dart';
 import 'button_bar_screen.dart';
@@ -53,6 +54,12 @@ class MenuButtonScreen extends StatelessWidget {
               "IconButtonScreen",
               () {
                 Get.to(IconButtonScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "LikeButtonScreen",
+                  () {
+                Get.to(LikeButtonScreen());
               },
             ),
             UIUtils.getButton(
