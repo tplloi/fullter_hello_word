@@ -59,6 +59,7 @@ dependencies:
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
   pin_code_fields: ^7.2.0 #https://pub.dev/packages/pin_code_fields
   tiengviet: ^0.5.0 #https://pub.dev/packages/tiengviet
+  timeago: ^3.1.0 #https://pub.dev/packages/timeago
   webview_flutter: ^2.0.6 #https://pub.dev/packages/webview_flutter
 
   #scoped_model: ^1.1.0 #https://pub.dev/packages/scoped_model
