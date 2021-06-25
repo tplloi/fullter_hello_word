@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/drag_select_grid_view_screen.dart';
 import 'package:hello_word/sample/widget/grid/grid_paper/grid_paper_screen.dart';
 import 'package:hello_word/sample/widget/grid/infinite_scroll/infinite_scroll_screen.dart';
 
@@ -25,8 +26,14 @@ class MenuGridScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             UIUtils.getButton(
-              "GridScreen",
+              "DragSelectGridViewSampleScreen",
               () {
+                Get.to(DragSelectGridViewSampleScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "GridScreen",
+                  () {
                 Get.to(GridScreen());
               },
             ),

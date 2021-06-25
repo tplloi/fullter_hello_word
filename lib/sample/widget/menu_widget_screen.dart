@@ -12,7 +12,7 @@ import 'package:hello_word/sample/widget/check_box/radio_button_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen_2.dart';
 import 'package:hello_word/sample/widget/data_table/data_table_screen.dart';
 import 'package:hello_word/sample/widget/dotted_border/dotted_border_screen.dart';
-import 'package:hello_word/sample/widget/drag_select_grid_view/drag_select_grid_view_screen.dart';
+import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/drag_select_grid_view_screen.dart';
 import 'package:hello_word/sample/widget/easy_loading/easy_loading_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/menu_edit_text_screen.dart';
 import 'package:hello_word/sample/widget/in_app_review/in_app_review_screen.dart';
@@ -254,12 +254,6 @@ class MenuWidgetScreen extends StatelessWidget {
               "DottedBorderScreen",
                   () {
                 Get.to(DottedBorderScreen());
-              },
-            ),
-            UIUtils.getButton(
-              "DragSelectGridViewScreen",
-                  () {
-                Get.to(DragSelectGridViewScreen());
               },
             ),
             UIUtils.getButton(

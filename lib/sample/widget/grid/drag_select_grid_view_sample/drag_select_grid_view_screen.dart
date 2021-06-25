@@ -1,18 +1,18 @@
 import 'package:drag_select_grid_view/drag_select_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
-import 'package:hello_word/sample/widget/drag_select_grid_view/selectable_item.dart';
-import 'package:hello_word/sample/widget/drag_select_grid_view/selection_app_bar.dart';
+import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/selectable_item.dart';
+import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/selection_app_bar.dart';
 
-class DragSelectGridViewScreen extends StatefulWidget {
+class DragSelectGridViewSampleScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _DragSelectGridViewScreenState();
+    return _DragSelectGridViewSampleScreenState();
   }
 }
 
-class _DragSelectGridViewScreenState
-    extends BaseStatefulState<DragSelectGridViewScreen> {
+class _DragSelectGridViewSampleScreenState
+    extends BaseStatefulState<DragSelectGridViewSampleScreen> {
   final controller = DragSelectGridViewController();
 
   @override
@@ -32,7 +32,7 @@ class _DragSelectGridViewScreenState
     return Scaffold(
       appBar: SelectionAppBar(
         selection: controller.value,
-        title: const Text('DragSelectGridViewScreen'),
+        title: const Text('DragSelectGridViewSampleScreen'),
       ),
       body: DragSelectGridView(
         gridController: controller,
