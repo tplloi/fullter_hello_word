@@ -20,6 +20,7 @@ import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_scr
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
 import 'package:hello_word/sample/widget/menu_image/menu_image_screen.dart';
 import 'package:hello_word/sample/widget/overflow_view/overflow_screen.dart';
+import 'package:hello_word/sample/widget/simple_url_preview/simple_url_preview_screen.dart';
 import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
 import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
 import 'package:hello_word/sample/widget/video_player/video_player_screen.dart';
@@ -264,6 +265,12 @@ class MenuWidgetScreen extends StatelessWidget {
               "ShimmerScreen",
               () {
                 Get.to(ShimmerScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "SimpleUrlPreviewScreen",
+                  () {
+                Get.to(SimpleUrlPreviewScreen());
               },
             ),
             UIUtils.getButton(
