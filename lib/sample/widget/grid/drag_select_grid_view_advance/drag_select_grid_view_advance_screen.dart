@@ -65,24 +65,4 @@ class _DragSelectGridViewAdvanceScreenState
 
   void scheduleRebuild() => setState(() {});
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     appBar: UIUtils.getAppBar(
-  //       "DragSelectGridViewAdvanceScreen",
-  //       () {
-  //         Get.back();
-  //       },
-  //       () {
-  //         UrlLauncherUtils.launchInWebViewWithJavaScript(
-  //             "https://pub.dev/packages/drag_select_grid_view");
-  //       },
-  //     ),
-  //     body: ListView(
-  //       padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-  //       physics: BouncingScrollPhysics(),
-  //       children: [],
-  //     ),
-  //   );
-  // }
 }
