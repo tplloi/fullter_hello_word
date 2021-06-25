@@ -13,7 +13,7 @@ class CustomLogo extends StatelessWidget {
       height: size,
       child: Center(
         child: Image.asset(
-          "assets/images/iv.jpg",
+          "assets/images/gallery1.jpg",
           width: size,
           height: size,
           fit: BoxFit.cover,

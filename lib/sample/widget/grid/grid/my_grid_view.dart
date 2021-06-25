@@ -41,13 +41,13 @@ class MyGridView {
       mainAxisSpacing: 1.0,
       crossAxisSpacing: 1.0,
       children: <Widget>[
-        getStructuredGridCell("Facebook", "assets/images/iv.png"),
-        getStructuredGridCell("Twitter", "assets/images/iv.jpg"),
-        getStructuredGridCell("Instagram", "assets/images/iv.png"),
-        getStructuredGridCell("Linkedin", "assets/images/iv.jpg"),
-        getStructuredGridCell("Google Plus", "assets/images/iv.png"),
-        getStructuredGridCell("Launcher Icon", "assets/images/iv.png"),
-        getStructuredGridCell("Launcher Icon", "assets/images/iv.png"),
+        getStructuredGridCell("Facebook", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Twitter", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Instagram", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Linkedin", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Google Plus", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Launcher Icon", "assets/images/gallery1.jpg"),
+        getStructuredGridCell("Launcher Icon", "assets/images/gallery1.jpg"),
       ],
     );
   }

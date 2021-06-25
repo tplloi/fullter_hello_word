@@ -4,7 +4,7 @@ class DbShop {
   static List<Product> getListProduct() {
     List<Product> listProduct = <Product>[];
     for (int i = 0; i < 10; i++) {
-      String img = i.isOdd ? ("iv.png") : ("iv.jpg");
+      String img = i.isOdd ? ("iv.png") : ("gallery1.jpg");
       Product p = Product(
         "Name " + i.toString(),
         "Description " + i.toString(),

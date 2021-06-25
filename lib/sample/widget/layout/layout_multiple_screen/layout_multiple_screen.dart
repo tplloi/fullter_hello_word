@@ -45,7 +45,7 @@ class MyHomePage extends StatelessWidget {
             name: "Suzuki",
             description: "Japan",
             price: 1000,
-            image: "iv.jpg",
+            image: "gallery1.jpg",
             color: Colors.red,
           ),
           ProductBox(
@@ -59,7 +59,7 @@ class MyHomePage extends StatelessWidget {
             name: "Honda",
             description: "Japan",
             price: 3000,
-            image: "iv.jpg",
+            image: "gallery1.jpg",
             color: Colors.blueAccent,
           ),
           ProductBox(

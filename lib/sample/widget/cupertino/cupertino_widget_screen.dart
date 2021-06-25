@@ -158,7 +158,7 @@ class _CupertinoContextMenuWidgetState
           height: 100,
           child: CupertinoContextMenu(
             child: Container(
-              child: Image.asset('assets/images/iv.jpg'),
+              child: Image.asset('assets/images/gallery1.jpg'),
             ),
             actions: <Widget>[
               CupertinoContextMenuAction(
