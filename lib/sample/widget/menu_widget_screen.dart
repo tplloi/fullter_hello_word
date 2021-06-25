@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/blur/blur_screen.dart';
 import 'package:hello_word/sample/widget/bottom_bar/menu_bottom_bar_screen.dart';
 import 'package:hello_word/sample/widget/bottom_sheet/bottom_sheet_screen.dart';
 import 'package:hello_word/sample/widget/chart/chart_screen.dart';
@@ -71,6 +72,12 @@ class MenuWidgetScreen extends StatelessWidget {
               "SliverAppBarScreen",
               () {
                 Get.to(SliverAppBarScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "BlurScreen",
+                  () {
+                Get.to(BlurScreen());
               },
             ),
             UIUtils.getButton(
