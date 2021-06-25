@@ -4,6 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/grid/drag_select_grid_view_advance/drag_select_grid_view_advance_screen.dart';
 import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/drag_select_grid_view_screen.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/menu_flutter_staggered_grid_view_screen.dart';
 import 'package:hello_word/sample/widget/grid/grid_paper/grid_paper_screen.dart';
 import 'package:hello_word/sample/widget/grid/infinite_scroll/infinite_scroll_screen.dart';
 
@@ -34,13 +35,19 @@ class MenuGridScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "DragSelectGridViewSampleScreen",
-                  () {
+              () {
                 Get.to(DragSelectGridViewSampleScreen());
               },
             ),
             UIUtils.getButton(
+              "MenuFlutterStaggeredGridViewScreen",
+              () {
+                Get.to(MenuFlutterStaggeredGridViewScreen());
+              },
+            ),
+            UIUtils.getButton(
               "GridScreen",
-                  () {
+              () {
                 Get.to(GridScreen());
               },
             ),
