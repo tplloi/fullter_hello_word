@@ -10,6 +10,7 @@ import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/exampl
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_5.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_6.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_7.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_8.dart';
 
 class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
   @override
@@ -71,6 +72,12 @@ class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
               "Example07",
                   () {
                 Get.to(Example07());
+              },
+            ),
+            UIUtils.getButton(
+              "Example08",
+                  () {
+                Get.to(Example08());
               },
             ),
           ],
