@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:get/get.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/tile_widget.dart';
 
 class StaggeredGridViewPage extends StatelessWidget {
@@ -35,8 +37,12 @@ class StaggeredGridViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
+        appBar: UIUtils.getAppBar(
+          title,
+          () {
+            Get.back();
+          },
+          null,
         ),
         body: Padding(
             padding: const EdgeInsets.only(top: 4),

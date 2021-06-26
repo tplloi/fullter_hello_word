@@ -12,6 +12,7 @@ import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/exampl
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_7.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_8.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_count_count_page.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_count_extent_page.dart';
 
 class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
   @override
@@ -85,6 +86,12 @@ class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
               "SpannableCountCountPage",
                   () {
                 Get.to(SpannableCountCountPage());
+              },
+            ),
+            UIUtils.getButton(
+              "SpannableCountExtentPage",
+                  () {
+                Get.to(SpannableCountExtentPage());
               },
             ),
           ],
