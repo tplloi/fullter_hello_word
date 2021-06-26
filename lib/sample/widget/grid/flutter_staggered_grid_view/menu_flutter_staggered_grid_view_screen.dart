@@ -16,6 +16,9 @@ import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spanna
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_extent_count_page.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_extent_extent_page.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/staggered_count_count_page.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/staggered_count_extent_page.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/staggered_extent_count_page.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/staggered_extent_extent_page.dart';
 
 class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
   @override
@@ -111,8 +114,26 @@ class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "StaggeredCountCountPage",
-                  () {
+              () {
                 Get.to(StaggeredCountCountPage());
+              },
+            ),
+            UIUtils.getButton(
+              "StaggeredCountExtentPage",
+              () {
+                Get.to(StaggeredCountExtentPage());
+              },
+            ),
+            UIUtils.getButton(
+              "StaggeredExtentCountPage",
+                  () {
+                Get.to(StaggeredExtentCountPage());
+              },
+            ),
+            UIUtils.getButton(
+              "StaggeredExtentExtentPage",
+                  () {
+                Get.to(StaggeredExtentExtentPage());
               },
             ),
           ],
