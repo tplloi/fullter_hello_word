@@ -57,6 +57,7 @@ dependencies:
   like_button: ^2.0.2 #https://pub.dev/packages/like_button
   get: ^4.1.4 #https://pub.dev/packages/get
   rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
+  #imageview360: ^1.2.0 #https://pub.dev/packages/imageview360
   intl: ^0.17.0 #https://pub.dev/packages/intl
   horizontal_data_table: ^3.3.0 #https://pub.dev/packages/horizontal_data_table
   video_player: ^2.1.5 #https://pub.dev/packages/video_player
@@ -116,9 +117,11 @@ flutter:
           weight: 400
 
   assets:
+#    - assets/
     - assets/videos/
     - assets/images/
     - assets/pdf/
+    - assets/sample/
     - data_repo/starwars_data.json
 
   # To add assets to your application, add an assets section, like this:

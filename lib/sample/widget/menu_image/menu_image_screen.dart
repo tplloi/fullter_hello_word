@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/menu_image/imageview360/imageview360_screen.dart';
 import 'package:hello_word/sample/widget/menu_image/photo_view/photo_view_screen.dart';
 
 import 'avatar_glow_screen.dart';
@@ -26,6 +27,12 @@ class MenuImageScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils.getButton(
+              "ImageView360Screen",
+              () {
+                Get.to(ImageView360Screen());
+              },
+            ),
             UIUtils.getButton(
               "AvatarGlowScreen",
               () {

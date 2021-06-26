@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/empty_screen.dart';
+import 'package:hello_word/sample/widget/button/text_button_screen.dart';
 
 import 'lib/util/uI_utils.dart';
 import 'sample/animation/menu_animation_screen.dart';
@@ -12,7 +14,6 @@ import 'sample/demo/syntax/syntax_screen.dart';
 import 'sample/widget/menu_widget_screen.dart';
 
 class MenuScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,6 +82,12 @@ class MenuScreen extends StatelessWidget {
             () {
               UrlLauncherUtils.launchInWebViewWithJavaScript(
                   "https://loitp.wordpress.com/2018/06/10/dieu-khoan-su-dung-chinh-sach-bao-mat-va-quyen-rieng-tu/");
+            },
+          ),
+          UIUtils.getButton(
+            "EmptyScreen",
+            () {
+              Get.to(EmptyScreen());
             },
           ),
         ],
