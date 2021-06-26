@@ -13,6 +13,7 @@ import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/exampl
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_8.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_count_count_page.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_count_extent_page.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/spannable_extent_count_page.dart';
 
 class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
   @override
@@ -36,62 +37,68 @@ class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
           children: <Widget>[
             UIUtils.getButton(
               "Example01",
-                  () {
+              () {
                 Get.to(Example01());
               },
             ),
             UIUtils.getButton(
               "Example02",
-                  () {
+              () {
                 Get.to(Example02());
               },
             ),
             UIUtils.getButton(
               "Example03",
-                  () {
+              () {
                 Get.to(Example03());
               },
             ),
             UIUtils.getButton(
               "Example04",
-                  () {
+              () {
                 Get.to(Example04());
               },
             ),
             UIUtils.getButton(
               "Example05",
-                  () {
+              () {
                 Get.to(Example05());
               },
             ),
             UIUtils.getButton(
               "Example06",
-                  () {
+              () {
                 Get.to(Example06());
               },
             ),
             UIUtils.getButton(
               "Example07",
-                  () {
+              () {
                 Get.to(Example07());
               },
             ),
             UIUtils.getButton(
               "Example08",
-                  () {
+              () {
                 Get.to(Example08());
               },
             ),
             UIUtils.getButton(
               "SpannableCountCountPage",
-                  () {
+              () {
                 Get.to(SpannableCountCountPage());
               },
             ),
             UIUtils.getButton(
               "SpannableCountExtentPage",
-                  () {
+              () {
                 Get.to(SpannableCountExtentPage());
+              },
+            ),
+            UIUtils.getButton(
+              "SpannableExtentCountPage",
+              () {
+                Get.to(SpannableExtentCountPage());
               },
             ),
           ],
