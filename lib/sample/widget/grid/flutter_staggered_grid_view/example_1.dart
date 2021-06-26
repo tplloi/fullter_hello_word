@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 
 const List<StaggeredTile> _staggeredTiles = <StaggeredTile>[
@@ -37,7 +38,7 @@ class Example01 extends StatelessWidget {
         Get.back();
       }, null),
       body: Padding(
-        padding: const EdgeInsets.only(top: 12),
+        padding: const EdgeInsets.all(DimenConstants.marginPaddingSmall),
         child: StaggeredGridView.count(
           crossAxisCount: 4,
           staggeredTiles: _staggeredTiles,
@@ -65,7 +66,7 @@ class _Example01Tile extends StatelessWidget {
         onTap: () {},
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(4),
+            padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
             child: Icon(
               iconData,
               color: Colors.white,
