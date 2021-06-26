@@ -4,6 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_1.dart';
+import 'package:hello_word/sample/widget/grid/flutter_staggered_grid_view/example_2.dart';
 
 class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
   @override
@@ -29,6 +30,12 @@ class MenuFlutterStaggeredGridViewScreen extends StatelessWidget {
               "Example01",
                   () {
                 Get.to(Example01());
+              },
+            ),
+            UIUtils.getButton(
+              "Example02",
+                  () {
+                Get.to(Example02());
               },
             ),
           ],
