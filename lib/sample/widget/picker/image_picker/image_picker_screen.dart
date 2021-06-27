@@ -20,7 +20,7 @@ class ImagePickerScreen extends StatefulWidget {
 }
 
 class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
-  PickedFile? _imageFile;
+  var _listImageFile = <PickedFile?>[];
   dynamic _pickImageError;
   bool isVideo = false;
   bool isSinglePick = true;
@@ -81,7 +81,8 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
               imageQuality: quality,
             );
             setState(() {
-              _imageFile = pickedFile;
+              _listImageFile.clear();
+              _listImageFile.add(pickedFile);
             });
           } else {
             final pickedFile = await _picker.getMultiImage(
@@ -90,7 +91,10 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
               imageQuality: quality,
             );
             setState(() {
-              _imageFile = pickedFile![0];
+              _listImageFile.clear();
+              pickedFile?.forEach((element) {
+                _listImageFile.add(element);
+              });
             });
           }
         } catch (e) {
@@ -150,15 +154,29 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
     if (retrieveError != null) {
       return retrieveError;
     }
-    if (_imageFile != null) {
+
+    if (_listImageFile.isNotEmpty) {
       if (kIsWeb) {
         // Why network?
         // See https://pub.dev/packages/image_picker#getting-ready-for-the-web-platform
-        return Image.network(_imageFile!.path);
+
+        return ListView.builder(
+          physics: BouncingScrollPhysics(),
+          itemCount: _listImageFile.length,
+          itemBuilder: (context, i) {
+            String path = _listImageFile[i]?.path ?? "";
+            return Image.network(path);
+          },
+        );
       } else {
-        return Semantics(
-            child: Image.file(File(_imageFile!.path)),
-            label: 'image_picker_example_picked_image');
+        return ListView.builder(
+          physics: BouncingScrollPhysics(),
+          itemCount: _listImageFile.length,
+          itemBuilder: (context, i) {
+            String path = _listImageFile[i]?.path ?? "";
+            return Image.file(File(path));
+          },
+        );
       }
     } else if (_pickImageError != null) {
       return Text(
@@ -185,7 +203,8 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
       } else {
         isVideo = false;
         setState(() {
-          _imageFile = response.file;
+          _listImageFile.clear();
+          _listImageFile.add(response.file);
         });
       }
     } else {
