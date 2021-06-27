@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/widget/picker/image_picker/aspect_ratio_video.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
@@ -42,7 +43,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
       _controller = controller;
       // In web, most browsers won't honor a programmatic call to .play
       // if the video has a sound track (and is not muted).
-      // Mute the video so it auto-plays in web!
+      // Mute the video so it auto-plays in web
       // This is not needed if the call to .play is the result of user
       // interaction (clicking on a "play" button, for example).
       final double volume = kIsWeb ? 0.0 : 1.0;
@@ -57,15 +58,18 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
   void _onImageButtonPressed(ImageSource source,
       {BuildContext? context}) async {
     if (_controller != null) {
-      await _controller!.setVolume(0.0);
+      await _controller?.setVolume(0.0);
     }
     if (isVideo) {
       final PickedFile? file = await _picker.getVideo(
           source: source, maxDuration: const Duration(seconds: 10));
       await _playVideo(file);
     } else {
-      await _displayPickImageDialog(context!,
-          (double? maxWidth, double? maxHeight, int? quality) async {
+      await _displayPickImageDialog(context!, (
+        double? maxWidth,
+        double? maxHeight,
+        int? quality,
+      ) async {
         try {
           final pickedFile = await _picker.getImage(
             source: source,
@@ -88,8 +92,8 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
   @override
   void deactivate() {
     if (_controller != null) {
-      _controller!.setVolume(0.0);
-      _controller!.pause();
+      _controller?.setVolume(0.0);
+      _controller?.pause();
     }
     super.deactivate();
   }
@@ -105,7 +109,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
 
   Future<void> _disposeVideoController() async {
     if (_toBeDisposed != null) {
-      await _toBeDisposed!.dispose();
+      await _toBeDisposed?.dispose();
     }
     _toBeDisposed = _controller;
     _controller = null;
@@ -124,7 +128,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
     }
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: AspectRatioVideo(_controller),
+      child: AspectRatioVideo(_controller!),
     );
   }
 
@@ -172,7 +176,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
         });
       }
     } else {
-      _retrieveDataError = response.exception!.code;
+      _retrieveDataError = response.exception?.code;
     }
   }
 
@@ -285,7 +289,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
 
   Text? _getRetrieveErrorWidget() {
     if (_retrieveDataError != null) {
-      final Text result = Text(_retrieveDataError!);
+      final Text result = Text(_retrieveDataError ?? "-");
       _retrieveDataError = null;
       return result;
     }
@@ -346,58 +350,5 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
             ],
           );
         });
-  }
-}
-
-typedef void OnPickImageCallback(
-    double? maxWidth, double? maxHeight, int? quality);
-
-class AspectRatioVideo extends StatefulWidget {
-  AspectRatioVideo(this.controller);
-
-  final VideoPlayerController? controller;
-
-  @override
-  AspectRatioVideoState createState() => AspectRatioVideoState();
-}
-
-class AspectRatioVideoState extends State<AspectRatioVideo> {
-  VideoPlayerController? get controller => widget.controller;
-  bool initialized = false;
-
-  void _onVideoControllerUpdate() {
-    if (!mounted) {
-      return;
-    }
-    if (initialized != controller!.value.isInitialized) {
-      initialized = controller!.value.isInitialized;
-      setState(() {});
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    controller!.addListener(_onVideoControllerUpdate);
-  }
-
-  @override
-  void dispose() {
-    controller!.removeListener(_onVideoControllerUpdate);
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (initialized) {
-      return Center(
-        child: AspectRatio(
-          aspectRatio: controller!.value.aspectRatio,
-          child: VideoPlayer(controller!),
-        ),
-      );
-    } else {
-      return Container();
-    }
   }
 }

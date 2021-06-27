@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/picker/day_picker_screen.dart';
-import 'package:hello_word/sample/widget/picker/image_picker_screen.dart';
+import 'package:hello_word/sample/widget/picker/image_picker/image_picker_screen.dart';
 
 class MenuPickerScreen extends StatelessWidget {
   @override
