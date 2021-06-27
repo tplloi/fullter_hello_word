@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
@@ -22,6 +23,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
   PickedFile? _imageFile;
   dynamic _pickImageError;
   bool isVideo = false;
+  bool isSinglePick = true;
   VideoPlayerController? _controller;
   VideoPlayerController? _toBeDisposed;
   String? _retrieveDataError;
@@ -71,15 +73,26 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
         int? quality,
       ) async {
         try {
-          final pickedFile = await _picker.getImage(
-            source: source,
-            maxWidth: maxWidth,
-            maxHeight: maxHeight,
-            imageQuality: quality,
-          );
-          setState(() {
-            _imageFile = pickedFile;
-          });
+          if (isSinglePick) {
+            final pickedFile = await _picker.getImage(
+              source: source,
+              maxWidth: maxWidth,
+              maxHeight: maxHeight,
+              imageQuality: quality,
+            );
+            setState(() {
+              _imageFile = pickedFile;
+            });
+          } else {
+            final pickedFile = await _picker.getMultiImage(
+              maxWidth: maxWidth,
+              maxHeight: maxHeight,
+              imageQuality: quality,
+            );
+            setState(() {
+              _imageFile = pickedFile![0];
+            });
+          }
         } catch (e) {
           setState(() {
             _pickImageError = e;
@@ -237,6 +250,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
             child: FloatingActionButton(
               onPressed: () {
                 isVideo = false;
+                isSinglePick = true;
                 _onImageButtonPressed(ImageSource.gallery, context: context);
               },
               heroTag: 'image0',
@@ -249,6 +263,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
             child: FloatingActionButton(
               onPressed: () {
                 isVideo = false;
+                isSinglePick = true;
                 _onImageButtonPressed(ImageSource.camera, context: context);
               },
               heroTag: 'image1',
@@ -262,6 +277,7 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
               backgroundColor: Colors.red,
               onPressed: () {
                 isVideo = true;
+                isSinglePick = true;
                 _onImageButtonPressed(ImageSource.gallery);
               },
               heroTag: 'video0',
@@ -275,12 +291,22 @@ class _ImagePickerScreenState extends BaseStatefulState<ImagePickerScreen> {
               backgroundColor: Colors.red,
               onPressed: () {
                 isVideo = true;
+                isSinglePick = true;
                 _onImageButtonPressed(ImageSource.camera);
               },
               heroTag: 'video1',
               tooltip: 'Take a Video',
               child: const Icon(Icons.videocam),
             ),
+          ),
+          SizedBox(height: DimenConstants.marginPaddingMedium),
+          FloatingActionButton(
+            onPressed: () {
+              isVideo = false;
+              isSinglePick = false;
+              _onImageButtonPressed(ImageSource.camera, context: context);
+            },
+            child: const Icon(Icons.image),
           ),
         ],
       ),
