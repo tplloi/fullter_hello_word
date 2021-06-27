@@ -144,13 +144,12 @@ class MenuDemoScreen extends StatelessWidget {
               Get.to(PackageInforPlusScreen());
             },
           ),
-          //TODO loitpp test share plus
-          // UIUtils.getButton(
-          //   "SharePlusScreen",
-          //   () {
-          //     Get.to(SharePlusScreen());
-          //   },
-          // ),
+          UIUtils.getButton(
+            "SharePlusScreen",
+            () {
+              Get.to(SharePlusScreen());
+            },
+          ),
           UIUtils.getButton(
             "Shop",
                 () {
