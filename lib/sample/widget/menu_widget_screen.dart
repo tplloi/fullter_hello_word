@@ -12,6 +12,7 @@ import 'package:hello_word/sample/widget/check_box/check_box_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen_2.dart';
 import 'package:hello_word/sample/widget/data_table/data_table_screen.dart';
+import 'package:hello_word/sample/widget/delayed_display/delayed_display_screen.dart';
 import 'package:hello_word/sample/widget/dotted_border/dotted_border_screen.dart';
 import 'package:hello_word/sample/widget/easy_loading/easy_loading_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/menu_edit_text_screen.dart';
@@ -146,6 +147,12 @@ class MenuWidgetScreen extends StatelessWidget {
               "DataTableScreen",
               () {
                 Get.to(DataTableScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "DelayedDisplayScreen",
+                  () {
+                Get.to(DelayedDisplayScreen());
               },
             ),
             UIUtils.getButton(
