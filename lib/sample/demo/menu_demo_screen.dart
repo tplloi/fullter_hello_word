@@ -14,6 +14,7 @@ import 'package:hello_word/sample/demo/flutter_local_notifications/flutter_local
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
+import 'package:hello_word/sample/demo/share_plus/share_plus_screen.dart';
 import 'package:hello_word/sample/demo/shop/shop_screen.dart';
 import 'package:hello_word/sample/demo/tiengviet/tieng_viet_screen.dart';
 import 'package:hello_word/sample/demo/time_ago/time_ago_screen.dart';
@@ -143,9 +144,16 @@ class MenuDemoScreen extends StatelessWidget {
               Get.to(PackageInforPlusScreen());
             },
           ),
+          //TODO loitpp test share plus
+          // UIUtils.getButton(
+          //   "SharePlusScreen",
+          //   () {
+          //     Get.to(SharePlusScreen());
+          //   },
+          // ),
           UIUtils.getButton(
             "Shop",
-            () {
+                () {
               Get.to(ShopScreen());
             },
           ),

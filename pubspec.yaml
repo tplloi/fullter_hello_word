@@ -50,6 +50,7 @@ dependencies:
   transparent_image: ^2.0.0 #https://pub.dev/packages/transparent_image
   sqflite: ^2.0.0+3 #https://pub.dev/packages/sqflite
   url_launcher: ^6.0.3 #https://pub.dev/packages/url_launcher
+  share_plus: ^2.1.4 #https://pub.dev/packages/share_plus
   simple_url_preview: ^3.0.1 #https://pub.dev/packages/simple_url_preview
   shimmer: ^2.0.0 #https://pub.dev/packages/shimmer
   marquee: ^2.1.0 #https://pub.dev/packages/marquee
