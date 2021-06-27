@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/animated_background/animated_background_screen.dart';
 import 'package:hello_word/sample/widget/blur/blur_screen.dart';
 import 'package:hello_word/sample/widget/bottom_bar/menu_bottom_bar_screen.dart';
 import 'package:hello_word/sample/widget/bottom_sheet/bottom_sheet_screen.dart';
@@ -12,7 +13,6 @@ import 'package:hello_word/sample/widget/check_box/radio_button_screen.dart';
 import 'package:hello_word/sample/widget/check_box/radio_button_screen_2.dart';
 import 'package:hello_word/sample/widget/data_table/data_table_screen.dart';
 import 'package:hello_word/sample/widget/dotted_border/dotted_border_screen.dart';
-import 'package:hello_word/sample/widget/grid/drag_select_grid_view_sample/drag_select_grid_view_screen.dart';
 import 'package:hello_word/sample/widget/easy_loading/easy_loading_screen.dart';
 import 'package:hello_word/sample/widget/edit_text/menu_edit_text_screen.dart';
 import 'package:hello_word/sample/widget/in_app_review/in_app_review_screen.dart';
@@ -71,6 +71,12 @@ class MenuWidgetScreen extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           children: [
             UIUtils.getButton(
+              "AnimatedBackgroundScreen",
+              () {
+                Get.to(AnimatedBackgroundScreen());
+              },
+            ),
+            UIUtils.getButton(
               "SliverAppBarScreen",
               () {
                 Get.to(SliverAppBarScreen());
@@ -78,7 +84,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "BlurScreen",
-                  () {
+              () {
                 Get.to(BlurScreen());
               },
             ),
@@ -240,7 +246,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "OverflowScreen",
-                  () {
+              () {
                 Get.to(OverflowScreen());
               },
             ),
@@ -252,7 +258,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "DottedBorderScreen",
-                  () {
+              () {
                 Get.to(DottedBorderScreen());
               },
             ),
@@ -270,7 +276,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "SimpleUrlPreviewScreen",
-                  () {
+              () {
                 Get.to(SimpleUrlPreviewScreen());
               },
             ),
@@ -348,7 +354,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "WebViewScreen",
-                  () {
+              () {
                 Get.to(WebViewScreen());
               },
             ),
