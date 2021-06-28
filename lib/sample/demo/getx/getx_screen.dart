@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/log_dog_utils.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
 import 'controller.dart';
 import 'second_screen.dart';
@@ -27,7 +28,10 @@ class GetXScreen extends GetWidget with WidgetsBindingObserver {
         () => {
           Get.back(),
         },
-        null,
+        () {
+          UrlLauncherUtils.launchInWebViewWithJavaScript(
+              "https://pub.dev/packages/get");
+        },
       ),
       body: Center(
         child: Column(

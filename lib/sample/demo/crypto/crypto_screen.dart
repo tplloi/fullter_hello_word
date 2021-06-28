@@ -4,6 +4,7 @@ import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
 class CryptoScreen extends StatelessWidget {
   @override
@@ -15,7 +16,10 @@ class CryptoScreen extends StatelessWidget {
         () {
           Get.back();
         },
-        null,
+        () {
+          UrlLauncherUtils.launchInWebViewWithJavaScript(
+              "https://pub.dev/packages/crypto/install");
+        },
       ),
       body: Center(
         child: UIUtils.getText("Check logcat"),

@@ -2,6 +2,7 @@ import 'package:encrypt/encrypt.dart' as Encrypted;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
 class EncryptScreen extends StatelessWidget {
   @override
@@ -13,7 +14,10 @@ class EncryptScreen extends StatelessWidget {
         () {
           Get.back();
         },
-        null,
+        () {
+          UrlLauncherUtils.launchInWebViewWithJavaScript(
+              "https://pub.dev/packages/encrypt");
+        },
       ),
       body: Center(
         child: UIUtils.getText("Check logcat"),

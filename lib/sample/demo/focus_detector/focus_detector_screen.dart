@@ -3,18 +3,18 @@ import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
 class FocusDetectorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils.getAppBar(
-        "FocusDetectorScreen",
-        () {
-          Get.back();
-        },
-        null,
-      ),
+      appBar: UIUtils.getAppBar("FocusDetectorScreen", () {
+        Get.back();
+      }, () {
+        UrlLauncherUtils.launchInWebViewWithJavaScript(
+            "https://pub.dev/packages/focus_detector");
+      }),
       body: Center(
         child: _buildFocusWidget(context),
       ),

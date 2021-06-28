@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 
 class AdvancePDFViewerScreen extends StatefulWidget {
   @override
@@ -74,6 +76,18 @@ class _AdvancePDFViewerScreenState extends State<AdvancePDFViewerScreen> {
         ),
         appBar: AppBar(
           title: const Text('FlutterPluginPDFViewer'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.code,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                UrlLauncherUtils.launchInWebViewWithJavaScript(
+                    "https://pub.dev/packages/advance_pdf_viewer");
+              },
+            ),
+          ],
         ),
         body: Center(
           child: _isLoading
