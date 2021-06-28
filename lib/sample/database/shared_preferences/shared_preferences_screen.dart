@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/shared_preferences_util.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesScreen extends StatefulWidget {
@@ -71,8 +72,13 @@ class SharedPreferencesScreenState extends State<SharedPreferencesScreen> {
       // Appbar
       appBar: UIUtils.getAppBar(
         nameOfApp,
-        () => Get.back(),
-        null,
+        () {
+          Get.back();
+        },
+        () {
+          UrlLauncherUtils.launchInWebViewWithJavaScript(
+              "https://pub.dev/packages/shared_preferences");
+        },
       ),
       // Body
       body: Container(
