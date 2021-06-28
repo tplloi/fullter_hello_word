@@ -50,6 +50,8 @@
         <string>Example usage description</string>
         <key>NSMicrophoneUsageDescription</key>
         <string>Example usage description</string>
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>Example usage description</string>
 
 	</dict>
 </plist>

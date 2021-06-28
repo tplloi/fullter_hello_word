@@ -36,6 +36,7 @@ dependencies:
   drag_select_grid_view: ^0.5.1 #https://pub.dev/packages/drag_select_grid_view
   device_info_plus: ^1.0.1 #https://pub.dev/packages/device_info_plus
   delayed_display: ^2.0.0 #https://pub.dev/packages/delayed_display
+  dio: ^4.0.0-beta6
   dotted_border: ^2.0.0 #https://pub.dev/packages/dotted_border
   draggable_scrollbar: ^0.1.0 #https://pub.dev/packages/draggable_scrollbar
   english_words: ^4.0.0 #https://pub.dev/packages/english_words
@@ -69,6 +70,7 @@ dependencies:
   in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
   photo_view: ^0.11.1 #https://pub.dev/packages/photo_view
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
+  permission_handler: ^6.0.1
   pin_code_fields: ^7.2.0 #https://pub.dev/packages/pin_code_fields
   tiengviet: ^0.5.0 #https://pub.dev/packages/tiengviet
   timeago: ^3.1.0 #https://pub.dev/packages/timeago
@@ -122,7 +124,7 @@ flutter:
           weight: 400
 
   assets:
-#    - assets/
+    #    - assets/
     - assets/videos/
     - assets/images/
     - assets/pdf/

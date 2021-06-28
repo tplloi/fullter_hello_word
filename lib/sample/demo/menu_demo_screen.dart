@@ -12,6 +12,7 @@ import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
 import 'package:hello_word/sample/demo/flutter_local_notifications/flutter_local_notifications_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
+import 'package:hello_word/sample/demo/image_gallery_saver/image_gallery_saver_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
 import 'package:hello_word/sample/demo/share_plus/share_plus_screen.dart';
@@ -127,6 +128,12 @@ class MenuDemoScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
+            "ImageGallerySaverScreen",
+            () {
+              Get.to(ImageGallerySaverScreen());
+            },
+          ),
+          UIUtils.getButton(
             "Inherited",
             () {
               Get.to(MenuInheritedScreen());
@@ -152,7 +159,7 @@ class MenuDemoScreen extends StatelessWidget {
           ),
           UIUtils.getButton(
             "Shop",
-                () {
+            () {
               Get.to(ShopScreen());
             },
           ),
@@ -170,7 +177,7 @@ class MenuDemoScreen extends StatelessWidget {
           ),
           UIUtils.getButton(
             "TimeAgoScreen",
-                () {
+            () {
               Get.to(TimeAgoScreen());
             },
           ),
