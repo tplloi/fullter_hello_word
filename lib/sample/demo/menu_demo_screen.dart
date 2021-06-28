@@ -15,6 +15,7 @@ import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart
 import 'package:hello_word/sample/demo/image_gallery_saver/image_gallery_saver_screen.dart';
 import 'package:hello_word/sample/demo/load_local_json/load_local_json_screen.dart';
 import 'package:hello_word/sample/demo/package_info_plus/package_info_plus_screen.dart';
+import 'package:hello_word/sample/demo/permission_handler/permission_handler_screen.dart';
 import 'package:hello_word/sample/demo/share_plus/share_plus_screen.dart';
 import 'package:hello_word/sample/demo/shop/shop_screen.dart';
 import 'package:hello_word/sample/demo/tiengviet/tieng_viet_screen.dart';
@@ -152,8 +153,14 @@ class MenuDemoScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
-            "SharePlusScreen",
+            "PermissionHandlerScreen",
             () {
+              Get.to(PermissionHandlerScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "SharePlusScreen",
+                () {
               Get.to(SharePlusScreen());
             },
           ),
