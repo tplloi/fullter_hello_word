@@ -61,6 +61,7 @@ dependencies:
   get: ^4.1.4 #https://pub.dev/packages/get
   rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
   #imageview360: ^1.2.0 #https://pub.dev/packages/imageview360
+  image_picker: ^0.8.1+1 #https://pub.dev/packages/image_picker
   intl: ^0.17.0 #https://pub.dev/packages/intl
   horizontal_data_table: ^3.3.0 #https://pub.dev/packages/horizontal_data_table
   video_player: ^2.1.5 #https://pub.dev/packages/video_player

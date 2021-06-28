@@ -22,6 +22,7 @@ import 'package:hello_word/sample/widget/md2_tab_indicator/md2_tab_indicator_scr
 import 'package:hello_word/sample/widget/menu_horizontal_data_table/menu_horizontal_data_table_screen.dart';
 import 'package:hello_word/sample/widget/menu_image/menu_image_screen.dart';
 import 'package:hello_word/sample/widget/overflow_view/overflow_screen.dart';
+import 'package:hello_word/sample/widget/picker/menu_picker_screen.dart';
 import 'package:hello_word/sample/widget/simple_url_preview/simple_url_preview_screen.dart';
 import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sreen.dart';
 import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
@@ -41,7 +42,6 @@ import 'grid/menu_grid_screen.dart';
 import 'inkwell/inkwell_screen.dart';
 import 'layout/menu_layout_screen.dart';
 import 'list/menu_list_screen.dart';
-import 'picker/day_picker_screen.dart';
 import 'progress/menu_progress_screen.dart';
 import 'shimmer/shimmer_screen.dart';
 import 'slider/menu_slider_screen.dart';
@@ -151,7 +151,7 @@ class MenuWidgetScreen extends StatelessWidget {
             ),
             UIUtils.getButton(
               "DelayedDisplayScreen",
-                  () {
+              () {
                 Get.to(DelayedDisplayScreen());
               },
             ),
@@ -258,9 +258,9 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "DayPickerScreen",
+              "MenuPickerScreen",
               () {
-                Get.to(DayPickerScreen());
+                Get.to(MenuPickerScreen());
               },
             ),
             UIUtils.getButton(

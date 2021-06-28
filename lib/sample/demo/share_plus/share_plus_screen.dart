@@ -1,6 +1,3 @@
-import 'dart:async';
-
-import 'package:battery_plus/battery_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
@@ -8,6 +5,7 @@ import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/demo/share_plus/image_previews.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 
 class SharePlusScreen extends StatefulWidget {
@@ -75,27 +73,24 @@ class _SharePlusScreenState extends BaseStatefulState<SharePlusScreen> {
             leading: Icon(Icons.add),
             title: Text('Add image'),
             onTap: () async {
-              // final imagePicker = ImagePicker();
-              // final pickedFile = await imagePicker.getImage(
-              //   source: ImageSource.gallery,
-              // );
-              // if (pickedFile != null) {
-              //   setState(() {
-              //     imagePaths.add(pickedFile.path);
-              //   });
-              // }
+              final imagePicker = ImagePicker();
+              final pickedFile = await imagePicker.getImage(
+                source: ImageSource.gallery,
+              );
+              if (pickedFile != null) {
+                setState(() {
+                  imagePaths.add(pickedFile.path);
+                });
+              }
             },
           ),
           const Padding(padding: EdgeInsets.only(top: 12.0)),
           Builder(
             builder: (BuildContext context) {
               return ElevatedButton(
-                // onPressed: text.isEmpty && imagePaths.isEmpty
-                //     ? null
-                //     : () => _onShare(context),
-                onPressed: (){
-                  _onShare(context);
-                },
+                onPressed: text.isEmpty && imagePaths.isEmpty
+                    ? null
+                    : () => _onShare(context),
                 child: const Text('Share plus'),
               );
             },
