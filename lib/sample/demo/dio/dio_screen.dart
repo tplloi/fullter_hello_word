@@ -49,6 +49,7 @@ class _DioScreenState extends BaseStatefulState<DioScreen> {
             _getHttp();
           }),
           UIUtils.getText(_responseThichTruyen),
+          //TODO loitpp https://pub.dev/packages/web_scraper
         ],
       ),
     );

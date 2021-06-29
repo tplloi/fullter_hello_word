@@ -28,6 +28,7 @@ import 'package:hello_word/sample/widget/tab_page_selector/tab_page_selector_sre
 import 'package:hello_word/sample/widget/text_view/menu_text_screen.dart';
 import 'package:hello_word/sample/widget/video_player/video_player_screen.dart';
 import 'package:hello_word/sample/widget/wave/wave_screen.dart';
+import 'package:hello_word/sample/widget/webview/menu_webview_screen.dart';
 
 import 'appbar/sliver_app_bar_screen.dart';
 import 'button/menu_button_screen.dart';
@@ -52,7 +53,6 @@ import 'stepper/stepper_screen.dart';
 import 'switch/switch_screen.dart';
 import 'table/table_screen.dart';
 import 'tooltip/tooltip_screen.dart';
-import 'webview/web_view_screen.dart';
 
 class MenuWidgetScreen extends StatelessWidget {
   @override
@@ -360,9 +360,9 @@ class MenuWidgetScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
-              "WebViewScreen",
+              "MenuWebviewScreen",
               () {
-                Get.to(WebViewScreen());
+                Get.to(MenuWebviewScreen());
               },
             ),
           ],
