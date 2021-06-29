@@ -4,6 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/button/flutter_speed_dial/flutter_speed_dial_screen.dart';
 import 'package:hello_word/sample/widget/button/like_button_screen.dart';
+import 'package:hello_word/sample/widget/button/progress_state_button/progress_state_screen.dart';
 
 import 'back_button_screen.dart';
 import 'button_bar_screen.dart';
@@ -37,6 +38,12 @@ class MenuButtonScreen extends StatelessWidget {
               "FlutterSpeedDialScreen",
                   () {
                 Get.to(FlutterSpeedDialScreen());
+              },
+            ),
+            UIUtils.getButton(
+              "ProgressStateScreen",
+                  () {
+                Get.to(ProgressStateScreen());
               },
             ),
             UIUtils.getButton(

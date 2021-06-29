@@ -74,6 +74,7 @@ dependencies:
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
   permission_handler: ^6.0.1 #https://pub.dev/packages/permission_handler
   pin_code_fields: ^7.2.0 #https://pub.dev/packages/pin_code_fields
+  progress_state_button: ^1.0.3 #https://pub.dev/packages/progress_state_button
   tiengviet: ^0.5.0 #https://pub.dev/packages/tiengviet
   timeago: ^3.1.0 #https://pub.dev/packages/timeago
   wave: ^0.2.0 #https://pub.dev/packages/wave
