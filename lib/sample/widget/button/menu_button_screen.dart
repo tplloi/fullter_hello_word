@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/sample/widget/button/flutter_speed_dial/flutter_speed_dial_screen.dart';
 import 'package:hello_word/sample/widget/button/like_button_screen.dart';
 
 import 'back_button_screen.dart';
@@ -32,6 +33,12 @@ class MenuButtonScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            UIUtils.getButton(
+              "FlutterSpeedDialScreen",
+                  () {
+                Get.to(FlutterSpeedDialScreen());
+              },
+            ),
             UIUtils.getButton(
               "BackButtonScreen",
               () {
