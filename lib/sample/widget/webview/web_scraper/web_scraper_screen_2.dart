@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/log_dog_utils.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
@@ -44,8 +45,14 @@ class _WebScraperScreen2State extends BaseStatefulState<WebScraperScreen2> {
         // productDescriptions = webScraper.getElement(
         //     'div.thumbnail > div.caption > p.description', ['class']);
 
-        _listImages = webScraper.getElement(
-            "div.view-category-item > div.view-category-item-infor  > a > h3.view-category-item-title'", []);
+        // _listImages = webScraper.getElement(
+        //     "div.view-category-item > div.view-category-item-infor  > a > h3.view-category-item-title'",
+        //     []);
+
+        _listImages = webScraper.getElement("div.tab-text", []);
+        _listImages?.forEach((element) {
+          Dog.i(">>> " + jsonEncode(element));
+        });
       });
     } else {
       Dog.i("fetchData !success");
@@ -65,7 +72,9 @@ class _WebScraperScreen2State extends BaseStatefulState<WebScraperScreen2> {
               "https://pub.dev/packages/web_scraper");
         },
       ),
-      body: Column(
+      body: ListView(
+        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        physics: BouncingScrollPhysics(),
         children: [
           UIUtils.getButton("fetch", () {
             fetchData();
@@ -77,4 +86,8 @@ class _WebScraperScreen2State extends BaseStatefulState<WebScraperScreen2> {
       ),
     );
   }
+}
+
+class Book {
+  String title = "";
 }
