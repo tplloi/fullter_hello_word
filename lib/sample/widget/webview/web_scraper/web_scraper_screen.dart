@@ -1,4 +1,4 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
@@ -18,7 +18,6 @@ class _WebScraperScreenState extends BaseStatefulState<WebScraperScreen> {
   @override
   void initState() {
     super.initState();
-    fetchProducts();
   }
 
   @override
@@ -61,48 +60,55 @@ class _WebScraperScreenState extends BaseStatefulState<WebScraperScreen> {
               "https://pub.dev/packages/web_scraper");
         },
       ),
-      body: SafeArea(
-        child: productNames == null
-            ? Center(
-                child:
-                    CircularProgressIndicator(), // Loads Circular Loading Animation
-              )
-            : ListView.builder(
-                itemCount: productNames!.length,
-                itemBuilder: (BuildContext context, int index) {
-                  // Attributes are in the form of List<Map<String, dynamic>>.
-                  Map<String, dynamic> attributes =
-                      productNames![index]['attributes'];
-                  return ExpansionTile(
-                    title: Text(attributes['title']),
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                          children: <Widget>[
-                            Container(
-                              child: Text(productDescriptions[index]['title']),
-                              margin: EdgeInsets.only(bottom: 10.0),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                // uses UI Launcher to launch in web browser & minor tweaks to generate url
-                                launch(
-                                    webScraper.baseUrl! + attributes['href']);
-                              },
-                              child: Text(
-                                'View Product',
-                                style: TextStyle(color: Colors.blue),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  );
-                },
-              ),
+      body: Column(
+        children: [
+          UIUtils.getButton("fetchProducts", () {
+            fetchProducts();
+          }),
+          Expanded(
+            child: _buildData(),
+          ),
+        ],
       ),
     );
+  }
+
+  Widget _buildData() {
+    if (productNames == null) {
+      return Container();
+    } else {
+      return ListView.builder(
+        itemCount: productNames!.length,
+        itemBuilder: (BuildContext context, int index) {
+          Map<String, dynamic> attributes = productNames![index]['attributes'];
+          return ExpansionTile(
+            title: Text(attributes['title']),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      child: Text(productDescriptions[index]['title']),
+                      margin: EdgeInsets.only(bottom: 10.0),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        // uses UI Launcher to launch in web browser & minor tweaks to generate url
+                        launch(webScraper.baseUrl! + attributes['href']);
+                      },
+                      child: Text(
+                        'View Product',
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          );
+        },
+      );
+    }
   }
 }
