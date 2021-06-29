@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/webview/web_scraper/web_scraper_screen.dart';
+import 'package:hello_word/sample/widget/webview/web_scraper/web_scraper_screen_2.dart';
 import 'package:hello_word/sample/widget/webview/web_view_screen.dart';
 
 class MenuWebviewScreen extends StatelessWidget {
@@ -30,8 +31,14 @@ class MenuWebviewScreen extends StatelessWidget {
               },
             ),
             UIUtils.getButton(
+              "WebScraperScreen2",
+              () {
+                Get.to(WebScraperScreen2());
+              },
+            ),
+            UIUtils.getButton(
               "WebViewScreen",
-                  () {
+              () {
                 Get.to(WebViewScreen());
               },
             ),

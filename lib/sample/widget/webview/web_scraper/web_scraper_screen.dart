@@ -32,7 +32,7 @@ class _WebScraperScreenState extends BaseStatefulState<WebScraperScreen> {
   List<Map<String, dynamic>>? productNames;
   late List<Map<String, dynamic>> productDescriptions;
 
-  void fetchProducts() async {
+  void _fetchProducts() async {
     // Loads web page and downloads into local state of library
     if (await webScraper
         .loadWebPage('/test-sites/e-commerce/allinone/computers/laptops')) {
@@ -63,7 +63,7 @@ class _WebScraperScreenState extends BaseStatefulState<WebScraperScreen> {
       body: Column(
         children: [
           UIUtils.getButton("fetchProducts", () {
-            fetchProducts();
+            _fetchProducts();
           }),
           Expanded(
             child: _buildData(),
