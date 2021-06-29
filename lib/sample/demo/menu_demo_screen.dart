@@ -9,6 +9,7 @@ import 'package:hello_word/sample/demo/battery_plus/battery_plus_screen.dart';
 import 'package:hello_word/sample/demo/communication_between_widget/communication_between_widget_screen.dart';
 import 'package:hello_word/sample/demo/connectivity_plus/connectivity_plus_screen.dart';
 import 'package:hello_word/sample/demo/device_info_plus/device_info_plus_screen.dart';
+import 'package:hello_word/sample/demo/dio/dio_screen.dart';
 import 'package:hello_word/sample/demo/easy_debounce/easy_debounce_screen.dart';
 import 'package:hello_word/sample/demo/flutter_local_notifications/flutter_local_notifications_screen.dart';
 import 'package:hello_word/sample/demo/focus_detector/focus_detector_screen.dart';
@@ -92,6 +93,12 @@ class MenuDemoScreen extends StatelessWidget {
             "DeviceInfoPlusScreen",
             () {
               Get.to(DeviceInfoPlusScreen());
+            },
+          ),
+          UIUtils.getButton(
+            "DioScreen",
+                () {
+              Get.to(DioScreen());
             },
           ),
           UIUtils.getButton(
