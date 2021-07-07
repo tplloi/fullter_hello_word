@@ -10,6 +10,7 @@ import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/not_sticky.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/side_header.dart';
 
 class FlutterStickyHeaderScreen extends StatefulWidget {
   @override
@@ -63,6 +64,12 @@ class _FlutterStickyHeaderScreenState
             "Not Sticky Example",
             () {
               Get.to(NotStickyExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Side Header Example",
+                () {
+              Get.to(SideHeaderExample());
             },
           ),
         ],
