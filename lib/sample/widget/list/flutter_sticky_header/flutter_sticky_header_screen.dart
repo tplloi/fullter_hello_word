@@ -7,6 +7,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/animated_header.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/not_sticky.dart';
@@ -68,8 +69,14 @@ class _FlutterStickyHeaderScreenState
           ),
           UIUtils.getButton(
             "Side Header Example",
-                () {
+            () {
               Get.to(SideHeaderExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Animated Header Example",
+            () {
+              Get.to(AnimatedHeaderExample());
             },
           ),
         ],
