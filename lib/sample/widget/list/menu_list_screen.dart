@@ -4,6 +4,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/sample/widget/list/contact_page_screen/contact_page_screen.dart';
 import 'package:hello_word/sample/widget/list/draggable_scrollbar_demo/draggable_scrollbar_demo_screen.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/flutter_sticky_header_screen.dart';
 import 'package:hello_word/sample/widget/list/lazy_load_scrollview/lazy_load_scrollview_screen.dart';
 import 'package:hello_word/sample/widget/list/list_body_widget/list_body_screen.dart';
 import 'package:hello_word/sample/widget/list/list_random_words/random_words_screen.dart';
@@ -38,6 +39,12 @@ class MenuListScreen extends StatelessWidget {
               "DraggableScrollBarDemo",
               () {
                 Get.to(DraggableScrollBarDemo());
+              },
+            ),
+            UIUtils.getButton(
+              "FlutterStickyHeaderScreen",
+                  () {
+                Get.to(FlutterStickyHeaderScreen());
               },
             ),
             UIUtils.getButton(
