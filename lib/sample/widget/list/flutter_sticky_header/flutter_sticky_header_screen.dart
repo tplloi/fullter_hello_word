@@ -11,6 +11,7 @@ import 'package:hello_word/sample/widget/list/flutter_sticky_header/animated_hea
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/not_sticky.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/reverse.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/side_header.dart';
 
 class FlutterStickyHeaderScreen extends StatefulWidget {
@@ -77,6 +78,12 @@ class _FlutterStickyHeaderScreenState
             "Animated Header Example",
             () {
               Get.to(AnimatedHeaderExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Reverse List Example",
+            () {
+              Get.to(ReverseExample());
             },
           ),
         ],
