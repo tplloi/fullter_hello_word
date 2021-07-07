@@ -9,6 +9,7 @@ import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/not_sticky.dart';
 
 class FlutterStickyHeaderScreen extends StatefulWidget {
   @override
@@ -17,8 +18,8 @@ class FlutterStickyHeaderScreen extends StatefulWidget {
   }
 }
 
-class _FlutterStickyHeaderScreenState extends BaseStatefulState<FlutterStickyHeaderScreen> {
-
+class _FlutterStickyHeaderScreenState
+    extends BaseStatefulState<FlutterStickyHeaderScreen> {
   @override
   void initState() {
     super.initState();
@@ -48,14 +49,20 @@ class _FlutterStickyHeaderScreenState extends BaseStatefulState<FlutterStickyHea
         children: [
           UIUtils.getButton(
             "List Example",
-                () {
+            () {
               Get.to(ListExample());
             },
           ),
           UIUtils.getButton(
             "Grid Example",
-                () {
+            () {
               Get.to(GridExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Not Sticky Example",
+            () {
+              Get.to(NotStickyExample());
             },
           ),
         ],
