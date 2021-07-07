@@ -1,6 +1,4 @@
-import 'dart:async';
 
-import 'package:battery_plus/battery_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
@@ -10,6 +8,7 @@ import 'package:hello_word/lib/util/url_launcher_utils.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/animated_header.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/mix_slivers.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/not_sticky.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/reverse.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/side_header.dart';
@@ -84,6 +83,12 @@ class _FlutterStickyHeaderScreenState
             "Reverse List Example",
             () {
               Get.to(ReverseExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Mixing other slivers",
+                () {
+              Get.to(MixSliversExample());
             },
           ),
         ],
