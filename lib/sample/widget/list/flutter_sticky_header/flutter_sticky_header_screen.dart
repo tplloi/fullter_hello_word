@@ -7,6 +7,7 @@ import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/core/base_stateful_state.dart';
 import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/widget/list/flutter_sticky_header/grid.dart';
 import 'package:hello_word/sample/widget/list/flutter_sticky_header/list.dart';
 
 class FlutterStickyHeaderScreen extends StatefulWidget {
@@ -49,6 +50,12 @@ class _FlutterStickyHeaderScreenState extends BaseStatefulState<FlutterStickyHea
             "List Example",
                 () {
               Get.to(ListExample());
+            },
+          ),
+          UIUtils.getButton(
+            "Grid Example",
+                () {
+              Get.to(GridExample());
             },
           ),
         ],
